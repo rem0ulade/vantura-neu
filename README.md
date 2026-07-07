@@ -1,8 +1,10 @@
-# Vantura — Website
+# Grace — Website
 
 Marketing-Website: **„Bessere Entscheidungen beginnen mit besseren Daten."**
 
 Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen.
+
+Domain: [meet-grace.com](https://meet-grace.com)
 
 ## Stack
 
@@ -30,13 +32,14 @@ components/
 lib/
   site.ts          ⭐ Zentrale Markenkonfiguration (Name, Claim, E-Mail, URL)
   content.ts       Alle Texte/Inhalte der Sektionen
+docs/brand/        Brand Foundation, Messaging, Voice & Style
 ```
 
 ### Markenname ändern
 
-Der Markenname ist noch nicht final. Er wird ausschließlich über
-[`lib/site.ts`](lib/site.ts) referenziert — **eine Änderung dort benennt die
-gesamte Website um** (Navigation, Texte, Metadata, Footer).
+Der Markenname wird ausschließlich über [`lib/site.ts`](lib/site.ts)
+referenziert — **eine Änderung dort benennt die gesamte Website um**
+(Navigation, Texte, Metadata, Footer).
 
 ### Referenzen ergänzen
 
@@ -50,7 +53,18 @@ Die Sektion erscheint automatisch, sobald der erste Eintrag existiert.
 ## Deployment
 
 Jeder Push auf `main` baut die Seite via GitHub Actions
-(`.github/workflows/deploy.yml`) und veröffentlicht sie auf **GitHub Pages**.
+(`.github/workflows/deploy.yml`) und veröffentlicht sie auf **GitHub Pages**:
+https://rem0ulade.github.io/vantura-neu/
+
 Der Base-Pfad (`/vantura-neu`) wird über `NEXT_PUBLIC_BASE_PATH` in der CI
-gesetzt; lokal läuft die Seite ohne Präfix. Bei Umzug auf eine eigene Domain:
-Variable entfernen und `SITE.url` in `lib/site.ts` anpassen.
+gesetzt; lokal läuft die Seite ohne Präfix.
+
+### Umzug auf meet-grace.com
+
+Sobald die Domain auf das Hosting zeigt:
+
+1. `NEXT_PUBLIC_BASE_PATH` aus `.github/workflows/deploy.yml` entfernen
+   (bei GitHub Pages mit Custom Domain liegt die Seite im Root).
+2. Bei GitHub Pages: Custom Domain `meet-grace.com` in den Repo-Settings
+   setzen (legt den CNAME an) und „Enforce HTTPS" aktivieren.
+3. `SITE.url` in `lib/site.ts` ist bereits auf `https://meet-grace.com` gesetzt.

@@ -1,8 +1,8 @@
 # Brand Foundation
 
-Arbeitsname: Vantura
+Name: Grace (final, Stand Juli 2026 — vormals Arbeitsname „Vantura")
 
-Hinweis: Der Name ist bewusst als Platzhalter gesetzt. Die Positionierung funktioniert unabhängig vom finalen Namen.
+Domain: meet-grace.com
 
 ## Kernidee
 

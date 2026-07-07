@@ -1,16 +1,16 @@
 /**
  * Zentrale Markenkonfiguration.
  *
- * Der Markenname ist noch nicht final. Er wird ausschließlich über diese
- * Datei referenziert — eine Änderung hier benennt die gesamte Website um.
+ * Der Markenname wird ausschließlich über diese Datei referenziert —
+ * eine Änderung hier benennt die gesamte Website um.
  */
 export const SITE = {
-  name: 'Vantura',
+  name: 'Grace',
   claim: 'Bessere Entscheidungen beginnen mit besseren Daten.',
   description:
     'Wir entwickeln Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen, die schneller verstehen wollen, was in ihrem Geschäft passiert.',
   email: 'jonathan.kokalj@gmail.com',
-  url: 'https://rem0ulade.github.io/vantura-neu',
+  url: 'https://meet-grace.com',
   locale: 'de_DE',
 } as const
 
