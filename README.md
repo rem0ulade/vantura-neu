@@ -46,10 +46,6 @@ referenziert — **eine Änderung dort benennt die gesamte Website um**
 Einträge in `REFERENCES` in [`lib/content.ts`](lib/content.ts) hinzufügen.
 Die Sektion erscheint automatisch, sobald der erste Eintrag existiert.
 
-### Vor Veröffentlichung offen
-
-- Impressum & Datenschutz: Platzhalter (`[…]`) mit echten Unternehmensdaten füllen.
-
 ## Deployment
 
 Jeder Push auf `main` baut die Seite via GitHub Actions
