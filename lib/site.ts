@@ -5,12 +5,12 @@
  * eine Änderung hier benennt die gesamte Website um.
  */
 export const SITE = {
-  name: 'Grace',
+  name: 'Vantura',
   claim: 'Bessere Entscheidungen beginnen mit besseren Daten.',
   description:
     'Wir entwickeln Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen, die schneller verstehen wollen, was in ihrem Geschäft passiert.',
   email: 'jonathan.kokalj@gmail.com',
-  url: 'https://meet-grace.com',
+  url: 'https://vantura-studios.com',
   locale: 'de_DE',
 } as const
 

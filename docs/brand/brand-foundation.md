@@ -1,8 +1,8 @@
 # Brand Foundation
 
-Name: Grace (final, Stand Juli 2026 — vormals Arbeitsname „Vantura")
+Name: Vantura
 
-Domain: meet-grace.com
+Hinweis: Zwischenzeitlich war „Grace" (meet-grace.com) im Gespräch, die Entscheidung fiel im Juli 2026 zurück auf Vantura. Die Positionierung funktioniert unabhängig vom Namen; der Name wird zentral über lib/site.ts gepflegt.
 
 ## Kernidee
 

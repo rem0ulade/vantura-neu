@@ -1,10 +1,10 @@
-# Grace — Website
+# Vantura — Website
 
 Marketing-Website: **„Bessere Entscheidungen beginnen mit besseren Daten."**
 
 Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen.
 
-Domain: [meet-grace.com](https://meet-grace.com)
+Domain: [vantura-studios.com](https://vantura-studios.com)
 
 ## Stack
 
@@ -59,12 +59,12 @@ https://rem0ulade.github.io/vantura-neu/
 Der Base-Pfad (`/vantura-neu`) wird über `NEXT_PUBLIC_BASE_PATH` in der CI
 gesetzt; lokal läuft die Seite ohne Präfix.
 
-### Umzug auf meet-grace.com
+### Umzug auf vantura-studios.com
 
-Sobald die Domain auf das Hosting zeigt:
+Sobald die Domain auf GitHub Pages zeigt und im alten Repo freigegeben ist:
 
 1. `NEXT_PUBLIC_BASE_PATH` aus `.github/workflows/deploy.yml` entfernen
    (bei GitHub Pages mit Custom Domain liegt die Seite im Root).
-2. Bei GitHub Pages: Custom Domain `meet-grace.com` in den Repo-Settings
-   setzen (legt den CNAME an) und „Enforce HTTPS" aktivieren.
-3. `SITE.url` in `lib/site.ts` ist bereits auf `https://meet-grace.com` gesetzt.
+2. Custom Domain `vantura-studios.com` in den Repo-Settings setzen und
+   „Enforce HTTPS" aktivieren.
+3. `SITE.url` in `lib/site.ts` ist bereits auf `https://vantura-studios.com` gesetzt.
