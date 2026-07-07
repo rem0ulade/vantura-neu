@@ -10,7 +10,7 @@ export function Problem() {
         <SectionHeading
           eyebrow="Das Problem"
           title="Ihre Daten sind da. Nur die Antworten fehlen."
-          lead="Die meisten Unternehmen haben kein Datenproblem — sie haben ein Zugangsproblem. Die Zahlen existieren, aber sie liegen verstreut, veraltet und in Formaten, mit denen niemand entscheiden kann."
+          lead="Die meisten Unternehmen haben kein Datenproblem — sie haben ein Zugangsproblem. Die Zahlen existieren, aber sie liegen verstreut, veraltet und in Formaten, mit denen niemand entscheiden kann. Ob Mediaagentur, Vermarkter oder Mittelstand: Die Muster sind überall dieselben."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

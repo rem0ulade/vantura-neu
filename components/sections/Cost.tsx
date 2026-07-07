@@ -33,9 +33,9 @@ export function Cost() {
 
         <Reveal delay={0.25} className="mt-14">
           <p className="mx-auto max-w-3xl text-balance text-center text-2xl font-medium leading-snug tracking-tight text-white lg:text-3xl">
-            Die Frage ist nicht, ob Sie sich bessere Daten leisten können.{' '}
+            Das Gute daran: Diese Kosten sind kein Naturgesetz.{' '}
             <span className="text-slate-400">
-              Sondern wie lange Sie sich die schlechten noch leisten wollen.
+              Sie sind ein lösbares Problem — und meist schneller gelöst, als man denkt.
             </span>
           </p>
         </Reveal>

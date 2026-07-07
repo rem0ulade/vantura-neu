@@ -144,6 +144,30 @@ export const PROCESS_STEPS = [
   },
 ] as const
 
+/** Produktisierte Einstiegsangebote — klar umrissen statt „Beratung nach Aufwand“. */
+export const PACKAGES = [
+  {
+    title: 'Reporting-Audit',
+    text: 'Analyse Ihrer Reports, Datenquellen und manuellen Prozesse. Ergebnis: konkrete Empfehlungen, Quick Wins und eine Roadmap.',
+    badge: 'Der Einstieg',
+  },
+  {
+    title: 'Dashboard-Sprint',
+    text: 'Konzeption und Umsetzung eines fokussierten Dashboards für eine konkrete Steuerungsfrage.',
+    badge: 'Schnell sichtbar',
+  },
+  {
+    title: 'Automation-Sprint',
+    text: 'Automatisierung eines wiederkehrenden Prozesses, der aktuell manuell oder fehleranfällig läuft.',
+    badge: 'Sofort spürbar',
+  },
+  {
+    title: 'Reporting-System',
+    text: 'Vollständige Reporting-Lösung mit Datenmodell, Dashboards, Dokumentation und Übergabe.',
+    badge: 'Das Gesamtbild',
+  },
+] as const
+
 /* --------------------------------------------------------------- Warum wir */
 
 export const EXPERIENCE_ANCHORS = [
