@@ -1,14 +1,57 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { SITE } from '@/lib/site'
 import './globals.css'
 
-export const metadata = {
-  title: 'Vantura | Reporting, Data & Automation',
-  description: 'Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen.',
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const title = `${SITE.name} — ${SITE.claim}`
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: title,
+    template: `%s — ${SITE.name}`,
+  },
+  description: SITE.description,
+  keywords: [
+    'Reporting',
+    'Dashboards',
+    'Business Intelligence',
+    'Automatisierung',
+    'Forecasting',
+    'KPI',
+    'Datenanalyse',
+    'Controlling',
+  ],
+  openGraph: {
+    type: 'website',
+    locale: SITE.locale,
+    url: SITE.url,
+    siteName: SITE.name,
+    title,
+    description: SITE.description,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description: SITE.description,
+  },
+  robots: { index: true, follow: true },
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="de">
-      <body>{children}</body>
+    <html lang="de" className={inter.variable}>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }

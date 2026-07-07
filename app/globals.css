@@ -1,12 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #0b1220;
+  --color-navy: #16233f;
+  --color-paper: #f7f8fb;
+  --color-line: #e6e9f0;
+  --color-muted: #5c6675;
+  --color-accent: #3b5bdb;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 24px 64px -16px rgb(11 18 32 / 0.14);
+  --shadow-card: 0 1px 2px rgb(11 18 32 / 0.04), 0 8px 24px -8px rgb(11 18 32 / 0.08);
+
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+:root {
+  color-scheme: light;
+}
 
 html {
   scroll-behavior: smooth;
+  /* Anker-Sprünge landen unterhalb der Sticky-Navigation */
+  scroll-padding-top: 5.5rem;
 }
 
 body {
   background: #ffffff;
-  color: #0f172a;
+  color: var(--color-ink);
+  font-feature-settings: 'cv11', 'ss01';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Feine Rasterlinien für Hero-Hintergrund */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(11 18 32 / 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(11 18 32 / 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
 }
