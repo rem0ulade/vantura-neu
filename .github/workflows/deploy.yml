@@ -30,9 +30,8 @@ jobs:
 
       - name: Build static export
         run: npm run build
-        env:
-          # GitHub Pages liefert die Seite unter /<repo-name> aus.
-          NEXT_PUBLIC_BASE_PATH: /vantura-neu
+        # Custom Domain (vantura-studios.com): Seite liegt im Root,
+        # daher kein NEXT_PUBLIC_BASE_PATH mehr.
 
       - name: Disable Jekyll processing
         run: touch out/.nojekyll
