@@ -43,12 +43,6 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="/websites"
-            className="text-sm font-medium text-muted transition-colors hover:text-ink"
-          >
-            Websites
-          </a>
-          <a
             href={CONTACT_HREF}
             className="rounded-full bg-ink px-4.5 py-2 text-sm font-medium text-white transition-all hover:bg-navy"
           >
@@ -86,13 +80,6 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="/websites"
-                onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-[15px] font-medium text-ink hover:bg-paper"
-              >
-                Websites
-              </a>
               <a
                 href={CONTACT_HREF}
                 onClick={() => setOpen(false)}
