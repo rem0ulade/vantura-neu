@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { LocalizedHome } from '@/components/LocalizedHome'
+import { LocalizedLanding } from '@/components/LocalizedLanding'
 
 export const metadata: Metadata = {
-  title: 'Reporting, Dashboards & Automation | Vantura',
-  description: 'Reporting, dashboards, forecasting and automation for companies that want to understand their business faster.',
+  title: 'Vantura Studios | Data, Websites & Digital Products',
+  description: 'Explore reporting and dashboards, websites, custom projects, selected work and Grace by Vantura Studios.',
   alternates: { canonical: '/', languages: { en: '/', de: '/de/' } },
 }
 
 export default function Home() {
-  return <LocalizedHome locale="en" />
+  return <LocalizedLanding locale="en" />
 }
