@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 const cases = [
   {
-    title: 'Trattoria da Matteo',
-    category: 'Gastronomie · Redesign-Konzept',
+    title: 'Osteria Verde',
+    category: 'Gastronomie · Fiktives Website-Konzept',
     description:
       'Ein warmer, hochwertiger Webauftritt, der Atmosphäre, Speisekarte und Reservierung direkt in den Mittelpunkt stellt.',
     accent: 'from-amber-100 via-orange-50 to-stone-100',
@@ -19,8 +19,8 @@ const cases = [
     badge: 'Restaurant',
   },
   {
-    title: 'Bonsai Home',
-    category: 'Interior · Marken- und Shopkonzept',
+    title: 'Atelier Noma',
+    category: 'Interior · Fiktives Marken- und Shopkonzept',
     description:
       'Ruhige Bildsprache, klare Produktführung und ein reduziertes Design für eine moderne Interior-Marke.',
     accent: 'from-emerald-100 via-stone-50 to-lime-100',
@@ -28,8 +28,8 @@ const cases = [
     badge: 'Interior',
   },
   {
-    title: 'Brühl Friseur',
-    category: 'Lokaler Dienstleister · Website-Konzept',
+    title: 'Studio Liora',
+    category: 'Beauty · Fiktives Website-Konzept',
     description:
       'Ein zugänglicher, mobiler Auftritt mit Leistungen, Team, Öffnungszeiten und einer klaren Terminaktion.',
     accent: 'from-rose-100 via-pink-50 to-orange-50',
@@ -37,8 +37,8 @@ const cases = [
     badge: 'Beauty',
   },
   {
-    title: 'Stockhausen',
-    category: 'Unternehmenswebsite · Konzept',
+    title: 'Nordwerk Solutions',
+    category: 'B2B · Fiktives Unternehmenskonzept',
     description:
       'Strukturierte Leistungsdarstellung, seriöse Positionierung und klare Kontaktwege für ein erklärungsbedürftiges Angebot.',
     accent: 'from-sky-100 via-slate-50 to-indigo-100',
@@ -113,7 +113,7 @@ export default function WebsitesPage() {
               <div className="absolute left-0 top-12 w-[82%] rotate-[-5deg] rounded-[28px] border border-white/70 bg-white p-3 shadow-2xl shadow-slate-300/60">
                 <div className="overflow-hidden rounded-[20px] bg-gradient-to-br from-emerald-100 via-white to-stone-100 p-7">
                   <div className="mb-16 flex items-center justify-between text-xs font-semibold text-emerald-950">
-                    <span>BONSAI HOME</span><span>COLLECTION</span>
+                    <span>ATELIER NOMA</span><span>COLLECTION</span>
                   </div>
                   <p className="max-w-xs text-4xl font-semibold tracking-tight text-emerald-950">Calm spaces. Better living.</p>
                   <div className="mt-10 h-32 rounded-2xl bg-emerald-950/90" />
@@ -122,7 +122,7 @@ export default function WebsitesPage() {
               <div className="absolute bottom-0 right-0 w-[76%] rotate-[5deg] rounded-[28px] border border-white/70 bg-white p-3 shadow-2xl shadow-slate-300/60">
                 <div className="overflow-hidden rounded-[20px] bg-gradient-to-br from-amber-100 via-orange-50 to-stone-100 p-7">
                   <div className="mb-12 flex items-center justify-between text-xs font-semibold text-stone-950">
-                    <span>DA MATTEO</span><span>PRENOTA</span>
+                    <span>OSTERIA VERDE</span><span>PRENOTA</span>
                   </div>
                   <p className="max-w-xs text-4xl font-semibold tracking-tight text-stone-950">Ein Abend wie in Italien.</p>
                   <div className="mt-9 grid grid-cols-3 gap-2">
@@ -138,11 +138,11 @@ export default function WebsitesPage() {
 
         <section id="arbeiten" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Ausgewählte Arbeiten</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Ausgewählte Konzepte</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">Vier Richtungen. Ein Anspruch.</h2>
             <p className="mt-5 text-lg leading-8 text-muted">
-              Die gezeigten Arbeiten sind eigene Konzepte und Redesigns. Sie zeigen, wie unterschiedlich Marken auftreten können,
-              ohne dass Klarheit, Nutzbarkeit und eine starke mobile Darstellung verloren gehen.
+              Alle gezeigten Marken und Projekte sind frei erfundene Designkonzepte und ausdrücklich keine Kundenreferenzen.
+              Sie demonstrieren Gestaltung, Struktur und technische Umsetzung für unterschiedliche Branchen.
             </p>
           </div>
 
