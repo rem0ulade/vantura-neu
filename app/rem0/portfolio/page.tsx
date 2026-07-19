@@ -1,18 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  ArrowRight,
-  BrainCircuit,
-  Code2,
-  Github,
-  Globe2,
-  Layers3,
-  Mail,
-  MapPin,
-  Rocket,
-  Smartphone,
-  Workflow,
-} from 'lucide-react'
+import { ArrowUpRight, Github, Mail, MapPin } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Jonathan Kokalj | App & Software Developer',
@@ -20,326 +8,268 @@ export const metadata: Metadata = {
     'Jonathan Kokalj is an experienced German app and software developer building mobile apps, web products, AI integrations and automations.',
 }
 
-const capabilities = [
+const projects = [
   {
-    icon: Smartphone,
-    title: 'Mobile Apps',
-    text: 'Cross-platform products with React Native and Expo, from early MVP to production release.',
+    number: '01',
+    title: 'Grace',
+    type: 'AI Workspace & Agent Orchestration',
+    description:
+      'A multi-platform AI workspace connecting models, tools and specialist agents in structured workflows. Built around privacy, local and cloud models, tool calling and collaborative execution.',
+    highlight:
+      'A product architecture designed to coordinate multiple specialised AI agents instead of treating every task as a single chat.',
+    tags: ['React Native', 'Desktop', 'AI Agents', 'LLM APIs', 'Tool Calling'],
+    accent: 'from-violet-500/30 via-fuchsia-500/10 to-transparent',
   },
   {
-    icon: Globe2,
-    title: 'Web Products',
-    text: 'Fast, responsive applications and websites built with React, Next.js and modern APIs.',
+    number: '02',
+    title: 'Enough',
+    type: 'Consumer Mobile Product',
+    description:
+      'A complete mobile product covering application architecture, polished UI flows, backend integration and iterative product development.',
+    highlight:
+      'Designed as a real product experience rather than a collection of disconnected screens.',
+    tags: ['React Native', 'Expo', 'Supabase', 'Product Design'],
+    accent: 'from-sky-500/30 via-cyan-500/10 to-transparent',
   },
   {
-    icon: BrainCircuit,
-    title: 'AI Integrations',
-    text: 'AI assistants, agents, model orchestration, tool calling and intelligent workflows.',
+    number: '03',
+    title: 'HotnCold',
+    type: 'App & Supporting Platform',
+    description:
+      'A mobile application with supporting web presence, backend services and continuous feature development from concept to usable software.',
+    highlight:
+      'End-to-end ownership across mobile, backend and product iteration.',
+    tags: ['Mobile App', 'APIs', 'Supabase', 'Web'],
+    accent: 'from-orange-500/30 via-amber-500/10 to-transparent',
   },
   {
-    icon: Workflow,
-    title: 'Data & Automation',
-    text: 'Dashboards, business tools, API integrations and automated operational processes.',
+    number: '04',
+    title: 'Reporting & Decision Tools',
+    type: 'Business Software',
+    description:
+      'Custom dashboards, calculation tools and management applications that turn complex datasets into clear operational decisions.',
+    highlight:
+      'Business logic, reporting and data integration translated into software people can actually use.',
+    tags: ['Power BI', 'Excel', 'Data Integration', 'Business Logic'],
+    accent: 'from-emerald-500/30 via-teal-500/10 to-transparent',
   },
 ]
 
 const skills = [
-  ['React Native', 'Cross-platform mobile apps'],
-  ['TypeScript / JavaScript', 'App and web development'],
-  ['React / Next.js', 'Modern web products'],
-  ['Expo / EAS', 'Builds, releases and deployment'],
-  ['Supabase', 'Backend, database and authentication'],
-  ['Python', 'Scripting and automation'],
-  ['REST / GraphQL', 'API design and integration'],
-  ['AI & LLM Integration', 'OpenAI, Claude and local models'],
-  ['Automation', 'n8n, Make and custom workflows'],
-  ['Power BI / Tableau', 'Analytics and reporting'],
-  ['Excel', 'Business logic and calculation tools'],
-  ['Docker & CI/CD', 'Deployment and delivery pipelines'],
-  ['Salesforce / Jira', 'Project and client workflows'],
-  ['Product Strategy', 'Concept, scope and prioritisation'],
-  ['Project Management', 'Delivery and stakeholder alignment'],
-  ['Data Integration', 'Connecting systems and datasets'],
-]
-
-const projects = [
-  {
-    title: 'Grace',
-    label: 'Flagship Product',
-    description:
-      'A multi-platform AI workspace connecting models, tools and specialist agents in structured workflows. Built around orchestration, privacy, local and cloud models, and collaborative execution.',
-    tags: ['React Native', 'Desktop', 'AI Agents', 'LLM APIs', 'Tool Calling'],
-    featured: true,
-  },
-  {
-    title: 'Enough',
-    label: 'Mobile Product',
-    description:
-      'A consumer-focused mobile application designed and developed as a complete product experience, including architecture, polished UI flows and backend integration.',
-    tags: ['React Native', 'Expo', 'Supabase', 'Product Design'],
-  },
-  {
-    title: 'HotnCold',
-    label: 'App & Platform',
-    description:
-      'A mobile product with supporting web presence, backend services and iterative feature development, covering the path from concept to usable software.',
-    tags: ['Mobile App', 'APIs', 'Supabase', 'Web'],
-  },
-  {
-    title: 'Reporting & Decision Tools',
-    label: 'Business Software',
-    description:
-      'Custom dashboards, calculation tools and management applications that turn complex datasets into clear operational decisions and repeatable workflows.',
-    tags: ['Power BI', 'Excel', 'Data Integration', 'Business Logic'],
-  },
-  {
-    title: 'Websites & One-Pagers',
-    label: 'Web Development',
-    description:
-      'Modern, conversion-focused websites for local businesses, products and service companies, designed, built and deployed as complete ready-to-use solutions.',
-    tags: ['Next.js', 'Responsive Design', 'Deployment', 'SEO'],
-  },
+  'React Native', 'Expo / EAS', 'TypeScript', 'JavaScript', 'React', 'Next.js', 'Supabase',
+  'Python', 'REST APIs', 'GraphQL', 'OpenAI', 'Claude', 'Local LLMs', 'AI Agents', 'n8n',
+  'Make', 'Docker', 'CI/CD', 'Power BI', 'Tableau', 'Excel', 'Salesforce', 'Jira',
+  'Product Strategy', 'Project Management', 'Data Integration',
 ]
 
 const experience = [
-  {
-    role: 'Freelance App & Software Developer',
-    company: 'Self-employed · Vantura Studios',
-    text: 'Development of apps, websites and software solutions for businesses and founders. Technical consulting, product concepts, project management and end-to-end implementation.',
-  },
-  {
-    role: 'Senior Manager Strategic Investment',
-    company: 'Weischer.Cinema GmbH',
-    text: 'Condition strategy, investment coordination, controlling of agreements and budgets, market analysis and KPI implementation.',
-  },
-  {
-    role: 'Senior Deal & Inventory Manager',
-    company: 'Publicis Media GmbH',
-    text: 'Budget and contract management for national and international clients, pricing analysis, negotiations, process optimisation and project management.',
-  },
-  {
-    role: 'Client Campaign Manager',
-    company: 'RMS Radio Marketing Services',
-    text: 'Campaign management, client support and project leadership for a Salesforce implementation in campaign management.',
-  },
-  {
-    role: 'Media Dispatcher',
-    company: 'Weischer.Media',
-    text: 'Planning and disposition of cinema advertising for the Swiss market.',
-  },
+  ['Present', 'Freelance App & Software Developer', 'Vantura Studios', 'Apps, websites, AI products, software solutions, technical consulting and product delivery.'],
+  ['2026', 'Senior Manager Strategic Investment', 'Weischer.Cinema GmbH', 'Commercial strategy, controlling, market analysis, budgets and KPI implementation.'],
+  ['Before', 'Senior Deal & Inventory Manager', 'Publicis Media GmbH', 'Budget and contract management, pricing analysis, negotiations and process optimisation.'],
+  ['Earlier', 'Client Campaign Manager', 'RMS Radio Marketing Services', 'Campaign management, client work and Salesforce implementation leadership.'],
 ]
 
 const certificates = [
-  ['Financial Analysis', 'Institute of Management, Technology and Finance · 2025'],
-  ['International Business Management', 'Human and Emotion: CHRMI · 2025'],
-  ['Economics for Business Leaders', 'LinkedIn Learning · 2024'],
-  ['Excel for Investment Professionals', 'LinkedIn Learning · 2024'],
-  ['Strategic Negotiations', 'LinkedIn Learning · 2024'],
+  'Financial Analysis',
+  'International Business Management',
+  'Economics for Business Leaders',
+  'Excel for Investment Professionals',
+  'Strategic Negotiations',
 ]
 
 export default function JonathanPortfolioPage() {
   return (
-    <div className="min-h-screen bg-[#070711] text-[#f4f4ff]">
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-[#070711]/85 backdrop-blur-xl">
-        <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
-          <Link href="/rem0/portfolio" className="text-lg font-bold tracking-[-0.03em]">
+    <div className="min-h-screen bg-[#050505] text-white selection:bg-lime-300 selection:text-black">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+        <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:px-8 lg:px-12">
+          <Link href="/rem0/portfolio" className="text-sm font-semibold uppercase tracking-[0.18em]">
             Jonathan Kokalj
           </Link>
-          <div className="flex items-center gap-5 text-sm text-white/60">
-            <a href="#work" className="hidden hover:text-white sm:block">Work</a>
-            <a href="#skills" className="hidden hover:text-white sm:block">Skills</a>
-            <a href="#experience" className="hidden hover:text-white md:block">Experience</a>
-            <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="hidden items-center gap-2 hover:text-white sm:inline-flex">
+          <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.14em] text-white/55">
+            <a href="#work" className="hidden transition hover:text-white sm:block">Work</a>
+            <a href="#about" className="hidden transition hover:text-white sm:block">About</a>
+            <a href="#arsenal" className="hidden transition hover:text-white md:block">Arsenal</a>
+            <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-white">
               <Github size={15} /> GitHub
-            </a>
-            <a href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Jonathan%20Kokalj" className="rounded-full border border-white/15 bg-white/5 px-4 py-2 font-semibold text-white transition hover:bg-white/10">
-              Let&apos;s talk
             </a>
           </div>
         </nav>
       </header>
 
       <main>
-        <section className="overflow-hidden border-b border-white/10">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:py-28">
-            <div className="flex flex-col justify-center">
-              <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-sky-100">
-                <MapPin size={14} /> German App & Software Developer
+        <section className="relative flex min-h-screen items-end overflow-hidden px-5 pb-10 pt-28 sm:px-8 lg:px-12 lg:pb-14">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(132,204,22,.13),transparent_28%),radial-gradient(circle_at_15%_70%,rgba(59,130,246,.12),transparent_28%)]" />
+          <div className="relative mx-auto w-full max-w-[1400px]">
+            <div className="mb-8 flex flex-col justify-between gap-5 border-b border-white/15 pb-6 sm:flex-row sm:items-end">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-lime-300">
+                <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,.8)]" /> Available for selected projects
               </div>
-              <h1 className="max-w-4xl text-5xl font-semibold leading-[0.98] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
-                I build digital products that <span className="bg-gradient-to-r from-sky-400 via-violet-400 to-orange-400 bg-clip-text text-transparent">actually ship.</span>
-              </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-white/60 sm:text-xl">
-                Developer and product-minded consultant with more than ten years of experience in the digital industry. I turn complex requirements into clean, practical and user-friendly software.
+              <div className="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-white/45">
+                <MapPin size={14} /> Germany · Remote worldwide
+              </div>
+            </div>
+
+            <h1 className="max-w-[1250px] text-[clamp(4rem,12vw,11rem)] font-black uppercase leading-[0.78] tracking-[-0.075em]">
+              Full-Stack
+              <span className="block text-white/25">Product</span>
+              <span className="block">Developer</span>
+            </h1>
+
+            <div className="mt-10 grid gap-8 border-t border-white/15 pt-7 lg:grid-cols-[1fr_1.1fr]">
+              <p className="max-w-sm text-sm uppercase leading-6 tracking-[0.12em] text-white/40">
+                Mobile apps · Web products · AI agents · Automations · Data tools
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a href="#work" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#070711]">
-                  View selected work <ArrowRight size={17} />
-                </a>
-                <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10">
-                  View GitHub <Github size={16} />
-                </a>
-                <a href="mailto:jk@vantura-studios.com" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10">
-                  Start a conversation <Mail size={16} />
-                </a>
-              </div>
-              <div className="mt-6 flex items-center gap-2 text-sm text-white/50">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,.8)]" />
-                Open to selected remote projects and long-term collaborations
-              </div>
-            </div>
-
-            <aside className="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.03] p-7 shadow-2xl shadow-black/30">
-              <div className="grid h-20 w-20 place-items-center rounded-3xl bg-gradient-to-br from-sky-400 via-violet-400 to-orange-400 text-2xl font-black">JK</div>
-              <h2 className="mt-6 text-2xl font-semibold tracking-tight">Jonathan Kokalj</h2>
-              <p className="mt-3 leading-7 text-white/60">
-                Independent app and software developer based near Hamburg, Germany. Strong analytical background, product thinking and experience leading complex digital projects.
+              <p className="max-w-2xl text-xl leading-8 text-white/70 sm:text-2xl sm:leading-9">
+                I turn complex ideas into useful software — combining product thinking, technical execution and more than ten years of digital-industry experience.
               </p>
-              <div className="mt-7 grid grid-cols-2 gap-3">
-                {[
-                  ['10+ years', 'Digital industry'],
-                  ['Mobile & Web', 'Product development'],
-                  ['AI & Automation', 'Practical integrations'],
-                  ['Long-term', 'Reliable collaboration'],
-                ].map(([title, text]) => (
-                  <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                    <p className="font-semibold">{title}</p>
-                    <p className="mt-1 text-xs text-white/45">{text}</p>
-                  </div>
-                ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="about" className="border-y border-white/10 bg-[#0a0a0a] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.65fr_1.35fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Core experience</p>
+              <p className="mt-5 text-sm uppercase leading-6 tracking-[0.12em] text-white/35">Developer · Consultant · Product thinker</p>
+            </div>
+            <div>
+              <h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+                I blend code, business logic and product judgment to build software that solves real problems.
+              </h2>
+              <div className="mt-10 grid gap-8 md:grid-cols-2">
+                <p className="text-lg leading-8 text-white/60">
+                  My background spans app development, analytics, commercial strategy, negotiation and project leadership. That helps me understand not only how to build a product, but why it should exist and how it creates value.
+                </p>
+                <p className="text-lg leading-8 text-white/60">
+                  I am comfortable joining at idea stage, rescuing unfinished builds, creating MVPs quickly or staying involved as a long-term technical partner after launch.
+                </p>
               </div>
-            </aside>
-          </div>
-        </section>
-
-        <section id="skills" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">What I do</p>
-          <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">From rough idea to working product.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-white/55">
-            I help founders, teams and businesses plan, build, deploy and continuously improve reliable digital products.
-          </p>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {capabilities.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="rounded-[24px] border border-white/10 bg-white/[0.035] p-6">
-                <Icon className="text-sky-400" size={24} />
-                <h3 className="mt-5 text-lg font-semibold">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/50">{text}</p>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-20">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">Skills & tools</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">A broad stack for complete product delivery.</h2>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {skills.map(([title, text]) => (
-                <article key={title} className="rounded-2xl border border-white/10 bg-white/[0.025] p-5">
-                  <h3 className="font-semibold">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/45">{text}</p>
-                </article>
-              ))}
             </div>
           </div>
         </section>
 
-        <section id="work" className="border-y border-white/10 bg-white/[0.02]">
-          <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">Selected work</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Products, platforms and prototypes.</h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-white/55">
-              Some client work cannot be shown publicly due to confidentiality. The projects below represent the type and scope of products I build.
-            </p>
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
-              {projects.map((project) => (
-                <article key={project.title} className={`rounded-[28px] border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.025] p-7 ${project.featured ? 'md:col-span-2' : ''}`}>
-                  <div className="inline-flex rounded-full border border-sky-400/20 bg-sky-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-sky-200">{project.label}</div>
-                  <h3 className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl">{project.title}</h3>
-                  <p className="mt-4 max-w-3xl leading-7 text-white/55">{project.description}</p>
-                  <div className="mt-6 flex flex-wrap gap-2">
-                    {project.tags.map((tag) => <span key={tag} className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/70">{tag}</span>)}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="experience" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">Experience</p>
-          <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Technical delivery backed by business experience.</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-white/55">
-            My background combines software development, analytics, commercial strategy, negotiation and project leadership.
-          </p>
-          <div className="mt-12 space-y-5">
-            {experience.map((item) => (
-              <article key={`${item.role}-${item.company}`} className="grid gap-4 rounded-[24px] border border-white/10 bg-white/[0.03] p-6 md:grid-cols-[.8fr_1.2fr] md:p-7">
-                <div>
-                  <h3 className="text-xl font-semibold">{item.role}</h3>
-                  <p className="mt-2 text-sm font-medium text-orange-300">{item.company}</p>
-                </div>
-                <p className="leading-7 text-white/55">{item.text}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="border-y border-white/10 bg-white/[0.02]">
-          <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">Certificates</p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Continuous learning across technology and business.</h2>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {certificates.map(([title, issuer]) => (
-                <article key={title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                  <h3 className="font-semibold">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-white/45">{issuer}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-orange-400">How I work</p>
-          <h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.04em] sm:text-5xl">Fast execution without losing the bigger picture.</h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {[
-              [Code2, '01', 'Understand', 'Clarify the real problem, users, priorities and constraints before unnecessary complexity enters the project.'],
-              [Rocket, '02', 'Build & Validate', 'Create a usable version quickly, test the core assumptions and improve based on real feedback.'],
-              [Layers3, '03', 'Stay & Improve', 'Support the product beyond launch with maintenance, new features and long-term technical ownership.'],
-            ].map(([Icon, number, title, text]) => {
-              const StepIcon = Icon as typeof Code2
-              return (
-                <article key={String(number)} className="border-t border-white/15 pt-6">
-                  <StepIcon size={22} className="text-sky-400" />
-                  <p className="mt-5 text-sm font-semibold text-sky-400">{String(number)}</p>
-                  <h3 className="mt-2 text-xl font-semibold">{String(title)}</h3>
-                  <p className="mt-3 leading-7 text-white/50">{String(text)}</p>
-                </article>
-              )
-            })}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-6xl px-6 pb-20 lg:px-8 lg:pb-28">
-          <div className="rounded-[30px] border border-sky-400/20 bg-gradient-to-br from-sky-400/10 via-violet-400/10 to-orange-400/10 p-8 sm:p-10">
-            <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
+        <section id="work" className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="flex flex-col justify-between gap-6 border-b border-white/15 pb-8 lg:flex-row lg:items-end">
               <div>
-                <h2 className="text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Have an app, product or idea in mind?</h2>
-                <p className="mt-4 max-w-2xl text-lg leading-8 text-white/55">Small initial budgets are not automatically a deal-breaker when the project, people and long-term potential make sense.</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Selected work</p>
+                <h2 className="mt-4 text-5xl font-black uppercase tracking-[-0.055em] sm:text-7xl lg:text-8xl">Built to ship.</h2>
               </div>
-              <a href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Jonathan%20Kokalj" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#070711]">
-                Email me <Mail size={17} />
+              <p className="max-w-xl text-base leading-7 text-white/45">
+                Some client work remains confidential. These projects represent the products, systems and technical challenges I work on.
+              </p>
+            </div>
+
+            <div>
+              {projects.map((project) => (
+                <article key={project.number} className="group grid gap-8 border-b border-white/15 py-12 lg:grid-cols-[130px_.8fr_1.2fr] lg:py-16">
+                  <div className="text-sm font-semibold text-white/25">{project.number}</div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lime-300">{project.type}</p>
+                    <h3 className="mt-4 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">{project.title}</h3>
+                    <div className="mt-7 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="rounded-full border border-white/15 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/55">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={`relative overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br ${project.accent} p-7 sm:p-9`}>
+                    <div className="absolute right-6 top-6 text-white/20 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white/60">
+                      <ArrowUpRight size={30} />
+                    </div>
+                    <p className="max-w-2xl text-xl leading-8 text-white/80">{project.description}</p>
+                    <div className="mt-10 border-t border-white/15 pt-6">
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/35">Key highlight</p>
+                      <p className="mt-3 max-w-xl leading-7 text-white/60">{project.highlight}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="arsenal" className="overflow-hidden border-y border-white/10 bg-lime-300 py-7 text-black">
+          <div className="whitespace-nowrap text-[clamp(2.4rem,6vw,5.5rem)] font-black uppercase leading-none tracking-[-0.055em]">
+            {skills.slice(0, 9).map((skill) => <span key={skill} className="mx-5 inline-block">{skill} <span className="text-black/25">✦</span></span>)}
+          </div>
+        </section>
+
+        <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">My arsenal</p>
+              <h2 className="mt-4 text-5xl font-black uppercase tracking-[-0.055em] sm:text-7xl">Tools for complete delivery.</h2>
+            </div>
+            <div className="grid grid-cols-2 border-l border-t border-white/15 sm:grid-cols-3">
+              {skills.map((skill) => (
+                <div key={skill} className="border-b border-r border-white/15 p-5 text-sm font-medium uppercase tracking-[0.08em] text-white/65 sm:p-6">{skill}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/10 bg-[#0a0a0a] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="grid gap-8 border-b border-white/15 pb-8 lg:grid-cols-[.7fr_1.3fr]">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Experience</p>
+              <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-6xl">Technical delivery backed by commercial and strategic experience.</h2>
+            </div>
+            <div>
+              {experience.map(([year, role, company, text]) => (
+                <article key={`${role}-${company}`} className="grid gap-4 border-b border-white/15 py-8 md:grid-cols-[120px_.9fr_1.1fr]">
+                  <p className="text-sm text-white/30">{year}</p>
+                  <div>
+                    <h3 className="text-xl font-semibold">{role}</h3>
+                    <p className="mt-2 text-sm uppercase tracking-[0.12em] text-lime-300">{company}</p>
+                  </div>
+                  <p className="leading-7 text-white/50">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Certificates</p>
+              <h2 className="mt-4 text-5xl font-black uppercase tracking-[-0.055em] sm:text-7xl">Always learning.</h2>
+            </div>
+            <div className="divide-y divide-white/15 border-y border-white/15">
+              {certificates.map((certificate, index) => (
+                <div key={certificate} className="flex items-center justify-between gap-5 py-5">
+                  <span className="text-lg text-white/75">{certificate}</span>
+                  <span className="text-xs uppercase tracking-[0.14em] text-white/25">0{index + 1}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-5 pb-8 sm:px-8 lg:px-12 lg:pb-12">
+          <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[34px] bg-lime-300 px-6 py-12 text-black sm:px-10 lg:px-14 lg:py-16">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em]">Have a project in mind?</p>
+            <h2 className="mt-5 max-w-5xl text-[clamp(3.4rem,8vw,8rem)] font-black uppercase leading-[0.82] tracking-[-0.065em]">
+              Let&apos;s build something useful.
+            </h2>
+            <div className="mt-10 flex flex-col justify-between gap-8 border-t border-black/20 pt-7 lg:flex-row lg:items-end">
+              <p className="max-w-2xl text-lg leading-8 text-black/65">
+                Small initial budgets are not automatically a deal-breaker when the product, people and long-term potential make sense.
+              </p>
+              <a href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Jonathan%20Kokalj" className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em]">
+                Start a conversation <Mail size={18} />
               </a>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-white/10 px-6 py-8 text-sm text-white/40 lg:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col justify-between gap-4 sm:flex-row">
+      <footer className="px-5 py-8 text-xs uppercase tracking-[0.14em] text-white/35 sm:px-8 lg:px-12">
+        <div className="mx-auto flex max-w-[1400px] flex-col justify-between gap-4 border-t border-white/10 pt-7 sm:flex-row">
           <span>© 2026 Jonathan Kokalj · Vantura Studios</span>
           <div className="flex gap-5">
-            <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-white"><Github size={15} /> github.com/rem0ulade</a>
+            <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a>
             <Link href="/" className="hover:text-white">Vantura Studios</Link>
           </div>
         </div>
