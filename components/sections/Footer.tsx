@@ -10,8 +10,7 @@ export function Footer() {
           <div>
             <p className="text-[17px] font-semibold tracking-tight">{SITE.name}</p>
             <p className="mt-2 max-w-xs text-sm leading-6 text-muted">
-              Reporting, Dashboards und Automatisierung für Unternehmen, die ihre Daten
-              verstehen wollen.
+              Reporting, dashboards and automation for companies that want to understand their data.
             </p>
           </div>
 
@@ -22,7 +21,7 @@ export function Footer() {
               </a>
             ))}
             <Link href="/projekt/" className="transition-colors hover:text-ink">
-              Projekte
+              Projects
             </Link>
             <Link href="/websites/" className="transition-colors hover:text-ink">
               Websites
@@ -32,14 +31,14 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col justify-between gap-4 border-t border-line pt-6 text-sm text-muted md:flex-row">
           <p>
-            © {new Date().getFullYear()} {SITE.name}. Alle Rechte vorbehalten.
+            © {new Date().getFullYear()} {SITE.name}. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/impressum/" className="transition-colors hover:text-ink">
-              Impressum
+              Legal Notice
             </Link>
             <Link href="/datenschutz/" className="transition-colors hover:text-ink">
-              Datenschutz
+              Privacy
             </Link>
           </div>
         </div>
