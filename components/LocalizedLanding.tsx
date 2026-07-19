@@ -13,7 +13,7 @@ const copy = {
     items: [
       ['Reporting & Dashboards', 'Turn data into clear decisions.', BarChart3, '/reporting/'],
       ['Websites', 'Focused websites that look sharp and perform.', Globe2, '/websites/'],
-      ['Projects', 'Apps, tools, automations and MVPs.', Code2, '/projekt/'],
+      ['Projects', 'Apps, tools, automations and MVPs.', Code2, '/projects/'],
       ['Portfolio', 'Selected work and practical examples.', BriefcaseBusiness, '/rem0/portfolio/'],
       ['Grace', 'Meet the AI workspace built by Vantura.', Sparkles, 'https://meet-grace.com/'],
     ],
@@ -24,7 +24,7 @@ const copy = {
     items: [
       ['Reporting & Dashboards', 'Daten in klare Entscheidungen übersetzen.', BarChart3, '/de/reporting/'],
       ['Websites', 'Fokussierte Websites, die stark aussehen und funktionieren.', Globe2, '/de/websites/'],
-      ['Projekte', 'Apps, Tools, Automationen und MVPs.', Code2, '/de/projekt/'],
+      ['Projekte', 'Apps, Tools, Automationen und MVPs.', Code2, '/de/projects/'],
       ['Portfolio', 'Ausgewählte Arbeiten und praktische Beispiele.', BriefcaseBusiness, '/rem0/portfolio/'],
       ['Grace', 'Der von Vantura entwickelte AI Workspace.', Sparkles, 'https://meet-grace.com/'],
     ],
