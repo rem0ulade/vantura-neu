@@ -5,7 +5,7 @@ import { ArrowUpRight, Github, Mail, MapPin } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Jonathan Kokalj | App & Software Developer',
   description:
-    'Jonathan Kokalj is an experienced German app and software developer building mobile apps, web products, AI integrations and automations.',
+    'Jonathan Kokalj builds mobile apps, web products, AI integrations, automations and data tools for founders, teams and businesses.',
 }
 
 const projects = [
@@ -16,42 +16,53 @@ const projects = [
     description:
       'A multi-platform AI workspace connecting models, tools and specialist agents in structured workflows. Built around privacy, local and cloud models, tool calling and collaborative execution.',
     highlight:
-      'A product architecture designed to coordinate multiple specialised AI agents instead of treating every task as a single chat.',
+      'A complex product architecture designed to coordinate multiple specialised agents, tools and model providers inside one coherent workspace.',
     tags: ['React Native', 'Desktop', 'AI Agents', 'LLM APIs', 'Tool Calling'],
     accent: 'from-violet-500/30 via-fuchsia-500/10 to-transparent',
   },
   {
     number: '02',
-    title: 'Enough',
-    type: 'Consumer Mobile Product',
+    title: 'Mobile Products',
+    type: 'Consumer Apps & MVPs',
     description:
-      'A complete mobile product covering application architecture, polished UI flows, backend integration and iterative product development.',
+      'Mobile products ranging from focused early-stage MVPs to more complete applications with authentication, backend services, polished user flows and deployment pipelines.',
     highlight:
-      'Designed as a real product experience rather than a collection of disconnected screens.',
-    tags: ['React Native', 'Expo', 'Supabase', 'Product Design'],
+      'Experience moving products from rough concept to testable release, then iterating based on real requirements and user feedback.',
+    tags: ['React Native', 'Expo', 'Supabase', 'APIs', 'Product Design'],
     accent: 'from-sky-500/30 via-cyan-500/10 to-transparent',
   },
   {
     number: '03',
-    title: 'HotnCold',
-    type: 'App & Supporting Platform',
+    title: 'Web Platforms',
+    type: 'Web Apps, Portals & One-Pagers',
     description:
-      'A mobile application with supporting web presence, backend services and continuous feature development from concept to usable software.',
+      'Responsive websites, internal tools, product pages and web applications for smaller businesses, founders and operational teams.',
     highlight:
-      'End-to-end ownership across mobile, backend and product iteration.',
-    tags: ['Mobile App', 'APIs', 'Supabase', 'Web'],
+      'Projects span fast one-page launches, custom interfaces and connected web products with real business logic behind them.',
+    tags: ['Next.js', 'React', 'Responsive UI', 'SEO', 'Deployment'],
     accent: 'from-orange-500/30 via-amber-500/10 to-transparent',
   },
   {
     number: '04',
-    title: 'Reporting & Decision Tools',
-    type: 'Business Software',
+    title: 'Reporting & Decision Systems',
+    type: 'Business Software & Data Products',
     description:
-      'Custom dashboards, calculation tools and management applications that turn complex datasets into clear operational decisions.',
+      'Custom dashboards, calculation tools, reporting systems and management applications that turn complex datasets into clear operational decisions.',
     highlight:
-      'Business logic, reporting and data integration translated into software people can actually use.',
-    tags: ['Power BI', 'Excel', 'Data Integration', 'Business Logic'],
+      'Delivered across smaller workflow improvements and larger, business-critical reporting and calculation initiatives.',
+    tags: ['Power BI', 'Excel', 'Data Integration', 'Business Logic', 'Automation'],
     accent: 'from-emerald-500/30 via-teal-500/10 to-transparent',
+  },
+  {
+    number: '05',
+    title: 'AI & Automation Projects',
+    type: 'Integrations, Agents & Workflows',
+    description:
+      'AI-assisted workflows, model integrations, API-connected automations and internal tools that reduce manual work and connect fragmented processes.',
+    highlight:
+      'Built for both narrow operational use cases and broader product concepts where AI becomes part of the actual workflow.',
+    tags: ['OpenAI', 'Claude', 'n8n', 'Make', 'REST APIs', 'Local Models'],
+    accent: 'from-lime-500/25 via-green-500/10 to-transparent',
   },
 ]
 
@@ -62,19 +73,11 @@ const skills = [
   'Product Strategy', 'Project Management', 'Data Integration',
 ]
 
-const experience = [
-  ['Present', 'Freelance App & Software Developer', 'Vantura Studios', 'Apps, websites, AI products, software solutions, technical consulting and product delivery.'],
-  ['2026', 'Senior Manager Strategic Investment', 'Weischer.Cinema GmbH', 'Commercial strategy, controlling, market analysis, budgets and KPI implementation.'],
-  ['Before', 'Senior Deal & Inventory Manager', 'Publicis Media GmbH', 'Budget and contract management, pricing analysis, negotiations and process optimisation.'],
-  ['Earlier', 'Client Campaign Manager', 'RMS Radio Marketing Services', 'Campaign management, client work and Salesforce implementation leadership.'],
-]
-
-const certificates = [
-  'Financial Analysis',
-  'International Business Management',
-  'Economics for Business Leaders',
-  'Excel for Investment Professionals',
-  'Strategic Negotiations',
+const projectRange = [
+  ['Early-stage products', 'From first concept and technical direction to a usable MVP that can be tested, shown and improved.'],
+  ['Small business solutions', 'Focused websites, automations and tools that solve a clear problem without unnecessary complexity.'],
+  ['Internal business systems', 'Reporting, calculation and workflow tools designed around real processes, stakeholders and data.'],
+  ['Longer product builds', 'Applications and platforms that require architecture, iteration, integrations and continued technical ownership.'],
 ]
 
 export default function JonathanPortfolioPage() {
@@ -87,7 +90,7 @@ export default function JonathanPortfolioPage() {
           </Link>
           <div className="flex items-center gap-5 text-xs font-medium uppercase tracking-[0.14em] text-white/55">
             <a href="#work" className="hidden transition hover:text-white sm:block">Work</a>
-            <a href="#about" className="hidden transition hover:text-white sm:block">About</a>
+            <a href="#approach" className="hidden transition hover:text-white sm:block">Approach</a>
             <a href="#arsenal" className="hidden transition hover:text-white md:block">Arsenal</a>
             <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-white">
               <Github size={15} /> GitHub
@@ -110,38 +113,38 @@ export default function JonathanPortfolioPage() {
             </div>
 
             <h1 className="max-w-[1250px] text-[clamp(4rem,12vw,11rem)] font-black uppercase leading-[0.78] tracking-[-0.075em]">
-              Full-Stack
-              <span className="block text-white/25">Product</span>
-              <span className="block">Developer</span>
+              Products
+              <span className="block text-white/25">Systems</span>
+              <span className="block">That Ship</span>
             </h1>
 
             <div className="mt-10 grid gap-8 border-t border-white/15 pt-7 lg:grid-cols-[1fr_1.1fr]">
               <p className="max-w-sm text-sm uppercase leading-6 tracking-[0.12em] text-white/40">
-                Mobile apps · Web products · AI agents · Automations · Data tools
+                Mobile apps · Web platforms · AI agents · Automations · Data tools
               </p>
               <p className="max-w-2xl text-xl leading-8 text-white/70 sm:text-2xl sm:leading-9">
-                I turn complex ideas into useful software — combining product thinking, technical execution and more than ten years of digital-industry experience.
+                I have worked across both small, focused builds and larger, more complex digital products — from rapid MVPs and one-page launches to connected applications, AI workflows and business-critical tools.
               </p>
             </div>
           </div>
         </section>
 
-        <section id="about" className="border-y border-white/10 bg-[#0a0a0a] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+        <section id="approach" className="border-y border-white/10 bg-[#0a0a0a] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.65fr_1.35fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Core experience</p>
-              <p className="mt-5 text-sm uppercase leading-6 tracking-[0.12em] text-white/35">Developer · Consultant · Product thinker</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Project experience</p>
+              <p className="mt-5 text-sm uppercase leading-6 tracking-[0.12em] text-white/35">Small launches · Complex systems · Long-term builds</p>
             </div>
             <div>
               <h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-                I blend code, business logic and product judgment to build software that solves real problems.
+                Different project sizes. The same focus on useful, dependable delivery.
               </h2>
               <div className="mt-10 grid gap-8 md:grid-cols-2">
                 <p className="text-lg leading-8 text-white/60">
-                  My background spans app development, analytics, commercial strategy, negotiation and project leadership. That helps me understand not only how to build a product, but why it should exist and how it creates value.
+                  Some projects need a fast, pragmatic release. Others require careful architecture, multiple integrations, complex data and ongoing development. I am comfortable working at both ends of that spectrum.
                 </p>
                 <p className="text-lg leading-8 text-white/60">
-                  I am comfortable joining at idea stage, rescuing unfinished builds, creating MVPs quickly or staying involved as a long-term technical partner after launch.
+                  I can join at idea stage, take over an unfinished product, build a focused solution from scratch or stay involved as a long-term technical partner after launch.
                 </p>
               </div>
             </div>
@@ -152,11 +155,11 @@ export default function JonathanPortfolioPage() {
           <div className="mx-auto max-w-[1400px]">
             <div className="flex flex-col justify-between gap-6 border-b border-white/15 pb-8 lg:flex-row lg:items-end">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Selected work</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Selected project areas</p>
                 <h2 className="mt-4 text-5xl font-black uppercase tracking-[-0.055em] sm:text-7xl lg:text-8xl">Built to ship.</h2>
               </div>
               <p className="max-w-xl text-base leading-7 text-white/45">
-                Some client work remains confidential. These projects represent the products, systems and technical challenges I work on.
+                A large part of my client and business work is confidential. The areas below show the range, scale and technical depth of the products I have worked on.
               </p>
             </div>
 
@@ -179,10 +182,27 @@ export default function JonathanPortfolioPage() {
                     </div>
                     <p className="max-w-2xl text-xl leading-8 text-white/80">{project.description}</p>
                     <div className="mt-10 border-t border-white/15 pt-6">
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/35">Key highlight</p>
+                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/35">Project experience</p>
                       <p className="mt-3 max-w-xl leading-7 text-white/60">{project.highlight}</p>
                     </div>
                   </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-white/10 bg-[#0a0a0a] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mx-auto max-w-[1400px]">
+            <div className="grid gap-8 border-b border-white/15 pb-8 lg:grid-cols-[.7fr_1.3fr]">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Range of work</p>
+              <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-6xl">From focused one-off builds to larger products with continued ownership.</h2>
+            </div>
+            <div className="grid md:grid-cols-2">
+              {projectRange.map(([title, text]) => (
+                <article key={title} className="border-b border-white/15 py-8 md:border-r md:px-8 md:first:pl-0">
+                  <h3 className="text-2xl font-semibold tracking-[-0.03em]">{title}</h3>
+                  <p className="mt-4 max-w-xl leading-7 text-white/50">{text}</p>
                 </article>
               ))}
             </div>
@@ -209,44 +229,6 @@ export default function JonathanPortfolioPage() {
           </div>
         </section>
 
-        <section className="border-y border-white/10 bg-[#0a0a0a] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-          <div className="mx-auto max-w-[1400px]">
-            <div className="grid gap-8 border-b border-white/15 pb-8 lg:grid-cols-[.7fr_1.3fr]">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Experience</p>
-              <h2 className="text-4xl font-semibold tracking-[-0.045em] sm:text-6xl">Technical delivery backed by commercial and strategic experience.</h2>
-            </div>
-            <div>
-              {experience.map(([year, role, company, text]) => (
-                <article key={`${role}-${company}`} className="grid gap-4 border-b border-white/15 py-8 md:grid-cols-[120px_.9fr_1.1fr]">
-                  <p className="text-sm text-white/30">{year}</p>
-                  <div>
-                    <h3 className="text-xl font-semibold">{role}</h3>
-                    <p className="mt-2 text-sm uppercase tracking-[0.12em] text-lime-300">{company}</p>
-                  </div>
-                  <p className="leading-7 text-white/50">{text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-          <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-[.7fr_1.3fr]">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Certificates</p>
-              <h2 className="mt-4 text-5xl font-black uppercase tracking-[-0.055em] sm:text-7xl">Always learning.</h2>
-            </div>
-            <div className="divide-y divide-white/15 border-y border-white/15">
-              {certificates.map((certificate, index) => (
-                <div key={certificate} className="flex items-center justify-between gap-5 py-5">
-                  <span className="text-lg text-white/75">{certificate}</span>
-                  <span className="text-xs uppercase tracking-[0.14em] text-white/25">0{index + 1}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="px-5 pb-8 sm:px-8 lg:px-12 lg:pb-12">
           <div className="mx-auto max-w-[1400px] overflow-hidden rounded-[34px] bg-lime-300 px-6 py-12 text-black sm:px-10 lg:px-14 lg:py-16">
             <p className="text-xs font-semibold uppercase tracking-[0.2em]">Have a project in mind?</p>
@@ -255,7 +237,7 @@ export default function JonathanPortfolioPage() {
             </h2>
             <div className="mt-10 flex flex-col justify-between gap-8 border-t border-black/20 pt-7 lg:flex-row lg:items-end">
               <p className="max-w-2xl text-lg leading-8 text-black/65">
-                Small initial budgets are not automatically a deal-breaker when the product, people and long-term potential make sense.
+                Whether it is a small first release or a more ambitious product, I care about clear scope, fast progress and software that remains useful after launch.
               </p>
               <a href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Jonathan%20Kokalj" className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.14em]">
                 Start a conversation <Mail size={18} />
