@@ -1,21 +1,20 @@
 /**
- * Zentrale Markenkonfiguration.
+ * Central brand configuration.
  *
- * Der Markenname wird ausschließlich über diese Datei referenziert —
- * eine Änderung hier benennt die gesamte Website um.
+ * The brand name is referenced through this file across the website.
  */
 export const SITE = {
   name: 'Vantura',
-  claim: 'Bessere Entscheidungen beginnen mit besseren Daten.',
+  claim: 'Better decisions start with better data.',
   description:
-    'Wir entwickeln Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen, die schneller verstehen wollen, was in ihrem Geschäft passiert.',
+    'We build reporting, dashboard and automation solutions for companies that want to understand what is happening in their business faster.',
   email: 'jk@vantura-studios.com',
   url: 'https://vantura-studios.com',
-  locale: 'de_DE',
+  locale: 'en_US',
 } as const
 
 export const MAIL_SUBJECT = encodeURIComponent(
-  `Erstgespräch: Reporting & Daten (${SITE.name})`
+  `Introductory call: Reporting & Data (${SITE.name})`
 )
 
 export const CONTACT_HREF = `mailto:${SITE.email}?subject=${MAIL_SUBJECT}`

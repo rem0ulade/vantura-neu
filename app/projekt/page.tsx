@@ -16,80 +16,80 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Ich baue dein Projekt | Vantura Studios',
+  title: 'I Build Your Project | Vantura Studios',
   description:
-    'Von der Idee bis zum fertigen Produkt: Apps, Web-Apps, interne Tools, Automationen und MVPs – konzipiert, entwickelt und veröffentlicht von Vantura Studios.',
+    'From the first idea to a finished product: apps, web apps, internal tools, automations and MVPs — designed, developed and launched by Vantura Studios.',
 }
 
 const services = [
   {
     icon: Smartphone,
-    title: 'Apps & Web-Apps',
-    text: 'Produkte für Mobile und Web – responsiv, schnell und auf echte Nutzung ausgelegt.',
+    title: 'Apps & Web Apps',
+    text: 'Products for mobile and web — responsive, fast and designed for real-world use.',
   },
   {
     icon: Blocks,
-    title: 'MVPs & Prototypen',
-    text: 'Eine Idee wird zu einer testbaren ersten Version, ohne monatelange Vorarbeit.',
+    title: 'MVPs & Prototypes',
+    text: 'Turn an idea into a testable first version without months of preparation.',
   },
   {
     icon: Workflow,
-    title: 'Automationen',
-    text: 'Wiederkehrende Abläufe, Schnittstellen und KI-Workflows, die manuelle Arbeit reduzieren.',
+    title: 'Automations',
+    text: 'Recurring workflows, integrations and AI processes that reduce manual work.',
   },
   {
     icon: Gauge,
-    title: 'Interne Tools',
-    text: 'Dashboards, Kalkulatoren, Portale und operative Werkzeuge, die exakt zum Prozess passen.',
+    title: 'Internal Tools',
+    text: 'Dashboards, calculators, portals and operational tools built around your exact process.',
   },
   {
     icon: LifeBuoy,
-    title: 'Projekt-Rettung',
-    text: 'Halbfertige, festgefahrene oder instabile Projekte analysieren, ordnen und fertigstellen.',
+    title: 'Project Rescue',
+    text: 'Analyse, stabilise and finish incomplete, stalled or unreliable software projects.',
   },
   {
     icon: Bot,
-    title: 'KI-Features',
-    text: 'Sinnvolle KI-Funktionen, Agenten und lokale Modelle direkt in bestehende Produkte integrieren.',
+    title: 'AI Features',
+    text: 'Integrate useful AI features, agents and local models directly into existing products.',
   },
 ]
 
 const steps = [
-  ['01', 'Verstehen', 'Wir klären Ziel, Nutzer, Ausgangslage und was die erste gute Version wirklich können muss.'],
-  ['02', 'Strukturieren', 'Du bekommst einen klaren Umfang, eine technische Richtung und priorisierte nächste Schritte.'],
-  ['03', 'Bauen', 'Ich entwickle in kurzen Etappen und zeige früh sichtbare, nutzbare Ergebnisse.'],
-  ['04', 'Veröffentlichen', 'Deployment, technische Einrichtung, Übergabe und eine saubere Grundlage für den Betrieb.'],
+  ['01', 'Understand', 'We clarify the goal, users, current situation and what the first strong version truly needs.'],
+  ['02', 'Structure', 'You receive a clear scope, technical direction and prioritised next steps.'],
+  ['03', 'Build', 'I develop in short iterations and show visible, usable results early.'],
+  ['04', 'Launch', 'Deployment, technical setup, handover and a clean foundation for ongoing operation.'],
 ]
 
 const principles = [
-  'Direkter Kontakt mit dem Entwickler statt Agentur-Stille',
-  'Frühe Prototypen statt monatelanger Konzeptphasen',
-  'Klare Prioritäten und transparente Entscheidungen',
-  'Bestehende Systeme werden genutzt, wenn das sinnvoller ist',
-  'Datenschutz und lokale KI-Lösungen werden von Anfang an mitgedacht',
-  'Nach dem Launch bleibt das Projekt verständlich und erweiterbar',
+  'Direct contact with the developer instead of agency silence',
+  'Early prototypes instead of months of concept work',
+  'Clear priorities and transparent decisions',
+  'Existing systems are reused whenever that is the smarter option',
+  'Privacy and local AI solutions are considered from the beginning',
+  'After launch, the project remains understandable and extendable',
 ]
 
 export default function ProjectPage() {
   return (
-    <div className="min-h-screen bg-white text-ink">
+    <div className="min-h-screen bg-white text-ink" lang="en">
       <header className="border-b border-line bg-white/90 backdrop-blur">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
           <Link href="/" className="text-[17px] font-semibold tracking-tight">
             Vantura Studios
           </Link>
           <div className="flex items-center gap-5">
-            <a href="#leistungen" className="hidden text-sm font-medium text-muted hover:text-ink sm:block">
-              Leistungen
+            <a href="#services" className="hidden text-sm font-medium text-muted hover:text-ink sm:block">
+              Services
             </a>
-            <a href="#prozess" className="hidden text-sm font-medium text-muted hover:text-ink sm:block">
-              Prozess
+            <a href="#process" className="hidden text-sm font-medium text-muted hover:text-ink sm:block">
+              Process
             </a>
             <a
-              href="mailto:hello@vantura-studios.com?subject=Projektanfrage"
+              href="mailto:hello@vantura-studios.com?subject=Project enquiry"
               className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-white transition hover:bg-navy"
             >
-              Projekt anfragen
+              Start a project
             </a>
           </div>
         </nav>
@@ -100,26 +100,26 @@ export default function ProjectPage() {
           <div className="mx-auto grid max-w-6xl gap-14 px-6 py-20 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:py-28">
             <div className="flex flex-col justify-center">
               <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-line bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-muted">
-                <Code2 size={14} /> Produktentwicklung mit Vantura
+                <Code2 size={14} /> Product development with Vantura
               </div>
               <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-ink sm:text-6xl lg:text-7xl">
-                Du hast die Idee. Ich baue dein Projekt.
+                You have the idea. I build the product.
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-muted sm:text-xl">
-                Apps, Web-Apps, interne Tools, Automationen und MVPs – von der ersten Struktur bis zum fertigen, nutzbaren Produkt.
+                Apps, web apps, internal tools, automations and MVPs — from the first structure to a finished, usable product.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="mailto:hello@vantura-studios.com?subject=Projektidee besprechen"
+                  href="mailto:hello@vantura-studios.com?subject=Discuss a project idea"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-navy"
                 >
-                  Idee besprechen <ArrowRight size={17} />
+                  Discuss your idea <ArrowRight size={17} />
                 </a>
                 <a
-                  href="#leistungen"
+                  href="#services"
                   className="inline-flex items-center justify-center rounded-full border border-line bg-white px-6 py-3.5 text-sm font-semibold text-ink transition hover:bg-stone-50"
                 >
-                  Was ich baue
+                  What I build
                 </a>
               </div>
             </div>
@@ -132,16 +132,16 @@ export default function ProjectPage() {
                   </div>
                   <div className="mt-10 grid gap-3">
                     <div className="rounded-2xl bg-white/10 p-4">
-                      <p className="text-xs text-white/50">01 · Produkt</p>
-                      <p className="mt-1 font-semibold">MVP & Nutzerfluss</p>
+                      <p className="text-xs text-white/50">01 · Product</p>
+                      <p className="mt-1 font-semibold">MVP & user flow</p>
                     </div>
                     <div className="ml-8 rounded-2xl bg-white p-4 text-ink">
-                      <p className="text-xs text-muted">02 · Entwicklung</p>
-                      <p className="mt-1 font-semibold">App, Backend & Integrationen</p>
+                      <p className="text-xs text-muted">02 · Development</p>
+                      <p className="mt-1 font-semibold">App, backend & integrations</p>
                     </div>
                     <div className="ml-16 rounded-2xl bg-white/10 p-4">
                       <p className="text-xs text-white/50">03 · Launch</p>
-                      <p className="mt-1 font-semibold">Deployment & Übergabe</p>
+                      <p className="mt-1 font-semibold">Deployment & handover</p>
                     </div>
                   </div>
                 </div>
@@ -152,8 +152,8 @@ export default function ProjectPage() {
                     <Check size={18} />
                   </span>
                   <div>
-                    <p className="text-xs text-muted">Ziel</p>
-                    <p className="font-semibold">Schnell etwas Nutzbares schaffen</p>
+                    <p className="text-xs text-muted">Goal</p>
+                    <p className="font-semibold">Create something useful, quickly</p>
                   </div>
                 </div>
               </div>
@@ -161,14 +161,14 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section id="leistungen" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
+        <section id="services" className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Was ich für dich baue</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">What I build for you</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
-              Nicht nur Websites. Echte digitale Produkte.
+              Not just websites. Real digital products.
             </h2>
             <p className="mt-5 text-lg leading-8 text-muted">
-              Vom kleinen internen Werkzeug bis zum vollständigen Softwareprodukt. Der Umfang richtet sich nach dem Problem – nicht nach einem starren Agenturpaket.
+              From a small internal tool to a complete software product. The scope follows the problem — not a rigid agency package.
             </p>
           </div>
 
@@ -185,16 +185,16 @@ export default function ProjectPage() {
           </div>
         </section>
 
-        <section id="prozess" className="border-y border-line bg-ink text-white">
+        <section id="process" className="border-y border-line bg-ink text-white">
           <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-24">
             <div className="grid gap-12 lg:grid-cols-[.8fr_1.2fr]">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/50">So entsteht dein Projekt</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/50">How your project is built</p>
                 <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em] sm:text-5xl">
-                  Klarer Prozess. Frühe Ergebnisse.
+                  Clear process. Early results.
                 </h2>
                 <p className="mt-5 text-lg leading-8 text-white/65">
-                  Du sollst nicht wochenlang auf eine Präsentation warten. Wir arbeiten auf eine funktionierende Version hin, die du sehen, testen und verbessern kannst.
+                  You should not wait weeks for a presentation. We work towards a functioning version you can see, test and improve.
                 </p>
               </div>
 
@@ -214,10 +214,10 @@ export default function ProjectPage() {
         <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
           <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Zusammenarbeit</p>
-              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em]">Technisch stark. Persönlich unkompliziert.</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Collaboration</p>
+              <h2 className="mt-4 text-4xl font-semibold tracking-[-0.035em]">Technically strong. Easy to work with.</h2>
               <p className="mt-5 text-lg leading-8 text-muted">
-                Du arbeitest direkt mit mir. Kein aufgeblähtes Projektteam, keine Weitergabe durch mehrere Ebenen und kein Fachjargon ohne Nutzen.
+                You work directly with me. No oversized project team, no hand-offs through multiple layers and no jargon without value.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -237,36 +237,36 @@ export default function ProjectPage() {
           <div className="mx-auto grid max-w-6xl gap-6 px-6 py-16 sm:grid-cols-3 lg:px-8">
             <div className="rounded-[24px] border border-line bg-white p-6">
               <Rocket className="mb-5" />
-              <h3 className="font-semibold">Neue Idee</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">Aus einer groben Idee wird ein klar umrissenes und testbares Produkt.</p>
+              <h3 className="font-semibold">New idea</h3>
+              <p className="mt-2 text-sm leading-6 text-muted">Turn a rough idea into a clearly scoped, testable product.</p>
             </div>
             <div className="rounded-[24px] border border-line bg-white p-6">
               <Layers3 className="mb-5" />
-              <h3 className="font-semibold">Bestehendes Projekt</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">Bestehender Code wird geprüft, stabilisiert, erweitert oder gezielt neu aufgebaut.</p>
+              <h3 className="font-semibold">Existing project</h3>
+              <p className="mt-2 text-sm leading-6 text-muted">Review, stabilise, extend or selectively rebuild an existing codebase.</p>
             </div>
             <div className="rounded-[24px] border border-line bg-white p-6">
               <ShieldCheck className="mb-5" />
-              <h3 className="font-semibold">Sensible Daten</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">Datenschutzfreundliche Architektur und lokale KI sind bei Bedarf Teil der Lösung.</p>
+              <h3 className="font-semibold">Sensitive data</h3>
+              <p className="mt-2 text-sm leading-6 text-muted">Privacy-friendly architecture and local AI can be part of the solution.</p>
             </div>
           </div>
         </section>
 
-        <section className="px-6 py-20 text-center lg:px-8 lg:py-28">
+        <section className="px-6 py-20 text-center lg:px-8 lg:py-24">
           <div className="mx-auto max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Bereit, etwas zu bauen?</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-muted">Ready to build something?</p>
             <h2 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-6xl">
-              Erzähl mir, was dein Projekt können soll.
+              Tell me what your project should do.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
-              Auch eine unfertige Idee reicht. Ich helfe dir, daraus einen realistischen ersten Umfang und einen klaren nächsten Schritt zu machen.
+              An unfinished idea is enough. I will help turn it into a realistic first scope and a clear next step.
             </p>
             <a
-              href="mailto:hello@vantura-studios.com?subject=Ich möchte ein Projekt bauen"
+              href="mailto:hello@vantura-studios.com?subject=I want to build a project"
               className="mt-9 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-navy"
             >
-              Projekt starten <ArrowRight size={17} />
+              Start your project <ArrowRight size={17} />
             </a>
           </div>
         </section>
