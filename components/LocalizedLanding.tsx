@@ -14,10 +14,10 @@ const copy = {
     footer: 'Built with clarity, speed and a strong sense for the actual business problem.',
     items: [
       { title: 'Reporting & Dashboards', label: 'Data systems', description: 'Turn scattered numbers into clear decisions, forecasts and automated reporting.', href: '/reporting/', icon: BarChart3, size: 'lg:col-span-7 lg:row-span-2', visual: 'dashboard' },
+      { title: 'AI Workspace', label: 'Meet Grace', description: 'A workspace for orchestrating AI agents, tools and local models in one place.', href: 'https://meet-grace.com/', icon: Sparkles, size: 'lg:col-span-4', visual: 'ai' },
       { title: 'Projects', label: 'Custom software', description: 'Apps, internal tools, automations, MVPs and product rescue — from idea to launch.', href: '/projects/', icon: Code2, size: 'lg:col-span-5 lg:row-span-2', visual: 'project' },
       { title: 'Websites', label: 'Digital presence', description: 'Focused, modern websites designed to look sharp and turn attention into action.', href: '/websites/', icon: Globe2, size: 'lg:col-span-5', visual: 'website' },
       { title: 'Portfolio', label: 'Selected work', description: 'A closer look at concepts, interfaces and practical solutions built by Vantura.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, size: 'lg:col-span-3', visual: 'portfolio' },
-      { title: 'AI Workspace', label: 'Meet Grace', description: 'A workspace for orchestrating AI agents, tools and local models in one place.', href: 'https://meet-grace.com/', icon: Sparkles, size: 'lg:col-span-4', visual: 'ai' },
     ],
   },
   de: {
@@ -28,10 +28,10 @@ const copy = {
     footer: 'Gebaut mit Klarheit, Geschwindigkeit und einem starken Blick für das eigentliche Business-Problem.',
     items: [
       { title: 'Reporting & Dashboards', label: 'Datensysteme', description: 'Aus verteilten Zahlen werden klare Entscheidungen, Forecasts und automatisierte Reports.', href: '/de/reporting/', icon: BarChart3, size: 'lg:col-span-7 lg:row-span-2', visual: 'dashboard' },
+      { title: 'AI Workspace', label: 'Meet Grace', description: 'Ein Workspace, der AI Agents, Tools und lokale Modelle an einem Ort orchestriert.', href: 'https://meet-grace.com/', icon: Sparkles, size: 'lg:col-span-4', visual: 'ai' },
       { title: 'Projekte', label: 'Individuelle Software', description: 'Apps, interne Tools, Automationen, MVPs und Projekt-Rettung – von der Idee bis zum Launch.', href: '/de/projects/', icon: Code2, size: 'lg:col-span-5 lg:row-span-2', visual: 'project' },
       { title: 'Websites', label: 'Digitaler Auftritt', description: 'Moderne Websites, die stark aussehen und Aufmerksamkeit in echte Anfragen verwandeln.', href: '/de/websites/', icon: Globe2, size: 'lg:col-span-5', visual: 'website' },
       { title: 'Portfolio', label: 'Ausgewählte Arbeiten', description: 'Konzepte, Interfaces und praktische Lösungen von Vantura im Detail.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, size: 'lg:col-span-3', visual: 'portfolio' },
-      { title: 'AI Workspace', label: 'Meet Grace', description: 'Ein Workspace, der AI Agents, Tools und lokale Modelle an einem Ort orchestriert.', href: 'https://meet-grace.com/', icon: Sparkles, size: 'lg:col-span-4', visual: 'ai' },
     ],
   },
 } as const
