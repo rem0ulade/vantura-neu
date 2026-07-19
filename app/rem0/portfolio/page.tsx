@@ -19,6 +19,7 @@ const projects = [
       'A complex product architecture designed to coordinate multiple specialised agents, tools and model providers inside one coherent workspace.',
     tags: ['React Native', 'Desktop', 'AI Agents', 'LLM APIs', 'Tool Calling'],
     accent: 'from-violet-500/30 via-fuchsia-500/10 to-transparent',
+    href: 'https://meet-grace.com',
   },
   {
     number: '02',
@@ -169,7 +170,13 @@ export default function JonathanPortfolioPage() {
                   <div className="text-sm font-semibold text-white/25">{project.number}</div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lime-300">{project.type}</p>
-                    <h3 className="mt-4 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">{project.title}</h3>
+                    <h3 className="mt-4 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
+                      {project.href ? (
+                        <a href={project.href} target="_blank" rel="noreferrer" className="transition hover:text-lime-300">
+                          {project.title}
+                        </a>
+                      ) : project.title}
+                    </h3>
                     <div className="mt-7 flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span key={tag} className="rounded-full border border-white/15 px-3 py-1 text-[11px] uppercase tracking-[0.1em] text-white/55">{tag}</span>
@@ -177,9 +184,15 @@ export default function JonathanPortfolioPage() {
                     </div>
                   </div>
                   <div className={`relative overflow-hidden rounded-[28px] border border-white/10 bg-gradient-to-br ${project.accent} p-7 sm:p-9`}>
-                    <div className="absolute right-6 top-6 text-white/20 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white/60">
-                      <ArrowUpRight size={30} />
-                    </div>
+                    {project.href ? (
+                      <a href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`} className="absolute right-6 top-6 z-10 text-white/20 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white/60">
+                        <ArrowUpRight size={30} />
+                      </a>
+                    ) : (
+                      <div className="absolute right-6 top-6 text-white/20">
+                        <ArrowUpRight size={30} />
+                      </div>
+                    )}
                     <p className="max-w-2xl text-xl leading-8 text-white/80">{project.description}</p>
                     <div className="mt-10 border-t border-white/15 pt-6">
                       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/35">Project experience</p>
