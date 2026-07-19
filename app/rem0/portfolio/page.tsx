@@ -2,10 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   ArrowRight,
-  Bot,
   BrainCircuit,
   Code2,
-  Database,
   Github,
   Globe2,
   Layers3,
@@ -17,9 +15,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Rem0 | App & Software Developer',
+  title: 'Jonathan Kokalj | App & Software Developer',
   description:
-    'Experienced German app and software developer building mobile apps, web products, AI integrations and automations.',
+    'Jonathan Kokalj is an experienced German app and software developer building mobile apps, web products, AI integrations and automations.',
 }
 
 const capabilities = [
@@ -84,19 +82,27 @@ const projects = [
   },
 ]
 
-export default function Rem0PortfolioPage() {
+export default function JonathanPortfolioPage() {
   return (
     <div className="min-h-screen bg-[#070711] text-[#f4f4ff]">
       <header className="sticky top-0 z-20 border-b border-white/10 bg-[#070711]/85 backdrop-blur-xl">
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-8">
-          <Link href="/rem0/portfolio" className="text-xl font-black tracking-[-0.04em]">
-            rem<span className="text-[#ff8b54]">0</span>
+          <Link href="/rem0/portfolio" className="text-lg font-bold tracking-[-0.03em]">
+            Jonathan Kokalj
           </Link>
           <div className="flex items-center gap-5 text-sm text-white/60">
             <a href="#work" className="hidden hover:text-white sm:block">Work</a>
             <a href="#skills" className="hidden hover:text-white sm:block">Skills</a>
             <a
-              href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Rem0"
+              href="https://github.com/rem0ulade"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden items-center gap-2 hover:text-white sm:inline-flex"
+            >
+              <Github size={15} /> GitHub
+            </a>
+            <a
+              href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Jonathan%20Kokalj"
               className="rounded-full border border-white/15 bg-white/5 px-4 py-2 font-semibold text-white transition hover:bg-white/10"
             >
               Let&apos;s talk
@@ -122,6 +128,9 @@ export default function Rem0PortfolioPage() {
                 <a href="#work" className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#070711]">
                   View selected work <ArrowRight size={17} />
                 </a>
+                <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10">
+                  View GitHub <Github size={16} />
+                </a>
                 <a href="mailto:jk@vantura-studios.com" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10">
                   Start a conversation <Mail size={16} />
                 </a>
@@ -133,8 +142,8 @@ export default function Rem0PortfolioPage() {
             </div>
 
             <aside className="rounded-[28px] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.03] p-7 shadow-2xl shadow-black/30">
-              <div className="grid h-20 w-20 place-items-center rounded-3xl bg-gradient-to-br from-sky-400 via-violet-400 to-orange-400 text-2xl font-black">R0</div>
-              <h2 className="mt-6 text-2xl font-semibold tracking-tight">Rem0</h2>
+              <div className="grid h-20 w-20 place-items-center rounded-3xl bg-gradient-to-br from-sky-400 via-violet-400 to-orange-400 text-2xl font-black">JK</div>
+              <h2 className="mt-6 text-2xl font-semibold tracking-tight">Jonathan Kokalj</h2>
               <p className="mt-3 leading-7 text-white/60">
                 Independent app and software developer based near Hamburg, Germany. I combine product thinking with hands-on implementation and stay involved beyond the first release.
               </p>
@@ -232,7 +241,7 @@ export default function Rem0PortfolioPage() {
                   Small initial budgets are not automatically a deal-breaker when the project, people and long-term potential make sense.
                 </p>
               </div>
-              <a href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Rem0" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#070711]">
+              <a href="mailto:jk@vantura-studios.com?subject=Project%20inquiry%20for%20Jonathan%20Kokalj" className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#070711]">
                 Email me <Mail size={17} />
               </a>
             </div>
@@ -242,10 +251,10 @@ export default function Rem0PortfolioPage() {
 
       <footer className="border-t border-white/10 px-6 py-8 text-sm text-white/40 lg:px-8">
         <div className="mx-auto flex max-w-6xl flex-col justify-between gap-4 sm:flex-row">
-          <span>© 2026 Rem0 · A Vantura Studios portfolio</span>
+          <span>© 2026 Jonathan Kokalj · Vantura Studios</span>
           <div className="flex gap-5">
             <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 hover:text-white">
-              <Github size={15} /> GitHub
+              <Github size={15} /> github.com/rem0ulade
             </a>
             <Link href="/" className="hover:text-white">Vantura Studios</Link>
           </div>
