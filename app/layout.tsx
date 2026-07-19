@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     'Reporting',
     'Dashboards',
     'Business Intelligence',
-    'Automatisierung',
+    'Automation',
     'Forecasting',
     'KPI',
-    'Datenanalyse',
+    'Data Analysis',
     'Controlling',
   ],
   openGraph: {
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html lang="en" className={inter.variable}>
       <body className="font-sans">{children}</body>
     </html>
   )
