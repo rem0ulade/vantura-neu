@@ -21,6 +21,9 @@ export function Footer() {
                 {link.label}
               </a>
             ))}
+            <Link href="/websites/" className="transition-colors hover:text-ink">
+              Websites
+            </Link>
           </nav>
         </div>
 
