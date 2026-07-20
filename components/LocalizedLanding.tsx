@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowUpRight, BarChart3, BriefcaseBusiness, Code2, Globe2, Sparkles } from 'lucide-react'
+import { ArrowUpRight, BarChart3, BriefcaseBusiness, Code2, Palette, Sparkles } from 'lucide-react'
 import { LanguageRedirect } from './LanguageRedirect'
 import { LanguageSwitch } from './LanguageSwitch'
 
@@ -15,9 +15,9 @@ const copy = {
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting systems, forecasts and dashboards that turn scattered information into decisions.', href: '/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projects', label: 'Product Studio', description: 'Apps, internal tools, automations and MVPs — designed, built and launched around the real problem.', href: '/projects/', icon: Code2, visual: 'software' },
-      { word: 'Web Design', title: 'Websites', label: 'Web Atelier', description: 'Focused websites with a clear position, strong visual direction and a direct path to action.', href: '/websites/', icon: Globe2, visual: 'web' },
+      { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Web design, campaign creatives, ads, banners and visual systems for a clear and coherent brand presence.', href: '/design/', icon: Palette, visual: 'design' },
       { word: 'AI', title: 'AI Workspace', label: 'Meet Grace', description: 'A workspace for orchestrating AI agents, tools and local models in one place.', href: 'https://meet-grace.com/', icon: Sparkles, visual: 'ai' },
-      { word: 'Portfolio', title: 'Selected work', label: 'Portfolio', description: 'Concepts, interfaces and practical solutions built across data, software, AI and the web.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
+      { word: 'Portfolio', title: 'Selected work', label: 'Portfolio', description: 'Concepts, interfaces and practical solutions built across data, software, AI and design.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
     ],
   },
   de: {
@@ -28,9 +28,9 @@ const copy = {
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting-Systeme, Forecasts und Dashboards, die verteilte Informationen in Entscheidungen übersetzen.', href: '/de/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projekte', label: 'Product Studio', description: 'Apps, interne Tools, Automationen und MVPs — geplant, gebaut und veröffentlicht rund um das echte Problem.', href: '/de/projects/', icon: Code2, visual: 'software' },
-      { word: 'Web Design', title: 'Websites', label: 'Web Atelier', description: 'Fokussierte Websites mit klarer Positionierung, starker Gestaltung und einem direkten Weg zur Anfrage.', href: '/de/websites/', icon: Globe2, visual: 'web' },
+      { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Webdesign, Kampagnenmotive, Ads, Banner und visuelle Systeme für einen klaren, konsistenten Markenauftritt.', href: '/de/design/', icon: Palette, visual: 'design' },
       { word: 'AI', title: 'AI Workspace', label: 'Meet Grace', description: 'Ein Workspace, der AI Agents, Tools und lokale Modelle an einem Ort orchestriert.', href: 'https://meet-grace.com/', icon: Sparkles, visual: 'ai' },
-      { word: 'Portfolio', title: 'Ausgewählte Arbeiten', label: 'Portfolio', description: 'Konzepte, Interfaces und praktische Lösungen aus Daten, Software, AI und Web.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
+      { word: 'Portfolio', title: 'Ausgewählte Arbeiten', label: 'Portfolio', description: 'Konzepte, Interfaces und praktische Lösungen aus Daten, Software, AI und Design.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
     ],
   },
 } as const
@@ -39,7 +39,7 @@ function Preview({ type }: { type: string }) {
   if (type === 'data') return <div className="grid h-full grid-cols-6 items-end gap-3 p-8">{[42,66,54,82,70,94].map((height,index)=><div key={index} className="rounded-t-2xl bg-blue-500/75 shadow-[0_12px_30px_rgba(59,130,246,.18)] transition-all duration-700" style={{height:`${height}%`}} />)}</div>
   if (type === 'ai') return <div className="relative h-full"><div className="absolute left-1/2 top-1/2 grid h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-violet-200 bg-white shadow-[0_0_80px_rgba(124,58,237,.25)]"><Sparkles className="text-violet-600" size={34}/></div>{[[20,24],[76,20],[18,75],[78,72]].map(([left,top],index)=><span key={index} className="absolute h-4 w-4 rounded-full bg-violet-300 shadow-[0_0_24px_rgba(124,58,237,.55)]" style={{left:`${left}%`,top:`${top}%`}} />)}</div>
   if (type === 'software') return <div className="flex h-full items-center justify-center p-8"><div className="w-full max-w-sm space-y-3">{['Concept','Build','Launch'].map((step,index)=><div key={step} className={`rounded-2xl border p-5 text-sm font-medium shadow-sm transition-all duration-500 ${index===1?'translate-x-5 border-slate-800 bg-slate-950 text-white':'border-white/80 bg-white/85'}`}>{step}<span className="float-right text-xs opacity-50">0{index+1}</span></div>)}</div></div>
-  if (type === 'web') return <div className="flex h-full items-center justify-center p-8"><div className="w-full max-w-md rotate-[-1deg] rounded-[28px] border-[8px] border-white bg-gradient-to-br from-amber-100 via-white to-rose-100 p-6 shadow-2xl"><div className="h-3 w-24 rounded-full bg-slate-800/70"/><div className="mt-10 h-20 rounded-2xl bg-slate-950"/><div className="mt-4 grid grid-cols-3 gap-3">{[1,2,3].map(item=><div key={item} className="h-14 rounded-xl bg-white/80 shadow-sm"/>)}</div></div></div>
+  if (type === 'design') return <div className="grid h-full grid-cols-2 gap-4 p-8"><div className="rounded-[28px] bg-gradient-to-br from-fuchsia-400 to-violet-600"/><div className="rounded-[28px] bg-white shadow-xl"/><div className="col-span-2 rounded-[28px] bg-amber-300"/></div>
   return <div className="grid h-full grid-cols-2 gap-4 p-8"><div className="rounded-[28px] bg-slate-950"/><div className="rounded-[28px] bg-blue-100"/><div className="rounded-[28px] bg-amber-100"/><div className="rounded-[28px] border border-white bg-white shadow-xl"/></div>
 }
 
