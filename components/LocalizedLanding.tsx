@@ -14,10 +14,10 @@ const copy = {
     open: 'Open space',
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting systems, forecasts and dashboards that turn scattered information into decisions.', href: '/reporting/', icon: BarChart3, visual: 'data' },
-      { word: 'AI', title: 'AI Workspace', label: 'Meet Grace', description: 'A workspace for orchestrating AI agents, tools and local models in one place.', href: 'https://meet-grace.com/', icon: Sparkles, visual: 'ai' },
       { word: 'Software', title: 'Projects', label: 'Product Studio', description: 'Apps, internal tools, automations and MVPs — designed, built and launched around the real problem.', href: '/projects/', icon: Code2, visual: 'software' },
-      { word: 'Web', title: 'Websites', label: 'Web Atelier', description: 'Focused websites with a clear position, strong visual direction and a direct path to action.', href: '/websites/', icon: Globe2, visual: 'web' },
-      { word: 'Work', title: 'Portfolio', label: 'Selected work', description: 'Concepts, interfaces and practical solutions built across data, software, AI and the web.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
+      { word: 'Web Design', title: 'Websites', label: 'Web Atelier', description: 'Focused websites with a clear position, strong visual direction and a direct path to action.', href: '/websites/', icon: Globe2, visual: 'web' },
+      { word: 'AI', title: 'AI Workspace', label: 'Meet Grace', description: 'A workspace for orchestrating AI agents, tools and local models in one place.', href: 'https://meet-grace.com/', icon: Sparkles, visual: 'ai' },
+      { word: 'Portfolio', title: 'Selected work', label: 'Portfolio', description: 'Concepts, interfaces and practical solutions built across data, software, AI and the web.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
     ],
   },
   de: {
@@ -26,11 +26,11 @@ const copy = {
     intro: 'Fünf Räume, in denen aus Business-Problemen klare Systeme, nützliche Produkte und starke digitale Erlebnisse werden.',
     open: 'Raum öffnen',
     items: [
-      { word: 'Daten', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting-Systeme, Forecasts und Dashboards, die verteilte Informationen in Entscheidungen übersetzen.', href: '/de/reporting/', icon: BarChart3, visual: 'data' },
-      { word: 'AI', title: 'AI Workspace', label: 'Meet Grace', description: 'Ein Workspace, der AI Agents, Tools und lokale Modelle an einem Ort orchestriert.', href: 'https://meet-grace.com/', icon: Sparkles, visual: 'ai' },
+      { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting-Systeme, Forecasts und Dashboards, die verteilte Informationen in Entscheidungen übersetzen.', href: '/de/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projekte', label: 'Product Studio', description: 'Apps, interne Tools, Automationen und MVPs — geplant, gebaut und veröffentlicht rund um das echte Problem.', href: '/de/projects/', icon: Code2, visual: 'software' },
-      { word: 'Web', title: 'Websites', label: 'Web Atelier', description: 'Fokussierte Websites mit klarer Positionierung, starker Gestaltung und einem direkten Weg zur Anfrage.', href: '/de/websites/', icon: Globe2, visual: 'web' },
-      { word: 'Arbeiten', title: 'Portfolio', label: 'Ausgewählte Arbeiten', description: 'Konzepte, Interfaces und praktische Lösungen aus Daten, Software, AI und Web.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
+      { word: 'Web Design', title: 'Websites', label: 'Web Atelier', description: 'Fokussierte Websites mit klarer Positionierung, starker Gestaltung und einem direkten Weg zur Anfrage.', href: '/de/websites/', icon: Globe2, visual: 'web' },
+      { word: 'AI', title: 'AI Workspace', label: 'Meet Grace', description: 'Ein Workspace, der AI Agents, Tools und lokale Modelle an einem Ort orchestriert.', href: 'https://meet-grace.com/', icon: Sparkles, visual: 'ai' },
+      { word: 'Portfolio', title: 'Ausgewählte Arbeiten', label: 'Portfolio', description: 'Konzepte, Interfaces und praktische Lösungen aus Daten, Software, AI und Web.', href: '/rem0/portfolio/', icon: BriefcaseBusiness, visual: 'work' },
     ],
   },
 } as const
