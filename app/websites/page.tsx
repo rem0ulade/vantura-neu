@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { LocalizedServicePage } from '@/components/LocalizedServicePage'
 
 export const metadata: Metadata = {
-  title: 'Websites | Vantura',
-  description: 'Modern, mobile-first websites for small businesses and service providers.',
+  title: 'Web Design | Vantura Studios',
+  description: 'Responsive web design, landing pages and complete website implementation for small businesses and service providers.',
   alternates: { canonical: '/websites/', languages: { en: '/websites/', de: '/de/websites/' } },
 }
 
