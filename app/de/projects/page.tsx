@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { LocalizedServicePage } from '@/components/LocalizedServicePage'
+import { LocalizedProjectsPage } from '@/components/LocalizedProjectsPage'
 
 export const metadata: Metadata = {
   title: 'Projekte | Vantura Studios',
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function GermanProjectsPage() {
-  return <LocalizedServicePage locale="de" type="project" />
+  return <LocalizedProjectsPage locale="de" />
 }
