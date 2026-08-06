@@ -24,13 +24,13 @@ export function HeroDashboard() {
   const reduceMotion = useReducedMotion()
 
   return (
-    <div className="relative">
+    <div className="min-w-0">
       {/* Hauptkarte */}
       <motion.div
         initial={reduceMotion ? false : { opacity: 0, y: 32, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.9, delay: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
-        className="rounded-2xl border border-line bg-white p-5 shadow-soft sm:p-6"
+        className="rounded-2xl border border-line bg-white p-4 shadow-soft sm:p-6"
       >
         {/* Kopfzeile */}
         <div className="flex items-center justify-between">
@@ -41,19 +41,37 @@ export function HeroDashboard() {
             </span>
             <p className="text-sm font-semibold tracking-tight">Management-Cockpit</p>
           </div>
-          <p className="text-xs text-muted">Aktualisiert vor 2 Min.</p>
+          <p className="hidden text-xs text-muted min-[390px]:block">Aktualisiert vor 2 Min.</p>
         </div>
 
+        {/* Operativer Hinweis im Dashboard-Kontext */}
+        <motion.div
+          initial={reduceMotion ? false : { opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="mt-4 flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50/60 p-3 sm:p-4"
+        >
+          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white text-amber-500 shadow-sm">
+            <TrendingDown size={16} />
+          </span>
+          <div className="min-w-0">
+            <p className="text-xs font-semibold">Abweichung erkannt</p>
+            <p className="tnum mt-0.5 text-[11px] leading-relaxed text-muted">
+              Segment Nord: −6,3 % unter Forecast. Benachrichtigung gesendet — heute, 07:00 Uhr.
+            </p>
+          </div>
+        </motion.div>
+
         {/* KPI-Zeile */}
-        <div className="mt-5 grid grid-cols-3 gap-3">
+        <div className="mt-4 grid grid-cols-3 gap-1.5 sm:mt-5 sm:gap-3">
           {KPIS.map((kpi) => (
-            <div key={kpi.label} className="rounded-xl border border-line bg-paper/70 p-3">
-              <p className="truncate text-[11px] font-medium text-muted">{kpi.label}</p>
-              <p className="tnum mt-1 text-sm font-semibold tracking-tight sm:text-base">
+            <div key={kpi.label} className="min-w-0 rounded-xl border border-line bg-paper/70 p-2 sm:p-3">
+              <p className="truncate text-[9px] font-medium text-muted sm:text-[11px]">{kpi.label}</p>
+              <p className="tnum mt-1 truncate text-[11px] font-semibold tracking-tight sm:text-base">
                 {kpi.value}
               </p>
               <p
-                className={`tnum mt-0.5 flex items-center gap-1 text-[11px] font-medium ${
+                className={`tnum mt-0.5 flex items-center gap-0.5 text-[9px] font-medium sm:gap-1 sm:text-[11px] ${
                   kpi.up ? 'text-emerald-600' : 'text-muted'
                 }`}
               >
@@ -65,10 +83,10 @@ export function HeroDashboard() {
         </div>
 
         {/* Umsatzchart */}
-        <div className="mt-4 rounded-xl border border-line p-4">
+        <div className="mt-3 rounded-xl border border-line p-3 sm:mt-4 sm:p-4">
           <div className="flex items-center justify-between">
             <p className="text-xs font-semibold">Umsatzentwicklung</p>
-            <div className="flex items-center gap-4 text-[11px] text-muted">
+            <div className="hidden items-center gap-4 text-[11px] text-muted min-[390px]:flex">
               <span className="flex items-center gap-1.5">
                 <span className="h-0.5 w-4 rounded-full bg-accent" /> 2026
               </span>
@@ -116,10 +134,10 @@ export function HeroDashboard() {
         </div>
 
         {/* Budgetverbrauch */}
-        <div className="mt-4 grid grid-cols-3 gap-3">
+        <div className="mt-3 grid grid-cols-3 gap-1.5 sm:mt-4 sm:gap-3">
           {BUDGETS.map((b, i) => (
-            <div key={b.label} className="rounded-xl border border-line p-3">
-              <div className="flex items-center justify-between text-[11px]">
+            <div key={b.label} className="min-w-0 rounded-xl border border-line p-2 sm:p-3">
+              <div className="flex items-center justify-between gap-1 text-[9px] sm:text-[11px]">
                 <span className="font-medium text-muted">{b.label}</span>
                 <span className="tnum font-semibold">{b.pct} %</span>
               </div>
@@ -136,27 +154,6 @@ export function HeroDashboard() {
         </div>
       </motion.div>
 
-      {/* Schwebende Hinweiskarte */}
-      <motion.div
-        initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
-        className="absolute -bottom-6 -left-4 hidden rounded-xl border border-line bg-white p-4 shadow-soft sm:block lg:-left-10"
-      >
-        <div className="flex items-start gap-3">
-          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-50 text-amber-500">
-            <TrendingDown size={16} />
-          </span>
-          <div>
-            <p className="text-xs font-semibold">Abweichung erkannt</p>
-            <p className="tnum mt-0.5 text-[11px] leading-relaxed text-muted">
-              Segment Nord: −6,3 % unter Forecast.
-              <br />
-              Benachrichtigung gesendet — heute, 07:00 Uhr.
-            </p>
-          </div>
-        </div>
-      </motion.div>
     </div>
   )
 }
