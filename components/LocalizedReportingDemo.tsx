@@ -85,7 +85,7 @@ export function LocalizedReportingDemo({ locale }: { locale: Locale }) {
     <div className="mx-auto grid max-w-[1500px] lg:grid-cols-[240px_1fr]">
       <aside className="border-b border-white/10 bg-[#091426] px-4 py-4 lg:min-h-[calc(100vh-73px)] lg:border-b-0 lg:border-r lg:px-5 lg:py-6">
         <Link href={reportingHref} className="mb-5 hidden items-center gap-2 text-xs font-medium text-white/45 hover:text-white lg:flex"><ArrowLeft size={14}/>{t.back}</Link>
-        <nav className="flex gap-2 overflow-x-auto lg:flex-col">{(Object.keys(t.nav) as View[]).map(key=>{const Icon=icons[key];return <button key={key} onClick={()=>setView(key)} className={`flex shrink-0 items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm font-medium transition lg:w-full ${view===key?'bg-blue-500 text-white shadow-[0_12px_30px_rgba(59,130,246,.22)]':'text-white/55 hover:bg-white/5 hover:text-white'}`}><Icon size={17}/>{t.nav[key]}</button>})}</nav>
+        <nav className="flex gap-2 overflow-x-auto lg:flex-col">{(Object.keys(t.nav) as View[]).map(key=>{const Icon=icons[key];return <button key={key} type="button" aria-pressed={view===key} onClick={()=>setView(key)} className={`flex shrink-0 items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm font-medium transition lg:w-full ${view===key?'bg-blue-500 text-white shadow-[0_12px_30px_rgba(59,130,246,.22)]':'text-white/55 hover:bg-white/5 hover:text-white'}`}><Icon size={17}/>{t.nav[key]}</button>})}</nav>
         <div className="mt-6 hidden rounded-xl border border-white/10 bg-white/[.03] p-4 lg:block"><ShieldCheck size={18} className="text-blue-300"/><p className="mt-3 text-xs leading-5 text-white/45">{t.notice}</p></div>
       </aside>
 
