@@ -39,13 +39,19 @@ const projects = [
   {
     index: '02', label: 'Enterprise / NDA', title: 'Decision Systems', subtitle: 'Reporting, forecasting & calculation tools',
     description: 'Business-critical internal systems for a major German media company. Client data, interfaces and implementation details remain confidential; responsibilities and technical scope can still be discussed.',
-    tags: ['Data', 'Business Logic', 'Reporting', 'Forecasting', 'Internal Tools'], icon: BarChart3,
+    tags: ['Data', 'Business Logic', 'Reporting', 'Forecasting', 'Internal Tools'], href: 'https://vantura-studios.com/de/reporting/demo/', icon: BarChart3,
     tone: 'bg-[#eef4ff] text-slate-950',
   },
   {
     index: '03', label: 'Client work', title: 'Digital Business Builds', subtitle: 'Websites, tools & connected workflows',
     description: 'Selected work for smaller businesses and operational teams — from high-trust websites and reporting concepts to connected tools supporting sales, operations and day-to-day decisions.',
     tags: ['Next.js', 'Web', 'Reporting', 'Automation', 'Product Design'], icon: Layers3,
+    logos: [
+      { src: '/customer-logos/weischer-cinema.svg', alt: 'Weischer' },
+      { src: '/customer-logos/recruvia.svg', alt: 'Recruvia' },
+      { src: '/customer-logos/froehlich-nord.svg', alt: 'Fröhlich-Nord' },
+      { src: '/customer-logos/rgh-nord.svg', alt: 'RGH Nord' },
+    ],
     tone: 'bg-[#fff7ed] text-slate-950',
   },
 ]
@@ -124,7 +130,7 @@ export default function PortfolioTestPage() {
                 const card = <div data-tilt className={`showcase-tilt relative overflow-hidden rounded-[34px] border border-black/5 ${project.tone} p-7 sm:p-10 lg:p-12`}>
                   <div className="relative z-10 grid min-h-[430px] gap-10 lg:grid-cols-[.8fr_1.2fr]">
                     <div className="flex flex-col justify-between"><div className="flex items-center justify-between"><span className="text-xs font-semibold uppercase tracking-[.18em] opacity-55">{project.index} / {project.label}</span><Icon size={25} className="opacity-45"/></div><div><p className="text-sm font-medium opacity-55">{project.subtitle}</p><h3 className="mt-3 text-5xl font-semibold tracking-[-.055em] sm:text-7xl">{project.title}</h3></div></div>
-                    <div className="flex flex-col justify-end"><p className="max-w-2xl text-xl leading-8 opacity-75 sm:text-2xl sm:leading-9">{project.description}</p><div className="mt-8 flex flex-wrap gap-2">{project.tags.map((tag)=><span key={tag} className="rounded-full border border-current/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[.1em] opacity-60">{tag}</span>)}</div>{project.href && <div className="mt-9 inline-flex items-center gap-2 text-sm font-semibold">Open product <ArrowUpRight size={16}/></div>}</div>
+                    <div className="flex flex-col justify-end"><p className="max-w-2xl text-xl leading-8 opacity-75 sm:text-2xl sm:leading-9">{project.description}</p><div className="mt-8 flex flex-wrap gap-2">{project.tags.map((tag)=><span key={tag} className="rounded-full border border-current/15 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[.1em] opacity-60">{tag}</span>)}</div>{project.logos && <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">{project.logos.map((logo)=><div key={logo.src} className="flex h-20 items-center justify-center rounded-2xl border border-current/10 bg-white/75 p-4"><img src={logo.src} alt={logo.alt} className="h-full w-full object-contain" /></div>)}</div>}{project.href && <div className="mt-9 inline-flex items-center gap-2 text-sm font-semibold">Open product <ArrowUpRight size={16}/></div>}</div>
                   </div><div className="scan-line pointer-events-none absolute bottom-14 left-0 h-px w-full opacity-50"/>
                 </div>
                 return project.href ? <a key={project.title} data-reveal href={project.href} target="_blank" rel="noreferrer" className="block">{card}</a> : <div key={project.title} data-reveal>{card}</div>
