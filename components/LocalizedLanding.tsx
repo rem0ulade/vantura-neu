@@ -2,27 +2,29 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, ArrowUpRight, BarChart3, Code2, Palette } from 'lucide-react'
+import { ArrowRight, ArrowUpRight, BarChart3, BrainCircuit, Code2, Palette } from 'lucide-react'
 import { LanguageRedirect } from './LanguageRedirect'
 import { LanguageSwitch } from './LanguageSwitch'
 
 const copy = {
   en: {
-    eyebrow: 'Vantura Studios', title: 'Enter the studio.', intro: 'Three spaces for turning business problems into clear systems, useful products and strong digital experiences.', open: 'Open space',
+    eyebrow: 'Vantura Studios', title: 'Enter the studio.', intro: 'Four spaces for turning business problems into clear systems, useful products and strong digital experiences.', open: 'Open space',
     portfolio: 'Selected work by Jonathan Kokalj', portfolioText: 'Software, data systems, AI products and selected client work.', portfolioCta: 'View portfolio',
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting systems, forecasts and dashboards that turn scattered information into decisions.', href: '/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projects', label: 'Product Studio', description: 'Apps, internal tools, automations and MVPs — designed, built and launched around the real problem.', href: '/projects/', icon: Code2, visual: 'software' },
       { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Web design, campaign creatives, ads, banners and visual systems for a clear and coherent brand presence.', href: '/design/', icon: Palette, visual: 'design' },
+      { word: 'AI', title: 'Applied AI & Agents', label: 'AI Lab', description: 'Privacy-first AI systems, agents, local models and hybrid architectures built around real business workflows.', href: '/ai/', icon: BrainCircuit, visual: 'ai' },
     ],
   },
   de: {
-    eyebrow: 'Vantura Studios', title: 'Betritt das Studio.', intro: 'Drei Räume, in denen aus Business-Problemen klare Systeme, nützliche Produkte und starke digitale Erlebnisse werden.', open: 'Raum öffnen',
+    eyebrow: 'Vantura Studios', title: 'Betritt das Studio.', intro: 'Vier Räume, in denen aus Business-Problemen klare Systeme, nützliche Produkte und starke digitale Erlebnisse werden.', open: 'Raum öffnen',
     portfolio: 'Ausgewählte Arbeiten von Jonathan Kokalj', portfolioText: 'Software, Datensysteme, KI-Produkte und ausgewählte Kundenprojekte.', portfolioCta: 'Portfolio ansehen',
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting-Systeme, Forecasts und Dashboards, die verteilte Informationen in Entscheidungen übersetzen.', href: '/de/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projekte', label: 'Product Studio', description: 'Apps, interne Tools, Automationen und MVPs — geplant, gebaut und veröffentlicht rund um das echte Problem.', href: '/de/projects/', icon: Code2, visual: 'software' },
       { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Webdesign, Kampagnenmotive, Ads, Banner und visuelle Systeme für einen klaren, konsistenten Markenauftritt.', href: '/de/design/', icon: Palette, visual: 'design' },
+      { word: 'AI', title: 'Applied AI & Agents', label: 'AI Lab', description: 'Datenschutzorientierte KI-Systeme, Agenten, lokale Modelle und hybride Architekturen für echte Geschäftsprozesse.', href: '/de/ai/', icon: BrainCircuit, visual: 'ai' },
     ],
   },
 } as const
@@ -31,6 +33,7 @@ function Preview({ type }: { type: string }) {
   if (type === 'data') return <div className="grid h-full grid-cols-6 items-end gap-3 p-8">{[42,66,54,82,70,94].map((height,index)=><div key={index} className="rounded-t-2xl bg-blue-500/75 shadow-[0_12px_30px_rgba(59,130,246,.18)] transition-all duration-700" style={{height:`${height}%`}} />)}</div>
   if (type === 'software') return <div className="flex h-full items-center justify-center p-8"><div className="w-full max-w-sm space-y-3">{['Concept','Build','Launch'].map((step,index)=><div key={step} className={`rounded-2xl border p-5 text-sm font-medium shadow-sm transition-all duration-500 ${index===1?'translate-x-5 border-slate-800 bg-slate-950 text-white':'border-white/80 bg-white/85'}`}>{step}<span className="float-right text-xs opacity-50">0{index+1}</span></div>)}</div></div>
   if (type === 'design') return <div className="grid h-full grid-cols-2 gap-4 p-8"><div className="rounded-[28px] bg-gradient-to-br from-fuchsia-400 to-violet-600"/><div className="rounded-[28px] bg-white shadow-xl"/><div className="col-span-2 rounded-[28px] bg-amber-300"/></div>
+  if (type === 'ai') return <div className="flex h-full items-center justify-center p-8"><div className="w-full max-w-md rounded-[30px] bg-slate-950 p-6 text-white shadow-2xl"><div className="flex items-center justify-between"><div><div className="text-[10px] font-semibold uppercase tracking-[.18em] text-white/35">Hybrid routing</div><div className="mt-1 text-lg font-semibold">Privacy · Capability · Cost</div></div><BrainCircuit className="text-blue-300" size={22}/></div><div className="mt-6 space-y-3">{[['Private data','Local model'],['Complex reasoning','Cloud model'],['Critical action','Human approval']].map(([from,to],index)=><div key={from} className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 rounded-2xl border border-white/10 bg-white/[.05] px-4 py-3"><span className="text-xs text-white/55">{from}</span><ArrowRight size={12} className="text-white/20"/><span className={`rounded-lg px-2 py-1.5 text-right text-[10px] font-semibold ${index===0?'bg-emerald-300/10 text-emerald-200':'bg-blue-300/10 text-blue-200'}`}>{to}</span></div>)}</div></div></div>
   return null
 }
 
