@@ -8,12 +8,12 @@ const copy = {
   en: {
     product: 'Operations Hub Demo',
     back: 'Back to reporting',
-    notice: 'Fictional sample data · login is shown on the next screen',
+    notice: 'Fictional sample data',
   },
   de: {
     product: 'Operations-Hub-Demo',
     back: 'Zurück zu Reporting',
-    notice: 'Fiktive Beispieldaten · Login folgt im nächsten Bildschirm',
+    notice: 'Fiktive Beispieldaten',
   },
 } as const
 
