@@ -3,7 +3,7 @@ import { LocalizedReportingDemo } from '@/components/LocalizedReportingDemo'
 
 export const metadata: Metadata = {
   title: 'Interactive Operations Hub Demo | Vantura',
-  description: 'Explore a fictional operations dashboard for performance, partner, contract and scorecard reporting.',
+  description: 'Live demo: partner intelligence with dashboard, contracts and scorecard — fictional sample data.',
   alternates: { canonical: '/reporting/demo/', languages: { en: '/reporting/demo/', de: '/de/reporting/demo/' } },
 }
 
