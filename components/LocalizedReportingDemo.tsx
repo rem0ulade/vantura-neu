@@ -22,7 +22,7 @@ export function LocalizedReportingDemo({ locale }: { locale: Locale }) {
   const reportingHref = locale === 'de' ? '/de/reporting/' : '/reporting/'
   const languageHref = locale === 'de' ? '/reporting/demo/' : '/de/reporting/demo/'
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ''
-  const demoSrc = `${basePath}/ops-hub-demo/`
+  const demoSrc = `${basePath}/ops-hub-demo/index.html`
 
   return (
     <div className="flex h-dvh flex-col bg-[#07101f] text-white">
