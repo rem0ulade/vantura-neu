@@ -17,5 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/de/websites/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE.url}/impressum/`, changeFrequency: 'yearly', priority: 0.1 },
     { url: `${SITE.url}/datenschutz/`, changeFrequency: 'yearly', priority: 0.1 },
+    { url: `${SITE.url}/arboretum/`, changeFrequency: 'weekly', priority: 0.6 },
   ]
 }
