@@ -123,8 +123,8 @@ export default function BesucherinfosPage() {
             <li>Kein offenes Feuer, kein Grillen. Kleine Picknicks ja; mitgebrachte Speisen im Café und auf der Terrasse nein.</li>
             <li>Betreten auf eigene Gefahr, besonders bei Schnee, Glätte und Sturm.</li>
           </ul>
-            <h3>Café, Gruppen & Gärtnerei</h3>
-            <img src="/arboretum/gaertnerei.jpg" alt="Staudengärtnerei am Arboretum" style={{ borderRadius: 8, margin: '12px 0' }} />
+          <h2>Café, Gruppen & Gärtnerei</h2>
+          <img src="/arboretum/gaertnerei.jpg" alt="Staudengärtnerei am Arboretum" style={{ borderRadius: 8, margin: '12px 0' }} />
           <p>Gruppenangebote (Imbiss, Kaffeetafel, Frühstück ab 20 Personen) per E-Mail an das Büro. Toiletten im Münsterhof inkl. wickelgerechtem und barrierefreiem WC; in der Saison Komposttoiletten am NDR-Garten.</p>
           <p>Die Staudengärtnerei Heiko Müller verkauft auf dem Hof – Öffnungszeiten nur über <a href={AE.gaertnerei} target="_blank" rel="noreferrer">gaertnerei-am-arboretum.de</a>.</p>
           <p>Büro: Montag bis Freitag 8–12 Uhr. Wochenende unbesetzt. <Link href="/arboretum/kontakt/">Kontakt</Link></p>
