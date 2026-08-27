@@ -15,6 +15,7 @@ import {
   Mail,
   Network,
   Sparkles,
+  Workflow,
 } from 'lucide-react'
 import PortfolioShowcaseEffects from './PortfolioShowcaseEffects'
 
@@ -74,11 +75,28 @@ const demos = [
   { title: 'Pricing Engine', body: 'A configurable calculation product showing how complex rules, benchmarks, inputs and business logic can become a clean interface.', icon: Braces },
 ]
 
-const lab = ['Generative UI', 'Data Visualisation', 'AI Agents', 'Mobile Interaction', 'Automation', 'Experimental Interfaces']
-const skills = ['React Native','Expo','TypeScript','React','Next.js','Python','Supabase','REST APIs','GraphQL','OpenAI','Claude','Local LLMs','AI Agents','n8n','Docker','CI/CD','Power BI','Tableau','Excel','Salesforce','Data Integration','Product Strategy','Project Management']
+const agentFlow = [
+  { number: '01', label: 'Trigger', icon: Sparkles },
+  { number: '02', label: 'Agent', icon: Bot },
+  { number: '03', label: 'Tools', icon: Workflow },
+  { number: '04', label: 'Approval', icon: LockKeyhole },
+]
+
+const lab = [
+  { title: 'AI Agents', text: 'Specialist agents that plan, call tools and finish multi-step work with a defined stop.' },
+  { title: 'Agentic Workflows', text: 'Several agents coordinated around one business process instead of a single chat window.' },
+  { title: 'Tool Calling & MCP', text: 'APIs, files, browsers and internal systems exposed as tools the agent can actually use.' },
+  { title: 'Automation', text: 'n8n, scheduled jobs and event-driven flows that replace manual handoffs.' },
+  { title: 'Local & Hybrid LLMs', text: 'Private data stays local. Frontier models only where they earn the access.' },
+  { title: 'Human Approval', text: 'Critical actions wait. The system prepares the work; a person still signs it off.' },
+]
+
+const labMarquee = ['AI Agents','Agentic Workflows','Automation','Tool Calling','MCP','Local LLMs','OpenAI','Claude','n8n','RAG','Hybrid Routing','Human Approval']
+
+const skills = ['AI Agents','Agentic Workflows','Tool Calling','MCP','OpenAI','Claude','Local LLMs','n8n','RAG','Python','TypeScript','React Native','Expo','React','Next.js','Supabase','REST APIs','GraphQL','Docker','CI/CD','Power BI','Tableau','Excel','Salesforce','Data Integration','Product Strategy','Project Management']
 
 export default function PortfolioTestPage() {
-  const marquee = [...skills, ...skills]
+  const marquee = [...labMarquee, ...labMarquee]
 
   return (
     <div className="min-h-screen bg-[#f7f9fc] text-slate-950 selection:bg-blue-600 selection:text-white">
@@ -166,18 +184,56 @@ export default function PortfolioTestPage() {
           </div>
         </section>
 
-        <section id="lab" className="overflow-hidden bg-blue-600 py-7 text-white"><div className="portfolio-marquee text-[clamp(2.5rem,6vw,5.8rem)] font-semibold uppercase leading-none tracking-[-.06em]">{marquee.map((skill,index)=><span key={`${skill}-${index}`} className="mx-5 whitespace-nowrap">{skill} <span className="text-white/30">✦</span></span>)}</div></section>
+        <section className="overflow-hidden bg-blue-600 py-7 text-white"><div className="portfolio-marquee text-[clamp(2.5rem,6vw,5.8rem)] font-semibold uppercase leading-none tracking-[-.06em]">{marquee.map((skill,index)=><span key={`${skill}-${index}`} className="mx-5 whitespace-nowrap">{skill} <span className="text-white/30">✦</span></span>)}</div></section>
 
-        <section className="bg-[#111318] px-5 py-20 text-white lg:px-8 lg:py-28">
-          <div className="mx-auto max-w-7xl"><div data-reveal className="grid gap-10 lg:grid-cols-[.75fr_1.25fr]"><div><p className="text-xs font-semibold uppercase tracking-[.22em] text-blue-300">Lab / experiments</p><h2 className="mt-4 text-5xl font-semibold tracking-[-.055em] sm:text-7xl">The part that can get weird.</h2></div><p className="max-w-2xl text-xl leading-9 text-white/55">Vantura stays clear and business-focused. The portfolio lab is where motion, interaction, prototypes and technical experiments can deliberately go further.</p></div><div className="mt-16 grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">{lab.map((title,index)=><div key={title} data-reveal className="group min-h-[190px] border-b border-r border-white/10 p-6 transition hover:bg-white/[.04]"><div className="flex items-start justify-between"><span className="text-xs text-white/25">0{index+1}</span><Sparkles size={16} className="text-blue-300 opacity-0 transition group-hover:opacity-100"/></div><p className="mt-16 text-2xl font-medium tracking-[-.03em] text-white/75 transition group-hover:text-white">{title}</p></div>)}</div></div>
+        <section id="lab" className="bg-[#111318] px-5 py-20 text-white lg:px-8 lg:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div data-reveal className="grid gap-10 lg:grid-cols-[.75fr_1.25fr]">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[.22em] text-blue-300">AI · Agents · Automation</p>
+                <h2 className="mt-4 text-5xl font-semibold tracking-[-.055em] sm:text-7xl">Agents that work. Automations that stick.</h2>
+              </div>
+              <p className="max-w-2xl text-xl leading-9 text-white/55">This is the layer I am pushing hardest: agentic systems around real operations — tool-calling agents, local and cloud models, and automations that replace manual handoffs instead of sitting next to them.</p>
+            </div>
+            <div data-reveal className="mt-16 overflow-hidden rounded-[34px] border border-white/10 bg-white/[.035] p-8 sm:p-12">
+              <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-300">How the agent works</p>
+                  <h3 className="mt-4 text-4xl font-semibold tracking-[-.045em]">Trigger → Agent → Tools → Approval</h3>
+                  <p className="mt-4 max-w-md leading-7 text-white/45">The chat window is not the product. The product is a controlled loop: something happens, an agent decides, tools execute, and a person still owns the critical step.</p>
+                </div>
+                <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/30 p-7 sm:p-10">
+                  <div className="absolute inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"/>
+                  <div className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    {agentFlow.map((item) => {
+                      const Icon = item.icon
+                      return <div key={item.number} className="flow-node rounded-2xl border border-white/10 bg-[#11151d] p-4 text-center shadow-2xl"><Icon size={19} className="mx-auto text-blue-300"/><p className="mt-4 text-[10px] font-semibold uppercase tracking-[.16em] text-white/35">{item.number}</p><p className="mt-1 text-xs font-medium text-white/75">{item.label}</p></div>
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-16 grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">
+              {lab.map((item, index) => (
+                <div key={item.title} data-reveal className="group min-h-[230px] border-b border-r border-white/10 p-6 transition hover:bg-white/[.04]">
+                  <div className="flex items-start justify-between">
+                    <span className="text-xs text-white/25">0{index + 1}</span>
+                    <Sparkles size={16} className="text-blue-300 opacity-0 transition group-hover:opacity-100"/>
+                  </div>
+                  <p className="mt-10 text-2xl font-medium tracking-[-.03em] text-white/90">{item.title}</p>
+                  <p className="mt-3 text-sm leading-6 text-white/45">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="bg-white px-5 py-20 lg:px-8 lg:py-28">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.65fr_1.35fr]"><div data-reveal><p className="text-xs font-semibold uppercase tracking-[.22em] text-blue-600">Arsenal</p><h2 className="mt-4 text-5xl font-semibold tracking-[-.055em] sm:text-7xl">Broad by design.</h2><p className="mt-6 max-w-md leading-7 text-slate-500">The useful combination is not one framework. It is being able to move from business problem to data, product, interface, integration and delivery.</p></div><div className="grid grid-cols-2 border-l border-t border-slate-200 sm:grid-cols-3">{skills.map((skill)=><div key={skill} data-reveal className="border-b border-r border-slate-200 px-4 py-5 text-sm font-medium text-slate-600 transition hover:bg-[#f7f9fc] hover:text-blue-600 sm:px-5">{skill}</div>)}</div></div>
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.65fr_1.35fr]"><div data-reveal><p className="text-xs font-semibold uppercase tracking-[.22em] text-blue-600">Arsenal</p><h2 className="mt-4 text-5xl font-semibold tracking-[-.055em] sm:text-7xl">Broad by design.</h2><p className="mt-6 max-w-md leading-7 text-slate-500">The useful combination is not one framework. It is moving from a messy process to agents, automations, data and an interface people will actually use.</p></div><div className="grid grid-cols-2 border-l border-t border-slate-200 sm:grid-cols-3">{skills.map((skill)=><div key={skill} data-reveal className="border-b border-r border-slate-200 px-4 py-5 text-sm font-medium text-slate-600 transition hover:bg-[#f7f9fc] hover:text-blue-600 sm:px-5">{skill}</div>)}</div></div>
         </section>
 
         <section className="bg-[#f7f9fc] px-5 py-24 lg:px-8 lg:py-36">
-          <div data-reveal className="mx-auto max-w-7xl overflow-hidden rounded-[38px] bg-blue-600 p-8 text-white sm:p-12 lg:p-16"><div className="grid gap-14 lg:grid-cols-[1.25fr_.75fr] lg:items-end"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-100">Have a useful problem?</p><h2 className="mt-5 max-w-4xl text-5xl font-semibold leading-[.95] tracking-[-.055em] sm:text-7xl">Let&apos;s turn it into something people actually use.</h2></div><div className="lg:text-right"><a href="mailto:jk@vantura-studios.com" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-700 transition hover:-translate-y-0.5"><Mail size={16}/> jk@vantura-studios.com</a><p className="mt-5 text-sm leading-6 text-blue-100">Vantura Studios · Software · Data · AI</p></div></div></div>
+          <div data-reveal className="mx-auto max-w-7xl overflow-hidden rounded-[38px] bg-blue-600 p-8 text-white sm:p-12 lg:p-16"><div className="grid gap-14 lg:grid-cols-[1.25fr_.75fr] lg:items-end"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-100">Have a useful problem?</p><h2 className="mt-5 max-w-4xl text-5xl font-semibold leading-[.95] tracking-[-.055em] sm:text-7xl">Let&apos;s turn it into an agent, an automation, or a system people actually use.</h2></div><div className="lg:text-right"><a href="mailto:jk@vantura-studios.com" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-blue-700 transition hover:-translate-y-0.5"><Mail size={16}/> jk@vantura-studios.com</a><p className="mt-5 text-sm leading-6 text-blue-100">Vantura Studios · AI Agents · Automation · Data</p></div></div></div>
         </section>
       </main>
     </div>
