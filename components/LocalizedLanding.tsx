@@ -13,8 +13,8 @@ const copy = {
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting systems, forecasts and dashboards that turn scattered information into decisions.', href: '/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projects', label: 'Product Studio', description: 'Apps, internal tools, automations and MVPs — designed, built and launched around the real problem.', href: '/projects/', icon: Code2, visual: 'software' },
-      { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Web design, campaign creatives, ads, banners and visual systems for a clear and coherent brand presence.', href: '/design/', icon: Palette, visual: 'design' },
       { word: 'AI', title: 'Applied AI & Agents', label: 'AI Lab', description: 'Privacy-first AI systems, agents, local models and hybrid architectures built around real business workflows.', href: '/ai/', icon: BrainCircuit, visual: 'ai' },
+      { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Web design, campaign creatives, ads, banners and visual systems for a clear and coherent brand presence.', href: '/design/', icon: Palette, visual: 'design' },
     ],
   },
   de: {
@@ -23,8 +23,8 @@ const copy = {
     items: [
       { word: 'Data', title: 'Reporting & Dashboards', label: 'Analytics Lab', description: 'Reporting-Systeme, Forecasts und Dashboards, die verteilte Informationen in Entscheidungen übersetzen.', href: '/de/reporting/', icon: BarChart3, visual: 'data' },
       { word: 'Software', title: 'Projekte', label: 'Product Studio', description: 'Apps, interne Tools, Automationen und MVPs — geplant, gebaut und veröffentlicht rund um das echte Problem.', href: '/de/projects/', icon: Code2, visual: 'software' },
-      { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Webdesign, Kampagnenmotive, Ads, Banner und visuelle Systeme für einen klaren, konsistenten Markenauftritt.', href: '/de/design/', icon: Palette, visual: 'design' },
       { word: 'AI', title: 'Applied AI & Agents', label: 'AI Lab', description: 'Datenschutzorientierte KI-Systeme, Agenten, lokale Modelle und hybride Architekturen für echte Geschäftsprozesse.', href: '/de/ai/', icon: BrainCircuit, visual: 'ai' },
+      { word: 'Design', title: 'Creative Design', label: 'Design Studio', description: 'Webdesign, Kampagnenmotive, Ads, Banner und visuelle Systeme für einen klaren, konsistenten Markenauftritt.', href: '/de/design/', icon: Palette, visual: 'design' },
     ],
   },
 } as const
