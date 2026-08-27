@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Arclicht | Independent Media Agency</title>
+  <meta name="description" content="Fiktive Designstudie: Independent Media Agency für Marken, Film und Kampagnen.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070708;
+      --paper: #111114;
+      --ink: #f4f1ea;
+      --muted: #9a958b;
+      --line: rgba(244,241,234,.12);
+      --accent: #e8ff47;
+    }
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: 'Instrument Sans', sans-serif; line-height: 1.6 }
+    a { color: inherit; text-decoration: none }
+    .wrap { width: min(1240px, calc(100% - 48px)); margin: auto }
+    .notice { background: var(--accent); color: #111; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-align: center; padding: 10px 16px }
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px); background: rgba(7,7,8,.78); border-bottom: 1px solid var(--line) }
+    nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px }
+    .brand { font-family: Syne, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -.04em }
+    .brand small { display: block; font-family: 'Instrument Sans', sans-serif; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-top: 2px }
+    .links { display: flex; gap: 28px; color: var(--muted); font-size: 14px }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--accent); color: #111; font-weight: 700 }
+    .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line) }
+    .hero { padding: 88px 0 72px }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: end }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--accent) }
+    h1, h2, h3 { margin: 0; font-family: Syne, sans-serif; letter-spacing: -.05em }
+    .hero h1 { font-size: clamp(56px, 8vw, 108px); line-height: .88; font-weight: 800; max-width: 720px; margin: 18px 0 24px }
+    .lead { font-size: 19px; color: var(--muted); max-width: 560px }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px }
+    .hero-media { min-height: 560px; border-radius: 36px; overflow: hidden; position: relative; background: url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1600&q=80') center/cover }
+    .hero-media:after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(7,7,8,.72)) }
+    .hero-chip { position: absolute; left: 24px; bottom: 24px; z-index: 1; background: rgba(7,7,8,.72); backdrop-filter: blur(12px); border: 1px solid var(--line); border-radius: 20px; padding: 18px 20px; max-width: 280px }
+    .hero-chip b { display: block; font-family: Syne, sans-serif; font-size: 22px; line-height: 1.05 }
+    .hero-chip span { color: var(--muted); font-size: 13px }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 56px }
+    .stats div { background: var(--bg); padding: 28px 8px 28px 0 }
+    .stats b { display: block; font-family: Syne, sans-serif; font-size: 36px }
+    .stats span { color: var(--muted); font-size: 14px }
+    section { padding: 108px 0 }
+    .kicker { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent) }
+    h2 { font-size: clamp(40px, 6vw, 72px); line-height: .95; font-weight: 800 }
+    .work { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 48px }
+    .work article { min-height: 340px; border-radius: 28px; overflow: hidden; position: relative; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--line) }
+    .work article:first-child { grid-column: 1 / -1; min-height: 420px }
+    .w1 { background: linear-gradient(180deg, rgba(7,7,8,.1), rgba(7,7,8,.72)), url('https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=1800&q=80') center/cover }
+    .w2 { background: linear-gradient(180deg, rgba(7,7,8,.05), rgba(7,7,8,.78)), url('https://images.unsplash.com/photo-1485846234645-a62644f75381?auto=format&fit=crop&w=1200&q=80') center/cover }
+    .w3 { background: linear-gradient(180deg, rgba(7,7,8,.05), rgba(7,7,8,.78)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80') center/cover }
+    .work span { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); font-weight: 700 }
+    .work h3 { font-size: 34px; margin-top: 8px }
+    .services { display: grid; grid-template-columns: .7fr 1.3fr; gap: 64px }
+    .service { display: grid; grid-template-columns: 70px 1fr 1.15fr; gap: 24px; padding: 26px 0; border-top: 1px solid var(--line); align-items: start }
+    .service:last-child { border-bottom: 1px solid var(--line) }
+    .service .num { color: var(--accent); font-weight: 700; font-size: 13px }
+    .service h3 { font-size: 28px }
+    .service p { margin: 0; color: var(--muted) }
+    .studio { background: var(--paper); border-radius: 36px; padding: 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center }
+    .studio p { color: var(--muted); font-size: 18px }
+    .principles { display: grid; gap: 18px; margin-top: 28px }
+    .principles div { padding-top: 16px; border-top: 1px solid var(--line) }
+    .principles b { color: var(--accent) }
+    .cta { display: grid; grid-template-columns: 1.3fr .7fr; gap: 32px; align-items: center; padding: 56px; border-radius: 36px; background: var(--accent); color: #111 }
+    .cta h2 { color: #111 }
+    .cta p { margin: 12px 0 0; color: #3a420f }
+    .cta .btn { background: #111; color: var(--accent) }
+    footer { padding: 28px 0 48px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap }
+    @media (max-width: 900px) {
+      .links { display: none }
+      .hero-grid, .services, .studio, .cta, .work { grid-template-columns: 1fr }
+      .work article:first-child { min-height: 340px }
+      .service { grid-template-columns: 48px 1fr }
+      .service p { grid-column: 2 }
+      .studio { padding: 36px }
+      .hero-media { min-height: 420px }
+      .stats { grid-template-columns: 1fr }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1240px) }
+      .hero { padding-top: 48px }
+      .hero h1 { font-size: 52px }
+      section { padding: 72px 0 }
+      .cta { padding: 28px }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">Designstudie · Arclicht ist kein echtes Unternehmen</div>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#">Arclicht<small>Media Agency · Konzept</small></a>
+      <div class="links">
+        <a href="#arbeit">Arbeit</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#studio">Studio</a>
+      </div>
+      <a class="btn" href="#kontakt">Briefing senden</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Independent media · Hamburg</p>
+          <h1>Marken, die Licht bekommen.</h1>
+          <p class="lead">Kampagnen, Film und digitale Systeme für Unternehmen, die nicht wie alle anderen wirken wollen. Eine fiktive Agentur – gebaut als vollständige Designstudie.</p>
+          <div class="actions">
+            <a class="btn" href="#arbeit">Ausgewählte Arbeit</a>
+            <a class="btn ghost" href="#leistungen">Leistungen</a>
+          </div>
+          <div class="stats">
+            <div><b>Film</b><span>Image, Launch, Social</span></div>
+            <div><b>Brand</b><span>Kampagne &amp; System</span></div>
+            <div><b>Digital</b><span>Sites, Ads, Content</span></div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="hero-chip"><b>Von der Idee bis zum Schnitt.</b><span>Eine visuelle Sprache, die in Film, Fläche und Feed hält.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="arbeit">
+      <div class="wrap">
+        <p class="kicker">Selected work</p>
+        <h2>Kampagnen, die eine Richtung haben.</h2>
+        <div class="work">
+          <article class="w1"><span>01 · Mobility launch</span><h3>Nova Rail — The quiet express.</h3></article>
+          <article class="w2"><span>02 · Fashion film</span><h3>Atelier Kite — Night cut.</h3></article>
+          <article class="w3"><span>03 · Culture</span><h3>Hafen Festival — Afterglow.</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen">
+      <div class="wrap services">
+        <div>
+          <p class="kicker">Leistungen</p>
+          <h2>Eine Idee. Jedes Format.</h2>
+        </div>
+        <div>
+          <article class="service"><div class="num">01</div><h3>Brand Campaigns</h3><p>Positionierung, Key Visual und eine Kampagnenarchitektur, die sich über Paid, Owned und Launch streckt.</p></article>
+          <article class="service"><div class="num">02</div><h3>Film &amp; Motion</h3><p>Imagefilme, Produktclips und Motion-Systeme, die sich in 6 und 60 Sekunden gleich klar lesen.</p></article>
+          <article class="service"><div class="num">03</div><h3>Digital &amp; Ads</h3><p>Landingpages, Banner und Social-Formate aus derselben visuellen Quelle – nicht als Nachgedanke.</p></article>
+          <article class="service"><div class="num">04</div><h3>Content Systems</h3><p>Wiederkehrende Templates, Art Direction und Produktionsrhythmus für laufende Kommunikation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio">
+      <div class="wrap">
+        <div class="studio">
+          <div>
+            <p class="kicker">Studio</p>
+            <h2>Klein. Präzise. Unübersehbar.</h2>
+          </div>
+          <div>
+            <p>Arclicht ist als unabhängiges Media-Studio gedacht: wenig Folien, viel Richtung. Strategie, Design und Produktion sitzen in einem Raum – damit Kampagnen nicht zwischen Gewerken zerfallen.</p>
+            <div class="principles">
+              <div><b>01 Richtung zuerst.</b> Erst die Idee, dann die Formate.</div>
+              <div><b>02 Weniger Fläche, mehr Haltung.</b> Kein Moodboard-Recycling.</div>
+              <div><b>03 Produktionstauglich.</b> Was entworfen wird, lässt sich drehen, schalten und halten.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Kein echtes Briefing. Eine Designstudie.</h2>
+            <p>Arclicht existiert nicht. Dieses Website-Konzept zeigt, wie Vantura Studios eine Mediaagentur visuell aufbauen würde.</p>
+          </div>
+          <a class="btn" href="mailto:jk@vantura-studios.com?subject=Designstudie%20Arclicht">Mit Vantura sprechen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap">
+    <span>Konzeptentwurf von Vantura Studios · kein offizieller Agenturauftritt</span>
+    <span>Fiktive Marke · Hamburg</span>
+  </footer>
+</body>
+</html>

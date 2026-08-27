@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vela Vermögen | Unabhängige Vermögensberatung</title>
+  <meta name="description" content="Fiktive Designstudie: unabhängige Vermögensberatung. Kein Angebot einer Finanzdienstleistung.">
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #15202b;
+      --ink: #1c242c;
+      --gold: #b0894d;
+      --cream: #f4efe6;
+      --paper: #fbf8f2;
+      --muted: #6d7378;
+      --line: rgba(21,32,43,.12);
+      --white: #fff;
+    }
+    * { box-sizing: border-box }
+    html { scroll-behavior: smooth }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Outfit, sans-serif; line-height: 1.65 }
+    a { color: inherit; text-decoration: none }
+    .wrap { width: min(1180px, calc(100% - 48px)); margin: auto }
+    .notice { background: var(--navy); color: #e8d7b5; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-align: center; padding: 10px 16px }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(251,248,242,.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line) }
+    nav { height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; letter-spacing: -.03em }
+    .brand small { display: block; font-family: Outfit, sans-serif; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-top: 2px }
+    .links { display: flex; gap: 28px; color: var(--muted); font-size: 14px }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--navy); color: var(--cream); font-weight: 600 }
+    .btn.light { background: transparent; color: var(--navy); border: 1px solid var(--line) }
+    .hero { padding: 84px 0 40px }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; align-items: center }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold) }
+    h1, h2, h3 { margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: -.03em }
+    .hero h1 { font-size: clamp(52px, 7vw, 92px); line-height: .92; margin: 16px 0 22px }
+    .hero h1 em { font-style: italic; color: var(--gold) }
+    .lead { font-size: 19px; color: var(--muted); max-width: 540px }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px }
+    .hero-media { min-height: 620px; border-radius: 0 160px 28px 28px; background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80') center/cover; box-shadow: 0 30px 80px rgba(21,32,43,.16); position: relative }
+    .quote { position: absolute; left: -28px; bottom: 36px; width: 270px; background: var(--white); padding: 24px; box-shadow: 0 24px 60px rgba(21,32,43,.12) }
+    .quote b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 28px; line-height: 1.05; font-weight: 500 }
+    .quote span { display: block; margin-top: 10px; color: var(--muted); font-size: 13px }
+    .rail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border-block: 1px solid var(--line); margin-top: 28px }
+    .rail div { background: var(--paper); padding: 22px 8px 22px 0 }
+    .rail b { display: block }
+    .rail span { font-size: 13px; color: var(--muted) }
+    section { padding: 104px 0 }
+    .intro { display: grid; grid-template-columns: .7fr 1.3fr; gap: 64px }
+    h2 { font-size: clamp(42px, 5.5vw, 68px); line-height: 1 }
+    .intro p { font-size: 19px; color: var(--muted); margin-top: 18px; max-width: 640px }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 48px }
+    .cards article { background: var(--white); border: 1px solid var(--line); padding: 32px; min-height: 240px }
+    .cards .num { color: var(--gold); font-size: 12px; font-weight: 700; letter-spacing: .14em }
+    .cards h3 { font-size: 32px; margin: 18px 0 12px }
+    .cards p { margin: 0; color: var(--muted) }
+    .story { background: var(--navy); color: var(--cream) }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center }
+    .story-photo { min-height: 560px; background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=80') center/cover }
+    .story p { color: rgba(244,239,230,.72); font-size: 18px }
+    .principles { margin-top: 28px; display: grid; gap: 16px }
+    .principles div { padding-top: 16px; border-top: 1px solid rgba(244,239,230,.16) }
+    .principles b { color: var(--gold) }
+    .legal { background: var(--cream) }
+    .legal-box { background: var(--white); border: 1px solid var(--line); padding: 40px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px }
+    .legal p { color: var(--muted); margin: 12px 0 0 }
+    .cta { display: grid; grid-template-columns: 1.3fr auto; gap: 28px; align-items: center; background: var(--navy); color: var(--cream); padding: 52px; }
+    .cta p { color: rgba(244,239,230,.7); margin: 12px 0 0 }
+    .cta .btn { background: var(--gold); color: var(--navy) }
+    footer { padding: 28px 0 48px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap }
+    @media (max-width: 900px) {
+      .links { display: none }
+      .hero-grid, .intro, .story-grid, .cards, .legal-box, .cta { grid-template-columns: 1fr }
+      .hero-media { min-height: 460px; border-radius: 0 100px 24px 24px }
+      .quote { left: 16px; width: auto; right: 16px }
+      .rail { grid-template-columns: 1fr }
+      .story-photo { min-height: 380px }
+    }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 28px, 1180px) }
+      .hero h1 { font-size: 48px }
+      section { padding: 72px 0 }
+      .cta { padding: 28px }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">Designstudie · kein Finanzdienstleister · kein Angebot</div>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#">Vela<small>Vermögen · Konzept</small></a>
+      <div class="links">
+        <a href="#ansatz">Ansatz</a>
+        <a href="#mandat">Mandat</a>
+        <a href="#haltung">Haltung</a>
+      </div>
+      <a class="btn" href="#kontakt">Gespräch anfragen</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Unabhängige Vermögensberatung</p>
+          <h1>Ruhe für das, was <em>bleiben</em> soll.</h1>
+          <p class="lead">Eine fiktive, inhabergeführte Beratung für Familien und Unternehmer. Kein Produktverkauf, keine Bankfiliale – nur die Idee eines klaren Mandats.</p>
+          <div class="actions">
+            <a class="btn" href="#mandat">Das Mandat</a>
+            <a class="btn light" href="#haltung">Unsere Haltung</a>
+          </div>
+          <div class="rail">
+            <div><b>Unabhängig</b><span>kein Produktzwang</span></div>
+            <div><b>Langfristig</b><span>über Marktphasen hinaus</span></div>
+            <div><b>Diskret</b><span>wenige Mandate</span></div>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="quote"><b>Struktur vor Lautstärke.</b><span>Vermögen ordnen, Risiken benennen, Entscheidungen ruhig halten.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ansatz">
+      <div class="wrap">
+        <div class="intro">
+          <p class="eyebrow">Ansatz</p>
+          <div>
+            <h2>Nicht mehr Produkte. Bessere Ordnung.</h2>
+            <p>Vela Vermögen ist als Studio-Konzept für einen Finanzdienstleister entworfen: seriös, reduziert, ohne Stock-Handshake. Die Seite erklärt Haltung und Mandat – nicht Kurse oder Versprechen.</p>
+          </div>
+        </div>
+        <div class="cards" id="mandat">
+          <article><span class="num">01</span><h3>Vermögensstruktur</h3><p>Bestand, Ziele und Verpflichtungen in eine lesbare Ordnung bringen – bevor über Instrumente gesprochen wird.</p></article>
+          <article><span class="num">02</span><h3>Mandatsbetreuung</h3><p>Ein fester Ansprechpartner, regelmäßige Lagebilder und Entscheidungen, die sich nachvollziehen lassen.</p></article>
+          <article><span class="num">03</span><h3>Nachfolge</h3><p>Übergaben, Familienvermögen und unternehmerische Anteile so denken, dass sie haltbar bleiben.</p></article>
+          <article><span class="num">04</span><h3>Liquidität &amp; Risiko</h3><p>Was verfügbar bleiben muss, was gebunden sein darf – ohne unnötige Dramatik.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="haltung">
+      <div class="wrap story-grid">
+        <div class="story-photo" role="img" aria-label="Ruhiger Innenraum"></div>
+        <div>
+          <p class="eyebrow">Haltung</p>
+          <h2>Weniger Mandate. Mehr Aufmerksamkeit.</h2>
+          <p>Die fiktive Kanzlei nimmt bewusst wenige Mandanten an. Nicht weil Exklusivität ein Verkaufsargument ist, sondern weil Beratung Zeit braucht.</p>
+          <div class="principles">
+            <div><b>Unabhängig.</b> Keine hauseigenen Produkte, keine Vertriebsquote.</div>
+            <div><b>Verständlich.</b> Jede Empfehlung muss sich in einem Satz erklären lassen.</div>
+            <div><b>Langsam genug.</b> Große Entscheidungen werden nicht in einem Termin erzwungen.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal">
+      <div class="wrap">
+        <div class="legal-box">
+          <h2>Hinweis</h2>
+          <p>Vela Vermögen ist kein existierendes Institut und erbringt keine Finanzdienstleistung. Es handelt sich um eine unverbindliche Designstudie von Vantura Studios. Es wird keine Anlageberatung, Vermittlung oder Verwaltung angeboten.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Ein Auftritt, der Vertrauen hält.</h2>
+            <p>Wenn Sie einen ähnlichen digitalen Auftritt für eine echte Beratung brauchen, spricht Vantura Studios mit.</p>
+          </div>
+          <a class="btn" href="mailto:jk@vantura-studios.com?subject=Designstudie%20Vela%20Vermögen">Mit Vantura sprechen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap">
+    <span>Konzeptentwurf von Vantura Studios · kein Finanzangebot</span>
+    <span>Fiktive Marke · Hamburg</span>
+  </footer>
+</body>
+</html>
