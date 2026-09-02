@@ -48,7 +48,7 @@ export function ArboretumFooter() {
         </span>
         <span>
           Konzeptentwurf als Geschenk von{' '}
-          <a href="https://vantura-studios.com">Vantura Studios</a>
+          <a href="https://vantura-studios.com">Jonathan Kokalj</a>
         </span>
       </div>
     </footer>

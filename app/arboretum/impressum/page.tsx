@@ -35,7 +35,7 @@ export default function ImpressumPage() {
           <p>Für Inhalte verlinkter Drittseiten sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar.</p>
           <h2>Urheberrecht</h2>
           <p>Die Inhalte unterliegen dem deutschen Urheberrecht. Nutzung außerhalb der gesetzlichen Schranken nur mit Zustimmung der Rechteinhaber. Fotos auf diesem Konzeptentwurf stammen vom öffentlichen Auftritt des Arboretums und dienen der Redesign-Vorlage.</p>
-          <p>Diese Seite ist ein unverbindlicher Website-Entwurf von Vantura Studios, nicht der laufende offizielle Internetauftritt.</p>
+          <p>Diese Seite ist ein unverbindlicher Website-Entwurf von Jonathan Kokalj, nicht der laufende offizielle Internetauftritt.</p>
         </div>
       </section>
     </main>

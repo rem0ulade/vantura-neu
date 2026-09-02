@@ -32,7 +32,7 @@ export default function ArboretumLayout({ children }: { children: React.ReactNod
     <div className={`ae ${fraunces.variable}`} lang="de">
       <p className="ae-gift">
         Unverbindlicher Website-Entwurf · ein Geschenk von{' '}
-        <a href="https://vantura-studios.com">Vantura Studios</a>
+        <a href="https://vantura-studios.com">Jonathan Kokalj</a>
         {' '}für das Arboretum Ellerhoop
       </p>
       <ArboretumNav />
