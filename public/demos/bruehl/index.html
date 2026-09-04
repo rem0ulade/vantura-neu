@@ -6,7 +6,10 @@
   <title>Brühl Friseure Rellingen – Ihr exklusives Haar-Erlebnis</title>
   <meta name="description" content="Brühl Friseure in Rellingen – Calligraphy-Cut, Balayage, Perücken-Studio, Haarverlängerung. Über 18 Expertinnen. Jetzt Termin vereinbaren!">
   <meta name="keywords" content="Friseur Rellingen, Calligraphy Cut, Balayage, Haarverlängerung, Perücken-Studio, Friseur Pinneberg">
-  <link rel="canonical" href="https://www.bruehl-friseure.de/">
+  <link rel="canonical" href="https://vantura-studios.com/demos/bruehl/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Brühl Friseure Rellingen – Ihr exklusives Haar-Erlebnis">
+  <meta property="og:image" content="https://vantura-studios.com/demos/bruehl/images/salon-11.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -169,7 +172,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1920&q=85');
+      background-image: url('images/salon-11.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -853,6 +856,54 @@
     }
     .c-icon svg { width: 15px; height: 15px; fill: var(--gold); }
 
+    /* ============================================================
+       SALON + GALERIE + JOBS
+    ============================================================ */
+    #salon { background: var(--cream); }
+    .salon-mosaic {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-rows: 240px 240px 200px;
+      gap: .7rem;
+      margin-top: 3rem;
+    }
+    .salon-mosaic a, .salon-mosaic img { display: block; width: 100%; height: 100%; }
+    .salon-mosaic img { object-fit: cover; }
+    .salon-mosaic .wide { grid-row: 1 / span 2; }
+    .salon-mosaic .wide img { height: 100%; }
+
+    #galerie { background: var(--dark); color: var(--cream); }
+    #galerie .section-h { color: var(--cream); }
+    #galerie .section-sub { color: rgba(244,239,229,.45); }
+    .galerie-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: .55rem;
+      margin-top: 3rem;
+    }
+    .galerie-grid img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      filter: saturate(.92);
+      transition: transform .5s var(--ease), filter .4s;
+    }
+    .galerie-grid a { overflow: hidden; display: block; }
+    .galerie-grid a:hover img { transform: scale(1.05); filter: saturate(1); }
+
+    #jobs { background: var(--cream-light); }
+    .jobs-box {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .jobs-box img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
     .map-frame {
       width: 100%;
       height: 460px;
@@ -966,13 +1017,17 @@
       .container { padding: 0 2rem; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .galerie-grid { grid-template-columns: repeat(4, 1fr); }
+      .salon-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; }
+      .salon-mosaic .wide { grid-row: auto; grid-column: 1 / span 2; height: 280px; }
     }
     @media (max-width: 900px) {
       .about-grid,
       .cal-grid,
       .team-intro,
       .contact-grid,
-      .gutschein-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .gutschein-grid,
+      .jobs-box { grid-template-columns: 1fr; gap: 3rem; }
       .about-quote-card { display: none; }
       .about-main-img { height: 400px; }
       .gutschein-img { min-height: 300px; }
@@ -990,6 +1045,8 @@
       .hamburger { display: flex; }
       .services-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .galerie-grid { grid-template-columns: repeat(2, 1fr); }
+      .salon-mosaic { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
       .hero-h1 { font-size: 3rem; }
       .svc-card { height: 340px; }
@@ -1012,7 +1069,7 @@
   <nav class="mobile-nav" id="mobileNav">
     <a href="#about"      onclick="closeMobile()">Über uns</a>
     <a href="#services"   onclick="closeMobile()">Leistungen</a>
-    <a href="#calligraphy" onclick="closeMobile()">Calligraphy</a>
+    <a href="#galerie"    onclick="closeMobile()">Galerie</a>
     <a href="#team"       onclick="closeMobile()">Team</a>
     <a href="#preise"     onclick="closeMobile()">Preise</a>
     <a href="#kontakt"    onclick="closeMobile()">Kontakt</a>
@@ -1025,7 +1082,7 @@
     <ul class="nav-links">
       <li><a href="#about">Über uns</a></li>
       <li><a href="#services">Leistungen</a></li>
-      <li><a href="#calligraphy">Calligraphy</a></li>
+      <li><a href="#galerie">Galerie</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="#preise">Preise</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
@@ -1086,7 +1143,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-img-wrap reveal">
-          <img class="about-main-img" src="https://www.bruehl-friseure.de/images/og-image.jpg" alt="Brühl Friseure Salon Rellingen" loading="lazy">
+          <img class="about-main-img" src="images/salon-06.jpg" alt="Empfang Brühl Friseure Rellingen" loading="lazy">
           <div class="about-accent-box"></div>
           <div class="about-quote-card">
             <blockquote>"Ihr Haar ist unsere Leidenschaft – jeder Besuch ein besonderes Erlebnis."</blockquote>
@@ -1102,13 +1159,32 @@
           <p style="font-size:.88rem; color:var(--muted); line-height:1.9;">
             Unser erfahrenes Team in Rellingen besteht aus hochqualifizierten Friseurmeisterinnen und Top-Stylistinnen, die auf verschiedene Bereiche spezialisiert sind: <strong style="color:var(--text); font-weight:400;">Calligraphy-Cut</strong>, Master of Color, Balayage-Techniken, Haarverlängerungen mit Great Lengths, Brautfrisuren und vieles mehr. Eine kontinuierliche Weiterentwicklung durch Fortbildungen und Schulungen ist für uns selbstverständlich.
           </p>
-          <img class="about-signature" src="https://bruehl-friseure.de/images/unterschrift-marion-bruehl.png" alt="Unterschrift Marion Brühl" loading="lazy">
+          <img class="about-signature" src="images/unterschrift-marion-bruehl.png" alt="Unterschrift Marion Brühl" loading="lazy">
           <br><br>
           <div style="display:flex; gap:1rem; flex-wrap:wrap;">
             <a href="#team" class="btn btn-dark">Unser Team kennenlernen</a>
             <a href="#kontakt" class="btn btn-ghost-dark">Kontakt & Anfahrt</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= SALON ========= -->
+  <section id="salon">
+    <div class="container">
+      <span class="eyebrow">Der Salon</span>
+      <h2 class="section-h">Rellingen, <em>Hauptstraße 84a</em></h2>
+      <p class="section-sub" style="max-width:540px;">Heller, ruhiger Salon mit 18+ Expertinnen – Calligraphy-Cut, Farbe, Extensions und Perücken-Studio unter einem Dach.</p>
+      <div class="salon-mosaic">
+        <a class="wide reveal" href="#galerie"><img src="images/salon-11.jpg" alt="Saloninnenraum Brühl Friseure"></a>
+        <a class="reveal reveal-delay-1" href="#galerie"><img src="images/salon-08.jpg" alt="Stylingplätze im Salon"></a>
+        <a class="reveal reveal-delay-2" href="#galerie"><img src="images/salon-01.jpg" alt="Stylistin bei der Arbeit"></a>
+        <a class="reveal reveal-delay-1" href="#galerie"><img src="images/salon-03.jpg" alt="Brühl Friseure Salon"></a>
+        <a class="reveal reveal-delay-2" href="#galerie"><img src="images/salon-14.jpg" alt="Empfang und Beratung"></a>
+        <a class="reveal" href="#galerie"><img src="images/salon-02.jpg" alt="Salon Brühl Friseure"></a>
+        <a class="reveal reveal-delay-1" href="#galerie"><img src="images/salon-07.jpg" alt="Arbeitsplätze im Salon"></a>
+        <a class="reveal reveal-delay-2" href="#galerie"><img src="images/salon-04.jpg" alt="Salonatmosphäre"></a>
       </div>
     </div>
   </section>
@@ -1125,7 +1201,7 @@
       </div>
       <div class="services-grid">
         <div class="svc-card reveal">
-          <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=80" alt="Calligraphy-Cut" loading="lazy">
+          <img src="images/frisuren/BF1.jpg" alt="Calligraphy-Cut" loading="lazy">
           <div class="svc-overlay"></div>
           <div class="svc-body">
             <p class="svc-tag">Signature-Service</p>
@@ -1134,7 +1210,7 @@
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=800&q=80" alt="Balayage & Coloration" loading="lazy">
+          <img src="images/frisuren/BF15.jpg" alt="Balayage & Coloration" loading="lazy">
           <div class="svc-overlay"></div>
           <div class="svc-body">
             <p class="svc-tag">Farbe & Tönung</p>
@@ -1143,7 +1219,7 @@
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1487412947147-5cebf100d293?w=800&q=80" alt="Haarverlängerung" loading="lazy">
+          <img src="images/frisuren/BF35.jpg" alt="Haarverlängerung" loading="lazy">
           <div class="svc-overlay"></div>
           <div class="svc-body">
             <p class="svc-tag">Extensions</p>
@@ -1152,7 +1228,7 @@
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-1">
-          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80" alt="Perücken-Studio" loading="lazy">
+          <img src="images/salon-05.jpg" alt="Perücken-Studio" loading="lazy">
           <div class="svc-overlay"></div>
           <div class="svc-body">
             <p class="svc-tag">Zweithaar-Studio</p>
@@ -1161,7 +1237,7 @@
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=800&q=80" alt="Specials & Pflege" loading="lazy">
+          <img src="images/salon-01.jpg" alt="Specials & Pflege" loading="lazy">
           <div class="svc-overlay"></div>
           <div class="svc-body">
             <p class="svc-tag">Treatments</p>
@@ -1170,7 +1246,7 @@
           </div>
         </div>
         <div class="svc-card reveal reveal-delay-3">
-          <img src="https://images.unsplash.com/photo-1594897030264-ab7d87efc473?w=800&q=80" alt="Brautfrisuren" loading="lazy">
+          <img src="images/frisuren/BF23.jpg" alt="Brautfrisuren" loading="lazy">
           <div class="svc-overlay"></div>
           <div class="svc-body">
             <p class="svc-tag">Brautstyling</p>
@@ -1215,6 +1291,41 @@
     </div>
   </section>
 
+  <!-- ========= GALERIE ========= -->
+  <section id="galerie">
+    <div class="container">
+      <span class="eyebrow">Galerie</span>
+      <h2 class="section-h">Looks aus dem <em>Salon</em></h2>
+      <p class="section-sub">Schnitte, Farbe und Styling – echte Arbeiten von Brühl Friseure.</p>
+      <div class="galerie-grid">
+        <a href="images/frisuren/BF1.jpg"><img src="images/frisuren/BF1.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF3.jpg"><img src="images/frisuren/BF3.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF5.jpg"><img src="images/frisuren/BF5.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF7.jpg"><img src="images/frisuren/BF7.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF9.jpg"><img src="images/frisuren/BF9.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF11.jpg"><img src="images/frisuren/BF11.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF13.jpg"><img src="images/frisuren/BF13.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF15.jpg"><img src="images/frisuren/BF15.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF17.jpg"><img src="images/frisuren/BF17.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF19.jpg"><img src="images/frisuren/BF19.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF21.jpg"><img src="images/frisuren/BF21.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF23.jpg"><img src="images/frisuren/BF23.jpg" alt="Brautfrisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF25.jpg"><img src="images/frisuren/BF25.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF27.jpg"><img src="images/frisuren/BF27.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF29.jpg"><img src="images/frisuren/BF29.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF31.jpg"><img src="images/frisuren/BF31.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF33.jpg"><img src="images/frisuren/BF33.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF35.jpg"><img src="images/frisuren/BF35.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF37.jpg"><img src="images/frisuren/BF37.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF39.jpg"><img src="images/frisuren/BF39.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF41.jpg"><img src="images/frisuren/BF41.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF45.jpg"><img src="images/frisuren/BF45.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF49.jpg"><img src="images/frisuren/BF49.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+        <a href="images/frisuren/BF53.jpg"><img src="images/frisuren/BF53.jpg" alt="Frisur Brühl Friseure" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
   <!-- ========= TEAM ========= -->
   <section id="team">
     <div class="container">
@@ -1232,56 +1343,73 @@
       </div>
       <div class="team-grid">
         <div class="team-card reveal">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-marion-bruehl.jpg" alt="Marion Brühl" loading="lazy">
+          <img src="images/mitarbeiter-marion-bruehl.jpg" alt="Marion Brühl" loading="lazy">
           <div class="team-info"><div class="team-name">Marion Brühl</div><div class="team-role">Saloninhaberin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-1">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-olga-wolter.jpg" alt="Olga Wolter" loading="lazy">
+          <img src="images/mitarbeiter-olga-wolter.jpg" alt="Olga Wolter" loading="lazy">
           <div class="team-info"><div class="team-name">Olga Wolter</div><div class="team-role">Top-Stylistin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-2">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-susanne-schaerff.jpg" alt="Susanne Schärff" loading="lazy">
+          <img src="images/mitarbeiter-susanne-schaerff.jpg" alt="Susanne Schärff" loading="lazy">
           <div class="team-info"><div class="team-name">Susanne Schärff</div><div class="team-role">Top-Stylistin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-3">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-doreen-wilke-liebert.jpg" alt="Doreen Wilke-Liebert" loading="lazy">
+          <img src="images/mitarbeiter-doreen-wilke-liebert.jpg" alt="Doreen Wilke-Liebert" loading="lazy">
           <div class="team-info"><div class="team-name">Doreen Wilke-Liebert</div><div class="team-role">Friseurmeisterin</div></div>
         </div>
         <div class="team-card reveal">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-emira-rexhepi.jpg" alt="Emira Rexhepi" loading="lazy">
+          <img src="images/mitarbeiter-emira-rexhepi.jpg" alt="Emira Rexhepi" loading="lazy">
           <div class="team-info"><div class="team-name">Emira Rexhepi</div><div class="team-role">Friseurmeisterin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-1">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-janina-block.jpg" alt="Janina Block" loading="lazy">
+          <img src="images/mitarbeiter-janina-block.jpg" alt="Janina Block" loading="lazy">
           <div class="team-info"><div class="team-name">Janina Block</div><div class="team-role">Top-Stylistin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-2">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-eyleen-wyczynski.jpg" alt="Eyleen Wyczynski" loading="lazy">
+          <img src="images/mitarbeiter-eyleen-wyczynski.jpg" alt="Eyleen Wyczynski" loading="lazy">
           <div class="team-info"><div class="team-name">Eyleen Wyczynski</div><div class="team-role">Top-Stylistin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-3">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-tanja-borchardt.jpg" alt="Tanja Borchardt" loading="lazy">
+          <img src="images/mitarbeiter-tanja-borchardt.jpg" alt="Tanja Borchardt" loading="lazy">
           <div class="team-info"><div class="team-name">Tanja Borchardt</div><div class="team-role">Top-Stylistin</div></div>
         </div>
         <div class="team-card reveal">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-christin-luedemann.jpg" alt="Christin Lüdemann" loading="lazy">
+          <img src="images/mitarbeiter-christin-luedemann.jpg" alt="Christin Lüdemann" loading="lazy">
           <div class="team-info"><div class="team-name">Christin Lüdemann</div><div class="team-role">Friseurmeisterin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-1">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-jasmin-muehrwald.jpg" alt="Jasmin Mührwald" loading="lazy">
+          <img src="images/mitarbeiter-jasmin-muehrwald.jpg" alt="Jasmin Mührwald" loading="lazy">
           <div class="team-info"><div class="team-name">Jasmin Mührwald</div><div class="team-role">Friseurmeisterin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-2">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-kim-kunter.jpg" alt="Kim Steffens" loading="lazy">
+          <img src="images/mitarbeiter-kim-kunter.jpg" alt="Kim Steffens" loading="lazy">
           <div class="team-info"><div class="team-name">Kim Steffens</div><div class="team-role">Friseurmeisterin</div></div>
         </div>
         <div class="team-card reveal reveal-delay-3">
-          <img src="https://bruehl-friseure.de/images/mitarbeiter-yvonne-kurbjuhn.jpg" alt="Yvonne Kurbjuhn" loading="lazy">
+          <img src="images/mitarbeiter-yvonne-kurbjuhn.jpg" alt="Yvonne Kurbjuhn" loading="lazy">
           <div class="team-info"><div class="team-name">Yvonne Kurbjuhn</div><div class="team-role">Friseurmeisterin</div></div>
         </div>
       </div>
       <div style="text-align:center; margin-top:3rem;">
-        <a href="https://bruehl-friseure.de/jobs-bruehl-friseur-rellingen.php" target="_blank" class="btn btn-ghost-dark">Offene Stellen ansehen</a>
+        <a href="#jobs" class="btn btn-ghost-dark">Offene Stellen ansehen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= JOBS ========= -->
+  <section id="jobs">
+    <div class="container">
+      <div class="jobs-box">
+        <div class="reveal">
+          <span class="eyebrow">Jobs</span>
+          <h2 class="section-h">Teil eines starken<br><em>Teams</em> werden</h2>
+          <div class="gold-bar"></div>
+          <p class="section-sub">Wir suchen Verstärkung in Rellingen – Friseurmeisterinnen, Stylistinnen und Auszubildende. Fortbildung, Calligraphy-Cut und ein eingespieltes Team.</p>
+          <br><br>
+          <a href="mailto:wunschtermin@bruehl-friseure.de?subject=Bewerbung" class="btn btn-dark">Bewerbung senden</a>
+        </div>
+        <img class="reveal reveal-delay-2" src="images/salon-12.jpg" alt="Teamalltag im Salon Brühl Friseure" loading="lazy">
       </div>
     </div>
   </section>
@@ -1424,7 +1552,7 @@
   <section id="gutschein">
     <div class="gutschein-grid">
       <div class="gutschein-img">
-        <img src="https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?w=900&q=80" alt="Gutschein Brühl Friseure" loading="lazy">
+        <img src="images/salon-08.jpg" alt="Gutschein Brühl Friseure" loading="lazy">
       </div>
       <div class="gutschein-body">
         <span class="eyebrow">Verschenken</span>
@@ -1434,7 +1562,7 @@
         <br><br>
         <div style="display:flex; gap:1rem; flex-wrap:wrap;">
           <a href="https://friseurgutscheine.polylith.de/overlay?client_id=24" target="_blank" class="btn btn-gold">Gutschein kaufen</a>
-          <a href="https://bruehl-friseure.de/gutschein-bruehl-friseur-rellingen.php" target="_blank" class="btn btn-ghost-light">Kennenlern-Gutschein</a>
+          <a href="https://friseurgutscheine.polylith.de/overlay?client_id=24" target="_blank" class="btn btn-ghost-light">Kennenlern-Gutschein</a>
         </div>
       </div>
     </div>
@@ -1521,9 +1649,9 @@
           <ul>
             <li><a href="#about">Über uns</a></li>
             <li><a href="#team">Unser Team</a></li>
-            <li><a href="https://bruehl-friseure.de/salon-bruehl-friseur-rellingen.php" target="_blank">Der Salon</a></li>
-            <li><a href="https://bruehl-friseure.de/trends-bruehl-friseur-rellingen.php" target="_blank">Galerie</a></li>
-            <li><a href="https://bruehl-friseure.de/jobs-bruehl-friseur-rellingen.php" target="_blank">Jobs</a></li>
+            <li><a href="#salon">Der Salon</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#jobs">Jobs</a></li>
             <li><a href="http://www.bruehl-young-style.de/" target="_blank">Young Style</a></li>
           </ul>
         </div>
@@ -1531,10 +1659,10 @@
           <h4>Leistungen</h4>
           <ul>
             <li><a href="#calligraphy">Calligraphy-Cut</a></li>
-            <li><a href="https://bruehl-friseure.de/farbe-bruehl-friseur-rellingen.php" target="_blank">Coloration</a></li>
-            <li><a href="https://bruehl-friseure.de/extensions-bruehl-friseur-rellingen.php" target="_blank">Haarverdichtung</a></li>
-            <li><a href="https://bruehl-friseure.de/zweithaar-bruehl-friseur-rellingen.php" target="_blank">Perücken-Studio</a></li>
-            <li><a href="https://bruehl-friseure.de/specials-bruehl-friseur-rellingen.php" target="_blank">Specials</a></li>
+            <li><a href="#services">Coloration</a></li>
+            <li><a href="#services">Haarverdichtung</a></li>
+            <li><a href="#services">Perücken-Studio</a></li>
+            <li><a href="#services">Specials</a></li>
             <li><a href="#preise">Preise</a></li>
           </ul>
         </div>
@@ -1545,13 +1673,13 @@
             <li><a href="tel:04101592390">04101 – 59 23 90</a></li>
             <li><a href="mailto:wunschtermin@bruehl-friseure.de">E-Mail schreiben</a></li>
             <li><a href="https://friseurgutscheine.polylith.de/overlay?client_id=24" target="_blank">Gutschein kaufen</a></li>
-            <li><a href="https://bruehl-friseure.de/gutschein-bruehl-friseur-rellingen.php" target="_blank">Kennenlern-Gutschein</a></li>
+            <li><a href="#gutschein">Kennenlern-Gutschein</a></li>
             <li><a href="#kontakt">Anfahrt</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Brühl Friseure · Hauptstraße 84a · 25462 Rellingen</p>
+        <p>© 2026 Brühl Friseure · Hauptstraße 84a · 25462 Rellingen · Konzept: <a href="https://vantura-studios.com/" style="color:inherit;">Vantura Studios</a></p>
         <div class="footer-legal">
           <a href="https://bruehl-friseure.de/impressum-bruehl-friseur-rellingen.php" target="_blank">Impressum</a>
           <a href="https://bruehl-friseure.de/datenschutz-bruehl-friseur-rellingen.php" target="_blank">Datenschutz</a>
