@@ -174,7 +174,7 @@ export const EXPERIENCE_ANCHORS = [
   {
     icon: BarChart3,
     title: 'Mediakonzern-Erfahrung',
-    text: 'Reporting und Forecasting bei Publicis Media — Budgets und Kampagnendaten großer Werbungtreibender.',
+    text: 'Reporting und Forecasting in deutschen und internationalen Media-Umfeldern — mit komplexen Budgets, Kampagnendaten und operativen Steuerungsfragen.',
   },
   {
     icon: LineChart,
