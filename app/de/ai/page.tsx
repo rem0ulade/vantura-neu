@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { LocalizedAIPage } from '@/components/LocalizedAIPage'
 
 export const metadata: Metadata = {
-  title: 'AI Lab | Vantura Studios',
-  description: 'Datenschutzorientierte KI-Systeme, Agenten, lokale LLMs, hybride Architekturen, Automation und AI Product Engineering.',
+  title: 'Externer AI Officer & KI-Beratung | Vantura Studios',
+  description: 'Externe KI-Verantwortung für Unternehmen: KI-Strategie, Use-Case-Portfolio, Governance, Enablement und technische Umsetzung – ergänzt um Agenten, lokale LLMs und datenschutzorientierte Architekturen.',
   alternates: { canonical: '/de/ai/', languages: { en: '/ai/', de: '/de/ai/' } },
 }
 
