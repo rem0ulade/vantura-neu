@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { LocalizedAIPage } from '@/components/LocalizedAIPage'
 
 export const metadata: Metadata = {
-  title: 'External AI Officer & AI Consulting | Vantura Studios',
-  description: 'External AI leadership for companies: AI strategy, use-case portfolio, governance, enablement and hands-on implementation, backed by agents, local LLMs and privacy-first architectures.',
+  title: 'AI Projects, AI Officer & Consulting | Vantura Studios',
+  description: 'AI projects for companies: dashboards, internal tools, automations and AI workflows — with strategy, governance, enablement and external AI Officer support when needed.',
   alternates: { canonical: '/ai/', languages: { en: '/ai/', de: '/de/ai/' } },
 }
 
