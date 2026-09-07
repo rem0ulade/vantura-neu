@@ -89,12 +89,12 @@ const lab = [
   { title: 'Tool Calling & MCP', text: 'APIs, Dateien, Browser und interne Systeme als Tools, die ein Agent tatsächlich nutzen kann.' },
   { title: 'Automation', text: 'n8n, geplante Jobs und ereignisgesteuerte Abläufe, die manuelle Übergaben ersetzen.' },
   { title: 'Local & Hybrid LLMs', text: 'Private Daten bleiben lokal. Frontier-Modelle nur dort, wo ihr Einsatz den Zugriff rechtfertigt.' },
-  { title: 'Human Freigabe', text: 'Kritische Aktionen warten auf Freigabe. Das System bereitet die Arbeit vor; ein Mensch bestätigt den entscheidenden Schritt.' },
+  { title: 'Human Approval', text: 'Kritische Aktionen warten auf Freigabe. Das System bereitet die Arbeit vor; ein Mensch bestätigt den entscheidenden Schritt.' },
 ]
 
-const labMarquee = ['AI Agents','Agentic Workflows','Automation','Tool Calling','MCP','Local LLMs','OpenAI','Claude','n8n','RAG','Hybrid Routing','Human Freigabe']
+const labMarquee = ['AI Agents','Agentic Workflows','Automation','Tool Calling','MCP','Local LLMs','OpenAI','Claude','n8n','RAG','Hybrid Routing','Human Approval']
 
-const skills = ['AI Agents','Agentic Workflows','Tool Calling','MCP','OpenAI','Claude','Local LLMs','n8n','RAG','Python','TypeScript','React Native','Expo','React','Next.js','Supabase','REST APIs','GraphQL','Docker','CI/CD','Power BI','Tableau','Excel','Salesforce','Data Integration','Product Strategy','Project Management']
+const skills = ['AI Agents','Agentic Workflows','Tool Calling','MCP','OpenAI','Claude','Local LLMs','n8n','RAG','Python','TypeScript','React Native','Expo','React','Next.js','Supabase','REST APIs','GraphQL','Docker','CI/CD','Power BI','Tableau','Excel','Salesforce','Datenintegration','Produktstrategie','Projektmanagement']
 
 export default function PortfolioDEPage() {
   const marquee = [...labMarquee, ...labMarquee]
@@ -122,7 +122,7 @@ export default function PortfolioDEPage() {
           <div className="relative mx-auto max-w-7xl">
             <div data-reveal className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-6">
               <p className="text-xs font-semibold uppercase tracking-[.24em] text-blue-600">Vantura Studios / Portfolio</p>
-              <p className="text-xs font-medium uppercase tracking-[.16em] text-slate-400">Software · Data · AI · Product</p>
+              <p className="text-xs font-medium uppercase tracking-[.16em] text-slate-400">Software · Daten · KI · Produkt</p>
             </div>
             <div className="grid gap-10 pt-12 lg:grid-cols-[1.4fr_.6fr] lg:items-end">
               <h1 data-reveal className="max-w-5xl text-[clamp(4rem,10vw,9rem)] font-semibold leading-[.82] tracking-[-.075em]">Ich baue<span className="block text-slate-300">nützliche Systeme.</span></h1>
@@ -169,7 +169,7 @@ export default function PortfolioDEPage() {
             </div>
             <div data-reveal className="mt-16 overflow-hidden rounded-[34px] border border-white/10 bg-white/[.035] p-8 sm:p-12">
               <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-                <div><p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-300">Wie ich an solche Systeme herangehe</p><h3 className="mt-4 text-4xl font-semibold tracking-[-.045em]">Data → Logic → Entscheidung</h3><p className="mt-4 max-w-md leading-7 text-white/45">Die Oberfläche ist nur die letzte Schicht. Die eigentliche Arbeit besteht darin, Prozesse, Regeln und unvollkommene Daten in ein System zu übersetzen, das zuverlässig genug für den täglichen Einsatz ist.</p></div>
+                <div><p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-300">Wie ich an solche Systeme herangehe</p><h3 className="mt-4 text-4xl font-semibold tracking-[-.045em]">Daten → Logik → Entscheidung</h3><p className="mt-4 max-w-md leading-7 text-white/45">Die Oberfläche ist nur die letzte Schicht. Die eigentliche Arbeit besteht darin, Prozesse, Regeln und unvollkommene Daten in ein System zu übersetzen, das zuverlässig genug für den täglichen Einsatz ist.</p></div>
                 <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-black/30 p-7 sm:p-10"><div className="absolute inset-x-10 top-1/2 h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent"/><div className="relative grid grid-cols-2 gap-3 sm:grid-cols-4">{flow.map((item)=>{const Icon=item.icon;return <div key={item.number} className="flow-node rounded-2xl border border-white/10 bg-[#11151d] p-4 text-center shadow-2xl"><Icon size={19} className="mx-auto text-blue-300"/><p className="mt-4 text-[10px] font-semibold uppercase tracking-[.16em] text-white/35">{item.number}</p><p className="mt-1 text-xs font-medium text-white/75">{item.label}</p></div>})}</div></div>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function PortfolioDEPage() {
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="grid gap-10 lg:grid-cols-[.75fr_1.25fr]">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[.22em] text-blue-300">AI · Agents · Automation</p>
+                <p className="text-xs font-semibold uppercase tracking-[.22em] text-blue-300">KI · Agenten · Automation</p>
                 <h2 className="mt-4 text-5xl font-semibold tracking-[-.055em] sm:text-7xl">Agenten, die arbeiten. Automationen, die bleiben.</h2>
               </div>
               <p className="max-w-2xl text-xl leading-9 text-white/55">Diesen Bereich treibe ich besonders stark voran: agentische Systeme rund um reale Abläufe — Tool-Calling-Agenten, lokale und Cloud-Modelle sowie Automationen, die manuelle Übergaben ersetzen, statt nur daneben zu existieren.</p>
