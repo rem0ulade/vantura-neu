@@ -22,6 +22,7 @@ import PortfolioShowcaseEffects from './PortfolioShowcaseEffects'
 export const metadata: Metadata = {
   title: 'Jonathan Kokalj | Portfolio · Vantura Studios',
   description: 'Selected software, data, AI and product work by Jonathan Kokalj — founder of Vantura Studios.',
+  alternates: { canonical: '/Portfolio/', languages: { en: '/Portfolio/', de: '/de/Portfolio/' } },
 }
 
 const proof = [
@@ -109,7 +110,7 @@ export default function PortfolioTestPage() {
             <a href="#work" className="hidden transition hover:text-slate-950 sm:block">Work</a>
             <a href="#enterprise" className="hidden transition hover:text-slate-950 md:block">Enterprise</a>
             <a href="#lab" className="hidden transition hover:text-slate-950 lg:block">Lab</a>
-            <a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-slate-950"><Github size={15}/> GitHub</a>
+            <div className="inline-flex items-center rounded-full border border-slate-200 bg-white p-1 text-[10px] font-semibold tracking-normal"><Link href="/Portfolio/" className="rounded-full bg-slate-950 px-2.5 py-1.5 text-white">EN</Link><Link href="/de/Portfolio/" className="rounded-full px-2.5 py-1.5 text-slate-500 transition hover:text-slate-950">DE</Link></div><a href="https://github.com/rem0ulade" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 transition hover:text-slate-950"><Github size={15}/> GitHub</a>
           </nav>
         </div>
       </header>
