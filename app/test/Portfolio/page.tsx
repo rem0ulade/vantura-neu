@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 const proof = [
-  { title: 'Enterprise experience', text: 'Internal software, reporting, calculation and decision systems built around real business processes.' },
+  { title: 'Enterprise experience', text: 'Internal software, reporting, calculation and decision-support tools built around real business processes in German and international media environments.' },
   { title: 'Product ownership', text: 'From concept and architecture to implementation, launch, iteration and continued technical ownership.' },
   { title: 'Business + engineering', text: 'Commercial workflows, data, product thinking and hands-on software development in one profile.' },
 ]
@@ -39,8 +39,8 @@ const projects = [
     tone: 'bg-[#111318] text-white',
   },
   {
-    index: '02', label: 'Enterprise / NDA', title: 'Decision Systems', subtitle: 'Reporting, forecasting & calculation tools',
-    description: 'Business-critical internal systems for a major German media company. Client data, interfaces and implementation details remain confidential; responsibilities and technical scope can still be discussed.',
+    index: '02', label: 'Enterprise / NDA', title: 'Reporting & Decision Tools', subtitle: 'Reporting, forecasting & calculation tools',
+    description: 'Business-critical reporting, forecasting, calculation and decision-support tools developed across German and international media environments, including Publicis Media. Client data, interfaces and implementation details remain confidential; responsibilities and technical scope can still be discussed.',
     tags: ['Data', 'Business Logic', 'Reporting', 'Forecasting', 'Internal Tools'], href: 'https://vantura-studios.com/de/reporting/demo/', icon: BarChart3,
     tone: 'bg-[#eef4ff] text-slate-950',
   },
@@ -162,7 +162,7 @@ export default function PortfolioTestPage() {
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
               <div><div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.04] px-4 py-2 text-xs font-semibold uppercase tracking-[.16em] text-blue-300"><LockKeyhole size={14}/> Confidential enterprise work</div><p className="mt-6 max-w-sm text-sm leading-7 text-white/45">Screenshots, data and implementation details are intentionally not published. The value of the work can still be described without exposing confidential information.</p></div>
-              <div><h2 className="max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">Real business software does not always belong in a public gallery.</h2><p className="mt-8 max-w-3xl text-xl leading-9 text-white/60">I have developed internal reporting, forecasting, calculation and decision-support systems for a major German media company. The projects combine complex business logic, operational data and iterative stakeholder requirements.</p></div>
+              <div><h2 className="max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">Real business software does not always belong in a public gallery.</h2><p className="mt-8 max-w-3xl text-xl leading-9 text-white/60">I have developed internal reporting, forecasting, calculation and decision-support tools across German and international media organisations, including Publicis Media. The work combines complex business logic, operational data and iterative stakeholder requirements.</p></div>
             </div>
             <div className="mt-16 grid gap-px overflow-hidden rounded-[30px] border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
               {enterpriseCapabilities.map((item)=><div key={item} data-reveal className="bg-[#0b0d12] p-6"><div className="flex items-start gap-3"><Check size={17} className="mt-0.5 shrink-0 text-blue-300"/><p className="text-sm leading-6 text-white/70">{item}</p></div></div>)}
