@@ -48,7 +48,18 @@ const copy = {
       ['Infrastructure', 'Local inference · Self-hosting · Docker · Hybrid setups'],
       ['Engineering', 'TypeScript · Python · React · Next.js · Supabase'],
     ],
-    cta: 'Have one AI project in mind — or need help finding the right one?',
+    strategyEyebrow: 'AI strategy & ongoing ownership',
+    strategyTitle: 'When individual projects turn into a broader AI agenda.',
+    strategyLead: 'Not every company needs a full AI programme on day one. But once several teams, tools and use cases are involved, clear ownership becomes valuable. I can help turn those moving parts into a practical operating model — without separating strategy from implementation.',
+    strategyPoints: [
+      ['01', 'Use-case portfolio', 'Collect, assess and prioritise opportunities by business value, feasibility, data readiness and risk.'],
+      ['02', 'Roadmap & priorities', 'Translate the strongest opportunities into a realistic sequence of pilots, production systems and organisational steps.'],
+      ['03', 'Tool & provider decisions', 'Evaluate models, platforms and vendors against capability, privacy, integration effort, cost and long-term flexibility.'],
+      ['04', 'Governance & standards', 'Define practical rules for approved tools, data handling, access, human approval, documentation and responsible use.'],
+      ['05', 'Enablement & AI Officer support', 'Support teams, coordinate stakeholders and stay involved as an external AI Officer when ongoing ownership is useful.'],
+    ],
+    cta: 'Have one AI project in mind — or need help shaping the bigger picture?',
+    ctaText: 'We can start with a concrete dashboard, workflow or internal tool — or look at your wider AI priorities and define the right next step together.',
     back: 'Back to studio',
   },
   de: {
@@ -95,7 +106,18 @@ const copy = {
       ['Infrastruktur', 'Local Inference · Self-Hosting · Docker · Hybrid-Setups'],
       ['Engineering', 'TypeScript · Python · React · Next.js · Supabase'],
     ],
-    cta: 'Sie haben ein konkretes KI-Projekt — oder wollen herausfinden, welches sich wirklich lohnt?',
+    strategyEyebrow: 'KI-Strategie & laufende Verantwortung',
+    strategyTitle: 'Wenn aus einzelnen Projekten eine größere KI-Agenda wird.',
+    strategyLead: 'Nicht jedes Unternehmen braucht vom ersten Tag an ein vollständiges KI-Programm. Sobald aber mehrere Teams, Tools und Use Cases zusammenkommen, wird klare Verantwortung wertvoll. Ich helfe dabei, daraus ein praktikables Operating Model zu machen — ohne Strategie und Umsetzung voneinander zu trennen.',
+    strategyPoints: [
+      ['01', 'Use-Case-Portfolio', 'Chancen sammeln, bewerten und nach Business-Nutzen, Machbarkeit, Datenreife und Risiko priorisieren.'],
+      ['02', 'Roadmap & Prioritäten', 'Die stärksten Use Cases in eine realistische Reihenfolge aus Piloten, produktiven Systemen und organisatorischen Schritten übersetzen.'],
+      ['03', 'Tool- & Anbieterauswahl', 'Modelle, Plattformen und Anbieter nach Leistung, Datenschutz, Integrationsaufwand, Kosten und langfristiger Flexibilität bewerten.'],
+      ['04', 'Governance & Standards', 'Praktische Regeln für freigegebene Tools, Daten, Zugriffe, Human Approval, Dokumentation und verantwortungsvollen Einsatz definieren.'],
+      ['05', 'Enablement & AI-Officer-Begleitung', 'Teams unterstützen, Stakeholder koordinieren und bei Bedarf als externer AI Officer laufende Verantwortung übernehmen.'],
+    ],
+    cta: 'Sie haben ein konkretes KI-Projekt — oder möchten das größere Bild strukturieren?',
+    ctaText: 'Wir können mit einem Dashboard, Workflow oder internen Tool starten — oder gemeinsam Ihre KI-Prioritäten ordnen und den sinnvollsten nächsten Schritt festlegen.',
     back: 'Zurück zum Studio',
   },
 } as const
@@ -154,7 +176,9 @@ export function LocalizedAIPage({ locale }: { locale: 'en' | 'de' }) {
 
       <section className="bg-white py-20 lg:py-28"><div className="mx-auto max-w-7xl px-6 lg:px-8"><p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-600">{t.stackEyebrow}</p><h2 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-.055em] sm:text-6xl">{t.stackTitle}</h2><div className="mt-10 divide-y divide-slate-200 border-y border-slate-200">{t.stack.map(([label,value])=><div key={label} className="grid gap-2 py-5 sm:grid-cols-[170px_1fr] sm:items-center"><p className="text-sm font-semibold">{label}</p><p className="text-sm leading-6 text-muted">{value}</p></div>)}</div></div></section>
 
-      <section className="border-t border-slate-200 bg-[#f6f8fb] py-16"><div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 sm:flex-row sm:items-end sm:justify-between lg:px-8"><div><h2 className="max-w-2xl text-3xl font-semibold tracking-[-.045em] sm:text-5xl">{t.cta}</h2><a href={contact} className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white">{t.primary}<ArrowRight size={16}/></a></div><Link href={`${prefix}/`} className="text-sm font-semibold text-slate-500">← {t.back}</Link></div></section>
+      <section className="border-t border-slate-200 bg-[#f6f8fb] py-20 lg:py-28"><div className="mx-auto max-w-7xl px-6 lg:px-8"><div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:gap-16"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-blue-600">{t.strategyEyebrow}</p><h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[.98] tracking-[-.055em] sm:text-6xl">{t.strategyTitle}</h2><p className="mt-6 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">{t.strategyLead}</p></div><div className="divide-y divide-slate-200 border-y border-slate-200">{t.strategyPoints.map(([number,title,description])=><div key={number} className="grid gap-3 py-6 sm:grid-cols-[64px_190px_1fr] sm:items-start"><span className="text-xs font-semibold tracking-[.18em] text-blue-600">{number}</span><h3 className="text-base font-semibold">{title}</h3><p className="text-sm leading-6 text-muted">{description}</p></div>)}</div></div></div></section>
+
+      <section className="border-t border-slate-200 bg-slate-950 py-16 text-white lg:py-20"><div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 sm:flex-row sm:items-end sm:justify-between lg:px-8"><div><h2 className="max-w-3xl text-3xl font-semibold tracking-[-.045em] sm:text-5xl">{t.cta}</h2><p className="mt-4 max-w-2xl text-sm leading-6 text-white/55 sm:text-base sm:leading-7">{t.ctaText}</p><a href={contact} className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950">{t.primary}<ArrowRight size={16}/></a></div><Link href={`${prefix}/`} className="text-sm font-semibold text-white/45 transition hover:text-white">← {t.back}</Link></div></section>
     </main>
   </div>
 }
