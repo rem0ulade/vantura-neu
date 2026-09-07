@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 const proof = [
-  { title: 'Enterprise-Erfahrung', text: 'Interne Software-, Reporting-, Kalkulations- und Entscheidungsunterstützungstools für reale Geschäftsprozesse in deutschen und internationalen Media-Umfeldern.' },
+  { title: 'Enterprise-Erfahrung', text: 'Interne Software-, Reporting-, Kalkulations- und Entscheidungsunterstützungstools für reale Geschäftsprozesse in deutschen und internationalen Unternehmensumfeldern.' },
   { title: 'Produktverantwortung', text: 'Von Konzept und Architektur über Umsetzung und Launch bis zu Iteration und laufender technischer Verantwortung.' },
   { title: 'Business + Engineering', text: 'Geschäftsprozesse, Daten, Produktdenken und hands-on Softwareentwicklung in einem Profil.' },
 ]
@@ -40,7 +40,7 @@ const projects = [
   },
   {
     index: '02', label: 'Enterprise / NDA', title: 'Reporting- & Entscheidungstools', subtitle: 'Reporting, Forecasting & Kalkulation',
-    description: 'Geschäftskritische Reporting-, Forecasting-, Kalkulations- und Entscheidungsunterstützungstools aus deutschen und internationalen Media-Umfeldern. Kundendaten, Oberflächen und Implementierungsdetails bleiben vertraulich; Verantwortungsbereiche und technischer Umfang können dennoch besprochen werden.',
+    description: 'Geschäftskritische Reporting-, Forecasting-, Kalkulations- und Entscheidungsunterstützungstools aus deutschen und internationalen Unternehmensumfeldern. Kundendaten, Oberflächen und Implementierungsdetails bleiben vertraulich; Verantwortungsbereiche und technischer Umfang können dennoch besprochen werden.',
     tags: ['Data', 'Business Logic', 'Reporting', 'Forecasting', 'Internal Tools'], href: 'https://vantura-studios.com/de/reporting/demo/', icon: BarChart3,
     tone: 'bg-[#eef4ff] text-slate-950',
   },
@@ -162,7 +162,7 @@ export default function PortfolioDEPage() {
           <div className="mx-auto max-w-7xl">
             <div data-reveal className="grid gap-12 lg:grid-cols-[.75fr_1.25fr]">
               <div><div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[.04] px-4 py-2 text-xs font-semibold uppercase tracking-[.16em] text-blue-300"><LockKeyhole size={14}/> Vertrauliche Enterprise-Projekte</div><p className="mt-6 max-w-sm text-sm leading-7 text-white/45">Screenshots, Daten und Implementierungsdetails werden bewusst nicht veröffentlicht. Der Wert der Arbeit lässt sich trotzdem beschreiben, ohne vertrauliche Informationen offenzulegen.</p></div>
-              <div><h2 className="max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">Echte Business-Software gehört nicht immer in eine öffentliche Galerie.</h2><p className="mt-8 max-w-3xl text-xl leading-9 text-white/60">Ich habe interne Reporting-, Forecasting-, Kalkulations- und Entscheidungsunterstützungstools in deutschen und internationalen Media-Umfeldern entwickelt. Die Arbeit verbindet komplexe Business-Logik, operative Daten und iterative Stakeholder-Anforderungen.</p></div>
+              <div><h2 className="max-w-4xl text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">Echte Business-Software gehört nicht immer in eine öffentliche Galerie.</h2><p className="mt-8 max-w-3xl text-xl leading-9 text-white/60">Ich habe interne Reporting-, Forecasting-, Kalkulations- und Entscheidungsunterstützungstools in deutschen und internationalen Unternehmensumfeldern entwickelt. Die Arbeit verbindet komplexe Business-Logik, operative Daten und iterative Stakeholder-Anforderungen.</p></div>
             </div>
             <div className="mt-16 grid gap-px overflow-hidden rounded-[30px] border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
               {enterpriseCapabilities.map((item)=><div key={item} data-reveal className="bg-[#0b0d12] p-6"><div className="flex items-start gap-3"><Check size={17} className="mt-0.5 shrink-0 text-blue-300"/><p className="text-sm leading-6 text-white/70">{item}</p></div></div>)}

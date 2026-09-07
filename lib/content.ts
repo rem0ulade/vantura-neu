@@ -173,8 +173,8 @@ export const PACKAGES = [
 export const EXPERIENCE_ANCHORS = [
   {
     icon: BarChart3,
-    title: 'Mediakonzern-Erfahrung',
-    text: 'Reporting und Forecasting in deutschen und internationalen Media-Umfeldern — mit komplexen Budgets, Kampagnendaten und operativen Steuerungsfragen.',
+    title: 'Enterprise-Reporting-Erfahrung',
+    text: 'Reporting und Forecasting in deutschen und internationalen Unternehmensumfeldern — mit komplexen Budgets, operativen Daten und Steuerungsfragen.',
   },
   {
     icon: LineChart,
