@@ -10,6 +10,7 @@ import {
   MonitorSmartphone,
   MousePointer2,
 } from 'lucide-react'
+import WebsitePortfolioEffects from './WebsitePortfolioEffects'
 
 export const metadata: Metadata = {
   title: 'Website-Portfolio | Vantura Studios',
@@ -115,8 +116,12 @@ const principles = [
 ]
 
 export default function WebsitePortfolioPage() {
+  const marquee = ['Webdesign', 'Responsive', 'Klarer Aufbau', 'Starke Inhalte', 'Direkter Kontakt', 'Individuell']
+  const marqueeLoop = [...marquee, ...marquee]
+
   return (
     <div className="min-h-screen bg-[#f5f7fa] text-[#101522] selection:bg-[#101522] selection:text-white">
+      <WebsitePortfolioEffects />
       <header className="fixed inset-x-0 top-0 z-50 border-b border-black/[.07] bg-[#f5f7fa]/85 backdrop-blur-xl">
         <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
           <Link href="/de/" className="text-[15px] font-semibold tracking-[-.035em]">
@@ -137,24 +142,24 @@ export default function WebsitePortfolioPage() {
       </header>
 
       <main>
-        <section className="relative overflow-hidden px-5 pb-20 pt-32 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
+        <section data-wp-hero className="relative overflow-hidden px-5 pb-20 pt-32 sm:px-8 lg:px-12 lg:pb-28 lg:pt-40">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_83%_14%,rgba(85,136,255,.17),transparent_27%),radial-gradient(circle_at_7%_75%,rgba(184,255,69,.14),transparent_22%)]" />
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(16,21,34,.035)_1px,transparent_1px),linear-gradient(90deg,rgba(16,21,34,.035)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_92%)]" />
           <div className="relative mx-auto max-w-[1344px]">
-            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-5 text-[11px] font-semibold uppercase tracking-[.22em]">
-              <p className="text-[#2459c4]">Website-Portfolio</p>
+            <div data-wp-reveal className="flex flex-wrap items-center justify-between gap-3 border-b border-black/10 pb-5 text-[11px] font-semibold uppercase tracking-[.22em]">
+              <p className="flex items-center gap-2 text-[#2459c4]"><span className="wp-live-dot h-2 w-2 rounded-full bg-[#2459c4]" /> Website-Portfolio</p>
               <p className="text-slate-400">Jonathan Kokalj · Vantura Studios</p>
             </div>
 
             <div className="grid gap-12 pt-10 lg:grid-cols-[1.35fr_.65fr] lg:items-end lg:pt-14">
-              <div>
+              <div data-wp-reveal>
                 <p className="mb-5 text-sm font-semibold text-slate-500">Individuelle Websites für Unternehmen und neue Ideen.</p>
                 <h1 className="max-w-5xl text-[clamp(3.8rem,8.7vw,8.5rem)] font-semibold leading-[.87] tracking-[-.075em]">
                   Klar im Kopf.
-                  <span className="block text-slate-300">Stark im Web.</span>
+                  <span className="wp-hero-accent block">Stark im Web.</span>
                 </h1>
               </div>
-              <div className="lg:pb-2">
+              <div data-wp-reveal className="lg:pb-2 [--wp-delay:120ms]">
                 <p className="max-w-lg text-lg leading-8 text-slate-600 sm:text-xl sm:leading-9">
                   Ich entwickle Websites, die Leistungen verständlich machen, Vertrauen schaffen und Interessenten ohne Umwege zur Anfrage führen.
                 </p>
@@ -164,7 +169,7 @@ export default function WebsitePortfolioPage() {
               </div>
             </div>
 
-            <div className="mt-14 grid overflow-hidden rounded-[28px] border border-white/80 bg-white/70 shadow-[0_28px_90px_rgba(28,41,75,.08)] backdrop-blur-sm sm:grid-cols-3">
+            <div data-wp-reveal className="mt-14 grid overflow-hidden rounded-[28px] border border-white/80 bg-white/70 shadow-[0_28px_90px_rgba(28,41,75,.08)] backdrop-blur-sm sm:grid-cols-3 [--wp-delay:220ms]">
               {[
                 ['05', 'ausgewählte Projekte'],
                 ['100 %', 'individuelle Gestaltung'],
@@ -179,9 +184,19 @@ export default function WebsitePortfolioPage() {
           </div>
         </section>
 
+        <div className="overflow-hidden border-y border-black/[.07] bg-white py-4" aria-hidden="true">
+          <div className="wp-marquee-track">
+            {marqueeLoop.map((item, index) => (
+              <span key={`${item}-${index}`} className="mx-5 flex items-center gap-10 whitespace-nowrap text-xs font-semibold uppercase tracking-[.2em] text-slate-500">
+                {item} <span className="text-[#2459c4]">✦</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
         <section id="projekte" className="bg-[#101522] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto max-w-[1344px]">
-            <div className="grid gap-7 border-b border-white/10 pb-9 lg:grid-cols-[.7fr_1.3fr] lg:items-end">
+            <div data-wp-reveal className="grid gap-7 border-b border-white/10 pb-9 lg:grid-cols-[.7fr_1.3fr] lg:items-end">
               <p className="text-xs font-semibold uppercase tracking-[.22em] text-[#91b9ff]">Ausgewählte Websites</p>
               <div>
                 <h2 className="text-5xl font-semibold tracking-[-.06em] sm:text-7xl">Vom ersten Eindruck bis zur Anfrage.</h2>
@@ -195,6 +210,8 @@ export default function WebsitePortfolioPage() {
               {projects.map((project, index) => (
                 <article
                   key={project.title}
+                  data-wp-project
+                  data-wp-reveal
                   className="group overflow-hidden rounded-[30px] border border-white/10 bg-white/[.045] lg:rounded-[38px]"
                 >
                   <div className={`grid lg:grid-cols-2 ${index % 2 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
@@ -209,7 +226,7 @@ export default function WebsitePortfolioPage() {
                         className="absolute inset-0 opacity-45"
                         style={{ background: `radial-gradient(circle at 50% 40%, ${project.color}, transparent 62%)` }}
                       />
-                      <div className="absolute inset-x-5 bottom-0 top-8 overflow-hidden rounded-t-[18px] border border-black/10 bg-white shadow-[0_28px_80px_rgba(0,0,0,.24)] transition duration-700 group-hover:-translate-y-2 group-hover:scale-[1.015] sm:inset-x-10 sm:top-12 lg:inset-x-12 lg:top-16">
+                      <div data-wp-tilt className="absolute inset-x-5 bottom-0 top-8 overflow-hidden rounded-t-[18px] border border-black/10 bg-white shadow-[0_28px_80px_rgba(0,0,0,.24)] sm:inset-x-10 sm:top-12 lg:inset-x-12 lg:top-16">
                         <div className="flex h-8 items-center gap-1.5 border-b border-black/[.07] bg-white px-3">
                           <span className="h-2 w-2 rounded-full bg-[#ff6b5f]" />
                           <span className="h-2 w-2 rounded-full bg-[#ffc94a]" />
@@ -222,7 +239,7 @@ export default function WebsitePortfolioPage() {
                             alt={`Startseite von ${project.title}`}
                             fill
                             sizes="(max-width: 1024px) 100vw, 50vw"
-                            className="object-cover object-top"
+                            className="wp-project-image object-cover object-top"
                           />
                         </div>
                       </div>
@@ -274,7 +291,7 @@ export default function WebsitePortfolioPage() {
         <section className="px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="mx-auto max-w-[1344px]">
             <div className="grid gap-10 lg:grid-cols-[.72fr_1.28fr]">
-              <div>
+              <div data-wp-reveal>
                 <p className="text-xs font-semibold uppercase tracking-[.22em] text-[#2459c4]">Darauf kommt es an</p>
                 <h2 className="mt-4 max-w-xl text-5xl font-semibold leading-[.98] tracking-[-.06em] sm:text-7xl">
                   Nicht nur schön. Sondern nützlich.
@@ -284,8 +301,8 @@ export default function WebsitePortfolioPage() {
                 {principles.map((item) => {
                   const Icon = item.icon
                   return (
-                    <div key={item.title} className="min-h-[250px] border-b border-r border-black/10 p-6 sm:p-8">
-                      <Icon size={22} className="text-[#2459c4]" />
+                    <div key={item.title} data-wp-reveal className="wp-principle min-h-[250px] border-b border-r border-black/10 p-6 sm:p-8">
+                      <Icon size={22} className="wp-principle-icon text-[#2459c4]" />
                       <h3 className="mt-12 text-2xl font-semibold tracking-[-.04em]">{item.title}</h3>
                       <p className="mt-3 max-w-xs text-base leading-7 text-slate-500">{item.text}</p>
                     </div>
@@ -297,7 +314,7 @@ export default function WebsitePortfolioPage() {
         </section>
 
         <section className="px-5 pb-8 sm:px-8 lg:px-12 lg:pb-12">
-          <div className="relative mx-auto max-w-[1344px] overflow-hidden rounded-[34px] bg-[#2459c4] px-7 py-12 text-white sm:p-12 lg:rounded-[44px] lg:p-16">
+          <div data-wp-reveal className="relative mx-auto max-w-[1344px] overflow-hidden rounded-[34px] bg-[#2459c4] px-7 py-12 text-white sm:p-12 lg:rounded-[44px] lg:p-16">
             <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#b8ff45]/20 blur-3xl" />
             <div className="relative grid gap-12 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
               <div>
