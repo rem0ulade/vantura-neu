@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE.url}/projects/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE.url}/design/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/websites/`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE.url}/portfolio/websites/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/de/reporting/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE.url}/de/ai/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/de/projects/`, changeFrequency: 'monthly', priority: 0.8 },
