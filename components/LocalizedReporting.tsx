@@ -60,7 +60,7 @@ const CUSTOMERS = [
 ] as const
 
 export function LocalizedReporting({locale}:{locale:'en'|'de'}){
- const t=text[locale], prefix=locale==='de'?'/de':'', basePath=process.env.NEXT_PUBLIC_BASE_PATH ?? '', demoHref=`${prefix}/reporting/demo/`, portfolioHref=locale==='de'?'/de/Portfolio/':'/Portfolio/'
+ const t=text[locale], prefix=locale==='de'?'/de':'', basePath=process.env.NEXT_PUBLIC_BASE_PATH ?? '', demoHref=`${prefix}/reporting/demo/`, portfolioHref=locale==='de'?'/de/Portfolio/':'/portfolio/'
  const contact=`mailto:jk@vantura-studios.com?subject=${encodeURIComponent(locale==='de'?'Erstgespräch: Reporting & Daten':'Intro call: Reporting & data')}`
  return <div className="min-h-screen bg-white text-ink">
   <header className="sticky top-0 z-50 border-b border-line bg-white/90 backdrop-blur"><nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8"><Link href={`${prefix}/`} className="flex min-w-0 items-center gap-2"><img src={basePath+'/brand/vantura-logo.png'} alt="" className="h-9 w-9 shrink-0 object-contain"/><span className="truncate text-[15px] font-semibold sm:text-[17px]">Vantura Studios</span></Link><div className="ml-3 flex shrink-0 items-center gap-3"><Link href={`${prefix}/`} className="hidden text-sm text-muted sm:block">{t.home}</Link><LanguageSwitch locale={locale}/><a href={contact} className="hidden rounded-full bg-ink px-4 py-2 text-sm font-medium text-white sm:block">{t.call}</a></div></nav></header>
