@@ -36,7 +36,7 @@ export function Hero({ locale }: { locale: Locale }) {
         </motion.p>
         <motion.h1
           {...fadeUp(0.08)}
-          className="mt-5 max-w-[12ch] text-[clamp(3.4rem,12vw,8.5rem)] font-bold uppercase leading-[0.85] tracking-[-0.06em]"
+          className="mt-5 max-w-[18ch] text-[clamp(2.6rem,8vw,5.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em]"
         >
           {copy.heroTitle}
         </motion.h1>
