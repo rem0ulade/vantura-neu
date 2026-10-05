@@ -1,1 +1,5 @@
-export { default, metadata } from '../test/Portfolio/page'
+import { LegacyRedirect } from '@/components/LegacyRedirect'
+
+export default function Page() {
+  return <LegacyRedirect to="/work/" />
+}

@@ -1,15 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { SITE } from '@/lib/site'
 import './globals.css'
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-space-grotesk',
 })
 
-const title = `${SITE.name} — ${SITE.claim}`
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jetbrains-mono',
+})
+
+const title = `${SITE.name} Studios — ${SITE.claim}`
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -19,20 +25,20 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   keywords: [
-    'Reporting',
-    'Dashboards',
-    'Business Intelligence',
-    'Automation',
-    'Forecasting',
-    'KPI',
-    'Data Analysis',
-    'Controlling',
+    'Webdesign',
+    'Website',
+    'Online Shop',
+    'Shopify',
+    'Relaunch',
+    'Landing Page',
+    'UI Design',
+    'Vantura',
   ],
   openGraph: {
     type: 'website',
     locale: SITE.locale,
     url: SITE.url,
-    siteName: SITE.name,
+    siteName: `${SITE.name} Studios`,
     title,
     description: SITE.description,
   },
@@ -50,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans">{children}</body>
+    <html lang="en" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }

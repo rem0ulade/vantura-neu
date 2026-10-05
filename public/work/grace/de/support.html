@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace — Support</title>
+  <meta name="description" content="Support für Grace auf dem Mac und die iOS Companion — ohne Terminal-Hacks." />
+  <link rel="alternate" hreflang="de" href="https://meet-grace.com/de/support.html" />
+  <link rel="alternate" hreflang="en" href="https://meet-grace.com/support.html" />
+  <link rel="alternate" hreflang="x-default" href="https://meet-grace.com/support.html" />
+  <link rel="apple-touch-icon" href="../assets/grace-icon.png" />
+  <link rel="icon" href="../assets/grace-icon.png" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="top">
+    <a class="brand" href="index.html"><div class="brand-mark"></div><span>Grace</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menü">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="features.html">Features</a>
+      <a href="agents.html">Agents</a>
+      <a class="active" href="support.html">Support</a>
+      <span class="lang-switch" aria-label="Sprache">
+        <a class="current" href="support.html" hreflang="de">DE</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="../support.html" hreflang="en">EN</a>
+      </span>
+        <a href="../support.html" hreflang="en">EN</a>
+      </span>
+    </div>
+  </nav>
+
+  <section style="margin-bottom:40px;">
+    <h2>Support</h2>
+    <p class="lede">Häufige Fragen zu Grace auf dem Mac und iOS — ohne Terminal-Hacks.</p>
+  </section>
+
+  <section>
+    <h2>Mac</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">Grace startet nicht</div>
+        <p>Prüfe zuerst Gatekeeper: macOS erlaubt keine unbekannten Apps ohne Bestätigung. Öffne statt des direkten Doppelklicks einmal „Systemeinstellungen → Sicherheit → Allgemein“ und erlaube den Start.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Grace ist langsam oder hängt</div>
+        <p>Schließe nicht genutzte Chats, prüfe die lokalen Modelle und Limiten deiner Keys und aktiviere ggf. den strengeren Modus in den Einstellungen.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Daten sichern</div>
+        <p>Grace speichert Chats, Runs und Dateien lokal. Sichere den Workspace-Ordner regelmäßig über Time Machine oder manuell.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>iOS Companion</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">TestFlight</div>
+        <p>Die iOS Companion-App wird über TestFlight verteilt. Halte die App aktuell und aktualisiere bei neuen TestFlight-Builds.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Verbindung zum Mac</div>
+        <p>Nutze LAN oder Tailscale. Beide Geräte müssen im selben Netz hängen; danach wählst du den Mac-Workspace in der App aus.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Push-Benachrichtigungen</div>
+        <p>Prüfe Mitteilungen für Grace in den iOS-Einstellungen und bestätige Push-Berechtigungen nach der ersten Anmeldung. Ohne Freigabe bleiben Benachrichtigungen stumm.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <p>Fragen, die hier nicht beantwortet werden: <a href="mailto:jk@vantura-studios.com?subject=Grace%20Support">jk@vantura-studios.com</a></p>
+  </section>
+
+  <footer>
+    <div class="footer-meta">
+      <span>© 2026 Grace</span>
+      <strong>Ein Produkt von <a href="https://vantura-studios.com/" target="_blank" rel="noopener">Vantura Studios</a></strong>
+    </div>
+    <div class="footer-links">
+      <a href="features.html">Features</a><span class="dot">·</span>
+      <a href="agents.html">Agents</a><span class="dot">·</span>
+      <a href="support.html">Support</a><span class="dot">·</span>
+      <a href="privacy.html">Datenschutz</a><span class="dot">·</span>
+      <a href="impressum.html">Impressum</a>
+    </div>
+  </footer>
+</div>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

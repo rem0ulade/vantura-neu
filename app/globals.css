@@ -1,19 +1,21 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-ink: #0b1220;
-  --color-navy: #16233f;
-  --color-paper: #f7f8fb;
-  --color-line: #e6e9f0;
-  --color-muted: #5c6675;
-  --color-accent: #3b5bdb;
+  --color-ink: #111111;
+  --color-navy: #1a1a1a;
+  --color-paper: #f2efe8;
+  --color-line: #111111;
+  --color-muted: #444444;
+  --color-accent: #ff4d1a;
+  --color-signal: #ff4d1a;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
-  --shadow-soft: 0 24px 64px -16px rgb(11 18 32 / 0.14);
-  --shadow-card: 0 1px 2px rgb(11 18 32 / 0.04), 0 8px 24px -8px rgb(11 18 32 / 0.08);
+  --shadow-soft: 0 24px 64px -16px rgb(17 17 17 / 0.18);
+  --shadow-card: 0 0 0 2px #111111;
 
-  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee: marquee 28s linear infinite;
 }
 
 :root {
@@ -22,20 +24,19 @@
 
 html {
   scroll-behavior: smooth;
-  /* Anker-Sprünge landen unterhalb der Sticky-Navigation */
   scroll-padding-top: 5.5rem;
 }
 
 body {
-  background: #ffffff;
+  background: var(--color-paper);
   color: var(--color-ink);
-  font-feature-settings: 'cv11', 'ss01';
+  font-feature-settings: 'ss01';
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--color-ink);
+  background: var(--color-signal);
   color: #ffffff;
 }
 
@@ -43,16 +44,29 @@ body {
   html {
     scroll-behavior: auto;
   }
+
+  .motion-safe-only {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
-/* Feine Rasterlinien für Hero-Hintergrund */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgb(11 18 32 / 0.045) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(11 18 32 / 0.045) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(to right, rgb(17 17 17 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(17 17 17 / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
 .tnum {
   font-variant-numeric: tabular-nums;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 860" role="img" aria-labelledby="coreTitle coreDesc">
+  <title id="coreTitle">Bonsai Core Hub Dashboard</title>
+  <desc id="coreDesc">Ein umfassendes Smart-Home-Dashboard mit Sidebar, Wetter, Innenklima, Szenen, Medienleiste und Sicherheitskarten.</desc>
+  <defs>
+    <linearGradient id="coreBg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#eef4eb"/>
+      <stop offset="1" stop-color="#e2eadf"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-16%" y="-18%" width="132%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#36503c" flood-opacity=".20"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="860" rx="28" fill="url(#coreBg)"/>
+
+  <g opacity=".58" fill="#19452c">
+    <circle cx="548" cy="58" r="2.4"/><circle cx="672" cy="82" r="2.8"/><circle cx="824" cy="42" r="1.8"/>
+    <circle cx="1008" cy="70" r="2.4"/><circle cx="1176" cy="92" r="2"/><circle cx="1294" cy="54" r="3"/>
+    <circle cx="618" cy="314" r="3.2"/><circle cx="924" cy="286" r="2.4"/><circle cx="1130" cy="316" r="2.2"/>
+    <circle cx="318" cy="398" r="2.4"/><circle cx="1218" cy="412" r="3.4"/><circle cx="1390" cy="468" r="2.4"/>
+    <circle cx="428" cy="720" r="2.8"/><circle cx="812" cy="688" r="2"/><circle cx="1044" cy="760" r="2.5"/>
+  </g>
+
+  <rect x="0" y="0" width="214" height="860" fill="#f6f8f2" stroke="#bdcbb8"/>
+  <rect x="20" y="22" width="24" height="24" rx="6" fill="#173b27"/>
+  <path d="M27 36l5-5 5 5v6H27z" fill="#e9f0e5"/>
+  <text x="54" y="42" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="850">Bonsai Home</text>
+  <text x="20" y="70" fill="#6b7d70" font-family="Inter,Arial,sans-serif" font-size="12" letter-spacing="4">SMART HOME</text>
+
+  <line x1="0" y1="108" x2="214" y2="108" stroke="#bdcbb8"/>
+  <text x="20" y="142" fill="#5e7164" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">LIVE-STATUS</text>
+  <circle cx="22" cy="172" r="4" fill="#239768"/><text x="36" y="177" fill="#24372a" font-family="Inter,Arial,sans-serif" font-size="14">14/22 Geräte an</text>
+  <circle cx="22" cy="202" r="4" fill="#63786a"/><text x="36" y="207" fill="#24372a" font-family="Inter,Arial,sans-serif" font-size="14">4 Kameras bereit</text>
+  <circle cx="22" cy="232" r="4" fill="#63786a"/><text x="36" y="237" fill="#24372a" font-family="Inter,Arial,sans-serif" font-size="14">1 Paket unterwegs</text>
+
+  <line x1="0" y1="264" x2="214" y2="264" stroke="#bdcbb8"/>
+  <text x="20" y="300" fill="#5e7164" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="800" letter-spacing="1.5">NAVIGATION</text>
+  <rect x="8" y="318" width="198" height="44" rx="10" fill="#dce8d9"/>
+  <rect x="12" y="329" width="4" height="22" rx="2" fill="#239768"/>
+  <text x="48" y="346" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800">Übersicht</text>
+  <g fill="#6a7c70" font-family="Inter,Arial,sans-serif" font-size="15">
+    <text x="48" y="400">Listen</text>
+    <text x="48" y="450">Kalender</text>
+    <text x="48" y="500">Geräte</text>
+    <text x="48" y="550">Klima</text>
+    <text x="48" y="600">Sicherheit</text>
+    <text x="48" y="650">Energie</text>
+    <text x="48" y="700">Heimnetz</text>
+  </g>
+
+  <text x="252" y="64" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="900">Guten Tag</text>
+  <circle cx="258" cy="92" r="4" fill="#239768"/><text x="270" y="97" fill="#526757" font-family="Inter,Arial,sans-serif" font-size="14">Live · Zuhause · 22 Geräte · 4 Kameras</text>
+  <text x="252" y="126" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="14">Heute 20:00 · Filmabend · Einkaufsliste offen</text>
+  <text x="1270" y="62" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800">11:28</text>
+  <text x="1274" y="88" fill="#627466" font-family="Inter,Arial,sans-serif" font-size="13">Freitag, 12. Juni</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="252" y="154" width="590" height="172" rx="18" fill="#fbfdf9" stroke="#aebdaf"/>
+    <text x="278" y="190" fill="#657768" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="850" letter-spacing="1.4">AUSSEN</text>
+    <text x="278" y="236" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="900">12.6°</text>
+    <text x="278" y="268" fill="#526757" font-family="Inter,Arial,sans-serif" font-size="15">Bewölkt · Regen ab 14:00 · Wind 12 km/h</text>
+    <line x1="278" y1="296" x2="814" y2="296" stroke="#d9e0d6"/>
+    <text x="278" y="318" fill="#239768" font-family="Inter,Arial,sans-serif" font-size="14">90% Luftfeuchte · Sonnenuntergang 21:50</text>
+    <circle cx="790" cy="190" r="14" fill="#d9b17b"/>
+    <ellipse cx="760" cy="214" rx="34" ry="18" fill="#9aa79d"/><ellipse cx="792" cy="224" rx="28" ry="12" fill="#aab5ad"/>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="858" y="154" width="540" height="172" rx="18" fill="#fbfdf9" stroke="#aebdaf"/>
+    <text x="884" y="190" fill="#657768" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="850" letter-spacing="1.4">INNEN</text>
+    <text x="884" y="236" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="42" font-weight="900">20.2°</text>
+    <text x="884" y="268" fill="#526757" font-family="Inter,Arial,sans-serif" font-size="15">6 Räume · 7/17 Fenster geschlossen · alles zu</text>
+    <line x1="884" y1="296" x2="1370" y2="296" stroke="#d9e0d6"/>
+    <text x="884" y="318" fill="#526757" font-family="Inter,Arial,sans-serif" font-size="14">Wohnzimmer 20.4° · Schlafzimmer 20.0° · Bad 21.1°</text>
+  </g>
+
+  <text x="252" y="372" fill="#617364" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="850" letter-spacing="1.5">SZENEN</text>
+  <g filter="url(#cardShadow)">
+    <rect x="252" y="392" width="386" height="112" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <rect x="278" y="414" width="40" height="40" rx="11" fill="#dfeae0"/><text x="336" y="454" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="850">Kameras an</text><text x="336" y="478" fill="#647568" font-family="Inter,Arial,sans-serif" font-size="13">4/4 bereit</text>
+    <rect x="652" y="392" width="386" height="112" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <rect x="678" y="414" width="40" height="40" rx="11" fill="#dfeae0"/><text x="736" y="454" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="850">Filmabend</text><text x="736" y="478" fill="#647568" font-family="Inter,Arial,sans-serif" font-size="13">TV an · Licht gedimmt</text>
+    <rect x="1052" y="392" width="346" height="112" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <rect x="1078" y="414" width="40" height="40" rx="11" fill="#dfeae0"/><text x="1136" y="454" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="850">Gute Nacht</text><text x="1136" y="478" fill="#647568" font-family="Inter,Arial,sans-serif" font-size="13">Lichter · Kameras · TV aus</text>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="252" y="524" width="386" height="160" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <text x="278" y="562" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850">Klimaanlage</text>
+    <text x="278" y="586" fill="#647568" font-family="Inter,Arial,sans-serif" font-size="13">Schlafzimmer · Automatik</text>
+    <rect x="278" y="612" width="78" height="42" rx="8" fill="#f4f7f1" stroke="#c4d1c2"/><text x="308" y="640" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="24">−</text>
+    <text x="424" y="646" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="850">18°</text>
+    <rect x="540" y="612" width="70" height="42" rx="8" fill="#f4f7f1" stroke="#c4d1c2"/><text x="566" y="640" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="24">+</text>
+    <rect x="652" y="524" width="386" height="160" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <text x="678" y="562" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850">Wohnzimmer</text>
+    <text x="678" y="586" fill="#647568" font-family="Inter,Arial,sans-serif" font-size="13">Alles an · warmes Licht</text>
+    <rect x="678" y="618" width="300" height="16" rx="8" fill="#e1eadf"/>
+    <rect x="678" y="618" width="210" height="16" rx="8" fill="#239768"/>
+    <rect x="1052" y="524" width="346" height="160" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <text x="1078" y="562" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="850">Energie</text>
+    <text x="1078" y="586" fill="#647568" font-family="Inter,Arial,sans-serif" font-size="13">Live-Verbrauch</text>
+    <rect x="1078" y="628" width="38" height="28" rx="8" fill="#8ad6bd"/><rect x="1128" y="604" width="38" height="52" rx="8" fill="#65c9b3"/><rect x="1178" y="574" width="38" height="82" rx="8" fill="#239768"/><text x="1250" y="638" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="850">318 W</text>
+  </g>
+
+  <g filter="url(#cardShadow)">
+    <rect x="252" y="704" width="1146" height="92" rx="16" fill="#fbfdf9" stroke="#aebdaf"/>
+    <rect x="278" y="724" width="52" height="52" rx="12" fill="#f07c3a"/>
+    <circle cx="305" cy="750" r="15" fill="#ffc85e"/><rect x="302" y="757" width="28" height="16" rx="8" fill="#7a2f22"/>
+    <text x="360" y="740" fill="#617364" font-family="Inter,Arial,sans-serif" font-size="13" font-weight="850" letter-spacing="1.2">JETZT LÄUFT · WOHNZIMMER</text>
+    <text x="360" y="768" fill="#173b27" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="850">Evening</text>
+    <circle cx="1198" cy="750" r="18" fill="#edf4ea" stroke="#b8c9b6"/><rect x="1232" y="732" width="36" height="36" rx="18" fill="#edf4ea" stroke="#b8c9b6"/><circle cx="1306" cy="750" r="18" fill="#edf4ea" stroke="#b8c9b6"/>
+  </g>
+</svg>

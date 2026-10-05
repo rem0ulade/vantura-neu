@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>H.O.M.E. | Dein Zuhause. Ein intelligentes System.</title>
+  <meta name="description" content="H.O.M.E. verbindet Licht, Klima, Musik, Sicherheit und Routinen in einer persönlichen Smart-Home-Oberfläche – geplant und fertig eingerichtet für dein Zuhause." />
+  <meta name="theme-color" content="#080b10" />
+  <meta property="og:title" content="H.O.M.E. | Dein Zuhause. Ein intelligentes System." />
+  <meta property="og:description" content="Eine persönliche Oberfläche für dein gesamtes Zuhause – ohne App-Chaos und Technikstress." />
+  <meta property="og:image" content="assets/work/bonsai-home-hero.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080b10;
+      --bg-soft: #0d121a;
+      --panel: rgba(18, 25, 36, .74);
+      --panel-solid: #111822;
+      --text: #f4f7fb;
+      --muted: #9aa7b7;
+      --line: rgba(255,255,255,.10);
+      --accent: #9fc5ff;
+      --accent-strong: #d5e7ff;
+      --green: #8ee0bd;
+      --max: 1180px;
+      --radius: 24px;
+      --shadow: 0 30px 90px rgba(0,0,0,.42);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+    body::before { content:""; position: fixed; inset: 0; pointer-events:none; opacity:.22; background: radial-gradient(circle at 15% 0%, rgba(96,151,238,.18), transparent 32%), radial-gradient(circle at 90% 28%, rgba(72,202,172,.10), transparent 24%); }
+    a { color: inherit; text-decoration: none; }
+    img { display:block; max-width:100%; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); margin-inline:auto; }
+    .nav { position:fixed; z-index:20; inset:0 0 auto; backdrop-filter: blur(20px); background:rgba(8,11,16,.72); border-bottom:1px solid var(--line); }
+    .nav-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .brand { display:flex; align-items:center; gap:12px; font-family:Manrope,sans-serif; font-weight:700; letter-spacing:.08em; }
+    .brand-mark { width:34px; height:34px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(145deg,#edf6ff,#8fb8ef); color:#07101b; font-size:12px; box-shadow:0 0 36px rgba(159,197,255,.22); }
+    .nav-links { display:flex; gap:28px; align-items:center; color:var(--muted); font-size:14px; }
+    .nav-links a:hover { color:var(--text); }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; border-radius:12px; border:1px solid var(--line); font-weight:600; transition:.2s ease; }
+    .button:hover { transform:translateY(-2px); }
+    .button.primary { background:linear-gradient(135deg,#f6f9ff,#b9d6ff); color:#09111b; border-color:transparent; box-shadow:0 14px 36px rgba(103,157,231,.22); }
+    .button.secondary { background:rgba(255,255,255,.04); }
+    .hero { min-height:100svh; display:grid; align-items:center; position:relative; padding:140px 0 80px; }
+    .hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.28; filter:saturate(.6) contrast(1.1); }
+    .hero::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(8,11,16,.98) 0%,rgba(8,11,16,.84) 42%,rgba(8,11,16,.38) 75%,rgba(8,11,16,.78) 100%),linear-gradient(0deg,var(--bg),transparent 35%); }
+    .hero-content { position:relative; z-index:2; max-width:760px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:10px; color:var(--accent-strong); font-size:13px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+    .eyebrow::before { content:""; width:28px; height:1px; background:var(--accent); }
+    h1,h2,h3 { font-family:Manrope,sans-serif; line-height:1.08; margin:0; }
+    h1 { margin-top:22px; font-size:clamp(52px,8vw,104px); letter-spacing:-.055em; max-width:900px; }
+    h1 span { color:var(--accent-strong); }
+    .lead { margin:28px 0 0; max-width:650px; color:#c1cad6; font-size:clamp(18px,2vw,22px); }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
+    .proof { display:flex; flex-wrap:wrap; gap:18px 28px; margin-top:38px; color:var(--muted); font-size:14px; }
+    .proof span::before { content:"✓"; color:var(--green); margin-right:8px; }
+    section { position:relative; padding:110px 0; }
+    .section-head { max-width:780px; margin-bottom:52px; }
+    .section-head h2 { margin-top:18px; font-size:clamp(36px,5vw,64px); letter-spacing:-.04em; }
+    .section-head p { color:var(--muted); font-size:18px; margin:22px 0 0; }
+    .statement { border-block:1px solid var(--line); background:rgba(255,255,255,.018); }
+    .statement-grid { display:grid; grid-template-columns:repeat(3,1fr); }
+    .statement article { padding:46px 34px; border-right:1px solid var(--line); }
+    .statement article:last-child { border-right:0; }
+    .statement h3 { font-size:24px; margin-bottom:12px; }
+    .statement p { color:var(--muted); margin:0; }
+    .product-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:center; }
+    .device { padding:14px; border:1px solid rgba(255,255,255,.14); border-radius:30px; background:linear-gradient(145deg,#242e3c,#070a0e); box-shadow:var(--shadow); transform:perspective(1200px) rotateY(3deg) rotateX(1deg); }
+    .device img { border-radius:18px; width:100%; }
+    .feature-stack { display:grid; gap:16px; }
+    .feature { padding:24px; border:1px solid var(--line); border-radius:18px; background:var(--panel); backdrop-filter:blur(12px); }
+    .feature small { color:var(--accent); font-weight:600; }
+    .feature h3 { font-size:22px; margin:8px 0; }
+    .feature p { color:var(--muted); margin:0; }
+    .capabilities { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .capability { min-height:220px; padding:26px; border:1px solid var(--line); border-radius:20px; background:linear-gradient(155deg,rgba(255,255,255,.055),rgba(255,255,255,.015)); }
+    .capability .num { color:var(--accent); font-size:13px; }
+    .capability h3 { margin:38px 0 12px; font-size:23px; }
+    .capability p { margin:0; color:var(--muted); }
+    .voice { overflow:hidden; }
+    .voice-card { display:grid; grid-template-columns:1fr 1fr; border:1px solid var(--line); border-radius:var(--radius); background:linear-gradient(140deg,#121a26,#0b1017); box-shadow:var(--shadow); }
+    .voice-copy { padding:56px; }
+    .voice-copy h2 { font-size:clamp(36px,5vw,62px); letter-spacing:-.04em; margin:18px 0 22px; }
+    .voice-copy p { color:var(--muted); font-size:18px; }
+    .voice-demo { min-height:430px; display:grid; place-items:center; position:relative; border-left:1px solid var(--line); background:radial-gradient(circle,rgba(108,166,244,.18),transparent 55%); }
+    .orb { width:170px; height:170px; border-radius:50%; background:radial-gradient(circle at 34% 30%,#eef7ff,#94bff5 32%,#446b9c 65%,#172435); box-shadow:0 0 80px rgba(121,178,247,.35),inset 0 0 35px rgba(255,255,255,.3); animation:pulse 3s ease-in-out infinite; }
+    .quote { position:absolute; bottom:42px; width:80%; padding:18px 20px; border:1px solid var(--line); background:rgba(7,11,17,.72); border-radius:16px; text-align:center; color:#dbe7f5; }
+    @keyframes pulse { 50% { transform:scale(1.04); box-shadow:0 0 110px rgba(121,178,247,.5),inset 0 0 42px rgba(255,255,255,.35); } }
+    .process { counter-reset:step; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .step { padding:26px; border-top:1px solid var(--line); }
+    .step::before { counter-increment:step; content:"0" counter(step); display:block; color:var(--accent); font-size:13px; margin-bottom:40px; }
+    .step h3 { font-size:22px; margin-bottom:12px; }
+    .step p { color:var(--muted); margin:0; }
+    .cta { padding-top:30px; }
+    .cta-card { padding:70px; border:1px solid var(--line); border-radius:30px; text-align:center; background:radial-gradient(circle at 50% 0%,rgba(123,177,247,.18),transparent 42%),#0e141d; }
+    .cta-card h2 { font-size:clamp(40px,6vw,72px); letter-spacing:-.045em; max-width:800px; margin:0 auto; }
+    .cta-card p { color:var(--muted); font-size:18px; max-width:650px; margin:22px auto 30px; }
+    footer { padding:48px 0; color:var(--muted); }
+    .footer-inner { display:flex; justify-content:space-between; gap:30px; border-top:1px solid var(--line); padding-top:30px; font-size:14px; }
+    .footer-links { display:flex; gap:20px; }
+    @media (max-width: 900px) {
+      .nav-links a:not(.button) { display:none; }
+      .product-grid,.voice-card { grid-template-columns:1fr; }
+      .voice-demo { border-left:0; border-top:1px solid var(--line); }
+      .capabilities { grid-template-columns:1fr 1fr; }
+      .process { grid-template-columns:1fr 1fr; }
+      .statement-grid { grid-template-columns:1fr; }
+      .statement article { border-right:0; border-bottom:1px solid var(--line); }
+      .statement article:last-child { border-bottom:0; }
+    }
+    @media (max-width: 620px) {
+      .wrap { width:min(calc(100% - 28px),var(--max)); }
+      .nav-inner { min-height:68px; }
+      .brand-sub { display:none; }
+      .hero { padding-top:115px; }
+      h1 { font-size:52px; }
+      section { padding:82px 0; }
+      .capabilities,.process { grid-template-columns:1fr; }
+      .voice-copy,.cta-card { padding:34px 24px; }
+      .proof { display:grid; }
+      .footer-inner { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="H.O.M.E. Startseite">
+        <span class="brand-mark">H</span>
+        <span>H.O.M.E.</span>
+        <span class="brand-sub" style="color:var(--muted);font-weight:500;letter-spacing:0">by Bonsai Home</span>
+      </a>
+      <nav class="nav-links" aria-label="Hauptnavigation">
+        <a href="#system">Das System</a>
+        <a href="#moeglichkeiten">Möglichkeiten</a>
+        <a href="#ablauf">Ablauf</a>
+        <a class="button secondary" href="fragebogen.html">Projekt starten</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-bg" src="assets/work/bonsai-home-hero.png" alt="Modernes Zuhause mit zentralem Smart-Home-Dashboard" />
+      <div class="wrap hero-content">
+        <div class="eyebrow">Holistic Orchestration for Modern Environments</div>
+        <h1>Dein Zuhause.<br><span>Ein intelligentes System.</span></h1>
+        <p class="lead">H.O.M.E. verbindet Licht, Klima, Musik, Sicherheit und Routinen in einer persönlichen Oberfläche – geplant und fertig eingerichtet für dein Zuhause.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="demo.html">System ansehen</a>
+          <a class="button secondary" href="fragebogen.html">Home Assessment anfragen</a>
+        </div>
+        <div class="proof">
+          <span>Im Alltag erprobt</span>
+          <span>Individuell eingerichtet</span>
+          <span>Lokal und privat möglich</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="wrap statement-grid">
+        <article><h3>Ein System statt zehn Apps.</h3><p>Alle wichtigen Geräte, Räume und Routinen in einer ruhigen, verständlichen Oberfläche.</p></article>
+        <article><h3>Gebaut für dein Zuhause.</h3><p>Keine starre Standardlösung. H.O.M.E. orientiert sich an deinen Räumen, Gewohnheiten und Geräten.</p></article>
+        <article><h3>Fertig statt frickelig.</h3><p>Von der Bestandsaufnahme über den Einkauf bis zur Einrichtung und Einweisung aus einer Hand.</p></article>
+      </div>
+    </section>
+
+    <section id="system">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Das System</div>
+          <h2>Software, die dein Zuhause verständlich macht.</h2>
+          <p>H.O.M.E. ist kein weiteres Smart-Home-Gerät. Es ist die persönliche Bedienoberfläche für alles, was bereits da ist – und alles, was sinnvoll ergänzt werden sollte.</p>
+        </div>
+        <div class="product-grid">
+          <div class="device"><img src="assets/core-hub-anonymized.webp" alt="H.O.M.E. Dashboard mit Wetter, Räumen, Medien und Sicherheitsstatus" /></div>
+          <div class="feature-stack">
+            <article class="feature"><small>01 · Übersicht</small><h3>Alles Wichtige auf einen Blick</h3><p>Räume, Klima, Musik, Sicherheit, Energie, Wetter, Pakete und Netzwerk – ohne App-Wechsel.</p></article>
+            <article class="feature"><small>02 · Automationen</small><h3>Ein Zuhause, das mitdenkt</h3><p>Heimkommen, Schlafen, Filmabend oder Urlaub laufen automatisch und bleiben jederzeit manuell steuerbar.</p></article>
+            <article class="feature"><small>03 · Kontrolle</small><h3>Komfort ohne Kontrollverlust</h3><p>Klare Statusanzeigen, nachvollziehbare Abläufe und lokale Komponenten statt unnötiger Cloud-Abhängigkeiten.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="moeglichkeiten" style="background:var(--bg-soft)">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Möglichkeiten</div>
+          <h2>Ein Zuhause, das sich deinem Alltag anpasst.</h2>
+        </div>
+        <div class="capabilities">
+          <article class="capability"><span class="num">01</span><h3>Licht & Szenen</h3><p>Räume, Gruppen, Stimmungen und automatische Lichtwechsel passend zu Uhrzeit und Anwesenheit.</p></article>
+          <article class="capability"><span class="num">02</span><h3>Klima & Luft</h3><p>Klimaanlage, Heizung, Temperatur und Luftqualität zentral steuern und intelligent automatisieren.</p></article>
+          <article class="capability"><span class="num">03</span><h3>Musik & Medien</h3><p>Sonos, Fernseher und weitere Mediengeräte direkt aus derselben Oberfläche bedienen.</p></article>
+          <article class="capability"><span class="num">04</span><h3>Sicherheit</h3><p>Fenster, Türen, Kameras, Anwesenheit und Urlaubsszenen verständlich zusammenführen.</p></article>
+          <article class="capability"><span class="num">05</span><h3>Alltag & Familie</h3><p>Kalender, Listen, Wetter, Pakete und Routinen dort anzeigen, wo sie im Alltag gebraucht werden.</p></article>
+          <article class="capability"><span class="num">06</span><h3>Geräte & Netzwerk</h3><p>Kompatible Geräte, Verbindungen und Systemzustände transparent überwachen.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="voice">
+      <div class="wrap voice-card">
+        <div class="voice-copy">
+          <div class="eyebrow">Sprache & KI</div>
+          <h2>Einfach sagen, was passieren soll.</h2>
+          <p>H.O.M.E. kann auf natürliche Sprache reagieren und Aktionen im Zuhause ausführen – ohne dass du den Namen jeder Lampe oder Automation kennen musst.</p>
+          <p style="color:var(--text);font-weight:600">„Mach das Wohnzimmer gemütlich und starte Musik.“</p>
+        </div>
+        <div class="voice-demo">
+          <div class="orb" aria-hidden="true"></div>
+          <div class="quote">Wohnzimmerlicht gedimmt · Sonos gestartet · Temperatur angepasst</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Dein H.O.M.E. Projekt</div>
+          <h2>Von deinem Zuhause zum fertigen System.</h2>
+          <p>Du kaufst kein Technikpaket von der Stange. Du erhältst ein geplantes, getestetes und vollständig eingerichtetes System.</p>
+        </div>
+        <div class="process">
+          <article class="step"><h3>Assessment</h3><p>Vorhandene Geräte, Räume, Netzwerk und Wünsche werden gemeinsam aufgenommen.</p></article>
+          <article class="step"><h3>Konzept</h3><p>Du erhältst eine klare Empfehlung für System, Geräte, Funktionen und Umsetzung.</p></article>
+          <article class="step"><h3>Einrichtung</h3><p>Hardware wird auf Wunsch beschafft, eingebunden und mit Oberfläche sowie Automationen eingerichtet.</p></article>
+          <article class="step"><h3>Übergabe</h3><p>Das System wird getestet, erklärt und so dokumentiert, dass es langfristig verständlich bleibt.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="kontakt">
+      <div class="wrap cta-card">
+        <h2>Wie intelligent könnte dein Zuhause sein?</h2>
+        <p>Starte mit einem unverbindlichen Projektcheck. Danach weißt du, was mit deiner vorhandenen Technik möglich ist und welche Ergänzungen wirklich sinnvoll sind.</p>
+        <div class="hero-actions" style="justify-content:center;margin-top:0">
+          <a class="button primary" href="fragebogen.html">Home Assessment starten</a>
+          <a class="button secondary" href="mailto:kontakt@vantura-studios.com">Direkt Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>H.O.M.E. · Ein Smart-Home-System von Bonsai Home</div>
+      <div class="footer-links"><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a><a href="impressum.html">Impressum</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace — Support</title>
+  <meta name="description" content="Support for Grace on Mac and the iOS companion — clear setup, troubleshooting and direct contact." />
+  <link rel="alternate" hreflang="de" href="https://meet-grace.com/de/support.html" />
+  <link rel="alternate" hreflang="en" href="https://meet-grace.com/support.html" />
+  <link rel="alternate" hreflang="x-default" href="https://meet-grace.com/support.html" />
+  <link rel="apple-touch-icon" href="assets/grace-icon.png" />
+  <link rel="icon" href="assets/grace-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="subpages.css" />
+</head>
+<body class="subpage">
+<div class="grace-cursor" aria-hidden="true"></div><div class="grace-cursor-glow" aria-hidden="true"></div>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="index.html"><div class="brand-mark"></div><span>Grace</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="features.html">Features</a><a href="agents.html">Agents</a><a class="active" href="support.html">Support</a>
+      <span class="lang-switch" aria-label="Language"><a href="de/support.html" hreflang="de">DE</a><span class="sep">/</span><a class="current" href="support.html" hreflang="en">EN</a></span>
+    </div>
+  </nav>
+
+  <header class="subhero">
+    <div class="subhero-kicker" data-reveal>Grace Support</div>
+    <h1 data-reveal>Answers first.<span>Terminal hacks never.</span></h1>
+    <p data-reveal>Clear help for Grace on Mac, the iOS companion, local models, connectivity and everyday workspace issues.</p>
+    <div class="quicknav" data-reveal><a href="#mac">Mac</a><a href="#ios">iOS Companion</a><a href="#workspace">Workspace &amp; data</a><a href="#contact">Contact</a></div>
+  </header>
+
+  <div class="marquee"><div class="marquee-track"><span>Mac <i>✦</i> iOS <i>✦</i> Local Models <i>✦</i> Connections <i>✦</i> Backups <i>✦</i> Support <i>✦</i></span><span>Mac <i>✦</i> iOS <i>✦</i> Local Models <i>✦</i> Connections <i>✦</i> Backups <i>✦</i> Support <i>✦</i></span></div></div>
+
+  <section class="editorial" id="mac">
+    <div class="section-head" data-reveal><div class="label">Mac</div><h2>Get the desktop workspace running smoothly.</h2></div>
+    <div class="help-grid">
+      <article class="help-card" data-reveal data-tilt><span class="category">Launch</span><h3>Grace won’t start</h3><p>Check macOS Gatekeeper. Open System Settings → Privacy &amp; Security and allow Grace once after the first blocked launch.</p></article>
+      <article class="help-card" data-reveal data-tilt><span class="category">Performance</span><h3>Grace feels slow</h3><p>Close inactive chats, inspect local model load and provider limits, then use stricter execution settings for demanding workflows.</p></article>
+      <article class="help-card" data-reveal data-tilt><span class="category">Agents</span><h3>A connector is missing</h3><p>Confirm that the corresponding CLI is installed and available on your Mac. Restart Grace so discovery can run again.</p></article>
+      <article class="help-card" data-reveal data-tilt><span class="category">Local</span><h3>Local model unavailable</h3><p>Check that the local runtime is running, the selected model is installed and enough memory is available for the chosen tier.</p></article>
+    </div>
+  </section>
+
+  <section class="editorial" id="ios">
+    <div class="section-head" data-reveal><div class="label">iOS Companion</div><h2>Your workspace from the phone, without moving it to the cloud.</h2></div>
+    <div class="help-grid">
+      <article class="help-card" data-reveal><span class="category">TestFlight</span><h3>Install and update</h3><p>The companion is distributed through TestFlight during early access. Keep the newest available build installed.</p></article>
+      <article class="help-card" data-reveal><span class="category">Connection</span><h3>Connect to your Mac</h3><p>Use the same LAN or Tailscale network, keep Grace running on the Mac and select the available workspace in the app.</p></article>
+      <article class="help-card" data-reveal><span class="category">Notifications</span><h3>Push stays silent</h3><p>Check Grace notification permissions in iOS Settings and confirm that the Mac workspace can reach the companion.</p></article>
+      <article class="help-card" data-reveal><span class="category">Remote access</span><h3>Outside your home network</h3><p>Use Tailscale for a private connection between your iPhone and Mac without exposing the Grace server publicly.</p></article>
+    </div>
+  </section>
+
+  <section class="editorial" id="workspace">
+    <div class="section-head" data-reveal><div class="label">Workspace &amp; data</div><h2>Your projects stay local. Treat them like important work.</h2></div>
+    <div class="help-grid">
+      <article class="help-card" data-reveal><span class="category">Backup</span><h3>Back up Grace</h3><p>Use Time Machine or a manual backup routine for the Grace workspace and project folders containing chats, runs and local state.</p></article>
+      <article class="help-card" data-reveal><span class="category">Privacy</span><h3>Understand data paths</h3><p>Local work stays on your Mac. External agents and providers may process the prompts you send to them; Grace makes that distinction visible.</p></article>
+      <article class="help-card" data-reveal><span class="category">Restore</span><h3>Move to another Mac</h3><p>Restore the workspace data and reconnect the installed agents. Provider authentication may need to be completed again.</p></article>
+      <article class="help-card" data-reveal><span class="category">Control</span><h3>A run is stuck</h3><p>Open Live Activity, stop or pause the turn, inspect pending approvals and restart only the affected step where possible.</p></article>
+    </div>
+  </section>
+
+  <section class="support-cta" id="contact" data-reveal><h2>Still blocked? Talk to a human.</h2><div class="cta-bottom"><p>Send the device, Grace version, affected agent and a short description of what happened. Screenshots help.</p><a href="mailto:jk@vantura-studios.com?subject=Grace%20Support">Contact support ↗</a></div></section>
+
+  <footer><div class="footer-meta"><span>© 2026 Grace</span><strong>A product of <a href="https://vantura-studios.com/" target="_blank" rel="noopener">Vantura Studios</a></strong></div><div class="footer-links"><a href="features.html">Features</a><span class="dot">·</span><a href="agents.html">Agents</a><span class="dot">·</span><a href="support.html">Support</a><span class="dot">·</span><a href="privacy.html">Privacy</a><span class="dot">·</span><a href="imprint.html">Imprint</a></div></footer>
+</div>
+<script src="subpages.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>System-Demo | H.O.M.E.</title>
+  <meta name="description" content="Erlebe typische Smart-Home-Szenen in einer interaktiven H.O.M.E.-Systemdemo." />
+  <meta name="theme-color" content="#070a0f" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260612-logo-demo2" />
+  <link rel="stylesheet" href="tech.css?v=20260719-1" />
+</head>
+<body class="demo-page">
+  <header class="site-header" data-scrolled="true" data-nav-open="false">
+    <a class="brand brand-logo tech-brand" href="index.html" aria-label="H.O.M.E. Startseite"><span class="tech-brand-mark">H</span><span>H.O.M.E.</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Hauptnavigation">
+      <a href="demo.html" aria-current="page">System-Demo</a>
+      <a href="index.html#system">System</a>
+      <a href="index.html#ablauf">Ablauf</a>
+      <a href="fragebogen.html">Home Assessment</a>
+      <a class="nav-cta-mobile" href="fragebogen.html">Projekt starten</a>
+    </nav>
+    <a class="header-cta" href="fragebogen.html">Projekt starten</a>
+  </header>
+
+  <main id="top">
+    <section class="demo-hero" aria-labelledby="demo-title">
+      <div class="demo-hero-copy reveal reveal-left">
+        <p class="eyebrow">Interactive System Preview</p>
+        <h1 id="demo-title">Ein Zuhause, das als System reagiert.</h1>
+        <p>Diese Demo zeigt keine starren Produktpakete. Sie simuliert typische Zustände eines individuell konfigurierten H.O.M.E.-Systems – von Licht und Klima bis Medien, Sicherheit und Routinen.</p>
+        <div class="hero-actions"><a class="button primary" href="#demo-lab">System ausprobieren</a><a class="button secondary" href="fragebogen.html">Home Assessment starten</a></div>
+      </div>
+      <div class="demo-hero-preview reveal reveal-right reveal-delay-1" aria-hidden="true"><div class="demo-screenshot-frame"><img src="assets/core-hub-anonymized.webp?v=20260612-core1" alt="" /></div></div>
+    </section>
+
+    <section class="section demo-lab-section" id="demo-lab" aria-labelledby="demo-lab-title">
+      <div class="section-heading reveal reveal-up">
+        <p class="eyebrow">Live Interface</p>
+        <h2 id="demo-lab-title">Wechsle Systemfokus und Alltagsszene.</h2>
+        <p>Jede Installation wird passend zu Räumen, Geräten und Gewohnheiten aufgebaut. Die Vorschau macht sichtbar, wie verschiedene Prioritäten in einer gemeinsamen Oberfläche zusammenlaufen.</p>
+      </div>
+      <div class="demo-lab reveal reveal-up">
+        <div class="demo-tabs" role="tablist" aria-label="Systemansichten">
+          <button class="demo-tab is-active" type="button" role="tab" aria-selected="true" data-demo-tab="core">Overview</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="family">Daily</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="comfort">Comfort</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="secure">Secure</button>
+        </div>
+        <div class="demo-stage">
+          <aside class="demo-sidebar">
+            <p class="eyebrow">Active profile</p><h3 id="demo-name">Overview</h3>
+            <p id="demo-description">Die zentrale Oberfläche für Räume, Szenen, Sicherheit, Energie, Medien und Termine.</p>
+            <div class="demo-mode-buttons" aria-label="Szenen">
+              <button class="demo-mode is-active" type="button" data-scene="home">Zuhause</button>
+              <button class="demo-mode" type="button" data-scene="movie">Filmabend</button>
+              <button class="demo-mode" type="button" data-scene="night">Gute Nacht</button>
+              <button class="demo-mode" type="button" data-scene="away">Unterwegs</button>
+            </div>
+          </aside>
+          <section class="demo-dashboard" aria-live="polite">
+            <div class="demo-dashboard-top"><div><span id="demo-kicker">Guten Abend</span><strong id="demo-status">Alles läuft ruhig.</strong></div><span class="demo-live-pill">LIVE DEMO</span></div>
+            <div class="demo-dashboard-grid" id="demo-cards"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-ideas-section" aria-labelledby="demo-ideas-title">
+      <div class="demo-ideas-copy reveal reveal-left"><p class="eyebrow">From preview to reality</p><h2 id="demo-ideas-title">Dein System entsteht nicht aus einem Paket. Sondern aus deinem Zuhause.</h2></div>
+      <div class="demo-idea-list">
+        <article class="reveal reveal-right"><h3>Bestehende Technik integrieren</h3><p>Vorhandene Lampen, Steckdosen, Klima-, Musik- und Sicherheitssysteme werden geprüft und sinnvoll verbunden.</p></article>
+        <article class="reveal reveal-right reveal-delay-1"><h3>Automationen modellieren</h3><p>Heimkommen, Schlafen, Filmabend, Urlaub und individuelle Abläufe werden kontrollierbar automatisiert.</p></article>
+        <article class="reveal reveal-right reveal-delay-2"><h3>Eine Oberfläche bereitstellen</h3><p>Die Bedienung wird für Smartphone, Tablet, Desktop oder Wanddisplay an deinen Alltag angepasst.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-section demo-cta" id="kontakt">
+      <div class="reveal reveal-left"><p class="eyebrow">Next step</p><h2>Wie würde dein Zuhause als System aussehen?</h2><div class="contact-direct"><a href="tel:+4915129833507">0151 298 335 07</a></div></div>
+      <div class="lead-card reveal reveal-right reveal-delay-1"><h3>Home Assessment anfragen</h3><p>Beschreibe kurz dein Zuhause. Danach klären wir vorhandene Technik, Ziele und einen sinnvollen ersten Umfang.</p>
+        <form class="index-inquiry-form" id="index-inquiry-form"><div class="q-inquiry-row"><label class="q-sr-only" for="index-email">E-Mail-Adresse</label><input class="q-input" type="email" id="index-email" name="email" placeholder="Deine E-Mail" autocomplete="email" /><label class="q-sr-only" for="index-phone">Telefonnummer</label><input class="q-input" type="tel" id="index-phone" name="phone" placeholder="Telefon (optional)" autocomplete="tel" /></div><input class="q-sr-only contact-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" /><div class="lead-actions"><button class="button primary" type="submit">Assessment anfragen</button><a class="button secondary-dark" href="fragebogen.html">Projektcheck starten</a></div></form>
+        <p class="form-note">Hinweise zur Verarbeitung stehen in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>H.O.M.E. · A Vantura Studios system</span><nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></nav></footer>
+  <div class="nav-backdrop" hidden aria-hidden="true"></div>
+  <script src="script.js?v=20260612-lux5"></script><script src="demo.js?v=20260612-music-demo2"></script><script src="contact.js?v=20260612-contact1"></script>
+</body>
+</html>

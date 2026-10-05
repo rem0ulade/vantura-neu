@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Home Assessment | H.O.M.E.</title>
+  <meta name="description" content="In wenigen Schritten zur ersten Orientierung für dein individuelles Smart-Home-System." />
+  <meta name="theme-color" content="#070a0f" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=20260612-logo-demo2" />
+  <link rel="stylesheet" href="tech.css?v=20260719-1" />
+</head>
+<body class="questionnaire-page">
+  <header class="site-header" data-scrolled="true" data-nav-open="false">
+    <a class="brand brand-logo tech-brand" href="index.html" aria-label="H.O.M.E. Startseite"><span class="tech-brand-mark">H</span><span>H.O.M.E.</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Hauptnavigation"><a href="demo.html">System-Demo</a><a href="index.html#system">System</a><a href="index.html#ablauf">Ablauf</a><a href="fragebogen.html" aria-current="page">Home Assessment</a><a class="nav-cta-mobile" href="#assessment">Jetzt starten</a></nav>
+    <a class="header-cta" href="#assessment">Jetzt starten</a>
+  </header>
+
+  <main class="q-main" id="top">
+    <section class="q-intro" aria-labelledby="q-title">
+      <p class="eyebrow">System assessment · 2 minutes</p>
+      <h1 id="q-title">Was soll dein Zuhause für dich übernehmen?</h1>
+      <p class="q-intro-copy">Keine Technikbegriffe und keine Produktlisten. Wir beginnen mit deinem Alltag, deinen Räumen und dem gewünschten Automationsgrad.</p>
+      <ul class="q-intro-points"><li>Unverbindliche Ersteinschätzung</li><li>Vorhandene Geräte können einbezogen werden</li><li>Planung, Beschaffung und Einrichtung aus einer Hand</li></ul>
+    </section>
+
+    <section class="q-wizard-shell" id="assessment" aria-label="Home Assessment">
+      <div class="q-wizard">
+        <div class="q-progress" aria-hidden="true"><div class="q-progress-track"><div class="q-progress-fill" id="q-progress-fill"></div></div><p class="q-progress-label" id="q-progress-label">Schritt 1 von 3</p></div>
+        <form class="q-form" id="project-questionnaire" novalidate>
+          <fieldset class="q-step" data-step="1">
+            <legend class="q-step-title">01 · Systemumgebung</legend><p class="q-step-lead">Damit die Lösung zum Gebäude und zu den Personen passt.</p>
+            <div class="q-field"><span class="q-label" id="label-housing">Wo wohnst du?</span><div class="q-options" role="radiogroup" aria-labelledby="label-housing"><label class="q-option"><input type="radio" name="housing" value="apartment" required /> Wohnung</label><label class="q-option"><input type="radio" name="housing" value="house" /> Haus</label></div></div>
+            <div class="q-field"><span class="q-label" id="label-rooms">Welcher Umfang ist interessant?</span><div class="q-options" role="radiogroup" aria-labelledby="label-rooms"><label class="q-option"><input type="radio" name="rooms" value="1-2" required /> 1–2 Räume</label><label class="q-option"><input type="radio" name="rooms" value="3-4" /> Mehrere Räume</label><label class="q-option"><input type="radio" name="rooms" value="5-7" /> Fast das ganze Zuhause</label><label class="q-option"><input type="radio" name="rooms" value="8plus" /> Vollständiges System</label></div></div>
+            <div class="q-field"><span class="q-label" id="label-people">Wer nutzt das System?</span><div class="q-options" role="radiogroup" aria-labelledby="label-people"><label class="q-option"><input type="radio" name="people" value="solo" required /> Eine Person</label><label class="q-option"><input type="radio" name="people" value="couple" /> Zwei Personen</label><label class="q-option"><input type="radio" name="people" value="family" /> Familie</label><label class="q-option"><input type="radio" name="people" value="shared" /> Mehrere Personen / WG</label></div></div>
+          </fieldset>
+
+          <fieldset class="q-step" data-step="2" hidden>
+            <legend class="q-step-title">02 · Funktionen</legend><p class="q-step-lead">Wähle, was im Alltag spürbar besser funktionieren soll.</p>
+            <div class="q-field"><span class="q-label" id="label-wishes">Gewünschte Systemmodule</span><p class="q-hint">Mehrere Antworten möglich.</p><div class="q-options q-options-check" role="group" aria-labelledby="label-wishes"><label class="q-option"><input type="checkbox" name="wishes" value="lighting" /> Licht und Szenen</label><label class="q-option"><input type="checkbox" name="wishes" value="climate" /> Klima und Raumkomfort</label><label class="q-option"><input type="checkbox" name="wishes" value="security" /> Sicherheit und Status</label><label class="q-option"><input type="checkbox" name="wishes" value="media" /> Musik und Medien</label><label class="q-option"><input type="checkbox" name="wishes" value="calendar" /> Kalender und Organisation</label><label class="q-option"><input type="checkbox" name="wishes" value="packages" /> Pakete und Meldungen</label><label class="q-option"><input type="checkbox" name="wishes" value="overview" /> Zentrale Gesamtübersicht</label><label class="q-option"><input type="checkbox" name="wishes" value="unsure" data-exclusive-group="wishes" /> Noch offen – Beratung gewünscht</label></div></div>
+            <div class="q-field"><span class="q-label" id="label-priority">Was hat Priorität?</span><div class="q-options" role="radiogroup" aria-labelledby="label-priority"><label class="q-option"><input type="radio" name="priority" value="overview" required /> Eine zentrale Oberfläche</label><label class="q-option"><input type="radio" name="priority" value="family" /> Einfacher Familienalltag</label><label class="q-option"><input type="radio" name="priority" value="comfort" /> Komfort und Atmosphäre</label><label class="q-option"><input type="radio" name="priority" value="security" /> Sicherheit und Kontrolle</label><label class="q-option"><input type="radio" name="priority" value="rooms" /> Individuelle Raumsteuerung</label></div></div>
+            <div class="q-field q-field-conditional" data-show-when="priority=rooms" hidden><span class="q-label" id="label-room-count">Wie viele Räume?</span><div class="q-options" role="radiogroup" aria-labelledby="label-room-count"><label class="q-option"><input type="radio" name="roomCount" value="2" /> 2 Räume</label><label class="q-option"><input type="radio" name="roomCount" value="3-4" /> 3–4 Räume</label><label class="q-option"><input type="radio" name="roomCount" value="5plus" /> 5 oder mehr</label></div></div>
+          </fieldset>
+
+          <fieldset class="q-step" data-step="3" hidden>
+            <legend class="q-step-title">03 · Integrationen</legend><p class="q-step-lead">Bestehende Technik kann weitergenutzt werden, sofern sie sinnvoll integrierbar ist.</p>
+            <div class="q-field"><span class="q-label" id="label-existing">Was ist bereits vorhanden?</span><div class="q-options q-options-check" role="group" aria-labelledby="label-existing"><label class="q-option"><input type="checkbox" name="existing" value="voice" /> Alexa, Google oder Sprachassistent</label><label class="q-option"><input type="checkbox" name="existing" value="lights" /> Lampen oder Steckdosen</label><label class="q-option"><input type="checkbox" name="existing" value="climate" /> Heizung oder Klimaanlage</label><label class="q-option"><input type="checkbox" name="existing" value="cameras" /> Kameras oder Sensoren</label><label class="q-option"><input type="checkbox" name="existing" value="tablet" /> Tablet oder Wanddisplay</label><label class="q-option"><input type="checkbox" name="existing" value="none" data-exclusive-group="existing" /> Noch nichts</label><label class="q-option"><input type="checkbox" name="existing" value="unsure" data-exclusive-group="existing" /> Unklar</label></div></div>
+            <div class="q-field"><span class="q-label" id="label-automation">Wie autonom darf das System arbeiten?</span><div class="q-options" role="radiogroup" aria-labelledby="label-automation"><label class="q-option"><input type="radio" name="automation" value="manual" required /> Hauptsächlich manuell</label><label class="q-option"><input type="radio" name="automation" value="some" /> Ausgewählte Automationen</label><label class="q-option"><input type="radio" name="automation" value="comfy" /> So automatisch wie sinnvoll</label></div></div>
+            <div class="q-field"><span class="q-label" id="label-timeline">Wann möchtest du starten?</span><div class="q-options" role="radiogroup" aria-labelledby="label-timeline"><label class="q-option"><input type="radio" name="timeline" value="exploring" required /> Erst orientieren</label><label class="q-option"><input type="radio" name="timeline" value="soon" /> In den nächsten Wochen</label><label class="q-option"><input type="radio" name="timeline" value="planned" /> In 1–3 Monaten</label><label class="q-option"><input type="radio" name="timeline" value="flexible" /> Flexibel</label></div></div>
+          </fieldset>
+
+          <div class="q-nav"><button class="button secondary q-btn-back" type="button" id="q-btn-back" hidden>Zurück</button><button class="button primary q-btn-next" type="button" id="q-btn-next">Weiter</button><button class="button primary q-btn-submit" type="submit" id="q-btn-submit" hidden>Systemprofil anzeigen</button></div>
+        </form>
+
+        <article class="q-result" id="q-result" hidden aria-live="polite">
+          <p class="eyebrow">Generated system profile</p><h2 class="q-result-tier" id="q-result-tier"></h2><p class="q-result-tagline" id="q-result-tagline"></p><p class="q-result-summary" id="q-result-summary"></p>
+          <div class="q-result-meta"><div class="q-result-stat"><span class="q-result-stat-label">Typischer Rahmen</span><strong id="q-result-effort"></strong></div><div class="q-result-stat"><span class="q-result-stat-label">Umsetzung</span><strong id="q-result-setup"></strong></div></div>
+          <div class="q-result-factors" id="q-result-factors"></div><p class="q-result-note">Dies ist eine erste Orientierung, kein Angebot. Im Gespräch prüfen wir Technik, Netzwerk, Räume und den sinnvollen Projektumfang.</p>
+          <form class="q-result-inquiry" id="q-result-inquiry"><label class="q-label" for="q-result-email">Unverbindliches Home Assessment anfragen</label><div class="q-inquiry-row"><input class="q-input" type="email" id="q-result-email" name="email" placeholder="name@beispiel.de" autocomplete="email" /><input class="q-input" type="tel" id="q-result-phone" name="phone" placeholder="Telefon (optional)" autocomplete="tel" /><button class="button primary" type="submit">Assessment anfragen</button></div><input class="q-sr-only contact-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" /></form>
+          <button class="button secondary q-btn-restart" type="button" id="q-btn-restart">Neu starten</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside class="q-quick-contact" aria-label="Schnellanfrage"><div class="q-quick-contact-inner"><p class="q-quick-contact-text">Schon eine konkrete Idee?</p><form class="q-quick-contact-form" id="q-quick-contact-form"><label class="q-sr-only" for="q-quick-email">E-Mail-Adresse</label><input class="q-input q-input-compact" type="email" id="q-quick-email" name="email" placeholder="Deine E-Mail" autocomplete="email" /><label class="q-sr-only" for="q-quick-phone">Telefonnummer</label><input class="q-input q-input-compact" type="tel" id="q-quick-phone" name="phone" placeholder="Telefon (optional)" autocomplete="tel" /><input class="q-sr-only contact-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" /><button class="button primary" type="submit">Direkt anfragen</button></form></div></aside>
+  <footer class="footer"><span>H.O.M.E. · A Vantura Studios system</span><nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></nav></footer>
+  <div class="nav-backdrop" hidden aria-hidden="true"></div>
+  <script src="script.js?v=20260612-lux4"></script><script src="contact.js?v=20260612-contact1"></script><script src="questionnaire.js?v=20260612-contact1"></script>
+</body>
+</html>

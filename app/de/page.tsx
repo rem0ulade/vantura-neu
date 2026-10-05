@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { LocalizedLanding } from '@/components/LocalizedLanding'
+import { WebdesignHome } from '@/components/webdesign/WebdesignHome'
 
 export const metadata: Metadata = {
-  title: 'Vantura Studios | Daten, KI, Software & Design',
-  description: 'Reporting, externe KI-Verantwortung, KI-Systeme, Softwareprodukte und digitales Design — Strategie und Umsetzung aus einem inhabergeführten Studio.',
+  title: 'Vantura Studios | Webdesign & Online-Shops',
+  description:
+    'Webdesign, Online-Shops und Relaunches — mit Craft, Motion und klarem Call-to-Action.',
   alternates: { canonical: '/de/', languages: { en: '/', de: '/de/' } },
 }
 
-export default function GermanHome() {
-  return <LocalizedLanding locale="de" />
+export default function DeHome() {
+  return <WebdesignHome locale="de" />
 }

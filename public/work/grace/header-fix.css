@@ -1,0 +1,366 @@
+/* Transparent desktop header and responsive mobile overhaul */
+nav.top {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding-right: 4px;
+}
+
+.nav-links {
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.lang-switch {
+  flex-shrink: 0;
+  padding-right: 2px;
+}
+
+@media (max-width: 900px) {
+  .home-preview .wrap {
+    padding-inline: 20px;
+  }
+
+  .preview-hero {
+    gap: 48px;
+    padding: 56px 0 72px;
+  }
+
+  .preview-hero .hero-copy {
+    max-width: 720px;
+  }
+
+  .preview-hero h1 {
+    max-width: 720px;
+    font-size: clamp(4rem, 12vw, 7rem);
+    line-height: .88;
+  }
+
+  .preview-hero .hero-sub {
+    max-width: 620px;
+    margin-top: 28px;
+  }
+
+  .app-stage {
+    width: 100%;
+    max-width: none;
+  }
+
+  .preview-hero .app-window {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-preview .wrap {
+    padding: 0 16px 56px;
+  }
+
+  nav.top {
+    position: relative;
+    top: auto;
+    min-height: 66px;
+    margin: 0;
+    padding: 14px 0;
+    border-bottom-color: rgba(255,255,255,.1);
+  }
+
+  .brand {
+    position: relative;
+    z-index: 2;
+    font-size: 15px;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-toggle {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    padding: 9px 13px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid var(--line-strong);
+    border-radius: 18px;
+    background: rgba(14,14,17,.97);
+    box-shadow: 0 24px 60px rgba(0,0,0,.42);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links > a {
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  .nav-links > a.active,
+  .nav-links > a:active {
+    background: rgba(255,255,255,.07);
+  }
+
+  .lang-switch {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 6px 0 0;
+    padding: 12px 14px 8px;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .preview-hero {
+    min-height: auto;
+    gap: 36px;
+    padding: 42px 0 58px;
+  }
+
+  .preview-hero::before {
+    width: 280px;
+    height: 280px;
+    right: -170px;
+    top: 2%;
+    filter: blur(64px);
+  }
+
+  .preview-hero::after {
+    width: 220px;
+    height: 220px;
+    left: -150px;
+    bottom: 20%;
+    filter: blur(60px);
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 18px;
+    font-size: 10px;
+    letter-spacing: .14em;
+  }
+
+  .preview-hero h1 {
+    max-width: 100%;
+    font-size: clamp(3.25rem, 16.5vw, 5.15rem);
+    line-height: .9;
+    letter-spacing: -.068em;
+    overflow-wrap: anywhere;
+  }
+
+  .preview-hero .hero-sub {
+    margin: 24px 0 24px;
+    font-size: 1rem;
+    line-height: 1.58;
+  }
+
+  .preview-hero .cta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .preview-hero .btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 16px;
+  }
+
+  .hero-proof {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin-top: 22px;
+    font-size: 12px;
+  }
+
+  .preview-hero .app-stage {
+    margin: 0;
+  }
+
+  .preview-hero .app-window {
+    aspect-ratio: 760 / 540;
+    border-radius: 18px;
+    transform: none !important;
+    box-shadow: 0 24px 65px rgba(0,0,0,.48);
+  }
+
+  .preview-hero .app-window::after {
+    left: 10px;
+    bottom: 10px;
+    padding: 5px 8px;
+    font-size: 8px;
+  }
+
+  .grace-product-shot {
+    object-fit: cover;
+    object-position: left top;
+  }
+
+  .agent-marquee {
+    margin-bottom: 72px;
+    padding: 16px 0;
+  }
+
+  .agent-track span {
+    gap: 16px;
+    margin-right: 24px;
+    font-size: clamp(1.8rem, 10vw, 3rem);
+  }
+
+  .editorial-section {
+    margin-bottom: 76px;
+  }
+
+  .section-head {
+    gap: 16px;
+    padding-bottom: 22px;
+  }
+
+  .section-head h2,
+  .privacy-panel h2,
+  .grace-identity-copy h2 {
+    font-size: clamp(2.35rem, 12vw, 4.2rem);
+    line-height: .94;
+    letter-spacing: -.055em;
+  }
+
+  .feature-row {
+    gap: 14px;
+    padding: 28px 0;
+  }
+
+  .feature-name h3 {
+    margin-bottom: 4px;
+    font-size: clamp(1.7rem, 8.5vw, 2.5rem);
+  }
+
+  .feature-card {
+    min-height: 0;
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .feature-card p {
+    padding-right: 24px;
+    font-size: 15px;
+    line-height: 1.62;
+  }
+
+  .feature-card .card-link {
+    right: 18px;
+    top: 14px;
+    font-size: 22px;
+  }
+
+  .grace-identity,
+  .privacy-panel,
+  .preview-cta {
+    margin-bottom: 72px;
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .grace-identity {
+    gap: 26px;
+  }
+
+  .grace-identity-art {
+    min-height: 390px;
+    border-radius: 17px;
+    background-position: center 15%;
+  }
+
+  .grace-identity-copy p {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .privacy-panel {
+    gap: 26px;
+  }
+
+  .privacy-item {
+    padding: 15px 0;
+  }
+
+  .privacy-item span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .preview-cta h2 {
+    font-size: clamp(2.8rem, 14vw, 4.8rem);
+    line-height: .88;
+  }
+
+  .preview-cta .cta-bottom {
+    gap: 22px;
+    margin-top: 28px;
+    padding-top: 20px;
+  }
+
+  .preview-cta p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .preview-cta a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+    padding-top: 24px;
+  }
+
+  footer .footer-links {
+    justify-content: flex-start;
+    gap: 10px 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-preview .wrap {
+    padding-inline: 14px;
+  }
+
+  .preview-hero h1 {
+    font-size: clamp(3rem, 16vw, 4rem);
+  }
+
+  .grace-identity-art {
+    min-height: 340px;
+  }
+
+  .grace-identity,
+  .privacy-panel,
+  .preview-cta {
+    padding: 18px;
+  }
+}

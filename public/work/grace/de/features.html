@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace — Features im Detail</title>
+  <meta name="description" content="Wie Grace Multi-Agent-Chat, visuelle Pipelines, Live Activity, Decision Log, Grace Local, Kanban und mehr wirklich funktioniert." />
+  <link rel="alternate" hreflang="en" href="https://meet-grace.com/features.html" />
+  <link rel="alternate" hreflang="de" href="https://meet-grace.com/de/features.html" />
+  <link rel="alternate" hreflang="x-default" href="https://meet-grace.com/features.html" />
+  <link rel="apple-touch-icon" href="../assets/grace-icon.png" />
+  <link rel="icon" href="../assets/grace-icon.png" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="top">
+    <a class="brand" href="index.html"><div class="brand-mark"></div><span>Grace</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menü">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Start</a>
+      <a class="active" href="features.html">Features</a>
+      <a href="agents.html">Agents</a>
+      <a href="support.html">Support</a>
+      <span class="lang-switch" aria-label="Sprache">
+        <a class="current" href="features.html" hreflang="de">DE</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="../features.html" hreflang="en">EN</a>
+      </span>
+    </div>
+  </nav>
+
+  <section style="margin-bottom:40px;">
+    <h2>Features — wie Grace wirklich arbeitet</h2>
+    <p class="lede">Jeder Block erklärt Nutzen und Ablauf. Grün = im Produkt. Blau = als Nächstes auf der Roadmap.</p>
+  </section>
+
+  <article class="feature-block" id="multi-agent">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Multi-Agent Chat</h2>
+      <p class="lede">Ein Composer für viele Coding-Agenten. Du wählst Agent und Modell — oder lässt Auto den passenden wählen.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Ein Thread, klare Führung</h3>
+        <p>Claude, Codex, Cursor, Hermes, OpenClaw, Vibe und mehr in einem Workspace. Statuspunkte zeigen laufend / wartend / fertig.</p>
+      </div>
+      <div class="point">
+        <h3>Stop &amp; Kontrolle</h3>
+        <p>Laufende Turns gezielt stoppen. Composer-Entwürfe bleiben am Chat hängen.</p>
+      </div>
+      <div class="point">
+        <h3>@Mentions &amp; Staffel</h3>
+        <p>Agenten im Composer ansprechen. Übergabe Specs → Implementierung im gleichen Chat.</p>
+      </div>
+      <div class="point">
+        <h3>Desktop &amp; iOS</h3>
+        <p>Gleicher Stand über LAN oder Tailscale. Push, wenn etwas fertig ist oder auf dich wartet.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="pipelines">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Visuelle Pipelines</h2>
+      <p class="lede">Wiederverwendbare Agenten-Ketten — mit React-Flow-Canvas, NL-Vorschlag und gespeicherten Läufen.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Canvas-Builder</h3>
+        <p>Start → Agent → End auf einem visuellen Graphen. Speichern und starten ohne Definition zu verlieren.</p>
+      </div>
+      <div class="point">
+        <h3>NL → Pipeline</h3>
+        <p>Ablauf in Alltagssprache beschreiben; Grace schlägt eine Kette vor, die du vor dem Start prüfst.</p>
+      </div>
+      <div class="point">
+        <h3>Platzhalter</h3>
+        <p><code>{input}</code> startet den Lauf. <code>{prev}</code> reicht das vorherige Ergebnis weiter.</p>
+      </div>
+      <div class="point">
+        <h3>Anhänge pro Schritt</h3>
+        <p>Dateien können mit einzelnen Pipeline-Schritten mitlaufen.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="live-activity">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Live Activity</h2>
+      <p class="lede">Alle laufenden Turns und Pipelines ohne Chat-Hopping — Timeline, Freigaben, Kennzahlen.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Timeline</h3>
+        <p>Parallele Agenten bleiben sichtbar. Detailpanel mit Status, Modell, Tools, Dateien und Kosten.</p>
+      </div>
+      <div class="point">
+        <h3>Stop &amp; Pause</h3>
+        <p>Turn beenden oder Pipeline pausieren — Deep-Link zurück in den Chat.</p>
+      </div>
+      <div class="point">
+        <h3>Approval-Queue</h3>
+        <p>Tool- und Plan-Freigaben an einer Stelle, statt versteckt in Threads.</p>
+      </div>
+      <div class="point">
+        <h3>Kennzahlen</h3>
+        <p>Aktiv, Freigaben, Tool-Aufrufe, Dateien, geschätzte API-Kosten — inkl. Statusleisten-Badges.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="decision-log">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Decision Log</h2>
+      <p class="lede">Architektur- und Produktentscheidungen mit Begründung — browsen, korrigieren, exportieren.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Manuell + Review</h3>
+        <p>Selbst eintragen oder Auto-Vorschläge aus abgeschlossenen Turns prüfen (opt-in).</p>
+      </div>
+      <div class="point">
+        <h3>Verlinkter Kontext</h3>
+        <p>Jeder Eintrag kann auf Chat/Run und betroffene Dateien zeigen.</p>
+      </div>
+      <div class="point">
+        <h3>Export</h3>
+        <p>Gefilterte <code>DECISIONS.md</code> fürs Projekthandbuch herunterladen.</p>
+      </div>
+      <div class="point">
+        <h3>Bleibt bei dir</h3>
+        <p>In deiner lokalen Grace-Datenbank — kein SaaS-Wiki.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="memory">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Shared Memory &amp; Projekt-Kontext</h2>
+      <p class="lede">Projektnotizen, die in neue Chats injiziert werden — Agenten starten orientiert.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Annehmen / Verwerfen</h3>
+        <p>Vorschläge aus Runs werden zu dauerhaftem Projektgedächtnis — du bleibst Editor.</p>
+      </div>
+      <div class="point">
+        <h3>Prefix, kein Prompt-Spam</h3>
+        <p>Kontext landet dort, wo die Plattform ohnehin injiziert — unabhängig vom Agenten.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="kanban">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Kanban</h2>
+      <p class="lede">Team-Board neben dem Chat: Spalten, Karten, Session-Links — Desktop und iOS.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Board parallel zum Chat</h3>
+        <p>Status von Triage bis Done. Karten verknüpfen Chats; Deep-Links springen zur Aufgabe.</p>
+      </div>
+      <div class="point">
+        <h3>Live ohne Flackern</h3>
+        <p>Hintergrund-Poll aktualisiert nur bei echten Änderungen.</p>
+      </div>
+      <div class="point">
+        <h3>Auto-Cards (opt-in)</h3>
+        <p>Im Team-Chat kann ein Label eine Karte anlegen und zuweisen.</p>
+      </div>
+      <div class="point">
+        <h3>Benachrichtigungen</h3>
+        <p>Übergänge nach erledigt oder blockiert lösen Push/Slack aus.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="broadcast">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Broadcast &amp; Best-of-N</h2>
+      <p class="lede">Eine Nachricht an mehrere Agenten — Antworten live vergleichen, optional einen Schiedsrichter wählen.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Parallel denken lassen</h3>
+        <p>Ideal für Architekturfragen: mehrere Modelle, eine Vergleichsansicht.</p>
+      </div>
+      <div class="point">
+        <h3>Best-of-N</h3>
+        <p>Ein Agent kürt die beste Antwort oder fasst zusammen — du wählst den Richter.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="worktree">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Worktree, Diff &amp; Dateien</h2>
+      <p class="lede">Transparenz für autonome Agenten: Dateien, Diffs, was wirklich passiert ist.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Git-Worktrees</h3>
+        <p>Isolierte Arbeitskopien pro Experiment. Jede Worktree kann als Projekt erscheinen.</p>
+      </div>
+      <div class="point">
+        <h3>Diff &amp; Ship-it</h3>
+        <p>Änderungen sehen, committen, optional pushen und PR öffnen.</p>
+      </div>
+      <div class="point">
+        <h3>Drag &amp; Drop</h3>
+        <p>Dateien aus dem Worktree-Panel in den Composer ziehen.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="coding-mode">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Coding Modus &amp; Magic Text</h2>
+      <p class="lede">Zwei Hebel für klarere, günstigere Interaktion — ohne Agenten zu tauschen.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Coding Modus</h3>
+        <p>Optional: sparsame Output-Regeln. Weniger Essay, mehr Ergebnis. Default aus.</p>
+      </div>
+      <div class="point">
+        <h3>Magic Text</h3>
+        <p>Rohtext in Code-Request, Mail, Team-Aufgabe oder Notiz wandeln — ein Klick.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="ios">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Desktop App &amp; iOS Companion</h2>
+      <p class="lede">Grace läuft als Desktop-App um den lokalen Server. Das iPhone dockt an denselben Workspace an.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Desktop</h3>
+        <p>Native Shell, Tray, Dateidialoge, Server-Steuerung, Links im Systembrowser.</p>
+      </div>
+      <div class="point">
+        <h3>iOS</h3>
+        <p>Chats, Kanban, Composer, Push. LAN oder Tailscale — ohne Cloud-Zwang für Inhalte.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="control">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Kosten, Privacy &amp; Kontrolle</h2>
+      <p class="lede">Self-hosted heißt nicht ohne Governance — sondern Governance bei dir.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Auto- / Streng-Modus</h3>
+        <p>Volle Autonomie oder Freigaben bei sensiblen Aktionen.</p>
+      </div>
+      <div class="point">
+        <h3>Kosten &amp; Usage</h3>
+        <p>Geschätzte API-Kosten und Provider-Usage — klar beschriftet, keine Abo-Rechnung.</p>
+      </div>
+      <div class="point">
+        <h3>Privacy-Indikatoren</h3>
+        <p>Sichtbar, ob ein Turn lokal bleibt oder über eine externe CLI geht.</p>
+      </div>
+      <div class="point">
+        <h3>Geräte &amp; Restore</h3>
+        <p>Geräteverwaltung und Session-Restore — der Workspace bleibt dein Haus.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="grace-local">
+    <div class="feature-head">
+      <span class="status">Im Produkt</span>
+      <h2>Grace Local</h2>
+      <p class="lede">Private lokale Modelle mit Grace-Identität — nutzbar ohne Claude-, Codex- oder andere KI-Abos für den Local-Pfad.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Stufen</h3>
+        <p><strong>Nano</strong> (leicht, z.&nbsp;B. Phi-Klasse) · <strong>Core</strong> · <strong>Code</strong> · stärkere Stufen bei guter Hardware.</p>
+      </div>
+      <div class="point">
+        <h3>First Run</h3>
+        <p>Hardware-bewusste Einrichtung mit lokaler Runtime (z.&nbsp;B. Ollama).</p>
+      </div>
+      <div class="point">
+        <h3>Gleiche Oberfläche</h3>
+        <p>Local sitzt neben Claude, Codex, Cursor im selben Composer und in Pipelines.</p>
+      </div>
+      <div class="point">
+        <h3>Privacy-USP</h3>
+        <p>Install → lokales Modell → Grace-Systemprompt → erster Prompt. Kein API-Key für Local nötig.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="feature-block" id="roadmap">
+    <div class="feature-head">
+      <span class="status planned">Als Nächstes</span>
+      <h2>Hub-Konnektoren &amp; ACP</h2>
+      <p class="lede">Einmal in Grace verbinden — freigegebene Agenten nutzen denselben Link. Goose/ACP als nächster nativer Schnitt.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="point">
+        <h3>Hub einmal → alle</h3>
+        <p>Gmail, Slack und weitere Dienste als geteilte Verbindungen geplant.</p>
+      </div>
+      <div class="point">
+        <h3>Goose &amp; ACP</h3>
+        <p>Erster echter Spawn für Goose, danach gemeinsamer ACP-Adapter wenn das Protokoll zweimal bestätigt ist.</p>
+      </div>
+      <div class="point">
+        <h3>Templates &amp; Replay</h3>
+        <p>Pipeline-Templates, Fork/Replay und Quality Gates nach dem P1-Kern.</p>
+      </div>
+    </div>
+  </article>
+
+  <section class="split-cta">
+    <h2>Mehr sehen?</h2>
+    <p>Agenten &amp; Konnektoren, Support — oder direkt Warteliste.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="agents.html">Agents</a>
+      <a class="btn btn-secondary" href="index.html#download">Download / Warteliste</a>
+      <a class="btn btn-secondary" href="support.html">Support</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-meta">
+      <span>© 2026 Grace</span>
+      <strong>Ein Produkt von <a href="https://vantura-studios.com/" target="_blank" rel="noopener">Vantura Studios</a></strong>
+    </div>
+    <div class="footer-links">
+      <a href="features.html">Features</a><span class="dot">·</span>
+      <a href="agents.html">Agents</a><span class="dot">·</span>
+      <a href="support.html">Support</a><span class="dot">·</span>
+      <a href="privacy.html">Datenschutz</a><span class="dot">·</span>
+      <a href="impressum.html">Impressum</a><span class="dot">·</span>
+      <a href="../features.html" hreflang="en">English</a>
+    </div>
+  </footer>
+</div>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

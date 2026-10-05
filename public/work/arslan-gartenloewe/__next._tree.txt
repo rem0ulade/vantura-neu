@@ -1,0 +1,11 @@
+:HL["/work/arslan-gartenloewe/_next/static/chunks/1qij7ljzngmw6.css","style"]
+:HL["/work/arslan-gartenloewe/logo.png","image"]
+:HL["/work/arslan-gartenloewe/images/weitere-01.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/unsplash-gartenweg.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/projekt-11.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/projekt-07.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/unsplash-gartenruhe.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/projekt-04.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/projekt-09.jpg","image"]
+:HL["/work/arslan-gartenloewe/images/projekt-02.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"aRoSJnA8trqzoj_zTgi2c"}

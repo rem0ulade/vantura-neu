@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="One by One Cala Pi — comida, cócteles, música y buen ambiente cerca de la playa." />
+    <meta name="theme-color" content="#101c1d" />
+    <title>One by One · Cala Pi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fugaz+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="One by One, inicio">
+        <span>ONE</span><i>BY</i><span>ONE</span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#menu" data-i18n="navMenu">Carta</a>
+        <a href="#vibe" data-i18n="navVibe">Ambiente</a>
+        <a href="#visit" data-i18n="navVisit">Visítanos</a>
+      </nav>
+      <div class="language-switcher" role="group" aria-label="Seleccionar idioma">
+        <button class="language-button active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="language-button" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="language-button" type="button" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">CALA PI · MALLORCA</p>
+          <h1 data-i18n="heroTitle">Comida.<br />Copas.<br /><em>Buen rollo.</em></h1>
+          <p class="hero-intro" data-i18n="heroIntro">Sabores mexicanos, raciones generosas y cócteles a pocos minutos de la cala.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="#menu" data-i18n="viewMenu">Ver la carta</a>
+            <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=One+By+One+Food+y+Drinks+Passeig+de+Cala+Pi+10" target="_blank" rel="noreferrer" data-i18n="directions">Cómo llegar</a>
+          </div>
+          <ul class="quick-facts" aria-label="Características">
+            <li data-i18n="factTerrace">Terraza</li>
+            <li data-i18n="factCocktails">Cócteles</li>
+            <li data-i18n="factMusic">Música</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual placeholder placeholder-hero" data-placeholder="photo-location">
+          <div class="placeholder-label">
+            <span>01</span>
+            <strong data-i18n="placeholderHero">FOTO PRINCIPAL</strong>
+            <small data-i18n="placeholderHeroHint">Terraza al atardecer o plato destacado · horizontal</small>
+          </div>
+          <div class="sun-disc" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Highlights">
+        <div>
+          <span>FAJITAS</span><b>✦</b><span>BURGERS</span><b>✦</b><span>COCKTAILS</span><b>✦</b><span>KARAOKE</span><b>✦</b><span>LIVE SPORTS</span><b>✦</b><span>CALA PI</span>
+        </div>
+      </section>
+
+      <section class="intro section-shell" id="about">
+        <div class="section-number">01 / <span data-i18n="aboutLabel">NOSOTROS</span></div>
+        <div class="intro-content">
+          <h2 data-i18n="aboutTitle">Ven a comer.<br /><span>Quédate por el ambiente.</span></h2>
+          <p data-i18n="aboutText">One by One reúne comida sin complicaciones, cócteles fríos y noches animadas en el corazón de Cala Pi. Un lugar relajado para compartir, brindar y disfrutar.</p>
+          <div class="feature-grid">
+            <article><span>01</span><h3 data-i18n="featureFood">Sabores para compartir</h3><p data-i18n="featureFoodText">Mexicano, burgers, pizza y platos a la parrilla.</p></article>
+            <article><span>02</span><h3 data-i18n="featureDrinks">Copas bien servidas</h3><p data-i18n="featureDrinksText">Cócteles, sangría, cerveza fría y mucho más.</p></article>
+            <article><span>03</span><h3 data-i18n="featureNights">Noches con ritmo</h3><p data-i18n="featureNightsText">Música, karaoke y deporte en directo.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-shell">
+          <div class="section-number light">02 / <span data-i18n="menuLabel">LA CARTA</span></div>
+          <div class="menu-heading">
+            <h2 data-i18n="menuTitle">Algo para cada antojo.</h2>
+            <p data-i18n="menuNotice">Selección orientativa. Sustituir por la carta y los precios confirmados.</p>
+          </div>
+          <div class="menu-grid">
+            <article class="menu-card coral"><span class="menu-index">01</span><h3>Mexican</h3><ul><li>Fajitas</li><li>Tacos</li><li>Burritos</li><li>Nachos</li></ul></article>
+            <article class="menu-card teal"><span class="menu-index">02</span><h3 data-i18n="grillTitle">De la parrilla</h3><ul><li>Burgers</li><li>Ribs</li><li>Chicken</li><li>Sharing Plates</li></ul></article>
+            <article class="menu-card yellow"><span class="menu-index">03</span><h3>Pizza & More</h3><ul><li>Pizza</li><li>Salads</li><li data-i18n="vegetarian">Opciones vegetarianas</li><li>Snacks</li></ul></article>
+            <article class="menu-card cream"><span class="menu-index">04</span><h3>Drinks</h3><ul><li>Cocktails</li><li>Sangria</li><li>Wine & Beer</li><li>Smoothies</li></ul></article>
+          </div>
+          <div class="menu-placeholder placeholder" data-placeholder="menu-pdf">
+            <div>
+              <strong data-i18n="fullMenu">CARTA COMPLETA</strong>
+              <span data-i18n="fullMenuHint">Aquí irá la carta original como PDF o versión web.</span>
+            </div>
+            <span class="placeholder-chip" data-i18n="needed">PENDIENTE</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="vibe section-shell" id="vibe">
+        <div class="section-number">03 / <span data-i18n="vibeLabel">EL AMBIENTE</span></div>
+        <div class="vibe-heading">
+          <h2 data-i18n="vibeTitle">Eat. Drink.<br /><span>Sing. Repeat.</span></h2>
+          <p data-i18n="vibeText">Desde cenas tranquilas hasta noches de karaoke y música: aquí cada noche tiene su propio ritmo.</p>
+        </div>
+        <div class="photo-grid">
+          <div class="placeholder photo-wide" data-placeholder="food-photo"><span>02</span><strong data-i18n="foodPhoto">FOTO DE COMIDA</strong><small data-i18n="wideHint">horizontal · alta resolución</small></div>
+          <div class="placeholder photo-tall" data-placeholder="drink-photo"><span>03</span><strong data-i18n="drinkPhoto">FOTO DE CÓCTEL</strong><small data-i18n="verticalHint">vertical · alta resolución</small></div>
+          <div class="placeholder photo-square" data-placeholder="night-photo"><span>04</span><strong data-i18n="nightPhoto">FOTO DE AMBIENTE</strong><small data-i18n="squareHint">cuadrada · noche o karaoke</small></div>
+        </div>
+        <div class="event-strip">
+          <div><small data-i18n="eventDay">VIERNES</small><strong data-i18n="karaokeNight">Karaoke Night</strong></div>
+          <p data-i18n="eventNotice">Fecha y horario por confirmar.</p>
+          <span class="placeholder-chip" data-i18n="verify">CONFIRMAR</span>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <div class="section-shell visit-grid">
+          <div>
+            <div class="section-number light">04 / <span data-i18n="visitLabel">VISÍTANOS</span></div>
+            <h2 data-i18n="visitTitle">Nos vemos<br />en Cala Pi.</h2>
+            <p class="address">Passeig de Cala Pi, 10<br />07639 Cala Pi · Mallorca</p>
+            <a class="button button-light" href="https://www.google.com/maps/search/?api=1&query=One+By+One+Food+y+Drinks+Passeig+de+Cala+Pi+10" target="_blank" rel="noreferrer" data-i18n="openMaps">Abrir en Google Maps</a>
+          </div>
+          <div class="visit-details">
+            <article>
+              <span>01</span><div><h3 data-i18n="hours">Horario</h3><p data-i18n="hoursPlaceholder">Añadir horario confirmado</p><small data-i18n="hoursHint">Los datos publicados actualmente no coinciden.</small></div>
+            </article>
+            <article>
+              <span>02</span><div><h3>WhatsApp & Phone</h3><p data-i18n="phonePlaceholder">Añadir número confirmado</p><small data-i18n="phoneHint">Necesario para llamadas y reservas.</small></div>
+            </article>
+            <article>
+              <span>03</span><div><h3>Instagram</h3><p data-i18n="socialPlaceholder">Añadir perfil oficial</p><small data-i18n="socialHint">Para eventos y novedades.</small></div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top"><span>ONE</span><i>BY</i><span>ONE</span></a>
+      <p>Food y Drinks · Cala Pi</p>
+      <p>© <span id="year"></span> One by One</p>
+    </footer>
+  </body>
+</html>

@@ -1,27 +1,22 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/site'
+import { getWorkSlugs } from '@/lib/work'
 
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const workSlugs = getWorkSlugs()
+
   return [
-    { url: `${SITE.url}/`, changeFrequency: 'monthly', priority: 1 },
-    { url: `${SITE.url}/de/`, changeFrequency: 'monthly', priority: 1 },
-    { url: `${SITE.url}/reporting/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/ai/`, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE.url}/projects/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/design/`, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE.url}/websites/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/portfolio/websites/`, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE.url}/de/reporting/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/de/ai/`, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE.url}/de/projects/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/de/design/`, changeFrequency: 'monthly', priority: 0.9 },
-    { url: `${SITE.url}/de/websites/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/portfolio/`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${SITE.url}/de/Portfolio/`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE.url}/`, changeFrequency: 'weekly', priority: 1 },
+    { url: `${SITE.url}/de/`, changeFrequency: 'weekly', priority: 1 },
+    { url: `${SITE.url}/work/`, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE.url}/de/work/`, changeFrequency: 'weekly', priority: 0.9 },
+    ...workSlugs.flatMap((slug) => [
+      { url: `${SITE.url}/work/${slug}/`, changeFrequency: 'monthly' as const, priority: 0.7 },
+      { url: `${SITE.url}/de/work/${slug}/`, changeFrequency: 'monthly' as const, priority: 0.7 },
+    ]),
     { url: `${SITE.url}/impressum/`, changeFrequency: 'yearly', priority: 0.1 },
     { url: `${SITE.url}/datenschutz/`, changeFrequency: 'yearly', priority: 0.1 },
-    { url: `${SITE.url}/arboretum/`, changeFrequency: 'weekly', priority: 0.6 },
   ]
 }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace Enterprise — Private AI infrastructure for companies</title>
+  <meta name="description" content="Grace Enterprise unifies local models, private cloud, approved AI providers, company agents, roles, audit logs and internal knowledge in one controlled platform." />
+  <meta property="og:title" content="Grace Enterprise — Private AI infrastructure for companies" />
+  <meta property="og:description" content="On-premises, private EU cloud or hybrid. A controlled AI platform for sensitive company work." />
+  <meta property="og:image" content="https://meet-grace.com/assets/grace-icon.png" />
+  <link rel="alternate" hreflang="en" href="https://meet-grace.com/enterprise.html" />
+  <link rel="alternate" hreflang="de" href="https://meet-grace.com/de/enterprise.html" />
+  <link rel="alternate" hreflang="x-default" href="https://meet-grace.com/enterprise.html" />
+  <link rel="apple-touch-icon" href="assets/grace-icon.png" />
+  <link rel="icon" href="assets/grace-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .enterprise-hero { padding: 72px 0 64px; border-bottom: 1px solid var(--line); margin-bottom: 72px; }
+    .enterprise-hero .eyebrow, .section-kicker { color: var(--plan); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
+    .enterprise-hero h1 { max-width: 900px; margin: 0 0 20px; font-family: var(--font-display); font-size: clamp(2.5rem, 7vw, 5.6rem); line-height: .98; letter-spacing: -.055em; }
+    .enterprise-hero .hero-sub { max-width: 760px; font-size: clamp(1.05rem, 2vw, 1.3rem); }
+    .proof-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .proof-row span { border:1px solid var(--line-strong); border-radius:999px; padding:8px 12px; color:var(--muted); font-size:13px; }
+    .deployment-grid, .enterprise-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .deployment-card, .enterprise-card { padding:22px; border:1px solid var(--line); border-radius:16px; background:color-mix(in srgb,var(--bg-elev) 86%,transparent); }
+    .deployment-card strong, .enterprise-card strong { display:block; font-family:var(--font-display); font-size:1.1rem; margin-bottom:8px; }
+    .deployment-card p, .enterprise-card p { margin:0; color:var(--muted); font-size:14.5px; }
+    .deployment-card .tag { display:inline-block; margin-bottom:14px; color:var(--ok); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .architecture { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .architecture > div { padding:24px; border:1px solid var(--line); border-radius:16px; }
+    .architecture h3 { margin:0 0 10px; font-family:var(--font-display); }
+    .architecture ul { margin:0; padding-left:1.1rem; color:var(--muted); }
+    .architecture li { margin:7px 0; }
+    .trust-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .trust-strip div { padding:16px; border-top:1px solid var(--line); color:var(--muted); }
+    .trust-strip b { display:block; color:var(--text); margin-bottom:5px; }
+    @media (max-width: 820px) { .deployment-grid,.enterprise-grid,.trust-strip,.architecture { grid-template-columns:1fr; } .enterprise-hero { padding-top:48px; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="index.html"><div class="brand-mark"></div><span>Grace</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="agents.html">Agents</a>
+      <a class="active" href="enterprise.html">Enterprise</a>
+      <a href="support.html">Support</a>
+      <span class="lang-switch" aria-label="Language">
+        <a href="de/enterprise.html" hreflang="de">DE</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a class="current" href="enterprise.html" hreflang="en">EN</a>
+      </span>
+    </div>
+  </nav>
+
+  <header class="enterprise-hero">
+    <p class="eyebrow">Grace Enterprise</p>
+    <h1>Private AI infrastructure for sensitive company work.</h1>
+    <p class="hero-sub">Grace brings local models, approved cloud providers, internal knowledge and company agents into one controlled platform — on-premises, in your private cloud or in a hybrid setup.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:jk@vantura-studios.com?subject=Grace%20Enterprise%20Pilot">Request an enterprise pilot</a>
+      <a class="btn btn-secondary" href="#deployment">Explore deployment options</a>
+    </div>
+    <div class="proof-row">
+      <span>On-premises</span><span>Private EU cloud</span><span>Hybrid deployment</span><span>SSO &amp; roles</span><span>Auditable usage</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-kicker">Why Grace Enterprise</div>
+    <h2>One platform instead of uncontrolled point solutions.</h2>
+    <p class="lede">Teams should be able to use powerful AI without sending confidential data through a patchwork of disconnected tools. Grace creates one central, traceable and administrable workspace.</p>
+    <div class="enterprise-grid">
+      <div class="enterprise-card"><strong>Controlled model access</strong><p>Policies by team, project or data class. Local models for sensitive work, cloud models only where they are approved.</p></div>
+      <div class="enterprise-card"><strong>Company knowledge</strong><p>Internal documents, policies and project context remain in your infrastructure and are exposed to agents deliberately.</p></div>
+      <div class="enterprise-card"><strong>Traceable operations</strong><p>Agent runs, approvals, tools, costs and decisions remain visible instead of disappearing into isolated chats.</p></div>
+      <div class="enterprise-card"><strong>Shared agents &amp; workflows</strong><p>Reusable agents, skills and pipelines are defined once and distributed in a controlled way across the company.</p></div>
+      <div class="enterprise-card"><strong>Roles &amp; policies</strong><p>SSO, groups, permissions, provider rules and tool approvals reflect existing governance structures.</p></div>
+      <div class="enterprise-card"><strong>Cost controls</strong><p>Budgets, provider policies and usage reporting prevent uncontrolled shadow spend.</p></div>
+    </div>
+  </section>
+
+  <section id="deployment">
+    <div class="section-kicker">Deployment models</div>
+    <h2>Your infrastructure. Your security level.</h2>
+    <p class="lede">Grace Enterprise runs the same product core in three deployment modes. Companies choose the architecture that fits privacy, performance and operational requirements.</p>
+    <div class="deployment-grid">
+      <article class="deployment-card"><span class="tag">Maximum control</span><strong>On-premises / Grace Local</strong><p>Models, database, knowledge sources and agents run entirely inside the company network. Designed for sensitive data and restricted environments.</p></article>
+      <article class="deployment-card"><span class="tag">Dedicated environment</span><strong>Self-hosted private cloud</strong><p>A dedicated Grace instance inside the customer infrastructure or with a selected EU hosting provider, with scalable GPU and RAM capacity.</p></article>
+      <article class="deployment-card"><span class="tag">Flexible by data class</span><strong>Hybrid</strong><p>Sensitive work stays local. Approved tasks may use Claude, OpenAI, Mistral or other cloud providers under policy control.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-kicker">Enterprise capabilities</div>
+    <h2>Built for operations, governance and scale.</h2>
+    <div class="feature-grid">
+      <div class="point"><h3>SSO &amp; central identity</h3><p>Connect existing identity providers and control access through roles.</p></div>
+      <div class="point"><h3>Audit logs</h3><p>Trace model usage, tool calls, approvals and administrative changes.</p></div>
+      <div class="point"><h3>Provider and model policies</h3><p>Define which models, data paths and tools are permitted in each context.</p></div>
+      <div class="point"><h3>Tenants &amp; workspaces</h3><p>Separate environments for teams, customers or business units.</p></div>
+      <div class="point"><h3>Internal knowledge sources</h3><p>Documents, repositories and policies become searchable under controlled access.</p></div>
+      <div class="point"><h3>Administration &amp; updates</h3><p>Backup, rollout, versioning and system health from one control plane.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-kicker">One shared core</div>
+    <h2>Grace Personal remains. Enterprise builds on top.</h2>
+    <p class="lede">Grace is not developed as three disconnected products. Personal, Cloud and Enterprise share chat, model abstraction, agents, tools, pipelines, knowledge and configuration. Enterprise adds the modules companies need for secure operations.</p>
+    <div class="architecture">
+      <div><h3>Shared product core</h3><ul><li>Multi-agent workspace</li><li>Local and external models</li><li>Pipelines, tools and skills</li><li>Project knowledge and decision log</li><li>Cost and approval controls</li></ul></div>
+      <div><h3>Enterprise extensions</h3><ul><li>SSO, roles and tenants</li><li>Audit and central policies</li><li>Private deployments</li><li>Company-wide agents</li><li>Administration, backup and support</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-kicker">Privacy &amp; control</div>
+    <h2>Local operation supports privacy — it does not replace governance.</h2>
+    <p class="lede">Grace reduces unnecessary data transfer and makes data paths visible. Actual compliance still depends on configuration, contracts, retention rules, access controls and the selected models. Private deployment supports privacy — it is not a certificate by itself. Details: <a href="privacy.html">Privacy policy</a>.</p>
+    <div class="trust-strip">
+      <div><b>Data control</b><span>Storage location and model path remain configurable.</span></div>
+      <div><b>Transparency</b><span>Local and external processing are clearly distinguished.</span></div>
+      <div><b>Approvals</b><span>Tools and sensitive actions can require explicit approval.</span></div>
+      <div><b>EU deployment</b><span>Private cloud installations can be placed deliberately in EU infrastructure.</span></div>
+    </div>
+  </section>
+
+  <section class="split-cta">
+    <h2>Run Grace Enterprise as a pilot in your environment.</h2>
+    <p>Start with one team, selected models and one concrete workflow. Together we define deployment, governance and success criteria.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:jk@vantura-studios.com?subject=Grace%20Enterprise%20Pilot">Request a pilot call</a>
+      <a class="btn btn-secondary" href="features.html">Explore the product core</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-meta"><span>© 2026 Grace</span><strong>A product of <a href="https://vantura-studios.com/" target="_blank" rel="noopener">Vantura Studios</a></strong></div>
+    <div class="footer-links"><a href="features.html">Features</a><span class="dot">·</span><a href="agents.html">Agents</a><span class="dot">·</span><a href="enterprise.html">Enterprise</a><span class="dot">·</span><a href="support.html">Support</a><span class="dot">·</span><a href="privacy.html">Privacy</a><span class="dot">·</span><a href="imprint.html">Imprint</a><span class="dot">·</span><a href="de/enterprise.html" hreflang="de">Deutsch</a></div>
+  </footer>
+</div>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

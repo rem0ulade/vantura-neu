@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 620" role="img" aria-labelledby="roomTitle roomDesc">
+  <title id="roomTitle">Raum-basierte Smart-Home-Hubs</title>
+  <desc id="roomDesc">Vier Tablet-Dashboards für Wohnzimmer, Schlafzimmer, Kinderzimmer und Badezimmer.</desc>
+  <defs>
+    <linearGradient id="living" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f0b45d"/><stop offset="1" stop-color="#ff7d6e"/></linearGradient>
+    <linearGradient id="sleep" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#7ea7ff"/><stop offset="1" stop-color="#35d0c5"/></linearGradient>
+    <linearGradient id="kids" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#91d870"/><stop offset="1" stop-color="#ffc96d"/></linearGradient>
+    <linearGradient id="bath" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#35d0c5"/><stop offset="1" stop-color="#f5f0e8"/></linearGradient>
+    <filter id="roomShadow" x="-18%" y="-20%" width="136%" height="144%"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#233027" flood-opacity=".24"/></filter>
+  </defs>
+  <rect width="1180" height="620" rx="32" fill="#edf3ea"/>
+  <g filter="url(#roomShadow)">
+    <g transform="translate(58 66)">
+      <rect width="500" height="220" rx="22" fill="#111318"/>
+      <rect x="18" y="18" width="464" height="184" rx="16" fill="#1b2028"/>
+      <text x="42" y="56" fill="#f5f0e8" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="850">Wohnzimmer</text>
+      <rect x="42" y="80" width="190" height="94" rx="14" fill="url(#living)"/>
+      <rect x="254" y="80" width="90" height="36" rx="10" fill="#353b46"/><rect x="362" y="80" width="78" height="36" rx="10" fill="#353b46"/>
+      <rect x="254" y="136" width="186" height="38" rx="10" fill="#2a303a"/>
+      <text x="64" y="138" fill="#201813" font-family="Inter,Arial,sans-serif" font-size="28" font-weight="900">Filmabend</text>
+    </g>
+    <g transform="translate(622 66)">
+      <rect width="500" height="220" rx="22" fill="#111318"/>
+      <rect x="18" y="18" width="464" height="184" rx="16" fill="#1b2028"/>
+      <text x="42" y="56" fill="#f5f0e8" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="850">Schlafzimmer</text>
+      <circle cx="142" cy="130" r="58" fill="url(#sleep)"/>
+      <text x="108" y="142" fill="#071018" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="900">18°</text>
+      <rect x="254" y="82" width="186" height="34" rx="10" fill="#353b46"/><rect x="254" y="132" width="128" height="34" rx="10" fill="#2a303a"/>
+    </g>
+    <g transform="translate(58 334)">
+      <rect width="500" height="220" rx="22" fill="#111318"/>
+      <rect x="18" y="18" width="464" height="184" rx="16" fill="#1b2028"/>
+      <text x="42" y="56" fill="#f5f0e8" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="850">Kinderzimmer</text>
+      <rect x="42" y="82" width="398" height="38" rx="12" fill="url(#kids)"/>
+      <rect x="42" y="140" width="110" height="34" rx="10" fill="#353b46"/><rect x="172" y="140" width="110" height="34" rx="10" fill="#353b46"/><rect x="302" y="140" width="138" height="34" rx="10" fill="#2a303a"/>
+      <text x="64" y="108" fill="#172117" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="900">Nachtlicht · Timer · Musik</text>
+    </g>
+    <g transform="translate(622 334)">
+      <rect width="500" height="220" rx="22" fill="#111318"/>
+      <rect x="18" y="18" width="464" height="184" rx="16" fill="#1b2028"/>
+      <text x="42" y="56" fill="#f5f0e8" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="850">Badezimmer</text>
+      <rect x="42" y="84" width="178" height="90" rx="14" fill="url(#bath)"/>
+      <text x="72" y="140" fill="#10241f" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="900">Spa</text>
+      <rect x="254" y="82" width="186" height="34" rx="10" fill="#353b46"/><rect x="254" y="132" width="128" height="34" rx="10" fill="#2a303a"/>
+    </g>
+  </g>
+</svg>

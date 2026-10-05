@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grace — Agents &amp; Konnektoren</title>
+  <meta name="description" content="Grace orchestriert Claude, Codex, Cursor, Hermes, OpenClaw, Mistral Vibe, Grace Local und mehr — von Discovery bis Pipeline in einem Workspace." />
+  <link rel="alternate" hreflang="en" href="https://meet-grace.com/agents.html" />
+  <link rel="alternate" hreflang="de" href="https://meet-grace.com/de/agents.html" />
+  <link rel="alternate" hreflang="x-default" href="https://meet-grace.com/agents.html" />
+  <link rel="apple-touch-icon" href="../assets/grace-icon.png" />
+  <link rel="icon" href="../assets/grace-icon.png" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="top">
+    <a class="brand" href="index.html"><div class="brand-mark"></div><span>Grace</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menü">Menu</button>
+    <div class="nav-links">
+      <a href="index.html">Start</a>
+      <a href="features.html">Features</a>
+      <a class="active" href="agents.html">Agents</a>
+      <a href="support.html">Support</a>
+      <span class="lang-switch" aria-label="Sprache">
+        <a class="current" href="agents.html" hreflang="de">DE</a>
+        <span class="sep" aria-hidden="true">/</span>
+        <a href="../agents.html" hreflang="en">EN</a>
+      </span>
+    </div>
+  </nav>
+
+  <section style="margin-bottom:48px;">
+    <h2>Agents — du führst, Grace orchestriert</h2>
+    <p class="lede">Grace ist die Schicht darüber: Discovery, Composer, Pipelines, Live Activity, Kanban. Modelle und CLIs darunter bleiben austauschbar.</p>
+  </section>
+
+  <section>
+    <h2>Jetzt im Workspace</h2>
+    <div class="grid">
+      <div class="card"><div class="card-title">Claude</div><p>Headless CLI, Streaming, Skills, Review-Rollen in Pipelines und Staffel-Übergaben.</p></div>
+      <div class="card"><div class="card-title">Codex</div><p>Implementierung, Diffs, Worktrees — oft der Bau-Schritt in der Kette.</p></div>
+      <div class="card"><div class="card-title">Cursor</div><p>Agent über cursor-agent — Editor-Kontext bleibt deins.</p></div>
+      <div class="card"><div class="card-title">Hermes</div><p>Recherche, Audit, Koordination — in Grace als Agent ansprechbar.</p></div>
+      <div class="card"><div class="card-title">OpenClaw</div><p>Lokale Instanz / Gateway in derselben Oberfläche.</p></div>
+      <div class="card"><div class="card-title">Mistral Vibe</div><p>Nativer Konnektor mit Transcript-Parität — Auto-Discovery wenn <code>vibe</code> installiert ist.</p></div>
+      <div class="card"><div class="card-title">Grace Local</div><p>Private Open-Source-Modelle (Nano und mehr) + Grace-Systemprompt — ohne Fremd-Abo für den Local-Pfad. <a href="features.html#grace-local">Details</a></p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Nächste Konnektoren</h2>
+    <div class="grid">
+      <div class="card"><div class="card-title">Goose / ACP</div><p>Erster Spawn über Discovery hinaus für Goose, danach gemeinsamer ACP-Adapter.</p></div>
+      <div class="card"><div class="card-title">Weitere CLIs</div><p>Aider, OpenCode, Qwen Code und andere — gestuft über die Connector-Registry.</p></div>
+      <div class="card"><div class="card-title">Hub einmal → alle</div><p>Geteilte Dienst-Verbindungen (z.&nbsp;B. Google, Slack), die freigegebene Agenten nutzen — Roadmap.</p></div>
+    </div>
+  </section>
+
+  <section class="split-cta">
+    <h2>Wie das zusammenhängt</h2>
+    <p>Pipelines, Broadcast, Live Activity und Kanban nutzen dieselben Agenten — siehe Feature-Tour.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="features.html">Features</a>
+      <a class="btn btn-secondary" href="index.html#download">Warteliste</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-meta">
+      <span>© 2026 Grace</span>
+      <strong>Ein Produkt von <a href="https://vantura-studios.com/" target="_blank" rel="noopener">Vantura Studios</a></strong>
+    </div>
+    <div class="footer-links">
+      <a href="features.html">Features</a><span class="dot">·</span>
+      <a href="agents.html">Agents</a><span class="dot">·</span>
+      <a href="support.html">Support</a><span class="dot">·</span>
+      <a href="privacy.html">Datenschutz</a><span class="dot">·</span>
+      <a href="impressum.html">Impressum</a><span class="dot">·</span>
+      <a href="../agents.html" hreflang="en">English</a>
+    </div>
+  </footer>
+</div>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) toggle.addEventListener('click', () => links.classList.toggle('open'));
+</script>
+</body>
+</html>

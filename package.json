@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:work": "bash scripts/build-work-demos.sh",
     "start": "next start",
     "lint": "next lint"
   },

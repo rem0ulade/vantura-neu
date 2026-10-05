@@ -1,66 +1,54 @@
-# Vantura — Website
+# Vantura — Webdesign
 
-Marketing-Website: **„Bessere Entscheidungen beginnen mit besseren Daten."**
-
-Reporting-, Dashboard- und Automatisierungslösungen für Unternehmen.
+Marketing site for **Vantura Studios**: webdesign, online shops and relaunches.
 
 Domain: [vantura-studios.com](https://vantura-studios.com)
 
 ## Stack
 
-- Next.js 16 (App Router, statischer Export)
+- Next.js 16 (App Router, static export)
 - React 19 · TypeScript
 - Tailwind CSS 4
-- Framer Motion · Lucide Icons
+- Framer Motion · Space Grotesk · JetBrains Mono
 
-## Entwicklung
+## Development
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
-npm run build    # statischer Export nach ./out
+npm run build:work   # clone/build demos into public/work (first time / refresh)
+npm run dev          # http://localhost:3000
+npm run build        # static export to ./out
 ```
 
-## Architektur
+`build:work` is only needed when refreshing demo sources. Built demos under `public/work/` are committed so CI can deploy with `npm ci && npm run build` alone.
+
+## Architecture
 
 ```
-app/               Routen, Layout, Metadata, SEO (robots, sitemap, icon)
-components/
-  sections/        Eine Datei pro Seitensektion (Hero, Problem, Cost, …)
-  dashboard/       Selbstgebaute Dashboard-Mockups (reines SVG/CSS)
-  ui/              Wiederverwendbare Bausteine (Button, Container, Reveal, …)
-lib/
-  site.ts          ⭐ Zentrale Markenkonfiguration (Name, Claim, E-Mail, URL)
-  content.ts       Alle Texte/Inhalte der Sektionen
-docs/brand/        Brand Foundation, Messaging, Voice & Style
+app/                 Routes (home EN/DE, /work, legal, legacy redirects)
+components/webdesign Kinetic Brutal marketing sections
+components/          WorkDemoShell, LegacyRedirect, language helpers
+lib/site.ts          Brand + mailto CTA
+lib/work.ts          Work catalog (six in-site demos)
+lib/webdesign-content.ts  EN/DE copy
+public/work/<slug>/  Static demo assets served on-domain
+scripts/             Demo build + GitHub Pages mirror helpers
+docs/superpowers/    Spec + plans
 ```
 
-### Markenname ändern
+## Work demos
 
-Der Markenname wird ausschließlich über [`lib/site.ts`](lib/site.ts)
-referenziert — **eine Änderung dort benennt die gesamte Website um**
-(Navigation, Texte, Metadata, Footer).
+In-site only (no primary github.io links):
 
-### Referenzen ergänzen
+- `/work/bonsai-home`
+- `/work/proud-together`
+- `/work/arslan-gartenloewe`
+- `/work/onebyone`
+- `/work/grace`
+- `/work/jonathan`
 
-Einträge in `REFERENCES` in [`lib/content.ts`](lib/content.ts) hinzufügen.
-Die Sektion erscheint automatisch, sobald der erste Eintrag existiert.
+Each demo page shows a floating „← Vantura Work“ chip over a same-origin iframe.
 
 ## Deployment
 
-Jeder Push auf `main` baut die Seite via GitHub Actions
-(`.github/workflows/deploy.yml`) und veröffentlicht sie auf **GitHub Pages**:
-https://rem0ulade.github.io/vantura-neu/
-
-Der Base-Pfad (`/vantura-neu`) wird über `NEXT_PUBLIC_BASE_PATH` in der CI
-gesetzt; lokal läuft die Seite ohne Präfix.
-
-### Umzug auf vantura-studios.com
-
-Sobald die Domain auf GitHub Pages zeigt und im alten Repo freigegeben ist:
-
-1. `NEXT_PUBLIC_BASE_PATH` aus `.github/workflows/deploy.yml` entfernen
-   (bei GitHub Pages mit Custom Domain liegt die Seite im Root).
-2. Custom Domain `vantura-studios.com` in den Repo-Settings setzen und
-   „Enforce HTTPS" aktivieren.
-3. `SITE.url` in `lib/site.ts` ist bereits auf `https://vantura-studios.com` gesetzt.
+Push to `main` → GitHub Actions → GitHub Pages (see `.github/workflows/deploy.yml`).

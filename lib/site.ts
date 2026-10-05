@@ -5,16 +5,16 @@
  */
 export const SITE = {
   name: 'Vantura',
-  claim: 'Better decisions start with better data.',
+  claim: 'Websites that sell.',
   description:
-    'We build reporting, dashboard and automation solutions for companies that want to understand what is happening in their business faster.',
+    'Webdesign, online shops and relaunches — built with craft, motion and a clear call to action.',
   email: 'jk@vantura-studios.com',
   url: 'https://vantura-studios.com',
   locale: 'en_US',
 } as const
 
 export const MAIL_SUBJECT = encodeURIComponent(
-  `Introductory call: Reporting & Data (${SITE.name})`
+  `Webdesign project inquiry (${SITE.name})`
 )
 
 export const CONTACT_HREF = `mailto:${SITE.email}?subject=${MAIL_SUBJECT}`
