@@ -7,7 +7,7 @@ export type WorkItem = {
   result: { en: string; de: string }
   kind: { en: string; de: string }
   featured?: boolean
-  /** Path under public/ — also iframe src with trailing slash */
+  /** Path under public/, also iframe src with trailing slash */
   publicPath: string
 }
 
@@ -17,16 +17,16 @@ export const WORK_ITEMS: WorkItem[] = [
     repo: 'bonsai-home',
     title: { en: 'Bonsai Home', de: 'Bonsai Home' },
     blurb: {
-      en: 'A smart-home sales site that explains a complex offer in a clear, buyable story.',
-      de: 'Smart-Home-Verkaufsseite, die ein komplexes Angebot klar und kaufbar erzählt.',
+      en: 'A smart-home sales site that explains a complex offer clearly, so visitors can see why to buy.',
+      de: 'Smart-Home-Verkaufsseite, die ein komplexes Angebot klar und nachvollziehbar erklärt.',
     },
     challenge: {
-      en: 'Too many features, too little clarity — visitors bounced before the offer landed.',
-      de: 'Zu viele Features, zu wenig Klarheit — Besucher sprangen ab, bevor das Angebot greifbar war.',
+      en: 'Too many features, too little clarity. Visitors left before the offer landed.',
+      de: 'Zu viele Features, zu wenig Klarheit. Besucher sprangen ab, bevor das Angebot ankam.',
     },
     result: {
-      en: 'Product narrative, structured pages and CTAs aimed at consultation requests.',
-      de: 'Produktstory, klare Seitenstruktur und CTAs auf Beratungsanfragen ausgerichtet.',
+      en: 'A clear product story, structured pages and calls to action that lead to consultation requests.',
+      de: 'Eine klare Produktgeschichte, gut gegliederte Seiten und Buttons, die zur Beratungsanfrage führen.',
     },
     kind: { en: 'Sales website', de: 'Verkaufsseite' },
     featured: true,
@@ -37,18 +37,18 @@ export const WORK_ITEMS: WorkItem[] = [
     repo: 'grace_webpage_v1',
     title: { en: 'Grace', de: 'Grace' },
     blurb: {
-      en: 'Product marketing for a multi-agent workspace — ambitious, still readable.',
-      de: 'Product-Marketing für einen Multi-Agent-Workspace — ambitioniert, trotzdem lesbar.',
+      en: 'Product marketing for a multi-agent workspace: ambitious, but still easy to read.',
+      de: 'Produktmarketing für einen Multi-Agent-Workspace: ambitioniert, aber gut lesbar.',
     },
     challenge: {
       en: 'A technical product needed a public face that non-engineers could trust.',
-      de: 'Ein technisches Produkt brauchte eine öffentliche Seite, der auch Nicht-Entwickler vertrauen.',
+      de: 'Ein technisches Produkt brauchte einen öffentlichen Auftritt, dem auch Nicht-Techniker vertrauen.',
     },
     result: {
-      en: 'Positioning, sections and motion that carry the product story without drowning in jargon.',
-      de: 'Positionierung, Sektionen und Motion, die die Produktstory tragen — ohne Jargon-Flut.',
+      en: 'Positioning, page sections and animation that tell the product story without drowning in jargon.',
+      de: 'Positionierung, Abschnitte und Animationen, die das Produkt erklären, ohne in Fachjargon zu versinken.',
     },
-    kind: { en: 'Product site', de: 'Product Site' },
+    kind: { en: 'Product site', de: 'Produktseite' },
     featured: true,
     publicPath: '/demos/grace/',
   },
@@ -57,16 +57,16 @@ export const WORK_ITEMS: WorkItem[] = [
     repo: 'arslan-gartenloewe',
     title: { en: 'Arslan Gartenlöwe', de: 'Arslan Gartenlöwe' },
     blurb: {
-      en: 'Local garden business online — services, trust and a path to contact.',
-      de: 'Gartenbetrieb online — Leistungen, Vertrauen und ein klarer Weg zur Anfrage.',
+      en: 'A local garden business online: services, credibility and an easy way to get in touch.',
+      de: 'Gartenbetrieb online: Leistungen, Vertrauen und ein klarer Weg zur Anfrage.',
     },
     challenge: {
       en: 'Strong craft offline, almost no digital presence that matched the work.',
-      de: 'Starkes Handwerk offline, digital kaum ein Auftritt, der zur Arbeit passte.',
+      de: 'Starkes Handwerk offline, aber online nichts, was zur Qualität der Arbeit passte.',
     },
     result: {
-      en: 'Service-led website with local credibility and a direct inquiry path.',
-      de: 'Leistungsgeführte Website mit lokaler Glaubwürdigkeit und direkter Anfrage.',
+      en: 'A website built around the services, with local credibility and a direct way to inquire.',
+      de: 'Eine Website rund um die Leistungen, mit regionaler Glaubwürdigkeit und direktem Anfrageweg.',
     },
     kind: { en: 'Local business', de: 'Lokalgeschäft' },
     featured: true,
@@ -82,11 +82,11 @@ export const WORK_ITEMS: WorkItem[] = [
     },
     challenge: {
       en: 'A young nonprofit needed to look serious without looking corporate.',
-      de: 'Ein junger Verein sollte ernst wirken — ohne steif oder korporat zu werden.',
+      de: 'Ein junger Verein sollte seriös wirken, ohne nach Konzern auszusehen.',
     },
     result: {
-      en: 'Warm identity system and pages for mission, events and membership.',
-      de: 'Warme Identität und Seiten für Mission, Events und Mitgliedschaft.',
+      en: 'A warm identity and pages for mission, events and membership.',
+      de: 'Ein warmes Erscheinungsbild und Seiten für Ziele, Veranstaltungen und Mitgliedschaft.',
     },
     kind: { en: 'Nonprofit', de: 'Verein' },
     publicPath: '/demos/proud-together/',
@@ -97,15 +97,15 @@ export const WORK_ITEMS: WorkItem[] = [
     title: { en: 'One by One', de: 'One by One' },
     blurb: {
       en: 'Concept exploration for layout rhythm and visual hierarchy.',
-      de: 'Konzeptstudie für Layout-Rhythmus und visuelle Hierarchie.',
+      de: 'Konzeptstudie zu Layout-Rhythmus und visueller Gewichtung.',
     },
     challenge: {
-      en: 'Test how far typography and spacing alone can carry a brand feel.',
-      de: 'Testen, wie weit Typografie und Spacing allein eine Markenwirkung tragen.',
+      en: 'Test how far type and spacing alone can carry a brand.',
+      de: 'Wie weit tragen Schrift und Abstände allein eine Marke?',
     },
     result: {
-      en: 'A sharp mockup used as a reference for editorial web layouts.',
-      de: 'Ein scharfes Mockup als Referenz für redaktionelle Web-Layouts.',
+      en: 'A clean mockup, used as a reference for editorial web layouts.',
+      de: 'Ein klarer Entwurf als Referenz für redaktionelle Layouts.',
     },
     kind: { en: 'Concept', de: 'Konzept' },
     publicPath: '/demos/onebyone/',
@@ -119,12 +119,12 @@ export const WORK_ITEMS: WorkItem[] = [
       de: 'Persönliche Markenseite mit klarem Angebot und direktem Kontakt.',
     },
     challenge: {
-      en: 'Multiple skills needed one clean public story — not a CV dump.',
-      de: 'Mehrere Skills brauchten eine klare öffentliche Story — kein Lebenslauf-Dump.',
+      en: 'Several skills needed one clear story, not a CV dump.',
+      de: 'Mehrere Fähigkeiten brauchten eine klare Geschichte statt einer Lebenslauf-Liste.',
     },
     result: {
-      en: 'Focused positioning, strong hierarchy and a single primary CTA.',
-      de: 'Fokussierte Positionierung, klare Hierarchie und ein primärer CTA.',
+      en: 'Focused positioning, clear hierarchy and one main call to action.',
+      de: 'Klare Positionierung, klare Gliederung und ein zentraler Button zur Kontaktaufnahme.',
     },
     kind: { en: 'Personal brand', de: 'Persönliche Marke' },
     publicPath: '/demos/jonathan/',

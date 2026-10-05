@@ -26,17 +26,26 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
           {items.map((item, index) => (
             <motion.article
               key={item.slug}
-              initial={reduce ? false : { opacity: 0, y: 24 }}
+              initial={reduce ? false : { opacity: 0, y: 28 }}
               whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-8%' }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
-              className="grid gap-6 border-2 border-ink p-6 shadow-[4px_4px_0_#111] lg:grid-cols-[1fr_1.1fr] lg:gap-10 lg:p-8"
+              whileHover={reduce ? undefined : { y: -4, boxShadow: '8px 8px 0 #ff4d1a' }}
+              className="group relative grid gap-6 overflow-hidden border-2 border-ink bg-paper p-6 shadow-[4px_4px_0_#111] lg:grid-cols-[1fr_1.1fr] lg:gap-10 lg:p-8"
             >
+              <motion.div
+                aria-hidden
+                className="absolute inset-y-0 left-0 w-1.5 origin-top bg-signal"
+                initial={reduce ? undefined : { scaleY: 0 }}
+                whileInView={reduce ? undefined : { scaleY: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.55, delay: 0.1 }}
+              />
               <div>
                 <p className="font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-signal">
                   {item.kind[locale]}
                 </p>
-                <h3 className="mt-4 text-3xl font-bold uppercase tracking-[-0.04em] sm:text-4xl">
+                <h3 className="mt-4 text-3xl font-bold uppercase tracking-[-0.04em] transition group-hover:translate-x-1 sm:text-4xl">
                   {item.title[locale]}
                 </h3>
                 <p className="mt-4 text-sm leading-6 text-muted">{item.blurb[locale]}</p>
@@ -48,17 +57,17 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
                 </Link>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                <div className="border-2 border-ink bg-paper p-4">
+                <div className="border-2 border-ink bg-paper p-4 transition group-hover:border-signal">
                   <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-signal">
                     {copy.featuredChallenge}
                   </p>
                   <p className="mt-2 text-sm leading-6">{item.challenge[locale]}</p>
                 </div>
-                <div className="border-2 border-ink bg-ink p-4 text-paper">
-                  <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-signal">
+                <div className="border-2 border-ink bg-ink p-4 text-paper transition group-hover:bg-signal group-hover:text-ink">
+                  <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-signal group-hover:text-ink">
                     {copy.featuredResult}
                   </p>
-                  <p className="mt-2 text-sm leading-6 text-paper/85">{item.result[locale]}</p>
+                  <p className="mt-2 text-sm leading-6 text-paper/85 group-hover:text-ink/85">{item.result[locale]}</p>
                 </div>
               </div>
             </motion.article>

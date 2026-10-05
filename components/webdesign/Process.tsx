@@ -1,8 +1,12 @@
+'use client'
+
+import { motion, useReducedMotion } from 'framer-motion'
 import type { Locale } from '@/lib/webdesign-content'
 import { t } from '@/lib/webdesign-content'
 
 export function Process({ locale }: { locale: Locale }) {
   const copy = t(locale)
+  const reduce = useReducedMotion()
 
   return (
     <section className="border-b-2 border-ink bg-paper py-20 lg:py-28">
@@ -14,15 +18,25 @@ export function Process({ locale }: { locale: Locale }) {
           {copy.processTitle}
         </h2>
         <ol className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {copy.process.map((step) => (
-            <li key={step.number} className="border-2 border-ink p-6">
-              <p className="font-mono text-xs font-bold text-signal">{step.number}</p>
+          {copy.process.map((step, index) => (
+            <motion.li
+              key={step.number}
+              initial={reduce ? false : { opacity: 0, y: 20 }}
+              whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.07 }}
+              whileHover={reduce ? undefined : { y: -4, borderColor: '#ff4d1a' }}
+              className="border-2 border-ink p-6 transition"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <p className="font-mono text-xs font-bold text-signal">{step.number}</p>
+                <p className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-muted">
+                  {step.duration}
+                </p>
+              </div>
               <h3 className="mt-4 text-xl font-bold uppercase tracking-[-0.03em]">{step.title}</h3>
-              <p className="mt-2 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-signal">
-                {step.duration}
-              </p>
               <p className="mt-3 text-sm leading-6 text-muted">{step.text}</p>
-            </li>
+            </motion.li>
           ))}
         </ol>
       </div>

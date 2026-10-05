@@ -29,26 +29,31 @@ export function WorkGrid({ locale }: { locale: Locale }) {
               whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-10%' }}
               transition={{ duration: 0.45, delay: index * 0.05 }}
-              whileHover={reduce ? undefined : { y: -4 }}
+              whileHover={reduce ? undefined : { y: -6, rotate: -0.4 }}
             >
               <Link
                 href={workHref(locale, item.slug)}
-                className="group flex h-full flex-col border-2 border-ink bg-paper p-6 shadow-[4px_4px_0_#111] transition hover:bg-ink hover:text-paper hover:shadow-[4px_4px_0_#ff4d1a]"
+                className="group relative flex h-full flex-col overflow-hidden border-2 border-ink bg-paper p-6 shadow-[4px_4px_0_#111] transition hover:bg-ink hover:text-paper hover:shadow-[6px_6px_0_#ff4d1a]"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <p className="font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-signal group-hover:text-signal">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 translate-y-full bg-signal/15 transition duration-500 group-hover:translate-y-0"
+                />
+                <div className="relative flex items-start justify-between gap-3">
+                  <p className="font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-signal">
                     {item.kind[locale]}
                   </p>
-                  <span className="font-mono text-[11px] font-bold">0{index + 1}</span>
+                  <span className="font-mono text-[11px] font-bold transition group-hover:text-signal">
+                    0{index + 1}
+                  </span>
                 </div>
-                <h3 className="mt-8 text-2xl font-bold uppercase tracking-[-0.04em]">{item.title[locale]}</h3>
-                <p className="mt-3 flex-1 text-sm leading-6 text-muted group-hover:text-paper/70">
+                <h3 className="relative mt-8 text-2xl font-bold uppercase tracking-[-0.04em] transition group-hover:translate-x-1">
+                  {item.title[locale]}
+                </h3>
+                <p className="relative mt-3 flex-1 text-sm leading-6 text-muted group-hover:text-paper/70">
                   {item.blurb[locale]}
                 </p>
-                <p className="mt-4 line-clamp-2 text-xs leading-5 text-muted/90 group-hover:text-paper/60">
-                  {item.result[locale]}
-                </p>
-                <p className="mt-8 font-mono text-xs font-bold uppercase tracking-[0.14em]">
+                <p className="relative mt-8 font-mono text-xs font-bold uppercase tracking-[0.14em] transition group-hover:translate-x-2">
                   {copy.workCta} →
                 </p>
               </Link>

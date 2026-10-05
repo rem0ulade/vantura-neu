@@ -32,12 +32,12 @@ export const PAIN_POINTS: PainPoint[] = [
   {
     icon: FileSpreadsheet,
     title: 'Excel-Chaos',
-    text: 'Dieselbe Kennzahl existiert in drei Dateien — mit drei verschiedenen Werten. Welche stimmt, weiß niemand mehr sicher.',
+    text: 'Dieselbe Kennzahl existiert in drei Dateien, mit drei verschiedenen Werten. Welche stimmt, weiß niemand mehr sicher.',
   },
   {
     icon: CalendarClock,
     title: 'Zahlen kommen zu spät',
-    text: 'Der Monatsbericht ist fertig, wenn der Monat vorbei ist. Gegensteuern können Sie dann nicht mehr — nur noch erklären.',
+    text: 'Der Monatsbericht ist fertig, wenn der Monat vorbei ist. Gegensteuern können Sie dann nicht mehr, nur noch erklären.',
   },
   {
     icon: RefreshCw,
@@ -47,7 +47,7 @@ export const PAIN_POINTS: PainPoint[] = [
   {
     icon: GitMerge,
     title: 'Verstreute Systeme',
-    text: 'CRM, Buchhaltung, Einkauf, Kampagnen-Tools — jedes System kennt einen Teil der Wahrheit. Keines das ganze Bild.',
+    text: 'CRM, Buchhaltung, Einkauf, Kampagnen-Tools, jedes System kennt einen Teil der Wahrheit. Keines das ganze Bild.',
   },
 ]
 
@@ -58,7 +58,7 @@ export const COST_ITEMS = [
     title: 'Zeit',
     text: 'Zwei Mitarbeitende, die je sechs Stunden pro Woche Berichte zusammenkopieren, kosten über 550 Arbeitsstunden im Jahr. Für Zahlen, die bei Fertigstellung schon veraltet sind.',
     stat: '550+',
-    statLabel: 'Stunden pro Jahr für manuelles Reporting — eine typische Beispielrechnung',
+    statLabel: 'Stunden pro Jahr für manuelles Reporting, eine typische Beispielrechnung',
   },
   {
     title: 'Fehler',
@@ -89,28 +89,28 @@ export const SOLUTIONS: Solution[] = [
     icon: LayoutDashboard,
     problem: '„Wir sehen erst am Monatsende, wie der Monat lief.“',
     title: 'Management-Dashboards',
-    text: 'Umsatz, Kosten, Pipeline und Budget — eine Oberfläche, täglich aktuell, für alle dieselben Zahlen. Sie öffnen ein Dashboard statt fünf Dateien.',
+    text: 'Umsatz, Kosten, Pipeline und Budget, eine Oberfläche, täglich aktuell, für alle dieselben Zahlen. Sie öffnen ein Dashboard statt fünf Dateien.',
     points: ['Eine verlässliche Quelle für alle KPIs', 'Täglich oder stündlich aktuell', 'Vom Gesamtbild bis ins Detail'],
   },
   {
     icon: Workflow,
     problem: '„Der Bericht kostet uns jede Woche einen Tag.“',
     title: 'Reporting-Automatisierung',
-    text: 'Wiederkehrende Berichte erstellen sich selbst: Daten werden automatisch zusammengeführt, geprüft und verteilt — ohne Copy & Paste, ohne Versionswirrwarr.',
+    text: 'Wiederkehrende Berichte erstellen sich selbst: Daten werden automatisch zusammengeführt, geprüft und verteilt, ohne Copy & Paste, ohne Versionswirrwarr.',
     points: ['Berichte laufen ohne manuelle Arbeit', 'Automatische Plausibilitätsprüfungen', 'Verteilung per Mail, Teams oder Portal'],
   },
   {
     icon: LineChart,
     problem: '„Unsere Planung ist eher Bauchgefühl als Prognose.“',
     title: 'Forecasting & Planung',
-    text: 'Nachvollziehbare Forecasts für Umsatz, Budget und Auslastung — aufgebaut auf Ihren echten Daten statt auf Hoffnung. Abweichungen sehen Sie, bevor sie teuer werden.',
+    text: 'Nachvollziehbare Forecasts für Umsatz, Budget und Auslastung, aufgebaut auf Ihren echten Daten statt auf Hoffnung. Abweichungen sehen Sie, bevor sie teuer werden.',
     points: ['Forecast vs. Ist auf einen Blick', 'Frühwarnung bei Abweichungen', 'Szenarien statt Einzelschätzung'],
   },
   {
     icon: BarChart3,
     problem: '„Unsere Tools können nicht, was wir brauchen.“',
     title: 'Individuelle Datenlösungen',
-    text: 'Wenn Standardsoftware an ihre Grenzen kommt: maßgeschneiderte Auswertungen, Schnittstellen und interne Tools — exakt entlang Ihrer Prozesse gebaut.',
+    text: 'Wenn Standardsoftware an ihre Grenzen kommt: maßgeschneiderte Auswertungen, Schnittstellen und interne Tools, exakt entlang Ihrer Prozesse gebaut.',
     points: ['Anbindung Ihrer bestehenden Systeme', 'Keine Systemumstellung nötig', 'Wächst mit Ihren Anforderungen'],
   },
 ]
@@ -122,7 +122,7 @@ export const PROCESS_STEPS = [
     number: '01',
     title: 'Erstgespräch',
     duration: '30 Minuten, kostenlos',
-    text: 'Wir sprechen über Ihre Zahlen, Ihre Systeme und darüber, wo aktuell Zeit und Nerven verloren gehen. Sie bekommen eine ehrliche Einschätzung — kein Verkaufsgespräch.',
+    text: 'Wir sprechen über Ihre Zahlen, Ihre Systeme und darüber, wo aktuell Zeit und Nerven verloren gehen. Sie bekommen eine ehrliche Einschätzung, kein Verkaufsgespräch.',
   },
   {
     number: '02',
@@ -140,11 +140,11 @@ export const PROCESS_STEPS = [
     number: '04',
     title: 'Übergabe & Betrieb',
     duration: 'fortlaufend',
-    text: 'Dokumentation, Einweisung Ihres Teams und auf Wunsch laufende Betreuung. Das System gehört Ihnen — inklusive allem Wissen darüber.',
+    text: 'Dokumentation, Einweisung Ihres Teams und auf Wunsch laufende Betreuung. Das System gehört Ihnen, inklusive allem Wissen darüber.',
   },
 ] as const
 
-/** Produktisierte Einstiegsangebote — klar umrissen statt „Beratung nach Aufwand“. */
+/** Produktisierte Einstiegsangebote, klar umrissen statt „Beratung nach Aufwand“. */
 export const PACKAGES = [
   {
     title: 'Reporting-Audit',
@@ -174,7 +174,7 @@ export const EXPERIENCE_ANCHORS = [
   {
     icon: BarChart3,
     title: 'Enterprise-Reporting-Erfahrung',
-    text: 'Reporting und Forecasting in deutschen und internationalen Unternehmensumfeldern — mit komplexen Budgets, operativen Daten und Steuerungsfragen.',
+    text: 'Reporting und Forecasting in deutschen und internationalen Unternehmensumfeldern, mit komplexen Budgets, operativen Daten und Steuerungsfragen.',
   },
   {
     icon: LineChart,
@@ -184,7 +184,7 @@ export const EXPERIENCE_ANCHORS = [
   {
     icon: SearchCheck,
     title: 'Business Intelligence',
-    text: 'Von der Datenquelle bis zum Vorstandsbericht — BI-Lösungen, die im Alltag wirklich genutzt werden.',
+    text: 'Von der Datenquelle bis zum Vorstandsbericht, BI-Lösungen, die im Alltag wirklich genutzt werden.',
   },
   {
     icon: ShieldCheck,
@@ -215,27 +215,27 @@ export const FAQ_ITEMS = [
   {
     question: 'Für wen ist das gedacht?',
     answer:
-      'Für Unternehmen, die Entscheidungen auf Basis von Zahlen treffen wollen, aber im Alltag mit Excel-Dateien, verstreuten Systemen und manuellen Berichten kämpfen — typischerweise Geschäftsführung, Controlling, Finance, Operations, Einkauf, Agenturen und Vermarkter. Eine eigene IT- oder Datenabteilung ist ausdrücklich nicht nötig.',
+      'Für Unternehmen, die Entscheidungen auf Basis von Zahlen treffen wollen, aber im Alltag mit Excel-Dateien, verstreuten Systemen und manuellen Berichten kämpfen, typischerweise Geschäftsführung, Controlling, Finance, Operations, Einkauf, Agenturen und Vermarkter. Eine eigene IT- oder Datenabteilung ist ausdrücklich nicht nötig.',
   },
   {
     question: 'Müssen wir unsere Systeme wechseln?',
     answer:
-      'Nein. Wir docken an das an, was Sie bereits nutzen — ERP, CRM, Buchhaltung, Excel, Kampagnen-Tools. Die Lösung führt Ihre bestehenden Daten zusammen, statt Ihre Arbeitsweise umzukrempeln.',
+      'Nein. Wir docken an das an, was Sie bereits nutzen: ERP, CRM, Buchhaltung, Excel, Kampagnen-Tools. Die Lösung führt Ihre bestehenden Daten zusammen, statt Ihre Arbeitsweise umzukrempeln.',
   },
   {
     question: 'Mit welchen Werkzeugen arbeitet ihr?',
     answer:
-      'Mit dem, was zu Ihrer Landschaft passt: Power BI, Excel und etablierte BI-Werkzeuge für Dashboards, dazu individuelle Schnittstellen und Anwendungen, wenn Standardtools nicht reichen. Die Werkzeugwahl folgt dem Problem — nicht umgekehrt.',
+      'Mit dem, was zu Ihrer Landschaft passt: Power BI, Excel und etablierte BI-Werkzeuge für Dashboards, dazu individuelle Schnittstellen und Anwendungen, wenn Standardtools nicht reichen. Die Werkzeugwahl folgt dem Problem, nicht umgekehrt.',
   },
   {
     question: 'Was kostet ein Projekt?',
     answer:
-      'Das hängt vom Umfang ab — von der schlanken Reporting-Automatisierung bis zur kompletten Dashboard-Landschaft. Nach dem Erstgespräch und der Analyse erhalten Sie ein Konzept mit Festpreis. Keine offenen Tagessatz-Rechnungen, keine Überraschungen.',
+      'Das hängt vom Umfang ab, von der schlanken Reporting-Automatisierung bis zur kompletten Dashboard-Landschaft. Nach dem Erstgespräch und der Analyse erhalten Sie ein Konzept mit Festpreis. Keine offenen Tagessatz-Rechnungen, keine Überraschungen.',
   },
   {
     question: 'Wie schnell sehen wir Ergebnisse?',
     answer:
-      'Erste nutzbare Ergebnisse gibt es typischerweise nach zwei bis vier Wochen. Wir arbeiten in kurzen Etappen, damit Sie früh echten Nutzen sehen — nicht erst am Projektende.',
+      'Erste nutzbare Ergebnisse gibt es typischerweise nach zwei bis vier Wochen. Wir arbeiten in kurzen Etappen, damit Sie früh echten Nutzen sehen, nicht erst am Projektende.',
   },
   {
     question: 'Was passiert im kostenlosen Erstgespräch?',
