@@ -1,0 +1,3 @@
+:HL["/demos/arslan-gartenloewe/_next/static/chunks/1qij7ljzngmw6.css","style"]
+:HL["/demos/arslan-gartenloewe/logo.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"impressum","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}},"staleTime":300,"buildId":"aRoSJnA8trqzoj_zTgi2c"}

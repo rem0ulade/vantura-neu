@@ -18,6 +18,9 @@ export function Process({ locale }: { locale: Locale }) {
             <li key={step.number} className="border-2 border-ink p-6">
               <p className="font-mono text-xs font-bold text-signal">{step.number}</p>
               <h3 className="mt-4 text-xl font-bold uppercase tracking-[-0.03em]">{step.title}</h3>
+              <p className="mt-2 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-signal">
+                {step.duration}
+              </p>
               <p className="mt-3 text-sm leading-6 text-muted">{step.text}</p>
             </li>
           ))}

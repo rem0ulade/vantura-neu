@@ -27,6 +27,12 @@ export function Nav({ locale }: { locale: Locale }) {
           >
             {copy.navServices}
           </a>
+          <a
+            href="#about"
+            className="hidden font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-ink lg:inline"
+          >
+            {copy.navAbout}
+          </a>
           <LanguageToggle locale={locale} />
           <a
             href={copy.contactHref}

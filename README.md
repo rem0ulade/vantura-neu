@@ -15,12 +15,12 @@ Domain: [vantura-studios.com](https://vantura-studios.com)
 
 ```bash
 npm install
-npm run build:work   # clone/build demos into public/work (first time / refresh)
+npm run build:work   # clone/build demos into public/demos (first time / refresh)
 npm run dev          # http://localhost:3000
 npm run build        # static export to ./out
 ```
 
-`build:work` is only needed when refreshing demo sources. Built demos under `public/work/` are committed so CI can deploy with `npm ci && npm run build` alone.
+`build:work` is only needed when refreshing demo sources. Built demos under `public/demos/` are committed so CI can deploy with `npm ci && npm run build` alone.
 
 ## Architecture
 
@@ -31,7 +31,7 @@ components/          WorkDemoShell, LegacyRedirect, language helpers
 lib/site.ts          Brand + mailto CTA
 lib/work.ts          Work catalog (six in-site demos)
 lib/webdesign-content.ts  EN/DE copy
-public/work/<slug>/  Static demo assets served on-domain
+public/demos/<slug>/  Static demo assets (iframe src); /work/[slug] is the shell
 scripts/             Demo build + GitHub Pages mirror helpers
 docs/superpowers/    Spec + plans
 ```

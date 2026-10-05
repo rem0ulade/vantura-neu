@@ -45,6 +45,9 @@ export function WorkGrid({ locale }: { locale: Locale }) {
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted group-hover:text-paper/70">
                   {item.blurb[locale]}
                 </p>
+                <p className="mt-4 line-clamp-2 text-xs leading-5 text-muted/90 group-hover:text-paper/60">
+                  {item.result[locale]}
+                </p>
                 <p className="mt-8 font-mono text-xs font-bold uppercase tracking-[0.14em]">
                   {copy.workCta} →
                 </p>

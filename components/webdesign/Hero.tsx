@@ -43,6 +43,9 @@ export function Hero({ locale }: { locale: Locale }) {
         <motion.p {...fadeUp(0.16)} className="mt-6 max-w-md text-base leading-7 text-muted sm:text-lg">
           {copy.heroText}
         </motion.p>
+        <motion.p {...fadeUp(0.2)} className="mt-8 max-w-lg font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">
+          {copy.heroNote}
+        </motion.p>
         <motion.div {...fadeUp(0.24)} className="mt-10 flex flex-col gap-3 sm:flex-row">
           <a
             href={copy.contactHref}

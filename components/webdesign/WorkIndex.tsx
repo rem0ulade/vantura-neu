@@ -36,6 +36,20 @@ export function WorkIndex({ locale }: { locale: Locale }) {
               </div>
               <h2 className="mt-6 text-3xl font-bold uppercase tracking-[-0.04em]">{item.title[locale]}</h2>
               <p className="mt-3 text-sm leading-6 text-muted group-hover:text-paper/70">{item.blurb[locale]}</p>
+              <div className="mt-5 grid gap-3 border-t-2 border-ink/15 pt-4 text-xs leading-5 group-hover:border-paper/20 sm:grid-cols-2">
+                <p>
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-signal">
+                    {copy.featuredChallenge}
+                  </span>
+                  <span className="mt-1 block text-muted group-hover:text-paper/70">{item.challenge[locale]}</span>
+                </p>
+                <p>
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-signal">
+                    {copy.featuredResult}
+                  </span>
+                  <span className="mt-1 block text-muted group-hover:text-paper/70">{item.result[locale]}</span>
+                </p>
+              </div>
               <p className="mt-8 font-mono text-xs font-bold uppercase tracking-[0.14em]">{copy.workCta} →</p>
             </Link>
           ))}
