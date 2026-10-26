@@ -18,7 +18,7 @@ export function Services({ locale }: { locale: Locale }) {
           {copy.servicesTitle}
         </h2>
         <p className="mt-5 max-w-2xl text-sm leading-6 text-muted sm:text-base">{copy.servicesLead}</p>
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-14 grid gap-4 md:grid-cols-3">
           {copy.services.map((item, index) => (
             <motion.article
               key={item.number}
@@ -45,6 +45,7 @@ export function Services({ locale }: { locale: Locale }) {
             </motion.article>
           ))}
         </div>
+        <p className="mt-8 max-w-3xl text-sm leading-7 text-muted">{copy.servicesExtras}</p>
       </div>
     </section>
   )

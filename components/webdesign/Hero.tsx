@@ -1,9 +1,11 @@
 'use client'
 
+import { BookingLink } from './BookingLink'
+
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import type { Locale } from '@/lib/webdesign-content'
-import { t, workHref } from '@/lib/webdesign-content'
+import { t } from '@/lib/webdesign-content'
 
 export function Hero({ locale }: { locale: Locale }) {
   const copy = t(locale)
@@ -36,30 +38,31 @@ export function Hero({ locale }: { locale: Locale }) {
         </motion.p>
         <motion.h1
           {...fadeUp(0.08)}
-          className="mt-5 max-w-[18ch] text-[clamp(2.6rem,8vw,5.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em]"
+          className="mt-5 max-w-[20ch] text-[clamp(2.6rem,8vw,5.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em]"
         >
           {copy.heroTitle}
         </motion.h1>
-        <motion.p {...fadeUp(0.16)} className="mt-6 max-w-md text-base leading-7 text-muted sm:text-lg">
+        <motion.p {...fadeUp(0.16)} className="mt-6 max-w-xl text-base leading-7 text-muted sm:text-lg">
           {copy.heroText}
         </motion.p>
         <motion.p {...fadeUp(0.2)} className="mt-8 max-w-lg font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">
           {copy.heroNote}
         </motion.p>
         <motion.div {...fadeUp(0.24)} className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a
-            href={copy.contactHref}
+          <BookingLink
+            placement="hero"
             className="inline-flex items-center justify-center border-2 border-ink bg-signal px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-ink shadow-[4px_4px_0_#111] transition hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
           >
             {copy.heroCta}
-          </a>
+          </BookingLink>
           <a
-            href={workHref(locale)}
+            href="#featured"
             className="inline-flex items-center justify-center border-2 border-ink bg-paper px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-paper"
           >
             {copy.heroSecondary}
           </a>
         </motion.div>
+        <p className="mt-5 text-sm leading-6 text-muted">{copy.bookingMeta}</p>
       </div>
     </section>
   )

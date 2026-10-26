@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { BookingLink } from './webdesign/BookingLink'
 import type { Locale } from '@/lib/webdesign-content'
 import { t, workHref } from '@/lib/webdesign-content'
 
@@ -23,6 +24,9 @@ export function WorkDemoShell({
       >
         {copy.workBack}
       </Link>
+      <BookingLink placement="project-demo" className="fixed right-4 top-4 z-50 border-2 border-ink bg-signal px-3 py-2 font-mono text-[11px] font-bold uppercase shadow-[4px_4px_0_#111]">
+        {copy.navCta}
+      </BookingLink>
       <iframe title={title} src={src} className="absolute inset-0 h-full w-full border-0 bg-paper" />
     </div>
   )

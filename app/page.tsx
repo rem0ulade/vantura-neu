@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import { WebdesignHome } from '@/components/webdesign/WebdesignHome'
 
 export const metadata: Metadata = {
-  title: 'Vantura Studios | Webdesign & Online Shops',
+  title: { absolute: 'Webdesign für Unternehmen | Vantura Studios' },
   description:
-    'Webdesign, online shops and relaunches — Kinetic Brutal craft with motion and clear CTAs.',
-  alternates: { canonical: '/', languages: { en: '/', de: '/de/' } },
+    'Firmenwebsite erstellen lassen oder bestehende Website erneuern. Design und Umsetzung aus einer Hand. Jetzt kostenloses 30-Minuten-Erstgespräch buchen.',
+  alternates: { canonical: '/', languages: { en: '/en/', de: '/', 'x-default': '/' } },
 }
 
 export default function Home() {
-  return <WebdesignHome locale="en" />
+  return <WebdesignHome locale="de" />
 }

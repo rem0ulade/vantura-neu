@@ -1,69 +1,69 @@
-import { CONTACT_HREF, CONTACT_HREF_DE } from '@/lib/site'
+import { BOOKING_HREF, CONTACT_HREF, CONTACT_HREF_DE } from '@/lib/site'
 
 export type Locale = 'en' | 'de'
 
 export const webdesignCopy = {
   en: {
-    navWork: 'Work',
+    navWork: 'Projects',
     navServices: 'Services',
-    navAbout: 'Studio',
-    navCta: 'Start a project',
-    heroBrand: 'Vantura Studios · Hamburg',
-    heroTitle: 'Websites for businesses that need more inquiries.',
+    navAbout: 'About me',
+    navCta: 'Book a call',
+    heroBrand: 'Webdesign for businesses · Near Hamburg · Working remotely',
+    heroTitle: 'Your new website. Built to turn interest into inquiries.',
     heroText:
-      'I design and build company sites, landing pages and online shops. Clear structure, strong visuals, and a way to get in touch that visitors actually use.',
-    heroCta: 'Discuss your project',
-    heroSecondary: 'View selected work',
-    heroNote: 'Direct with the founder · No account team · Fixed price before we start',
+      'I’m Jonathan. I design and build websites for small businesses and service providers, from the first page structure to launch. So visitors understand your offer and can take the next step.',
+    heroCta: 'Book a free discovery call',
+    heroSecondary: 'See website examples',
+    heroNote: 'Design & development from one person · Fixed price agreed before we start',
     strip: [
       'Company websites',
       'Landing pages',
       'Online shops',
       'Relaunches',
       'Hosting & care',
-      'Motion with a purpose',
+      'Personal support',
     ],
-    featuredEyebrow: 'Selected work',
-    featuredTitle: 'Recent projects.',
-    featuredLead: 'Sites built around a real offer. Open any demo right here.',
-    featuredChallenge: 'Challenge',
-    featuredResult: 'What we delivered',
-    featuredCta: 'Open project',
+    featuredEyebrow: 'Website examples',
+    featuredTitle: 'See what your website could look like.',
+    featuredLead: 'A local business, a product and my own software project: three examples of different website needs. Explore the design and the work behind it.',
+    featuredChallenge: 'The brief',
+    featuredResult: 'The implementation',
+    featuredCta: 'Explore website',
     servicesEyebrow: 'Services',
-    servicesTitle: 'What you can hire me for.',
+    servicesTitle: 'From your offer to a finished website.',
     servicesLead:
-      'For owners and teams who want a site that explains what they offer and makes it easy to get in touch. No generic template.',
+      'For small businesses, service providers and local companies. We define what your website needs to do, then I take care of its design and development.',
     services: [
       {
         number: '01',
-        title: 'Company websites',
-        text: 'Multi-page sites for local businesses and studios: services, about, proof and contact in one coherent system.',
-        points: ['Clear page structure', 'Mobile-first layouts', 'Contact & inquiry paths'],
+        title: 'New company website',
+        text: 'A professional website that explains your services and gives potential customers a clear way to inquire.',
+        points: [
+          'Page structure & individual design',
+          'Phone, tablet & desktop layouts',
+          'Contact paths & basic SEO'
+        ]
       },
       {
         number: '02',
-        title: 'Landing pages',
-        text: 'Single-purpose pages for a campaign, a launch or one specific offer. Clear hierarchy, one call to action.',
-        points: ['A clear story', 'Sections built to get replies', 'Fast load, clean code'],
+        title: 'Website redesign',
+        text: 'Your business has moved forward, but your website hasn’t? I update its structure, design and implementation to match your business today.',
+        points: [
+          'Review existing content',
+          'Make your offer easier to understand',
+          'Account for existing URLs during migration'
+        ]
       },
       {
         number: '03',
-        title: 'Online shops',
-        text: 'Product pages and shop design that make browsing and buying easy.',
-        points: ['Product grids & detail pages', 'Clear shipping and returns info', 'Checkout-ready flows'],
-      },
-      {
-        number: '04',
-        title: 'Relaunch & redesign',
-        text: 'Replace an outdated site with a sharper brand presence, and keep what already works.',
-        points: ['Content audit', 'New visual system', 'Clean migration'],
-      },
-      {
-        number: '05',
-        title: 'Hosting & care',
-        text: 'Hosting, updates and small changes after launch, so you do not have to think about servers or plugins.',
-        points: ['Fast, secure hosting', 'Updates and backups', 'Small edits on request'],
-      },
+        title: 'Campaign landing page',
+        text: 'A focused page for Google Ads, a promotion or a single service. With a relevant message and one clear next step.',
+        points: [
+          'Aligned with your advertising offer',
+          'Easy to navigate on a phone',
+          'Inquiry or booking as the main goal'
+        ]
+      }
     ],
     approachEyebrow: 'Approach',
     approachTitle: 'How projects usually run.',
@@ -88,145 +88,146 @@ export const webdesignCopy = {
     workLead: 'Open a live demo without leaving this site.',
     workCta: 'Open demo',
     workIndexTitle: 'Selected work',
-    workIndexLead: 'Live demos hosted on vantura-studios.com.',
+    workIndexLead: 'Website examples, personal projects and design concepts. Each entry describes the work, with a demo to explore.',
     workBack: '← Back to work',
-    processEyebrow: 'Process',
-    processTitle: 'From first call to launch.',
+    processEyebrow: 'Your project',
+    processTitle: 'A clear path to your new website.',
     process: [
       {
         number: '01',
-        title: 'Discovery',
-        duration: '30–45 min',
+        title: 'Free discovery call',
+        duration: '30 minutes',
         text: 'We clarify goals, audience, content and constraints. You leave with an honest recommendation, even if I am not the right fit.',
       },
       {
         number: '02',
         title: 'Proposal',
         duration: 'within a few days',
-        text: 'Scope, timeline and a fixed price before the real work starts. No retainer just to get going.',
+        text: 'Scope, timeline and a fixed price before the real work starts. Ongoing costs are listed separately.',
       },
       {
         number: '03',
         title: 'Design & build',
-        duration: 'typically 2–6 weeks',
+        duration: 'agreed in the proposal',
         text: 'Direction, pages and implementation in short cycles. You review real screens, not slide decks.',
       },
       {
         number: '04',
         title: 'Launch',
         duration: 'handover included',
-        text: 'Go-live support, basic SEO setup and a walkthrough so you can update content with confidence. Optional hosting and care afterwards.',
+        text: 'Go-live support, basic SEO setup and a walkthrough to the agreed solution. Optional hosting and care afterwards.',
       },
     ],
-    aboutEyebrow: 'Studio',
-    aboutTitle: 'One person. End to end.',
+    aboutEyebrow: 'Your contact',
+    aboutTitle: 'You talk to me. I build your website.',
     aboutText:
-      'Vantura is Jonathan Kokalj: design and development from a studio near Hamburg. You get quick decisions, short feedback loops and a site built to be used, not just admired.',
+      'I’m Jonathan Kokalj, the person behind Vantura Studios in Rellingen near Hamburg. I handle your website’s design and development. From our first call to launch, you have one contact who knows your project.',
     aboutPoints: [
       'Owner-led: no handoff between sales and production',
       'Design and code in one workflow',
       'Hosting and care if you want everything from one place',
     ],
-    aboutCta: 'Say hello',
+    aboutCta: 'Book a free discovery call',
     faqEyebrow: 'FAQ',
-    faqTitle: 'Common questions.',
+    faqTitle: 'Before you decide.',
     faq: [
       {
-        q: 'Who is this for?',
-        a: 'Owners and small teams who need a serious website or shop: local businesses, studios, product launches. And who want one accountable person.',
+        q: 'What will my website cost?',
+        a: 'The price depends on the number of pages, content and functionality. After our free discovery call, you receive a fixed-price proposal with a clear scope. Ongoing costs such as hosting are listed separately.'
       },
       {
-        q: 'Do you only design, or also build?',
-        a: 'Both. Visual direction and production front end are part of the same engagement, so the design does not die in a handoff.',
+        q: 'What happens on the free discovery call?',
+        a: 'We spend 30 minutes on Google Meet discussing your business, current website and goals. I give you an initial recommendation on the right approach. You don’t need a finished brief, and the call doesn’t commit you to a project.'
       },
       {
-        q: 'How long does a typical project take?',
-        a: 'A focused landing page can ship in about two weeks. A full company site or shop usually takes a few weeks, depending on how soon your texts and images are ready.',
+        q: 'How long does a project take?',
+        a: 'We agree on the timeline in your proposal. Scope, special features and the availability of copy and images affect the schedule. Before we start, you know the steps and when your feedback is needed.'
       },
       {
-        q: 'How does pricing work?',
-        a: 'Fixed scope and price after discovery. You know the investment before build starts.',
+        q: 'Do I need to supply copy and images?',
+        a: 'We can use your existing copy, images and logo. If anything is missing, we work out what you need and which support to include in the proposal. You don’t need finished content for the first call.'
       },
       {
-        q: 'Can you work with our existing brand?',
-        a: 'Yes. I can extend a strong brand system or help define a sharper web presence if what you have is incomplete.',
-      },
-      {
-        q: 'Can you host the site too?',
-        a: 'Yes. I can host and maintain it after launch, or hand everything over so you can host it yourself. Your choice.',
-      },
+        q: 'What happens after launch?',
+        a: 'You get a handover and an introduction to the agreed solution. We define how you’ll update content during planning. Hosting, ongoing care and further changes are available as optional services.'
+      }
     ],
-    ctaTitle: 'Have a project in mind?',
+    ctaTitle: 'Let’s talk about your website.',
     ctaText:
-      'Send a short note about the business, the goal and the timeline. I usually reply within one business day.',
-    ctaButton: 'Email the studio',
-    ctaMeta: 'jk@vantura-studios.com',
-    footerTag: 'Webdesign · Shops · Hosting · Hamburg',
+      'In 30 minutes, we’ll discuss your business, your current website and what you want to achieve. You’ll get an initial recommendation on the right scope and next steps. No preparation or commitment required.',
+    ctaButton: 'Book a free discovery call',
+    ctaMeta: '30 minutes · Free & no obligation · Google Meet',
+    footerTag: 'Company websites · Relaunches · Landing pages · Near Hamburg',
     legal: 'Legal notice',
     privacy: 'Privacy',
-    contactHref: CONTACT_HREF,
+    contactHref: BOOKING_HREF,
+    emailHref: CONTACT_HREF,
+    bookingMeta: '30 minutes · Free & no obligation · Video call via Google Meet',
+    allWork: 'More project examples',
+    servicesExtras: 'Need an online shop or ongoing hosting and care? We can include those in your proposal.',
+    emailAlternative: 'Prefer to email?',
   },
   de: {
-    navWork: 'Arbeiten',
+    navWork: 'Projekte',
     navServices: 'Leistungen',
-    navAbout: 'Studio',
-    navCta: 'Projekt anfragen',
-    heroBrand: 'Vantura Studios · Hamburg',
-    heroTitle: 'Websites für Unternehmen, die mehr Anfragen brauchen.',
+    navAbout: 'Über mich',
+    navCta: 'Termin buchen',
+    heroBrand: 'Webdesign für Unternehmen · Bei Hamburg · Deutschlandweit',
+    heroTitle: 'Deine neue Website. Gemacht für mehr Anfragen.',
     heroText:
-      'Ich gestalte und baue Firmenwebsites, Landingpages und Online-Shops. Mit klarer Struktur, starkem Design und einem Kontaktweg, den Besucher wirklich nutzen.',
-    heroCta: 'Projekt besprechen',
-    heroSecondary: 'Arbeiten ansehen',
-    heroNote: 'Direkt mit dem Inhaber · Kein Agentur-Overhead · Festpreis vor dem Start',
+      'Ich bin Jonathan. Ich gestalte und entwickle Websites für kleine Unternehmen und Selbstständige – von der Seitenstruktur bis zur Veröffentlichung. Damit Besucher dein Angebot verstehen und einfach Kontakt aufnehmen können.',
+    heroCta: 'Kostenloses Erstgespräch buchen',
+    heroSecondary: 'Website-Beispiele ansehen',
+    heroNote: 'Design & Umsetzung aus einer Hand · Festpreis vor dem Projektstart',
     strip: [
       'Firmenwebsites',
       'Landingpages',
       'Online-Shops',
       'Relaunches',
       'Hosting & Betreuung',
-      'Animationen mit Zweck',
+      'Persönliche Betreuung',
     ],
-    featuredEyebrow: 'Ausgewählte Projekte',
-    featuredTitle: 'Aktuelle Arbeiten.',
-    featuredLead: 'Websites, die um ein echtes Angebot herum gebaut sind. Jede Demo lässt sich direkt hier öffnen.',
-    featuredChallenge: 'Ausgangslage',
-    featuredResult: 'Ergebnis',
-    featuredCta: 'Projekt öffnen',
+    featuredEyebrow: 'Website-Beispiele',
+    featuredTitle: 'So könnte auch dein Auftritt aussehen.',
+    featuredLead: 'Ein lokaler Betrieb, ein Produkt und mein eigenes Softwareprojekt: drei Beispiele für unterschiedliche Anforderungen. Schau dir Gestaltung und Umsetzung direkt an.',
+    featuredChallenge: 'Die Aufgabe',
+    featuredResult: 'Die Umsetzung',
+    featuredCta: 'Website ansehen',
     servicesEyebrow: 'Leistungen',
-    servicesTitle: 'Wofür du mich beauftragen kannst.',
+    servicesTitle: 'Von deinem Angebot zur fertigen Website.',
     servicesLead:
-      'Für Inhaber und Teams, die eine Website wollen, die das Angebot erklärt und zur Kontaktaufnahme einlädt. Kein Standard-Template.',
+      'Für kleine Unternehmen, Dienstleister und lokale Betriebe. Wir klären, was deine Website leisten soll. Ich kümmere mich um Gestaltung und technische Umsetzung.',
     services: [
       {
         number: '01',
-        title: 'Firmenwebsites',
-        text: 'Mehrseitige Websites für lokale Betriebe und Studios: Leistungen, Über uns, Referenzen und Kontakt aus einem Guss.',
-        points: ['Klare Seitenstruktur', 'Mobil zuerst gedacht', 'Einfache Kontaktwege'],
+        title: 'Neue Firmenwebsite',
+        text: 'Dein Unternehmen bekommt einen professionellen Auftritt, der Leistungen verständlich erklärt und Interessenten zur Anfrage führt.',
+        points: [
+          'Seitenstruktur & individuelles Design',
+          'Für Smartphone, Tablet & Desktop',
+          'Kontaktwege & grundlegende Suchmaschinenoptimierung'
+        ]
       },
       {
         number: '02',
-        title: 'Landingpages',
-        text: 'Eine Seite, ein Ziel: Kampagne, Launch oder ein bestimmtes Angebot. Klare Gliederung, ein Call-to-Action.',
-        points: ['Klare Geschichte', 'Abschnitte, die zur Anfrage führen', 'Schnell und sauber gebaut'],
+        title: 'Website erneuern',
+        text: 'Dein Angebot hat sich weiterentwickelt, deine Website nicht? Ich überarbeite Struktur, Gestaltung und Technik passend zu deinem heutigen Unternehmen.',
+        points: [
+          'Bestehende Inhalte prüfen',
+          'Angebot klarer präsentieren',
+          'Vorhandene URLs beim Umzug berücksichtigen'
+        ]
       },
       {
         number: '03',
-        title: 'Online-Shops',
-        text: 'Produktseiten und Shop-Design, bei denen Stöbern und Kaufen leichtfallen.',
-        points: ['Produktübersicht & Detailseiten', 'Klare Versand- und Rückgabeinfos', 'Bestellprozess, der funktioniert'],
-      },
-      {
-        number: '04',
-        title: 'Relaunch & Redesign',
-        text: 'Eine veraltete Website durch einen stärkeren Markenauftritt ersetzen, ohne zu verlieren, was schon funktioniert.',
-        points: ['Bestandsaufnahme der Inhalte', 'Neues Design', 'Sauberer Umzug'],
-      },
-      {
-        number: '05',
-        title: 'Hosting & Betreuung',
-        text: 'Hosting, Updates und kleine Änderungen nach dem Launch, damit du dich nicht um Server oder Plugins kümmern musst.',
-        points: ['Schnelles, sicheres Hosting', 'Updates und Backups', 'Kleine Änderungen auf Zuruf'],
-      },
+        title: 'Seite für deine Werbung',
+        text: 'Eine fokussierte Landingpage für Google Ads, eine Aktion oder eine einzelne Leistung. Mit passender Botschaft und einem klaren nächsten Schritt.',
+        points: [
+          'Auf dein Anzeigenangebot abgestimmt',
+          'Schnelle Orientierung auf dem Handy',
+          'Anfrage oder Terminbuchung im Mittelpunkt'
+        ]
+      }
     ],
     approachEyebrow: 'Arbeitsweise',
     approachTitle: 'So laufen Projekte.',
@@ -251,83 +252,84 @@ export const webdesignCopy = {
     workLead: 'Live-Demo öffnen, ohne die Domain zu verlassen.',
     workCta: 'Demo öffnen',
     workIndexTitle: 'Ausgewählte Arbeiten',
-    workIndexLead: 'Live-Demos auf vantura-studios.com.',
+    workIndexLead: 'Website-Beispiele, eigene Projekte und Gestaltungskonzepte. Zu jedem Eintrag findest du die Umsetzung und eine Demo zum Ansehen.',
     workBack: '← Zurück zu den Arbeiten',
-    processEyebrow: 'Ablauf',
-    processTitle: 'Vom ersten Gespräch bis zum Launch.',
+    processEyebrow: 'Dein Projekt',
+    processTitle: 'In klaren Schritten zur neuen Website.',
     process: [
       {
         number: '01',
-        title: 'Kennenlernen',
-        duration: '30–45 Min.',
+        title: 'Kostenlos kennenlernen',
+        duration: '30 Minuten',
         text: 'Wir klären Ziele, Zielgruppe, Inhalte und Rahmen. Du bekommst eine ehrliche Einschätzung, auch wenn ich nicht der Richtige bin.',
       },
       {
         number: '02',
         title: 'Angebot',
         duration: 'innerhalb weniger Tage',
-        text: 'Umfang, Zeitplan und Festpreis, bevor die eigentliche Arbeit beginnt. Kein Retainer nur zum Anfangen.',
+        text: 'Umfang, Zeitplan und Festpreis, bevor die eigentliche Arbeit beginnt. Laufende Kosten sind separat ausgewiesen.',
       },
       {
         number: '03',
         title: 'Design & Umsetzung',
-        duration: 'typisch 2–6 Wochen',
+        duration: 'nach vereinbartem Zeitplan',
         text: 'Richtung, Seiten und Umsetzung in kurzen Schritten. Du siehst echte Entwürfe, keine endlosen Folien.',
       },
       {
         number: '04',
-        title: 'Launch',
+        title: 'Veröffentlichung',
         duration: 'Übergabe inklusive',
-        text: 'Begleitung beim Livegang, grundlegende SEO und eine Einführung, damit du Inhalte selbst pflegen kannst. Auf Wunsch Hosting und Betreuung danach.',
+        text: 'Begleitung beim Livegang, grundlegende SEO und eine Einführung, zur vereinbarten Lösung. Auf Wunsch Hosting und Betreuung danach.',
       },
     ],
-    aboutEyebrow: 'Studio',
-    aboutTitle: 'Eine Person. Alles aus einer Hand.',
+    aboutEyebrow: 'Dein Ansprechpartner',
+    aboutTitle: 'Du sprichst mit mir. Ich baue deine Website.',
     aboutText:
-      'Vantura ist Jonathan Kokalj: Design und Entwicklung aus Hamburg. Schnelle Entscheidungen, kurze Abstimmung und eine Website, die genutzt wird und nicht nur gut aussieht.',
+      'Ich bin Jonathan Kokalj und stehe hinter Vantura Studios in Rellingen bei Hamburg. Ich übernehme Gestaltung und Entwicklung deiner Website. Vom ersten Gespräch bis zur Veröffentlichung hast du einen festen Ansprechpartner, der dein Projekt kennt.',
     aboutPoints: [
       'Inhabergeführt: keine Übergabe zwischen Verkauf und Umsetzung',
       'Design und Code aus einer Hand',
       'Hosting und Betreuung, wenn du alles aus einer Hand willst',
     ],
-    aboutCta: 'Nachricht schreiben',
+    aboutCta: 'Kostenloses Erstgespräch buchen',
     faqEyebrow: 'FAQ',
-    faqTitle: 'Häufige Fragen.',
+    faqTitle: 'Was du vor dem Start wissen möchtest.',
     faq: [
       {
-        q: 'Für wen ist das?',
-        a: 'Für Inhaber und kleine Teams, die eine ordentliche Website oder einen Shop brauchen, etwa lokale Betriebe, Studios oder Produktstarts, und eine feste Ansprechperson wollen.',
+        q: 'Was kostet meine neue Website?',
+        a: 'Der Preis hängt vom Umfang ab: Seitenzahl, Inhalte und Funktionen machen den Unterschied. Nach unserem kostenlosen Erstgespräch erhältst du ein Angebot mit klar beschriebenen Leistungen und Festpreis. Laufende Kosten wie Hosting werden separat ausgewiesen.'
       },
       {
-        q: 'Nur Design oder auch Umsetzung?',
-        a: 'Beides. Gestaltung und Umsetzung gehören zusammen, damit vom Design nichts auf dem Weg zur fertigen Seite verloren geht.',
+        q: 'Was passiert im kostenlosen Erstgespräch?',
+        a: 'Wir sprechen 30 Minuten per Google Meet über dein Unternehmen, deinen bisherigen Auftritt und deine Ziele. Ich gebe dir eine erste Einschätzung, welche Website dazu passt. Du brauchst kein fertiges Konzept und beauftragst mit dem Gespräch noch kein Projekt.'
       },
       {
-        q: 'Wie lange dauert ein typisches Projekt?',
-        a: 'Eine einfache Landingpage oft in etwa zwei Wochen. Eine komplette Firmenwebsite oder ein Shop meist einige Wochen, je nachdem, wann Texte und Bilder fertig sind.',
+        q: 'Wie lange dauert die Umsetzung?',
+        a: 'Den Zeitplan vereinbaren wir im Angebot. Entscheidend sind der Umfang, besondere Funktionen und die Verfügbarkeit von Texten und Bildern. Du weißt vor dem Start, welche Schritte und Rückmeldungen wann anstehen.'
       },
       {
-        q: 'Wie läuft das mit dem Preis?',
-        a: 'Nach dem Kennenlernen bekommst du ein Angebot mit Festpreis. Du weißt vorher, was es kostet.',
+        q: 'Muss ich Texte und Bilder selbst liefern?',
+        a: 'Vorhandene Texte, Bilder und dein Logo können wir verwenden. Fehlt noch etwas, klären wir gemeinsam, was gebraucht wird und welche Unterstützung Teil des Angebots sein soll. Du musst nicht mit fertigen Inhalten ins Erstgespräch kommen.'
       },
       {
-        q: 'Kann ich mit meinem bestehenden Auftritt arbeiten?',
-        a: 'Ja. Ich baue auf einem starken Markenauftritt auf oder schärfe ihn, wenn er noch unvollständig ist.',
-      },
-      {
-        q: 'Kannst du die Website auch hosten?',
-        a: 'Ja. Ich hoste und betreue die Seite nach dem Launch gern weiter, oder ich übergebe alles, und du hostest selbst. Wie du willst.',
-      },
+        q: 'Was passiert nach der Veröffentlichung?',
+        a: 'Du erhältst eine Übergabe und eine Einführung in die vereinbarte Lösung. Wie du Inhalte ändern kannst, legen wir bei der Planung fest. Hosting, laufende Betreuung und weitere Änderungen kannst du auf Wunsch zusätzlich beauftragen.'
+      }
     ],
-    ctaTitle: 'Projekt im Kopf?',
+    ctaTitle: 'Lass uns über deine Website sprechen.',
     ctaText:
-      'Schreib kurz, worum es im Geschäft geht, was du erreichen willst und bis wann. In der Regel antworte ich innerhalb eines Werktags.',
-    ctaButton: 'Studio mailen',
-    ctaMeta: 'jk@vantura-studios.com',
-    footerTag: 'Webdesign · Shops · Hosting · Hamburg',
+      'In 30 Minuten besprechen wir dein Unternehmen, deinen aktuellen Auftritt und deine Ziele. Du bekommst eine erste Einschätzung zum passenden Umfang und den nächsten Schritten. Du brauchst nichts vorzubereiten und gehst keine Verpflichtung ein.',
+    ctaButton: 'Kostenloses Erstgespräch buchen',
+    ctaMeta: '30 Minuten · Kostenlos & unverbindlich · Google Meet',
+    footerTag: 'Firmenwebsites · Relaunches · Landingpages · Bei Hamburg',
     legal: 'Impressum',
     privacy: 'Datenschutz',
-    contactHref: CONTACT_HREF_DE,
+    contactHref: BOOKING_HREF,
+    emailHref: CONTACT_HREF_DE,
+    bookingMeta: '30 Minuten · Kostenlos & unverbindlich · Videogespräch per Google Meet',
+    allWork: 'Weitere Projektbeispiele',
+    servicesExtras: 'Du brauchst einen Online-Shop oder möchtest Hosting und Betreuung abgeben? Das berücksichtigen wir auf Wunsch im Angebot.',
+    emailAlternative: 'Lieber per E-Mail?',
   },
 } as const
 
@@ -341,5 +343,5 @@ export function workHref(locale: Locale, slug?: string) {
 }
 
 export function homeHref(locale: Locale) {
-  return locale === 'de' ? '/de/' : '/'
+  return locale === 'de' ? '/' : '/en/'
 }

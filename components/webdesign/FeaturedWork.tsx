@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, useReducedMotion } from 'framer-motion'
 import { getFeaturedWork } from '@/lib/work'
 import type { Locale } from '@/lib/webdesign-content'
@@ -42,6 +43,18 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
                 transition={{ duration: 0.55, delay: 0.1 }}
               />
               <div>
+                {item.preview && (
+                  <Link href={workHref(locale, item.slug)} className="mb-6 block overflow-hidden border-2 border-ink">
+                    <Image
+                      src={item.preview.src}
+                      alt={item.preview.alt[locale]}
+                      width={1440}
+                      height={900}
+                      sizes="(min-width: 1024px) 520px, 100vw"
+                      className="aspect-[16/10] w-full object-cover object-top"
+                    />
+                  </Link>
+                )}
                 <p className="font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-signal">
                   {item.kind[locale]}
                 </p>
@@ -73,6 +86,9 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
             </motion.article>
           ))}
         </div>
+        <Link href={workHref(locale)} className="mt-9 inline-flex text-sm font-semibold underline underline-offset-4">
+          {copy.allWork} →
+        </Link>
       </div>
     </section>
   )

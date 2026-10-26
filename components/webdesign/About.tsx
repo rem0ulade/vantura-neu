@@ -1,5 +1,7 @@
 'use client'
 
+import { BookingLink } from './BookingLink'
+
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Locale } from '@/lib/webdesign-content'
 import { t } from '@/lib/webdesign-content'
@@ -19,13 +21,13 @@ export function About({ locale }: { locale: Locale }) {
             {copy.aboutTitle}
           </h2>
           <p className="mt-6 max-w-xl text-base leading-7 text-muted">{copy.aboutText}</p>
-          <motion.a
-            href={copy.contactHref}
+          <BookingLink
+            placement="about"
             whileHover={reduce ? undefined : { x: 2, y: 2, boxShadow: '0px 0px 0 #111' }}
             className="mt-8 inline-flex border-2 border-ink bg-signal px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-ink shadow-[4px_4px_0_#111]"
           >
             {copy.aboutCta}
-          </motion.a>
+          </BookingLink>
         </div>
         <ul className="space-y-3">
           {copy.aboutPoints.map((point, index) => (

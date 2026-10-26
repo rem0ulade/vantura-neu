@@ -8,9 +8,11 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
   const router = useRouter()
 
   const changeLanguage = (nextLocale: Locale) => {
-    localStorage.setItem('vantura-locale', nextLocale)
-    const cleanPath = pathname.replace(/^\/de(?=\/|$)/, '') || '/'
-    router.push(nextLocale === 'de' ? `/de${cleanPath === '/' ? '/' : cleanPath}` : cleanPath)
+    const cleanPath = pathname.replace(/^\/(de|en)(?=\/|$)/, '') || '/'
+    const nextPath = cleanPath === '/'
+      ? (nextLocale === 'de' ? '/' : '/en/')
+      : (nextLocale === 'de' ? `/de${cleanPath}` : cleanPath)
+    router.push(`${nextPath}${window.location.search}${window.location.hash}`)
   }
 
   return (

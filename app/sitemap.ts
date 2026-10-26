@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: `${SITE.url}/`, changeFrequency: 'weekly', priority: 1 },
-    { url: `${SITE.url}/de/`, changeFrequency: 'weekly', priority: 1 },
+    { url: `${SITE.url}/en/`, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE.url}/work/`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE.url}/de/work/`, changeFrequency: 'weekly', priority: 0.9 },
     ...workSlugs.flatMap((slug) => [

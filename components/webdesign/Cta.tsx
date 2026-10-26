@@ -1,7 +1,10 @@
 'use client'
 
+import { BookingLink } from './BookingLink'
+
 import { motion, useReducedMotion } from 'framer-motion'
 import type { Locale } from '@/lib/webdesign-content'
+import { SITE } from '@/lib/site'
 import { t } from '@/lib/webdesign-content'
 
 export function Cta({ locale }: { locale: Locale }) {
@@ -9,7 +12,7 @@ export function Cta({ locale }: { locale: Locale }) {
   const reduce = useReducedMotion()
 
   return (
-    <section className="relative overflow-hidden border-b-2 border-ink bg-signal py-20 lg:py-28">
+    <section id="termin" className="relative overflow-hidden border-b-2 border-ink bg-signal py-20 lg:py-28">
       {!reduce && (
         <motion.div
           aria-hidden
@@ -28,16 +31,20 @@ export function Cta({ locale }: { locale: Locale }) {
           {copy.ctaTitle}
         </motion.h2>
         <p className="mt-5 max-w-xl text-base leading-7 text-ink/80">{copy.ctaText}</p>
-        <motion.a
-          href={copy.contactHref}
+        <BookingLink
+          placement="closing"
           whileHover={reduce ? undefined : { x: 3, y: 3, boxShadow: '0px 0px 0 #f2efe8' }}
           whileTap={reduce ? undefined : { scale: 0.98 }}
           className="mt-10 inline-flex border-2 border-ink bg-ink px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-paper shadow-[4px_4px_0_#f2efe8]"
         >
           {copy.ctaButton}
-        </motion.a>
+        </BookingLink>
         <p className="mt-4 font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-ink/70">
           {copy.ctaMeta}
+        </p>
+        <p className="mt-6 text-sm text-ink/80">
+          {copy.emailAlternative}{' '}
+          <a href={copy.emailHref} className="font-semibold underline underline-offset-4">{SITE.email}</a>
         </p>
       </div>
     </section>

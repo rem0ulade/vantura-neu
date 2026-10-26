@@ -5,12 +5,12 @@
  */
 export const SITE = {
   name: 'Vantura',
-  claim: 'Websites that get you inquiries.',
+  claim: 'Webdesign für Unternehmen.',
   description:
-    'Webdesign, online shops, relaunches and hosting. Clear structure, strong visuals, one contact path.',
+    'Professionelle Firmenwebsites, Relaunches und Landingpages. Design und Umsetzung mit Jonathan Kokalj. Kostenloses Erstgespräch buchen.',
   email: 'jk@vantura-studios.com',
   url: 'https://vantura-studios.com',
-  locale: 'en_US',
+  locale: 'de_DE',
 } as const
 
 export const MAIL_SUBJECT_EN = encodeURIComponent(
@@ -23,3 +23,5 @@ export const MAIL_SUBJECT_DE = encodeURIComponent(
 
 export const CONTACT_HREF = `mailto:${SITE.email}?subject=${MAIL_SUBJECT_EN}`
 export const CONTACT_HREF_DE = `mailto:${SITE.email}?subject=${MAIL_SUBJECT_DE}`
+
+export const BOOKING_HREF = 'https://calendly.com/hello-jonathankokalj/kennenlernen'

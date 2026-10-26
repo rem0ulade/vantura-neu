@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { BookingLink } from './BookingLink'
 import type { Locale } from '@/lib/webdesign-content'
 import { t } from '@/lib/webdesign-content'
 
@@ -19,9 +20,9 @@ export function Footer({ locale }: { locale: Locale }) {
           <Link href="/datenschutz/" className="hover:text-signal">
             {copy.privacy}
           </Link>
-          <a href={copy.contactHref} className="hover:text-signal">
+          <BookingLink placement="footer" className="hover:text-signal">
             {copy.ctaButton}
-          </a>
+          </BookingLink>
         </nav>
       </div>
     </footer>

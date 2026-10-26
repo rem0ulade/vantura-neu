@@ -84,3 +84,8 @@ button {
     transition: none;
   }
 }
+
+:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 4px;
+}

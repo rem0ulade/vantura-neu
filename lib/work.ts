@@ -7,6 +7,7 @@ export type WorkItem = {
   result: { en: string; de: string }
   kind: { en: string; de: string }
   featured?: boolean
+  preview?: { src: string; alt: { en: string; de: string } }
   /** Path under public/, also iframe src with trailing slash */
   publicPath: string
 }
@@ -14,6 +15,7 @@ export type WorkItem = {
 export const WORK_ITEMS: WorkItem[] = [
   {
     slug: 'bonsai-home',
+    preview: { src: '/demos/bonsai-home/assets/bonsai-home-hero.png', alt: { en: 'Smart-home product image used on the Bonsai Home website', de: 'Smart-Home-Produktmotiv aus der Website von Bonsai Home' } },
     repo: 'bonsai-home',
     title: { en: 'Bonsai Home', de: 'Bonsai Home' },
     blurb: {
@@ -21,12 +23,12 @@ export const WORK_ITEMS: WorkItem[] = [
       de: 'Smart-Home-Verkaufsseite, die ein komplexes Angebot klar und nachvollziehbar erklärt.',
     },
     challenge: {
-      en: 'Too many features, too little clarity. Visitors left before the offer landed.',
-      de: 'Zu viele Features, zu wenig Klarheit. Besucher sprangen ab, bevor das Angebot ankam.',
+      en: 'Explain a smart-home offer with many features in a clear, approachable way.',
+      de: 'Ein Smart-Home-Angebot mit vielen Funktionen verständlich und übersichtlich erklären.',
     },
     result: {
-      en: 'A clear product story, structured pages and calls to action that lead to consultation requests.',
-      de: 'Eine klare Produktgeschichte, gut gegliederte Seiten und Buttons, die zur Beratungsanfrage führen.',
+      en: 'A clear product story, structured pages and buttons for consultation inquiries.',
+      de: 'Eine klare Produktgeschichte, gut gegliederte Seiten und Buttons für Beratungsanfragen.',
     },
     kind: { en: 'Sales website', de: 'Verkaufsseite' },
     featured: true,
@@ -34,6 +36,7 @@ export const WORK_ITEMS: WorkItem[] = [
   },
   {
     slug: 'grace',
+    preview: { src: '/portfolio-websites/grace.webp', alt: { en: 'Website preview of my Grace software project', de: 'Website-Vorschau meines Softwareprojekts Grace' } },
     repo: 'grace_webpage_v1',
     title: { en: 'Grace', de: 'Grace' },
     blurb: {
@@ -48,12 +51,13 @@ export const WORK_ITEMS: WorkItem[] = [
       en: 'Positioning, page sections and animation that tell the product story without drowning in jargon.',
       de: 'Positionierung, Abschnitte und Animationen, die das Produkt erklären, ohne in Fachjargon zu versinken.',
     },
-    kind: { en: 'Product site', de: 'Produktseite' },
+    kind: { en: 'Personal software project', de: 'Eigenes Softwareprojekt' },
     featured: true,
     publicPath: '/demos/grace/',
   },
   {
     slug: 'arslan-gartenloewe',
+    preview: { src: '/demos/arslan-gartenloewe/og.png', alt: { en: 'Brand and garden imagery from the Arslan Gartenlöwe project', de: 'Marken- und Gartenmotiv aus dem Projekt Arslan Gartenlöwe' } },
     repo: 'arslan-gartenloewe',
     title: { en: 'Arslan Gartenlöwe', de: 'Arslan Gartenlöwe' },
     blurb: {
@@ -61,14 +65,14 @@ export const WORK_ITEMS: WorkItem[] = [
       de: 'Gartenbetrieb online: Leistungen, Vertrauen und ein klarer Weg zur Anfrage.',
     },
     challenge: {
-      en: 'Strong craft offline, almost no digital presence that matched the work.',
-      de: 'Starkes Handwerk offline, aber online nichts, was zur Qualität der Arbeit passte.',
+      en: 'Present gardening services and regional contact details in one accessible website.',
+      de: 'Gartenleistungen und regionale Kontaktmöglichkeiten in einer übersichtlichen Website bündeln.',
     },
     result: {
       en: 'A website built around the services, with local credibility and a direct way to inquire.',
       de: 'Eine Website rund um die Leistungen, mit regionaler Glaubwürdigkeit und direktem Anfrageweg.',
     },
-    kind: { en: 'Local business', de: 'Lokalgeschäft' },
+    kind: { en: 'Local business website', de: 'Website für einen lokalen Betrieb' },
     featured: true,
     publicPath: '/demos/arslan-gartenloewe/',
   },
@@ -126,7 +130,7 @@ export const WORK_ITEMS: WorkItem[] = [
       en: 'Focused positioning, clear hierarchy and one main call to action.',
       de: 'Klare Positionierung, klare Gliederung und ein zentraler Button zur Kontaktaufnahme.',
     },
-    kind: { en: 'Personal brand', de: 'Persönliche Marke' },
+    kind: { en: 'My own website', de: 'Eigene Website' },
     publicPath: '/demos/jonathan/',
   },
 ]

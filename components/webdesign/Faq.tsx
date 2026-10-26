@@ -29,6 +29,7 @@ export function Faq({ locale }: { locale: Locale }) {
                   onClick={() => setOpen(isOpen ? null : index)}
                   className="flex w-full items-center justify-between gap-6 py-5 text-left transition hover:bg-ink hover:px-3 hover:text-paper"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-${locale}-${index}`}
                 >
                   <span className="text-lg font-bold uppercase tracking-[-0.03em] sm:text-xl">{item.q}</span>
                   <motion.span
@@ -41,6 +42,7 @@ export function Faq({ locale }: { locale: Locale }) {
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
+                      id={`faq-${locale}-${index}`}
                       initial={reduce ? false : { height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={reduce ? undefined : { height: 0, opacity: 0 }}
