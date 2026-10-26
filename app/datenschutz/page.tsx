@@ -34,11 +34,16 @@ export default function Datenschutz() {
 
       <h2>3. Hosting</h2>
       <p>
-        Diese Website wird über Vercel (Vercel Inc., USA) bereitgestellt. Dabei
-        werden technische Verbindungsdaten zur Auslieferung und Absicherung der
-        Website verarbeitet. Weitere Informationen finden Sie in der{' '}
-        <a href="https://vercel.com/legal/privacy-notice" rel="noopener noreferrer">
-          Datenschutzerklärung von Vercel
+        Diese Website wird über GitHub Pages (GitHub, Inc., USA) bereitgestellt. Beim
+        Aufruf der Seite verarbeitet GitHub die unter Ziffer 2 genannten Verbindungsdaten
+        zur Auslieferung der Inhalte. Der Datentransfer in die USA erfolgt auf Grundlage
+        des EU-U.S. Data Privacy Framework bzw. von Standardvertragsklauseln gemäß
+        Art. 46 DSGVO. Details finden Sie in der{' '}
+        <a
+          href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+          rel="noopener noreferrer"
+        >
+          Datenschutzerklärung von GitHub
         </a>
         .
       </p>
