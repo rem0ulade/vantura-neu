@@ -40,16 +40,16 @@ export const WORK_ITEMS: WorkItem[] = [
     repo: 'grace_webpage_v1',
     title: { en: 'Grace', de: 'Grace' },
     blurb: {
-      en: 'Product marketing for a multi-agent workspace: ambitious, but still easy to read.',
-      de: 'Produktmarketing für einen Multi-Agent-Workspace: ambitioniert, aber gut lesbar.',
+      en: 'A website for my own software product, explaining its features and showing how it works.',
+      de: 'Website für mein eigenes Softwareprodukt: Funktionen verständlich erklären und das Produkt zeigen.',
     },
     challenge: {
       en: 'A technical product needed a public face that non-engineers could trust.',
       de: 'Ein technisches Produkt brauchte einen öffentlichen Auftritt, dem auch Nicht-Techniker vertrauen.',
     },
     result: {
-      en: 'Positioning, page sections and animation that tell the product story without drowning in jargon.',
-      de: 'Positionierung, Abschnitte und Animationen, die das Produkt erklären, ohne in Fachjargon zu versinken.',
+      en: 'A clear offer, structured pages and visual examples of the product.',
+      de: 'Eine klare Angebotsbeschreibung, strukturierte Seiten und anschauliche Einblicke in das Produkt.',
     },
     kind: { en: 'Personal software project', de: 'Eigenes Softwareprojekt' },
     featured: true,
