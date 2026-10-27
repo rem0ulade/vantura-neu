@@ -2,11 +2,11 @@
 
 :root {
   color-scheme: light;
-  --blue: #173e8f;
-  --deep: #102b63;
-  --sky: #edf3fd;
-  --line: #ced9ee;
-  --muted: #536583;
+  --blue: #245942;
+  --deep: #163d2c;
+  --sky: #f0f4eb;
+  --line: #d4dfcf;
+  --muted: #596c5c;
   --white: #ffffff;
   --sans: 'DM Sans', sans-serif;
   --display: 'Manrope', sans-serif;
@@ -20,7 +20,7 @@ img { display: block; max-width: 100%; }
 button, input, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }
-:focus-visible { outline: 3px solid #5b8ae6; outline-offset: 5px; }
+:focus-visible { outline: 3px solid #5c8e68; outline-offset: 5px; }
 [hidden] { display: none !important; }
 .container { width: min(1200px, calc(100% - 48px)); margin-inline: auto; }
 .section { padding-block: 96px; }
@@ -76,7 +76,7 @@ em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.045em; }
 .menu-section { background: var(--sky); }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 38px; }
 .section-heading > p { max-width: 280px; color: var(--muted); font-size: 14px; }
-.menu-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid #aebfdd; gap: 12px 36px; }
+.menu-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid #b4c7ad; gap: 12px 36px; }
 .menu-tabs a { min-height: 50px; padding: 13px 2px; font-size: 14px; text-decoration: none; border-bottom: 3px solid transparent; margin-bottom: -1px; }
 .menu-tabs a:hover, .menu-tabs a[aria-selected='true'] { border-bottom-color: var(--blue); }
 .menu-tabs a[aria-selected='true'] { font-weight: 700; }
@@ -108,7 +108,7 @@ em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.045em; }
 .reservation-section { background: var(--blue); color: white; padding-block: 88px; }
 .reservation-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 100px; align-items: start; }
 .reservation-copy h2 { font-size: clamp(3.7rem, 6vw, 5.4rem); }
-.reservation-copy > p:not(.eyebrow) { max-width: 330px; margin-top: 26px; font-size: 15px; color: #e2eaff; }
+.reservation-copy > p:not(.eyebrow) { max-width: 330px; margin-top: 26px; font-size: 15px; color: #e4eedf; }
 .reservation-doodle { font-size: 90px; line-height: 1; margin-top: 30px; }
 .reservation-copy .demo-note { font-size: 11px !important; line-height: 1.8; max-width: 340px; }
 form { padding: 34px; border-radius: 4px; background: white; color: var(--blue); }
@@ -117,7 +117,7 @@ form { padding: 34px; border-radius: 4px; background: white; color: var(--blue);
 label { display: flex; flex-direction: column; gap: 8px; font-size: 12px; font-weight: 500; }
 label span { font-weight: 400; }
 input, select { min-width: 0; width: 100%; min-height: 48px; padding: 12px; border: 1px solid var(--line); border-radius: 2px; background: white; color: var(--deep); font-size: 13px; color-scheme: light; }
-input::placeholder { color: #75839a; }
+input::placeholder { color: #748271; }
 form .button { width: 100%; margin-bottom: 12px; }
 #reservation-status { font-size: 13px; line-height: 1.8; margin-top: 18px; padding: 16px; background: var(--sky); }
 #reservation-status:empty { display: none; }

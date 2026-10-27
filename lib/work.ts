@@ -15,7 +15,7 @@ export type WorkItem = {
 export const WORK_ITEMS: WorkItem[] = [
   {
     slug: 'bonsai-home',
-    preview: { src: '/demos/bonsai-home/assets/bonsai-home-hero.png', alt: { en: 'Smart-home product image used on the Bonsai Home website', de: 'Smart-Home-Produktmotiv aus der Website von Bonsai Home' } },
+    preview: { src: '/demos/bonsai-home/preview.svg', alt: { en: 'Bonsai Home website with a floating dashboard and mint light effects', de: 'Bonsai-Home-Website mit schwebendem Dashboard und mintgrünen Lichteffekten' } },
     repo: 'bonsai-home',
     title: { en: 'Bonsai Home', de: 'Bonsai Home' },
     blurb: {
@@ -40,8 +40,8 @@ export const WORK_ITEMS: WorkItem[] = [
     repo: 'vantura-neu',
     title: { en: 'Ciao Bella · Trattoria', de: 'Ciao Bella · Trattoria' },
     blurb: {
-      en: 'An Italian restaurant concept in white and blue, with food photography, a menu and a reservation preview.',
-      de: 'Italienische Restaurant-Demo in Weiß und Blau – mit Speisekarte, Food-Fotografie und Reservierungsvorschau.',
+      en: 'An Italian restaurant concept in white and green, with food photography, a menu and a reservation preview.',
+      de: 'Italienische Restaurant-Demo in Weiß und Grün – mit Speisekarte, Food-Fotografie und Reservierungsvorschau.',
     },
     challenge: {
       en: 'Help guests discover the food, find opening hours and plan their visit on any device.',

@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#080b10" />
   <meta property="og:title" content="H.O.M.E. | Dein Zuhause. Ein intelligentes System." />
   <meta property="og:description" content="Eine persönliche Oberfläche für dein gesamtes Zuhause – ohne App-Chaos und Technikstress." />
-  <meta property="og:image" content="assets/work/bonsai-home-hero.png" />
+  <meta property="og:image" content="assets/bonsai-home-hero.png" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -128,8 +128,11 @@
       .footer-inner { flex-direction:column; }
     }
   </style>
+  <link rel="stylesheet" href="experience.css" />
+  <script src="experience.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#system">Zum Inhalt springen</a>
   <header class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="H.O.M.E. Startseite">
@@ -147,22 +150,33 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <img class="hero-bg" src="assets/work/bonsai-home-hero.png" alt="Modernes Zuhause mit zentralem Smart-Home-Dashboard" />
-      <div class="wrap hero-content">
-        <div class="eyebrow">Holistic Orchestration for Modern Environments</div>
-        <h1>Dein Zuhause.<br><span>Ein intelligentes System.</span></h1>
-        <p class="lead">H.O.M.E. verbindet Licht, Klima, Musik, Sicherheit und Routinen in einer persönlichen Oberfläche – geplant und fertig eingerichtet für dein Zuhause.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="demo.html">System ansehen</a>
-          <a class="button secondary" href="fragebogen.html">Home Assessment anfragen</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="particle-field" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="wrap hero-layout">
+        <div class="hero-content">
+          <div class="eyebrow">Technik, die sich nach Zuhause anfühlt</div>
+          <h1 id="hero-title">Dein Zuhause.<br><span>Im Einklang.</span></h1>
+          <p class="lead">Licht, Klima, Musik und Sicherheit. Ein System, das alles verbindet – und deinen Alltag ein bisschen leichter macht.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="demo.html">H.O.M.E. entdecken <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="fragebogen.html">Zuhause-Check starten</a>
+          </div>
+          <div class="proof"><span>Individuell eingerichtet</span><span>Lokal und privat möglich</span></div>
+          <button class="motion-toggle" type="button" aria-pressed="false" hidden>Animation pausieren</button>
         </div>
-        <div class="proof">
-          <span>Im Alltag erprobt</span>
-          <span>Individuell eingerichtet</span>
-          <span>Lokal und privat möglich</span>
+        <div class="home-scene" data-scene="ankommen">
+          <div class="scene-orbit orbit-one" aria-hidden="true"></div><div class="scene-orbit orbit-two" aria-hidden="true"></div>
+          <div class="scene-status"><i aria-hidden="true"></i> Dein Zuhause. Alles verbunden.</div>
+          <div class="hero-dashboard"><div class="device-chrome"><span>H.O.M.E. / DEIN ÜBERBLICK</span><span aria-hidden="true">● ● ●</span></div><img src="assets/core-hub-anonymized.webp" width="1244" height="1027" alt="Bonsai Home Dashboard mit Räumen, Temperatur, Musik und Sicherheitsstatus" fetchpriority="high" /></div>
+          <div class="floating-note"><span aria-hidden="true">☀</span><div><small>Deine Szene</small><strong id="scene-title">Willkommen zu Hause.</strong></div></div>
+          <div class="scene-picker" role="group" aria-label="Gestaltungsvorschau: Alltagsszene wählen">
+            <button type="button" data-preset="ankommen" aria-pressed="true">Ankommen</button><button type="button" data-preset="filmabend" aria-pressed="false">Filmabend</button><button type="button" data-preset="nacht" aria-pressed="false">Gute Nacht</button>
+          </div>
+          <p class="scene-caption" id="scene-caption" aria-live="polite">Gestaltungsvorschau · Warmes Licht. Deine Musik. Dein Moment.</p>
         </div>
       </div>
+      <div class="wrap hero-baseline"><span>WENIGER BEDIENEN. MEHR ZU HAUSE SEIN.</span><a href="#system">Das System kennenlernen <span aria-hidden="true">↓</span></a></div>
     </section>
 
     <section class="statement">
@@ -231,7 +245,7 @@
           <p>Du kaufst kein Technikpaket von der Stange. Du erhältst ein geplantes, getestetes und vollständig eingerichtetes System.</p>
         </div>
         <div class="process">
-          <article class="step"><h3>Assessment</h3><p>Vorhandene Geräte, Räume, Netzwerk und Wünsche werden gemeinsam aufgenommen.</p></article>
+          <article class="step"><h3>Bestandsaufnahme</h3><p>Vorhandene Geräte, Räume, Netzwerk und Wünsche werden gemeinsam aufgenommen.</p></article>
           <article class="step"><h3>Konzept</h3><p>Du erhältst eine klare Empfehlung für System, Geräte, Funktionen und Umsetzung.</p></article>
           <article class="step"><h3>Einrichtung</h3><p>Hardware wird auf Wunsch beschafft, eingebunden und mit Oberfläche sowie Automationen eingerichtet.</p></article>
           <article class="step"><h3>Übergabe</h3><p>Das System wird getestet, erklärt und so dokumentiert, dass es langfristig verständlich bleibt.</p></article>
@@ -244,7 +258,7 @@
         <h2>Wie intelligent könnte dein Zuhause sein?</h2>
         <p>Starte mit einem unverbindlichen Projektcheck. Danach weißt du, was mit deiner vorhandenen Technik möglich ist und welche Ergänzungen wirklich sinnvoll sind.</p>
         <div class="hero-actions" style="justify-content:center;margin-top:0">
-          <a class="button primary" href="fragebogen.html">Home Assessment starten</a>
+          <a class="button primary" href="fragebogen.html">Zuhause-Check starten</a>
           <a class="button secondary" href="mailto:kontakt@vantura-studios.com">Direkt Kontakt aufnehmen</a>
         </div>
       </div>
