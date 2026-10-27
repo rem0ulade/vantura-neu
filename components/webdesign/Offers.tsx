@@ -31,12 +31,12 @@ const packages = [
   {
     name: 'Premium', setup: '2.290', monthly: '129',
     de: {
-      lead: 'Ein umfangreicher Auftritt mit zusätzlichen Inhalten und laufender Pflege.',
+      lead: 'Ein umfangreicher Auftritt mit zusätzlichen Inhalten und optionaler laufender Pflege.',
       website: ['Alles aus Standard, zusätzlich:', 'Karriereseite mit Stellenanzeigen', 'Zusätzliche Seiten für Zielgruppen oder Leistungen', 'Texterstellung und Bearbeitung deiner Fotos', 'Seite zu Qualität und Zertifikaten', 'Englische Sprachversion'],
       care: ['Alles aus Standard, mit:', 'Pflege des Google-Unternehmensprofils', 'Vierteljährlichem Bericht zu Besuchern, Anfragen und Suchplatzierungen', 'Täglichen Backups', '2 Stunden Änderungen pro Monat', 'Reaktion am nächsten Werktag'],
     },
     en: {
-      lead: 'A fuller website with additional content and ongoing care.',
+      lead: 'A fuller website with additional content and optional ongoing care.',
       website: ['Everything in Standard, plus:', 'Careers page with job listings', 'Additional pages for audiences or services', 'Copywriting and editing of your supplied photos', 'Quality and certifications page', 'English language version'],
       care: ['Everything in Standard, with:', 'Google Business Profile maintenance', 'Quarterly report on visitors, inquiries and search positions', 'Daily backups', '2 hours of changes per month', 'Response on the next working day'],
     },
@@ -51,7 +51,7 @@ export function Offers({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-signal">{de ? 'Pakete & Betreuung' : 'Packages & care'}</p>
         <h2 id="angebote-title" className="mt-4 max-w-3xl text-4xl font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-6xl">{de ? 'Deine Website. Passend zu deinem Bedarf.' : 'Your website. Built around your needs.'}</h2>
-        <p className="mt-5 max-w-2xl text-sm leading-7 text-muted sm:text-base">{de ? 'Drei Pakete zur Orientierung: Du zahlst einmal für die Erstellung und anschließend monatlich für Betrieb und Betreuung. Den genauen Seitenumfang stimmen wir vorab ab und halten ihn im Festpreisangebot fest.' : 'Three packages to help you plan: a one-time website setup, followed by monthly hosting and care. We agree the exact scope and number of pages before you receive your fixed-price proposal.'}</p>
+        <p className="mt-5 max-w-2xl text-sm leading-7 text-muted sm:text-base">{de ? 'Drei Pakete zur Orientierung. Du kannst nur die Website beauftragen und sie anschließend selbst oder bei einem Anbieter deiner Wahl betreiben lassen. Hosting und laufende Betreuung über mich sind optional. Umfang und Übergabe stimmen wir individuell ab.' : 'Three packages to help you plan. You can commission just the website and run it yourself or with a provider of your choice. Hosting and ongoing care through me are optional. We agree the scope and handover individually.'}</p>
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
           {packages.map((item) => {
             const copy = item[locale]
@@ -66,12 +66,12 @@ export function Offers({ locale }: { locale: Locale }) {
                   <div className="mt-6 border-y-2 border-ink py-5">
                     <p className="font-mono text-[10px] font-bold uppercase tracking-[0.1em]">{de ? 'Erstellung & Veröffentlichung · einmalig ab' : 'Website setup & launch · one-time from'}</p>
                     <p className="mt-2 text-4xl font-bold tracking-[-0.05em]">{de ? item.setup : item.setup.replace('.', ',')} €</p>
-                    <p className="mt-4 text-xl font-bold">{item.monthly} € <span className="text-sm font-normal text-muted">{de ? '/ Monat Betreuung' : '/ month care'}</span></p>
+                    <p className="mt-4 text-xl font-bold">{item.monthly} € <span className="text-sm font-normal text-muted">{de ? '/ Monat · optional' : '/ month · optional'}</span></p>
                     <p className="mt-2 text-xs leading-5 text-muted">{de ? 'Alle Preise netto zzgl. gesetzlicher Umsatzsteuer.' : 'All prices exclude statutory VAT.'}</p>
                   </div>
                   <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">Website</h4>
                   <ul className="mt-3 space-y-2 text-sm leading-6">{copy.website.map((point) => <li key={point} className="flex gap-2"><span aria-hidden className="text-signal">✦</span><span>{point}</span></li>)}</ul>
-                  <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">{de ? 'Laufende Betreuung' : 'Ongoing care'}</h4>
+                  <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">{de ? 'Betreuung · optional' : 'Care · optional'}</h4>
                   <ul className="mb-8 mt-3 space-y-2 text-sm leading-6">{copy.care.map((point) => <li key={point} className="flex gap-2"><span aria-hidden className="text-signal">✦</span><span>{point}</span></li>)}</ul>
                   <BookingLink placement={`package-${item.name.toLowerCase()}`} className="mt-auto inline-flex min-h-12 items-center justify-center border-2 border-ink bg-signal px-4 py-3 text-center font-mono text-[11px] font-bold uppercase tracking-[0.1em] shadow-[3px_3px_0_#111] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">{de ? 'Jetzt Erstgespräch buchen' : 'Book a discovery call'} →</BookingLink>
                 </div>
@@ -80,7 +80,7 @@ export function Offers({ locale }: { locale: Locale }) {
           })}
         </div>
         <div className="mt-8 grid gap-6 border-2 border-ink p-6 md:grid-cols-2">
-          <div><h3 className="text-lg font-bold">{de ? 'Das gilt für alle Pakete' : 'Included in every agreement'}</h3><p className="mt-3 text-sm leading-7 text-muted">{de ? 'Die Betreuung startet mit der Veröffentlichung. Mindestlaufzeit: 12 Monate, danach monatlich kündbar. Zusätzliche Änderungen außerhalb des enthaltenen Zeitbudgets: 85 € netto pro Stunde, nur nach Absprache. Die einmalige Erstellung zahlst du zu 50 % bei Beauftragung und zu 50 % beim Livegang. Domain und Inhalte gehören dir; bei Kündigung erhältst du alle Daten.' : 'Care starts at launch with a minimum term of 12 months, then cancellation is possible monthly. Additional changes beyond the included time: €85 per hour excluding VAT, agreed in advance. Website setup is paid 50% on order and 50% at launch. Your domain and content belong to you; all data is handed over if you cancel.'}</p></div>
+          <div><h3 className="text-lg font-bold">{de ? 'Das gilt für alle Pakete' : 'Included in every agreement'}</h3><p className="mt-3 text-sm leading-7 text-muted">{de ? 'Die Website ist auch ohne Hosting- oder Betreuungsvertrag erhältlich. Du erhältst eine abgestimmte Übergabe an dich oder deinen Anbieter. Nur wenn du die laufende Betreuung buchst, gilt: Start mit der Veröffentlichung, Mindestlaufzeit 12 Monate, danach monatlich kündbar. Zusätzliche Änderungen außerhalb des enthaltenen Zeitbudgets: 85 € netto pro Stunde, nur nach Absprache. Die einmalige Erstellung zahlst du zu 50 % bei Beauftragung und zu 50 % beim Livegang. Domain und Inhalte gehören dir; bei Kündigung erhältst du alle Daten.' : 'The website is available without a hosting or care contract. We arrange a handover to you or your provider. Only if you choose ongoing care does the 12-month minimum term apply, starting at launch, followed by monthly cancellation. Additional changes beyond the included time: €85 per hour excluding VAT, agreed in advance. Website setup is paid 50% on order and 50% at launch. Your domain and content belong to you; all data is handed over if you cancel.'}</p></div>
           <div><h3 className="text-lg font-bold">{de ? 'Auf Wunsch ergänzen' : 'Optional additions'}</h3><p className="mt-3 text-sm leading-7 text-muted">{de ? 'Logo und Corporate Design, Visitenkarten und Briefpapier, eine LinkedIn-Unternehmensseite oder die Einrichtung von Google Ads. Preise und Umfang vereinbaren wir separat. Kosten für Anzeigen, externe Lizenzen und E-Mail-Tarife werden bei Bedarf gesondert ausgewiesen.' : 'Logo and brand design, business cards and stationery, a LinkedIn company page or Google Ads setup. Scope and prices are agreed separately. Advertising spend, external licences and email plans are listed separately when needed.'}</p></div>
         </div>
       </div>

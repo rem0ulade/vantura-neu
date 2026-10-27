@@ -90,3 +90,18 @@ button {
   outline-offset: 4px;
 }
 
+
+/* Fluid brand pattern; the veil keeps text readable over the moving canvas. */
+.hero-atmosphere {
+  background: var(--color-paper);
+}
+
+.hero-atmosphere-veil {
+  background: linear-gradient(90deg, rgb(242 239 232 / 0.98) 0%, rgb(242 239 232 / 0.92) 35%, rgb(242 239 232 / 0.68) 58%, rgb(242 239 232 / 0.08) 100%);
+}
+
+@media (max-width: 767px) {
+  .hero-atmosphere-veil {
+    background: linear-gradient(110deg, rgb(242 239 232 / 0.96), rgb(242 239 232 / 0.85) 60%, rgb(242 239 232 / 0.62));
+  }
+}

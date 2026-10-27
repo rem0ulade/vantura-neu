@@ -2,18 +2,14 @@
 
 import { BookingLink } from './BookingLink'
 
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { HeroBackdrop } from './HeroBackdrop'
 import type { Locale } from '@/lib/webdesign-content'
 import { t } from '@/lib/webdesign-content'
 
 export function Hero({ locale }: { locale: Locale }) {
   const copy = t(locale)
   const reduce = useReducedMotion()
-  const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
-  const shift = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 80])
-  const fade = useTransform(scrollYProgress, [0, 1], [1, reduce ? 1 : 0.35])
 
   const fadeUp = (delay: number) =>
     reduce
@@ -25,14 +21,9 @@ export function Hero({ locale }: { locale: Locale }) {
         }
 
   return (
-    <section ref={ref} className="relative overflow-hidden border-b-2 border-ink">
-      <motion.div style={{ y: shift, opacity: fade }} className="absolute inset-0 -z-10">
-        <div className="bg-grid absolute inset-0 opacity-80" />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(242,239,232,.92)_0%,rgba(242,239,232,.55)_42%,rgba(255,77,26,.45)_100%)]" />
-        <div className="absolute bottom-0 right-0 h-2/5 w-full bg-[repeating-linear-gradient(-45deg,#ff4d1a,#ff4d1a_10px,#111_10px,#111_20px)] opacity-90 sm:w-2/5" />
-      </motion.div>
-
-      <div className="mx-auto flex max-w-7xl flex-col px-5 pb-16 pt-12 lg:px-8 lg:pb-20 lg:pt-16">
+    <section className="relative isolate overflow-hidden border-b-2 border-ink">
+      <HeroBackdrop locale={locale} />
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-5 pb-20 pt-12 lg:px-8 lg:pb-24 lg:pt-16">
         <motion.p {...fadeUp(0)} className="font-mono text-xs font-bold uppercase tracking-[0.22em]">
           {copy.heroBrand}
         </motion.p>
@@ -67,3 +58,4 @@ export function Hero({ locale }: { locale: Locale }) {
     </section>
   )
 }
+

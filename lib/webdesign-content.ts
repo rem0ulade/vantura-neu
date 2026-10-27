@@ -133,7 +133,7 @@ export const webdesignCopy = {
     faq: [
       {
         q: 'What will my website cost?',
-        a: 'Website setup starts at €690 excluding VAT, with ongoing care from €59 per month excluding VAT. Packages differ in scope, functionality and care. After the discovery call, you receive a binding fixed-price proposal for the agreed scope.'
+        a: 'Website setup starts at €690 excluding VAT. Optional hosting and care start at €59 per month excluding VAT. Packages differ in scope, functionality and care. After the discovery call, you receive a binding fixed-price proposal for the agreed scope.'
       },
       {
         q: 'What happens on the free discovery call?',
@@ -149,7 +149,7 @@ export const webdesignCopy = {
       },
       {
         q: 'What happens after launch?',
-        a: 'You get an introduction to your website, followed by hosting and care in your chosen package. A monthly allowance for changes is included. Care has a minimum term of 12 months, then cancellation is possible monthly.'
+        a: 'You choose: I hand over your website for hosting with your own provider, or take care of hosting and maintenance if you prefer. Individual arrangements are welcome. Monthly fees and the 12-month minimum term apply only when you book ongoing care, followed by monthly cancellation.'
       }
     ],
     ctaTitle: 'Let’s talk about your website.',
@@ -164,7 +164,7 @@ export const webdesignCopy = {
     emailHref: CONTACT_HREF,
     bookingMeta: '30 minutes · Free & no obligation · Video call via Google Meet',
     allWork: 'More project examples',
-    servicesExtras: 'Need an online shop or additional features? We discuss the scope on our discovery call. For company websites, explore the three packages below, including hosting and care.',
+    servicesExtras: 'Need an online shop or additional features? We discuss the scope on our discovery call. For company websites, explore the three packages below. Hosting and care are optional; you can also arrange them yourself.',
     emailAlternative: 'Prefer to email?',
   },
   de: {
@@ -279,7 +279,7 @@ export const webdesignCopy = {
         number: '04',
         title: 'Veröffentlichung',
         duration: 'Übergabe inklusive',
-        text: 'Deine Website geht auf deiner Domain online. Du erhältst eine Einführung; anschließend übernehme ich den Betrieb und die Betreuung im gewählten Paket.',
+        text: 'Deine Website geht auf deiner Domain online. Du erhältst eine Einführung und die vereinbarte Übergabe. Hosting und Betreuung übernehme ich auf Wunsch – du kannst auch deinen eigenen Anbieter nutzen.',
       },
     ],
     aboutEyebrow: 'Dein Ansprechpartner',
@@ -297,7 +297,7 @@ export const webdesignCopy = {
     faq: [
       {
         q: 'Was kostet meine neue Website?',
-        a: 'Die Erstellung startet bei 690 € netto einmalig, die laufende Betreuung bei 59 € netto pro Monat. Die Pakete unterscheiden sich in Seitenumfang, Funktionen und Betreuung. Nach dem Erstgespräch erhältst du ein verbindliches Angebot für den vereinbarten Umfang. Alle Preise verstehen sich zuzüglich gesetzlicher Umsatzsteuer.'
+        a: 'Die Erstellung startet bei 690 € netto einmalig. Hosting und laufende Betreuung sind optional und starten bei 59 € netto pro Monat. Die Pakete unterscheiden sich in Seitenumfang, Funktionen und Betreuung. Nach dem Erstgespräch erhältst du ein verbindliches Angebot für den vereinbarten Umfang. Alle Preise verstehen sich zuzüglich gesetzlicher Umsatzsteuer.'
       },
       {
         q: 'Was passiert im kostenlosen Erstgespräch?',
@@ -313,7 +313,7 @@ export const webdesignCopy = {
       },
       {
         q: 'Was passiert nach der Veröffentlichung?',
-        a: 'Du erhältst eine Einführung in deine Website. Danach übernehme ich Hosting und Betreuung im gewählten Paket. Ein monatliches Zeitbudget für Änderungen ist enthalten. Die Betreuung läuft zunächst 12 Monate und ist anschließend monatlich kündbar.'
+        a: 'Du entscheidest: Ich übergebe dir die fertige Website für den Betrieb bei deinem eigenen Anbieter oder übernehme auf Wunsch Hosting und Betreuung. Auch individuelle Absprachen sind möglich. Nur bei gebuchter Betreuung gelten die Monatsbeträge und die Mindestlaufzeit von 12 Monaten; danach ist sie monatlich kündbar.'
       }
     ],
     ctaTitle: 'Lass uns über deine Website sprechen.',
@@ -328,7 +328,7 @@ export const webdesignCopy = {
     emailHref: CONTACT_HREF_DE,
     bookingMeta: '30 Minuten · Kostenlos & unverbindlich · Videogespräch per Google Meet',
     allWork: 'Weitere Projektbeispiele',
-    servicesExtras: 'Du brauchst einen Online-Shop oder zusätzliche Funktionen? Wir klären den Umfang im Erstgespräch. Für klassische Firmenwebsites findest du unten drei Pakete inklusive Hosting und Betreuung.',
+    servicesExtras: 'Du brauchst einen Online-Shop oder zusätzliche Funktionen? Wir klären den Umfang im Erstgespräch. Für klassische Firmenwebsites findest du unten drei Pakete. Hosting und Betreuung kannst du optional dazubuchen oder selbst organisieren.',
     emailAlternative: 'Lieber per E-Mail?',
   },
 } as const
