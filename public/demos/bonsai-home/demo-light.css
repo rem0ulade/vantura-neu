@@ -1,0 +1,18 @@
+/* Align the detailed simulator with the bright Bonsai identity. */
+:root { color-scheme:light; --tech-bg:#f7f9fd;--tech-panel:#fff;--tech-panel-2:#edf2fa;--tech-text:#20334f;--tech-muted:#61718a;--tech-line:#dce4ef;--tech-blue:#3459db;--tech-cyan:#3459db;--tech-shadow:0 18px 60px #263d6c0c;--muted:#61718a;--champagne:#20334f;--teal:#8fa8e8;--gold-light:#ebba89; }
+body:before { display:none; }.site-header { background:#f7f9fdec!important; }.brand-logo img.bonsai-logo { display:block!important;width:40px;height:40px; }.tech-brand { letter-spacing:-.04em; }
+.header-cta,.button.primary { background:#3459db!important;color:white!important;box-shadow:none!important; }.button.secondary,.button.secondary-dark { background:#fff!important;color:#20334f!important;border:1px solid #dce4ef!important; }
+.demo-hero { gap:60px;align-items:center; }.demo-hero-preview { min-width:0; }.demo-hero-preview .home-ui { border:1px solid #dce4ef; }.demo-hero-preview .home-greeting h3 { font-family:Inter,sans-serif;font-size:21px; }.demo-hero-copy h1 { color:#20334f; }.demo-hero-copy>p:not(.eyebrow),.section-heading p { color:#61718a; }
+.demo-lab,.lead-card { background:#fff!important; }.demo-tab,.demo-mode { background:#f3f6fb!important;color:#516681!important; }.demo-tab.is-active,.demo-mode.is-active { color:#3459db!important;background:#e7edff!important;border-color:#9fb0e8!important; }
+.demo-sidebar { border-color:#dce4ef;background:#f3f6fb; }.demo-dashboard { background:#f7f9fd!important; }.demo-dashboard-top strong,.demo-card strong { color:#20334f; }.demo-card { border-color:#dce4ef;border-radius:14px;background:#fff; }.demo-card span,.demo-card small { color:#61718a; }.demo-card-warm,.demo-card-gold { background:#fcf0e3; }.demo-card-cool,.demo-card-green { background:#edf2fb; }.demo-card-blue { background:#e7edff; }.demo-card-neutral { background:#fff; }.demo-live-pill { color:#3459db!important;background:#edf1ff!important;border-color:#cad5f6!important; }
+.demo-card-controls button,.demo-music-controls button,.demo-volume-controls button { background:#fff;color:#3459db;border-color:#dce4ef; }.demo-meter { background:#dce4ef; }.demo-meter span { background:#7c98e5; }.demo-idea-list article { border-color:#dce4ef; }.q-input { color:#20334f!important;background:#f7f9fd!important; }.footer { background:#edf2fa; }.contact-direct a { color:#3459db; }
+@media(max-width:760px) { .demo-hero { gap:32px; }.home-ui .home-greeting h3 { font-size:18px; } }
+:root { --bg:#f7f9fd;--bg-soft:#edf2fa;--bg-elevated:#fff;--ink:#20334f;--line:#dce4ef;--gold:#3459db;--amber:#ba7739;--font-display:Manrope,Inter,sans-serif; }
+.demo-hero { background:#f0f4fc;grid-template-columns:1fr 1fr;padding-inline:40px; }
+.demo-hero h1 { background:none;color:#20334f;-webkit-text-fill-color:currentColor;font-size:clamp(42px,5.3vw,68px); }
+.demo-hero p:not(.eyebrow) { color:#61718a;font-size:17px; }
+.demo-hero .home-ui .home-greeting h3 { color:#20334f;background:none; }
+.demo-hero .home-ui .room-illustration { max-height:190px;background:var(--room-wall); }
+@media(max-width:900px) { .demo-hero { grid-template-columns:1fr; } }
+@media(max-width:620px) { .demo-hero { padding-inline:20px; }.demo-hero h1 { font-size:42px; } }
+@media(max-width:1050px) { .site-header .nav { background:#f7f9fd!important; }.site-header .nav a { color:#20334f; }.nav-toggle span { background:#20334f; } }

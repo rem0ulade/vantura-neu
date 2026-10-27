@@ -15,10 +15,11 @@
     button.addEventListener('click', () => {
       const preset = button.dataset.preset;
       scene.dataset.scene = preset;
+      document.dispatchEvent(new CustomEvent('bonsai:scene', { detail: preset }));
       document.querySelectorAll('[data-preset]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
       document.getElementById('scene-title').textContent = titles[preset];
       document.getElementById('scene-caption').textContent = `Gestaltungsvorschau · ${captions[preset]}`;
-      hero.style.setProperty('--scene-glow', {ankommen:'#82d6a51e',filmabend:'#b296e72b',nacht:'#82a6d61e'}[preset]);
+      hero.style.setProperty('--scene-glow', {ankommen:'#cbdcfa80',filmabend:'#d9dffb90',nacht:'#b9cde960'}[preset]);
     });
   });
   let width = 0, height = 0, particles = [], frame = 0, previous = 0;
@@ -40,10 +41,10 @@
       p.y -= p.v * delta; if(p.y < -5) p.y = height + 5;
       const x = p.x + Math.sin(p.phase + p.y * .004) * 18;
       const distance = Math.hypot(x-pointer.x, p.y-pointer.y);
-      ctx.fillStyle = `rgba(181,237,197,${distance < 150 ? .7 : .23})`;
+      ctx.fillStyle = `rgba(64,104,188,${distance < 150 ? .7 : .23})`;
       ctx.beginPath(); ctx.arc(x,p.y,p.r,0,Math.PI*2); ctx.fill();
       if(distance < 130) {
-        ctx.strokeStyle=`rgba(181,237,197,${(1-distance/130)*.16})`;
+        ctx.strokeStyle=`rgba(64,104,188,${(1-distance/130)*.16})`;
         ctx.beginPath(); ctx.moveTo(x,p.y); ctx.lineTo(pointer.x,pointer.y); ctx.stroke();
       }
     }
@@ -72,7 +73,7 @@
     const sceneRect=scene.getBoundingClientRect();
     const x=Math.max(-.5,Math.min(.5,(event.clientX-sceneRect.left)/sceneRect.width-.5));
     const y=Math.max(-.5,Math.min(.5,(event.clientY-sceneRect.top)/sceneRect.height-.5));
-    dashboard.style.transform=`perspective(1200px) rotateY(${-8+x*7}deg) rotateX(${4-y*5}deg)`;
+    dashboard.style.transform=`perspective(1200px) rotateY(${-5+x*5}deg) rotateX(${2-y*3}deg)`;
   },{passive:true});
   hero.addEventListener('pointerleave',()=>{pointer.x=-999;pointer.y=-999;dashboard.style.transform='';});
   new ResizeObserver(resize).observe(hero);

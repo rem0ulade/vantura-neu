@@ -12,16 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260612-logo-demo2" />
   <link rel="stylesheet" href="tech.css?v=20260719-1" />
-</head>
+<link rel="stylesheet" href="dashboard.css" /><link rel="stylesheet" href="demo-light.css" /><script src="dashboard.js" defer></script></head>
 <body class="demo-page">
   <header class="site-header" data-scrolled="true" data-nav-open="false">
-    <a class="brand brand-logo tech-brand" href="index.html" aria-label="H.O.M.E. Startseite"><span class="tech-brand-mark">H</span><span>H.O.M.E.</span></a>
+    <a class="brand brand-logo tech-brand" href="index.html" aria-label="H.O.M.E. Startseite"><img class="bonsai-logo" src="assets/bonsai-mark.svg" width="40" height="40" alt="" /><span>Bonsai Home</span></a>
     <button class="nav-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="site-nav" aria-label="Hauptnavigation">
       <a href="demo.html" aria-current="page">System-Demo</a>
       <a href="index.html#system">System</a>
       <a href="index.html#ablauf">Ablauf</a>
-      <a href="fragebogen.html">Home Assessment</a>
+      <a href="fragebogen.html">Zuhause-Check</a>
       <a class="nav-cta-mobile" href="fragebogen.html">Projekt starten</a>
     </nav>
     <a class="header-cta" href="fragebogen.html">Projekt starten</a>
@@ -30,30 +30,30 @@
   <main id="top">
     <section class="demo-hero" aria-labelledby="demo-title">
       <div class="demo-hero-copy reveal reveal-left">
-        <p class="eyebrow">Interactive System Preview</p>
+        <p class="eyebrow">Interaktive Systemvorschau</p>
         <h1 id="demo-title">Ein Zuhause, das als System reagiert.</h1>
         <p>Diese Demo zeigt keine starren Produktpakete. Sie simuliert typische Zustände eines individuell konfigurierten H.O.M.E.-Systems – von Licht und Klima bis Medien, Sicherheit und Routinen.</p>
-        <div class="hero-actions"><a class="button primary" href="#demo-lab">System ausprobieren</a><a class="button secondary" href="fragebogen.html">Home Assessment starten</a></div>
+        <div class="hero-actions"><a class="button primary" href="#demo-lab">System ausprobieren</a><a class="button secondary" href="fragebogen.html">Zuhause-Check starten</a></div>
       </div>
-      <div class="demo-hero-preview reveal reveal-right reveal-delay-1" aria-hidden="true"><div class="demo-screenshot-frame"><img src="assets/core-hub-anonymized.webp?v=20260612-core1" alt="" /></div></div>
+      <div class="demo-hero-preview"><div class="home-ui" data-dashboard data-mode="ankommen"><div class="home-top"><div class="mini-brand"><img src="assets/bonsai-mark.svg" width="26" height="26" alt=""/><span>bonsai<span>home</span></span></div><span class="home-demo-label">INTERAKTIVE VORSCHAU</span></div><div class="home-greeting"><div><span>DEIN ZUHAUSE, IN DEINEM RHYTHMUS</span><h3 data-home-greeting>Schön, dass du da bist.</h3></div><span class="home-weather" aria-label="Beispiel: sonnig bei 21 Grad">☀ 21°</span></div><div class="home-room"><svg class="room-illustration" viewBox="0 0 400 220" fill="none" aria-hidden="true"><rect width="400" height="220" rx="16" fill="var(--room-wall)"/><path d="M0 176H400" stroke="var(--room-line)"/><path d="M0 176 40 140V0M40 140H400" stroke="var(--room-line)"/><rect x="75" y="26" width="124" height="91" rx="5" fill="var(--window-sky)"/><path d="M137 26v91M75 72h124" stroke="white" stroke-width="5"/><circle class="room-sun" cx="166" cy="49" r="12" fill="#ffc779"/><path class="room-moon" d="M165 37a13 13 0 1 0 12 18 13 13 0 0 1-12-18Z" fill="#f6f8ff"/><path d="M75 27h124" stroke="#97accf" stroke-width="5"/><ellipse cx="214" cy="193" rx="119" ry="14" fill="var(--room-shadow)"/><rect x="126" y="122" width="160" height="53" rx="14" fill="#9aafd8"/><path d="M136 126h63v35h-63zm68 0h68v35h-68z" fill="#bbcbed"/><rect x="115" y="148" width="22" height="33" rx="8" fill="#7c97c6"/><rect x="273" y="148" width="22" height="33" rx="8" fill="#7c97c6"/><path d="M139 182v7m135-7v7" stroke="#425d82" stroke-width="4"/><rect x="211" y="122" width="32" height="29" rx="5" transform="rotate(10 211 122)" fill="#f5b778"/><path d="M335 60v120m-17 0h34" stroke="#49688a" stroke-width="4" stroke-linecap="round"/><path d="m317 40-10 28h55l-10-28Z" fill="#edb575"/><path class="lamp-beam" d="m309 69-44 113h135L360 69Z" fill="#ffd68c" opacity=".25"/><rect x="54" y="158" width="24" height="28" rx="4" fill="#db9671"/><path d="M66 158v-37m0 20c-20 0-21-18-21-18 20 0 21 18 21 18Zm0-10c0-19 20-21 20-21 0 19-20 21-20 21Z" fill="#7d9ac2"/></svg><span class="room-tag"><i></i> Wohnzimmer</span></div><div class="home-controls"><div class="home-control light-control"><div class="home-card-label"><span aria-hidden="true">☼</span> Licht <button type="button" class="tiny-switch" data-light-toggle aria-label="Wohnzimmerlicht" aria-pressed="true"><i></i></button></div><strong><span data-light-value>75</span><small> %</small></strong><label class="sr-only">Helligkeit im Wohnzimmer<input type="range" min="0" max="100" value="75" data-light-range /></label><span class="light-state" data-light-label>Warm & einladend</span></div><div class="home-control climate-control"><div class="home-card-label"><span aria-hidden="true">◉</span> Raumklima</div><strong><span data-temp-value>22</span><small> °C</small></strong><div class="temp-actions"><button type="button" data-temp-change="-1" aria-label="Temperatur senken">−</button><span>Wunschtemperatur</span><button type="button" data-temp-change="1" aria-label="Temperatur erhöhen">+</button></div></div></div><div class="home-music"><div class="album-art" aria-hidden="true">♫</div><div><small>DEIN SOUNDTRACK</small><strong data-track>Lieblingsmusik</strong><span data-music-status>Musik läuft</span></div><div class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div><button type="button" data-music-toggle aria-label="Musik pausieren" aria-pressed="true">Ⅱ</button></div><div class="home-foot"><span>⌁ Alle Fenster geschlossen</span><span>Nur Beispieldaten</span></div></div></div>
     </section>
 
     <section class="section demo-lab-section" id="demo-lab" aria-labelledby="demo-lab-title">
       <div class="section-heading reveal reveal-up">
-        <p class="eyebrow">Live Interface</p>
+        <p class="eyebrow">Dein System zum Ausprobieren</p>
         <h2 id="demo-lab-title">Wechsle Systemfokus und Alltagsszene.</h2>
         <p>Jede Installation wird passend zu Räumen, Geräten und Gewohnheiten aufgebaut. Die Vorschau macht sichtbar, wie verschiedene Prioritäten in einer gemeinsamen Oberfläche zusammenlaufen.</p>
       </div>
       <div class="demo-lab reveal reveal-up">
         <div class="demo-tabs" role="tablist" aria-label="Systemansichten">
-          <button class="demo-tab is-active" type="button" role="tab" aria-selected="true" data-demo-tab="core">Overview</button>
-          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="family">Daily</button>
-          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="comfort">Comfort</button>
-          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="secure">Secure</button>
+          <button class="demo-tab is-active" type="button" role="tab" aria-selected="true" data-demo-tab="core">Übersicht</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="family">Alltag</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="comfort">Komfort</button>
+          <button class="demo-tab" type="button" role="tab" aria-selected="false" data-demo-tab="secure">Sicherheit</button>
         </div>
         <div class="demo-stage">
           <aside class="demo-sidebar">
-            <p class="eyebrow">Active profile</p><h3 id="demo-name">Overview</h3>
+            <p class="eyebrow">Aktive Ansicht</p><h3 id="demo-name">Übersicht</h3>
             <p id="demo-description">Die zentrale Oberfläche für Räume, Szenen, Sicherheit, Energie, Medien und Termine.</p>
             <div class="demo-mode-buttons" aria-label="Szenen">
               <button class="demo-mode is-active" type="button" data-scene="home">Zuhause</button>
@@ -71,7 +71,7 @@
     </section>
 
     <section class="section demo-ideas-section" aria-labelledby="demo-ideas-title">
-      <div class="demo-ideas-copy reveal reveal-left"><p class="eyebrow">From preview to reality</p><h2 id="demo-ideas-title">Dein System entsteht nicht aus einem Paket. Sondern aus deinem Zuhause.</h2></div>
+      <div class="demo-ideas-copy reveal reveal-left"><p class="eyebrow">Von der Idee zum Zuhause</p><h2 id="demo-ideas-title">Dein System entsteht nicht aus einem Paket. Sondern aus deinem Zuhause.</h2></div>
       <div class="demo-idea-list">
         <article class="reveal reveal-right"><h3>Bestehende Technik integrieren</h3><p>Vorhandene Lampen, Steckdosen, Klima-, Musik- und Sicherheitssysteme werden geprüft und sinnvoll verbunden.</p></article>
         <article class="reveal reveal-right reveal-delay-1"><h3>Automationen modellieren</h3><p>Heimkommen, Schlafen, Filmabend, Urlaub und individuelle Abläufe werden kontrollierbar automatisiert.</p></article>
@@ -80,15 +80,15 @@
     </section>
 
     <section class="cta-section demo-cta" id="kontakt">
-      <div class="reveal reveal-left"><p class="eyebrow">Next step</p><h2>Wie würde dein Zuhause als System aussehen?</h2><div class="contact-direct"><a href="tel:+4915129833507">0151 298 335 07</a></div></div>
-      <div class="lead-card reveal reveal-right reveal-delay-1"><h3>Home Assessment anfragen</h3><p>Beschreibe kurz dein Zuhause. Danach klären wir vorhandene Technik, Ziele und einen sinnvollen ersten Umfang.</p>
-        <form class="index-inquiry-form" id="index-inquiry-form"><div class="q-inquiry-row"><label class="q-sr-only" for="index-email">E-Mail-Adresse</label><input class="q-input" type="email" id="index-email" name="email" placeholder="Deine E-Mail" autocomplete="email" /><label class="q-sr-only" for="index-phone">Telefonnummer</label><input class="q-input" type="tel" id="index-phone" name="phone" placeholder="Telefon (optional)" autocomplete="tel" /></div><input class="q-sr-only contact-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" /><div class="lead-actions"><button class="button primary" type="submit">Assessment anfragen</button><a class="button secondary-dark" href="fragebogen.html">Projektcheck starten</a></div></form>
+      <div class="reveal reveal-left"><p class="eyebrow">Der nächste Schritt</p><h2>Wie würde dein Zuhause als System aussehen?</h2><div class="contact-direct"><a href="tel:+4915129833507">0151 298 335 07</a></div></div>
+      <div class="lead-card reveal reveal-right reveal-delay-1"><h3>Zuhause-Check anfragen</h3><p>Beschreibe kurz dein Zuhause. Danach klären wir vorhandene Technik, Ziele und einen sinnvollen ersten Umfang.</p>
+        <form class="index-inquiry-form" id="index-inquiry-form"><div class="q-inquiry-row"><label class="q-sr-only" for="index-email">E-Mail-Adresse</label><input class="q-input" type="email" id="index-email" name="email" placeholder="Deine E-Mail" autocomplete="email" /><label class="q-sr-only" for="index-phone">Telefonnummer</label><input class="q-input" type="tel" id="index-phone" name="phone" placeholder="Telefon (optional)" autocomplete="tel" /></div><input class="q-sr-only contact-honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" /><div class="lead-actions"><button class="button primary" type="submit">Zuhause-Check anfragen</button><a class="button secondary-dark" href="fragebogen.html">Projektcheck starten</a></div></form>
         <p class="form-note">Hinweise zur Verarbeitung stehen in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><span>H.O.M.E. · A Vantura Studios system</span><nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></nav></footer>
+  <footer class="footer"><span>H.O.M.E. · Ein System von Vantura Studios</span><nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a></nav></footer>
   <div class="nav-backdrop" hidden aria-hidden="true"></div>
   <script src="script.js?v=20260612-lux5"></script><script src="demo.js?v=20260612-music-demo2"></script><script src="contact.js?v=20260612-contact1"></script>
 </body>

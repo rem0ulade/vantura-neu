@@ -66,12 +66,12 @@ export function Offers({ locale }: { locale: Locale }) {
                   <div className="mt-6 border-y-2 border-ink py-5">
                     <p className="font-mono text-[10px] font-bold uppercase tracking-[0.1em]">{de ? 'Erstellung & Veröffentlichung · einmalig ab' : 'Website setup & launch · one-time from'}</p>
                     <p className="mt-2 text-4xl font-bold tracking-[-0.05em]">{de ? item.setup : item.setup.replace('.', ',')} €</p>
-                    <p className="mt-4 text-xl font-bold">{item.monthly} € <span className="text-sm font-normal text-muted">{de ? '/ Monat · optional' : '/ month · optional'}</span></p>
                     <p className="mt-2 text-xs leading-5 text-muted">{de ? 'Alle Preise netto zzgl. gesetzlicher Umsatzsteuer.' : 'All prices exclude statutory VAT.'}</p>
                   </div>
                   <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">Website</h4>
                   <ul className="mt-3 space-y-2 text-sm leading-6">{copy.website.map((point) => <li key={point} className="flex gap-2"><span aria-hidden className="text-signal">✦</span><span>{point}</span></li>)}</ul>
                   <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">{de ? 'Betreuung · optional' : 'Care · optional'}</h4>
+                  <p className="mt-2 text-xl font-bold">{item.monthly} € <span className="text-sm font-normal text-muted">{de ? '/ Monat · optional' : '/ month · optional'}</span></p>
                   <ul className="mb-8 mt-3 space-y-2 text-sm leading-6">{copy.care.map((point) => <li key={point} className="flex gap-2"><span aria-hidden className="text-signal">✦</span><span>{point}</span></li>)}</ul>
                   <BookingLink placement={`package-${item.name.toLowerCase()}`} className="mt-auto inline-flex min-h-12 items-center justify-center border-2 border-ink bg-signal px-4 py-3 text-center font-mono text-[11px] font-bold uppercase tracking-[0.1em] shadow-[3px_3px_0_#111] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">{de ? 'Jetzt Erstgespräch buchen' : 'Book a discovery call'} →</BookingLink>
                 </div>
