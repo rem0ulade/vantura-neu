@@ -36,12 +36,12 @@ export const WORK_ITEMS: WorkItem[] = [
   },
   {
     slug: 'restaurant',
-    preview: { src: '/demos/restaurant/preview.svg', alt: { en: 'Restaurant Lindenhof demo with menu, seasonal specials and table reservation', de: 'Restaurant-Demo Lindenhof mit Speisekarte, saisonalen Angeboten und Tischreservierung' } },
+    preview: { src: '/demos/restaurant/preview.svg', alt: { en: 'Ciao Bella · Trattoria demo with menu, seasonal specials and table reservation', de: 'Italienische Restaurant-Demo Ciao Bella mit Speisekarte, saisonalen Angeboten und Tischreservierung' } },
     repo: 'vantura-neu',
-    title: { en: 'Restaurant Lindenhof', de: 'Restaurant Lindenhof' },
+    title: { en: 'Ciao Bella · Trattoria', de: 'Ciao Bella · Trattoria' },
     blurb: {
-      en: 'A German-language restaurant concept with a menu, seasonal specials and a table reservation demo.',
-      de: 'Restaurant-Beispiel mit Speisekarte, saisonalen Angeboten und einer Demo zur Tischreservierung.',
+      en: 'An Italian restaurant concept in white and blue, with food photography, a menu and a reservation preview.',
+      de: 'Italienische Restaurant-Demo in Weiß und Blau – mit Speisekarte, Food-Fotografie und Reservierungsvorschau.',
     },
     challenge: {
       en: 'Help guests discover the food, find opening hours and plan their visit on any device.',

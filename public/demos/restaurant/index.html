@@ -4,96 +4,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, follow">
-  <meta name="description" content="Restaurant Lindenhof – eine Restaurant-Demo mit saisonaler Küche, Speisekarte, aktuellen Angeboten und Tischreservierung.">
-  <title>Restaurant Lindenhof · Gemeinsam gut essen</title>
+  <meta name="theme-color" content="#173e8f">
+  <meta name="description" content="Ciao Bella – eine italienische Restaurant-Demo. Frische Pasta, Pizza aus dem Ofen und ein Platz für einen schönen Abend.">
+  <title>Ciao Bella · Ein Stück Italien</title>
   <link rel="stylesheet" href="restaurant.css">
   <script src="restaurant.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
-  <div class="wrap">
-    <nav class="top" aria-label="Hauptnavigation">
-      <a class="brand" href="#start"><span class="brand-mark" aria-hidden="true">L</span><span>Lindenhof<small>Restaurant &amp; Begegnung</small></span></a>
-      <button class="nav-toggle" type="button" aria-controls="navigation" aria-expanded="false" hidden>Menü öffnen</button>
-      <div class="nav-links" id="navigation">
-        <a href="#speisekarte">Speisekarte</a><a href="#aktionen">Aktionen</a><a href="#ueber-uns">Über uns</a><a href="#kontakt">Kontakt</a><a class="nav-cta" href="#reservieren">Tisch reservieren ↗</a>
-      </div>
-    </nav>
-    <main id="inhalt">
-      <header class="hero" id="start">
-        <div class="hero-copy">
-          <p class="eyebrow">Frisch gekocht. Herzlich serviert.</p>
-          <h1>Gutes Essen.<span>Gute Zeit.</span>Bei uns.</h1>
-          <p class="hero-sub">Willkommen im Lindenhof. Freuen Sie sich auf saisonale Lieblingsgerichte, frische Zutaten und einen Platz, an dem man gerne etwas länger bleibt.</p>
-          <div class="cta-row"><a class="btn primary" href="#reservieren">Tisch reservieren ↗</a><a class="btn secondary" href="#speisekarte">Speisekarte entdecken</a></div>
-          <ul class="hero-proof"><li>Saisonale Küche</li><li>Vegetarische Auswahl</li><li>Mit Liebe zubereitet</li></ul>
-        </div>
-        <figure class="hero-visual">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Einladend gedeckter Tisch mit Weingläsern im Restaurant" width="900" height="1100" fetchpriority="high">
-          <figcaption><span>Ein Platz für gute Momente.</span><a href="#ueber-uns" aria-label="Unser Restaurant kennenlernen">↗</a></figcaption>
-        </figure>
-      </header>
-      <div class="ribbon"><span>Saisonal ✦ Frisch ✦ Herzlich ✦ Gemeinsam genießen</span></div>
-      <section id="aktionen" aria-labelledby="aktionen-titel">
-        <div class="section-head"><p class="eyebrow">Aktuell im Lindenhof</p><h2 id="aktionen-titel">Heute etwas<br>Besonderes.</h2></div>
-        <div class="offers">
-          <article class="offer featured"><p class="eyebrow">Dienstag bis Freitag · 12–14 Uhr</p><h3>Die Mittagspause<br>schmeckt besser hier.</h3><p>Ein wechselndes Hauptgericht und eine kleine Vorspeise. Frisch gekocht für Ihre Pause.</p><p class="price">Mittagsmenü <span>XX,XX €</span></p><a href="#reservieren">Platz für die Mittagspause sichern ↗</a></article>
-          <article class="offer"><p class="eyebrow">Unsere saisonale Empfehlung</p><h3>Herbst auf<br>dem Teller.</h3><p>Cremiges Kürbisrisotto mit Ofengemüse, gerösteten Kernen und frischen Kräutern. Auf Wunsch vegan.</p><p class="price">Saisonales Gericht <span>XX,XX €</span></p><a href="#speisekarte">Die Speisekarte ansehen ↗</a></article>
-        </div>
-        <p class="note">Beispielangebote dieser Restaurant-Demo. Alle Preise sind Platzhalter.</p>
-      </section>
-      <section id="speisekarte" aria-labelledby="speisekarte-titel">
-        <div class="section-head"><p class="eyebrow">Mit Appetit entdecken</p><h2 id="speisekarte-titel">Unsere<br>Speisekarte.</h2></div>
-        <nav class="menu-categories" aria-label="Kategorien der Speisekarte"><a href="#vorspeisen">Vorspeisen</a><a href="#hauptgerichte">Hauptgerichte</a><a href="#desserts">Desserts</a><a href="#getraenke">Getränke</a></nav>
-        <div class="menu-grid">
-          <article class="menu-category" id="vorspeisen"><p class="eyebrow">01 · Der Anfang</p><h3>Vorspeisen</h3>
-            <dl><div><dt>Geröstete Tomatensuppe <small>Mit Basilikum und hausgemachtem Brot · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Salat der Saison <small>Blattsalate, knackiges Gemüse und Kräuterdressing · vegan</small></dt><dd>XX,XX €</dd></div><div><dt>Burrata mit Tomaten <small>Mit Rucola, Olivenöl und geröstetem Brot · vegetarisch</small></dt><dd>XX,XX €</dd></div></dl>
-          </article>
-          <article class="menu-category" id="hauptgerichte"><p class="eyebrow">02 · Das Herzstück</p><h3>Hauptgerichte</h3>
-            <dl><div><dt>Kürbisrisotto <small>Ofengemüse, geröstete Kerne und Kräuter · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Gebratenes Fischfilet <small>Mit Rosmarinkartoffeln und saisonalem Gemüse</small></dt><dd>XX,XX €</dd></div><div><dt>Rindersteak vom Grill <small>Mit Kartoffelspalten, Kräuterbutter und kleinem Salat</small></dt><dd>XX,XX €</dd></div></dl>
-          </article>
-          <article class="menu-category" id="desserts"><p class="eyebrow">03 · Zum Abschluss</p><h3>Desserts</h3>
-            <dl><div><dt>Warmer Schokoladenkuchen <small>Mit Vanilleeis und Beeren · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Apfelstreusel aus dem Ofen <small>Mit Zimt und Vanillesoße · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Sorbet der Saison <small>Zwei Kugeln mit frischen Früchten · vegan</small></dt><dd>XX,XX €</dd></div></dl>
-          </article>
-          <article class="menu-category" id="getraenke"><p class="eyebrow">04 · Im Glas</p><h3>Getränke</h3>
-            <dl><div><dt>Hausgemachte Limonade <small>Zitrone, Minze und ein Hauch Ingwer · 0,4 l</small></dt><dd>XX,XX €</dd></div><div><dt>Mineralwasser <small>Still oder sprudelnd · 0,75 l</small></dt><dd>XX,XX €</dd></div><div><dt>Wein des Hauses <small>Weiß, Rot oder Rosé · 0,2 l</small></dt><dd>XX,XX €</dd></div><div><dt>Kaffee oder Espresso <small>Frisch gemahlen · eine Tasse</small></dt><dd>XX,XX €</dd></div></dl>
-          </article>
-        </div>
-        <p class="note">Alle Preise sind Platzhalter. Informationen zu Allergenen und Zusatzstoffen erhalten Sie bei unserem Team.</p>
-      </section>
-      <section class="about-panel" id="ueber-uns" aria-labelledby="ueber-uns-titel">
-        <div><p class="eyebrow">Über uns</p><h2 id="ueber-uns-titel">Am liebsten<br>gemeinsam.</h2></div>
-        <div class="about-copy"><p>Wir glauben, dass gutes Essen Menschen zusammenbringt. Deshalb kochen wir im Lindenhof mit frischen Zutaten, einer großen Portion Sorgfalt und Freude an dem, was gerade Saison hat.</p><p>Ob zum Mittagessen, für einen Abend zu zweit oder eine große Runde mit Freunden: Bei uns stehen Gastfreundschaft und ehrlicher Genuss im Mittelpunkt.</p><ul><li><strong>Saisonal gedacht</strong><span>Unsere Küche richtet sich nach den Zutaten der Jahreszeit.</span></li><li><strong>Für alle am Tisch</strong><span>Auch vegetarische Gerichte gehören selbstverständlich dazu.</span></li><li><strong>Herzlich empfangen</strong><span>Ein gutes Essen beginnt für uns mit einem guten Gefühl.</span></li></ul></div>
-      </section>
-      <section class="reservation" id="reservieren" aria-labelledby="reservieren-titel">
-        <p class="eyebrow">Wir freuen uns auf Sie</p><h2 id="reservieren-titel">Ihr Tisch<br>wartet auf Sie.</h2>
-        <div class="reservation-bottom"><p>Ein Abend zu zweit oder ein Tisch für die ganze Runde? Probieren Sie unsere Reservierungsanfrage aus.</p><a class="btn dark" href="#reservierungsformular">Tisch reservieren ↗</a></div>
-        <form id="reservierungsformular">
-          <p class="form-note" id="demo-hinweis">Demo: Es werden keine Daten versendet und keine echten Tische reserviert. Bitte verwenden Sie Beispieldaten.</p>
+<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+<div class="topline">Ein bisschen Italien. Ein bisschen länger bleiben.</div>
+<header class="site-header" id="start">
+  <nav class="navigation container" aria-label="Hauptnavigation">
+    <a class="wordmark" href="#start" aria-label="Ciao Bella – zur Startseite">ciao bella<span>TRATTORIA · PIZZERIA</span></a>
+    <button class="nav-toggle" type="button" aria-controls="navigation" aria-expanded="false" hidden>Menü öffnen ☰</button>
+    <div class="nav-links" id="navigation"><a href="#speisekarte">Speisekarte</a><a href="#ueber-uns">Das Restaurant</a><a href="#aktionen">Aktuelles</a><a class="button button-small" href="#reservieren">Tisch reservieren ↗</a></div>
+  </nav>
+</header>
+<main id="inhalt">
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="sun" aria-hidden="true">✳</span> Italien auf dem Teller. Freude am Tisch.</p>
+      <h1 id="hero-title">Ein Stück<br>Italien.<br><em>Für dich.</em></h1>
+      <p class="hero-description">Knusprige Pizza. Frische Pasta. Ein Glas Wein und Menschen, mit denen du gerne Zeit verbringst. Willkommen im Ciao Bella.</p>
+      <div class="hero-actions"><a class="button" href="#reservieren">Tisch reservieren ↗</a><a class="text-link" href="#speisekarte">Die Speisekarte entdecken ↓</a></div>
+      <p class="hero-footnote"><span aria-hidden="true">◌</span> Mit Liebe gekocht. Am liebsten gemeinsam.</p>
+    </div>
+    <div class="hero-art">
+      <figure class="hero-photo"><img src="images/pizza.jpg" alt="Frisch gebackene Pizza mit Tomaten, Mozzarella und Basilikum" width="1400" height="1750" fetchpriority="high"></figure>
+      <div class="round-stamp"><span>PIZZA · PASTA</span><strong>Amore.</strong><span>JEDEN TAG EIN BISSCHEN</span></div>
+      <div class="photo-caption"><span>Einfach gute Zutaten.</span><span>Und ganz viel Gefühl. ↗</span></div>
+    </div>
+  </section>
+  <div class="brand-strip"><div class="container"><span>Frische Pasta</span><i aria-hidden="true">✳</i><span>Pizza aus dem Ofen</span><i aria-hidden="true">✳</i><span>Dolce Vita am Tisch</span></div></div>
+  <section class="intro container section" id="ueber-uns" aria-labelledby="intro-title">
+    <div class="intro-image"><img src="images/pasta.jpg" alt="Pasta mit grünem Pesto, Tomaten und frisch geriebenem Käse" width="1000" height="1100" loading="lazy"><span class="image-label">Einfach. Frisch. Italienisch.</span></div>
+    <div class="intro-copy"><p class="eyebrow">Unser Lieblingsplatz? Am Tisch.</p><h2 id="intro-title">Gutes Essen.<br><em>Gute Gesellschaft.</em></h2><p>Bei uns muss ein Abend nichts Besonderes sein, um besonders zu werden. Ein Teller Pasta, ein Gespräch, das noch nicht zu Ende ist, und vielleicht noch ein Dessert zum Teilen.</p><p>Wir lieben die italienische Küche für ihre Einfachheit: wenige gute Zutaten, sorgfältig zubereitet. Genau so kommt sie bei uns auf den Tisch.</p><a class="text-link" href="#reservieren">Komm vorbei und bleib ein wenig ↗</a></div>
+  </section>
+  <section class="menu-section section" id="speisekarte" aria-labelledby="menu-title"><div class="container">
+    <div class="section-heading"><div><p class="eyebrow">Was darf es heute sein?</p><h2 id="menu-title">Für den kleinen Hunger.<br><em>Und die große Liebe.</em></h2></div><p>Von der ersten Olive bis zum letzten Löffel Tiramisu. Hier findest du deine nächste Lieblingsbestellung.</p></div>
+    <div class="menu-tabs" aria-label="Kategorien der Speisekarte"><a href="#vorspeisen" data-category="vorspeisen">Vorspeisen</a><a href="#pizza-pasta" data-category="pizza-pasta">Pizza &amp; Pasta</a><a href="#desserts" data-category="desserts">Desserts</a><a href="#getraenke" data-category="getraenke">Getränke</a></div>
+    <div class="menu-sheet">
+      <div class="menu-panel" id="vorspeisen"><h3>Ein guter Anfang.</h3><dl class="dishes">
+        <div><dt>Bruschetta al Pomodoro<small>Geröstetes Brot, sonnengereifte Tomaten, Basilikum und Olivenöl</small></dt><dd>7,50 €</dd></div>
+        <div><dt>Burrata<small>Cremige Burrata, bunte Tomaten, Rucola und Basilikumöl</small></dt><dd>12,50 €</dd></div>
+        <div><dt>Antipasti zum Teilen<small>Gegrilltes Gemüse, Oliven, Käse und ofenfrisches Brot · für zwei</small></dt><dd>18,90 €</dd></div>
+        <div><dt>Insalata della Casa<small>Blattsalate, Kirschtomaten, Gurke und hausgemachtes Dressing</small></dt><dd>9,50 €</dd></div>
+      </dl></div>
+      <div class="menu-panel" id="pizza-pasta"><h3>Unsere großen Lieben.</h3><dl class="dishes">
+        <div><dt>Pizza Margherita<small>Tomatensoße, Fior di Latte, frischer Basilikum und Olivenöl</small></dt><dd>12,90 €</dd></div>
+        <div><dt>Pizza Diavola<small>Tomatensoße, Mozzarella, pikante Salami und Peperoncino</small></dt><dd>15,90 €</dd></div>
+        <div><dt>Tagliatelle al Ragù<small>Bandnudeln mit langsam geschmortem Rinderragout und Parmesan</small></dt><dd>17,50 €</dd></div>
+        <div><dt>Linguine al Limone<small>Mit Zitrone, Parmesan und frischen Kräutern · vegetarisch</small></dt><dd>15,50 €</dd></div>
+        <div><dt>Pasta al Pesto<small>Basilikumpesto, Kirschtomaten und geröstete Pinienkerne · vegetarisch</small></dt><dd>14,90 €</dd></div>
+        <div><dt>Pizza Verdure<small>Tomatensoße, Mozzarella und gegrilltes Gemüse · vegetarisch</small></dt><dd>14,50 €</dd></div>
+      </dl></div>
+      <div class="menu-panel" id="desserts"><h3>Für ein süßes Ende.</h3><dl class="dishes">
+        <div><dt>Tiramisu della Casa<small>Unser Klassiker mit Mascarpone, Espresso und Kakao</small></dt><dd>7,90 €</dd></div>
+        <div><dt>Panna Cotta<small>Mit hausgemachter Beerensoße und frischen Früchten</small></dt><dd>7,50 €</dd></div>
+        <div><dt>Affogato<small>Vanilleeis und ein frisch gebrühter Espresso</small></dt><dd>5,50 €</dd></div>
+        <div><dt>Zitronensorbet<small>Zwei Kugeln, frisch und fruchtig · vegan</small></dt><dd>5,90 €</dd></div>
+      </dl></div>
+      <div class="menu-panel" id="getraenke"><h3>Auf einen schönen Abend.</h3><dl class="dishes">
+        <div><dt>Hausgemachte Zitronenlimonade<small>Mit frischer Minze · 0,4 l</small></dt><dd>5,90 €</dd></div>
+        <div><dt>Mineralwasser<small>Still oder mit Kohlensäure · 0,75 l</small></dt><dd>6,50 €</dd></div>
+        <div><dt>Wein des Hauses<small>Weiß, Rot oder Rosé · 0,2 l</small></dt><dd>6,90 €</dd></div>
+        <div><dt>Aperitif des Hauses<small>Spritzig, fruchtig, auch alkoholfrei erhältlich · 0,2 l</small></dt><dd>7,90 €</dd></div>
+        <div><dt>Espresso<small>Ein kleiner italienischer Abschluss</small></dt><dd>2,90 €</dd></div>
+      </dl></div>
+    </div><p class="menu-note">Alle Gerichte und Preise sind Beispiele dieser Demo. Informationen zu Allergenen und Zusatzstoffen würde dir unser Team vor Ort geben.</p>
+  </div></section>
+  <section class="section container" id="aktionen" aria-labelledby="special-title">
+    <div class="section-heading"><div><p class="eyebrow">Noch ein guter Grund vorbeizukommen</p><h2 id="special-title">Kleine Auszeit.<br><em>Großer Genuss.</em></h2></div></div>
+    <div class="special-grid">
+      <article class="lunch-card"><p class="eyebrow">Dienstag–Freitag · 12–14 Uhr</p><h3>Mittagspause<br>auf Italienisch.</h3><p>Ein wechselndes Pastagericht, ein kleiner Salat und ein Espresso. Für die Pause, die du dir verdient hast.</p><div class="special-bottom"><strong>16,90 € <small>Beispielpreis</small></strong><a href="#reservieren" aria-label="Tisch für das Mittagsmenü reservieren">↗</a></div><span class="card-sun" aria-hidden="true">✳</span></article>
+      <article class="evening-card"><img src="images/restaurant.jpg" alt="Ein gedeckter Restauranttisch mit Weingläsern und liebevoll angerichteten Speisen" width="1100" height="800" loading="lazy"><div><p class="eyebrow">Der Abend gehört euch</p><h3>Ein Tisch.<br>Tausend Geschichten.</h3><a class="text-link" href="#reservieren">Den nächsten Abend planen ↗</a></div></article>
+    </div>
+  </section>
+  <section class="reservation-section" id="reservieren" aria-labelledby="reservation-title"><div class="reservation-grid container">
+    <div class="reservation-copy"><p class="eyebrow">Wir halten dir einen Platz frei</p><h2 id="reservation-title">Bis gleich?<br><em>Bis bald.</em></h2><p>Ob zu zweit, mit Freunden oder der ganzen Familie: Der schönste Platz ist da, wo alle zusammenkommen.</p><div class="reservation-doodle" aria-hidden="true">✳</div><p class="demo-note">Dies ist eine Restaurant-Demo. Du kannst die Reservierung ausprobieren; es wird kein Tisch gebucht und es werden keine Daten versendet.</p></div>
+        <form id="reservierungsformular" aria-label="Reservierung ausprobieren">
+          <h3>Dein Tisch im Ciao Bella</h3><p class="form-note" id="demo-hinweis">Reservierungsvorschau: Bitte verwende nur Beispieldaten.</p>
           <div class="form-grid">
-            <label>Ihr Name<input name="name" autocomplete="off" placeholder="Zum Beispiel Erika Musterfrau" required maxlength="100"></label>
+            <label>Dein Name<input name="name" autocomplete="off" placeholder="Zum Beispiel Erika Musterfrau" required maxlength="100"></label>
             <label>E-Mail-Adresse<input name="email" type="email" autocomplete="off" placeholder="erika@beispiel.de" required></label>
             <label>Datum<input name="date" type="date" required></label>
             <label>Uhrzeit<select name="time" required><option value="">Bitte wählen</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option></select></label>
             <label>Personen<select name="guests" required><option value="">Bitte wählen</option><option>1 Person</option><option>2 Personen</option><option>3 Personen</option><option>4 Personen</option><option>5 Personen</option><option>6 Personen</option><option>Mehr als 6 Personen</option></select></label>
-            <label>Ihre Wünsche <span>(optional)</span><input name="message" placeholder="Zum Beispiel ein ruhiger Tisch" maxlength="300"></label>
+            <label>Deine Wünsche <span>(optional)</span><input name="message" placeholder="Zum Beispiel ein ruhiger Tisch" maxlength="300"></label>
           </div>
-          <button class="btn dark" type="submit" aria-describedby="demo-hinweis">Reservierung ausprobieren ↗</button>
+          <button class="button" type="submit" aria-describedby="demo-hinweis">Reservierung ausprobieren ↗</button>
           <p id="reservation-status" role="status" tabindex="-1"></p>
           <noscript><p>Die Vorschau der Reservierung benötigt JavaScript. Dies ist eine Demo ohne echte Buchungsmöglichkeit.</p></noscript>
         </form>
-      </section>
-    </main>
-    <footer id="kontakt">
-      <div class="footer-intro"><a class="brand" href="#start">Lindenhof</a><p>Gutes Essen. Gute Zeit. Bei uns.</p><p class="note">Fiktives Restaurant · Website-Beispiel von Vantura Studios. Adresse, Kontaktdaten und Öffnungszeiten sind Beispieldaten.</p></div>
-      <div class="footer-grid">
-        <div><h2>Öffnungszeiten</h2><dl class="hours"><div><dt>Montag</dt><dd>Ruhetag</dd></div><div><dt>Dienstag–Freitag</dt><dd>12–14 &amp; 17–22 Uhr</dd></div><div><dt>Samstag</dt><dd>17–23 Uhr</dd></div><div><dt>Sonntag</dt><dd>12–21 Uhr</dd></div></dl></div>
-        <div><h2>Kontakt &amp; Adresse</h2><address>Musterstraße 12<br>12345 Musterstadt<br>Telefon: 030 / XXXXXXX<br>E-Mail: <a href="mailto:restaurant@example.com">restaurant@example.com</a></address><p class="note">Kontaktangaben als Platzhalter.</p></div>
-        <div><h2>Folgen Sie uns</h2><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><br><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><p class="note">Beispiellinks zu den Plattformen.</p></div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Restaurant Lindenhof · Demo</span><div><a href="/impressum/" target="_blank" rel="noopener">Impressum des Demo-Anbieters</a><a href="/datenschutz/" target="_blank" rel="noopener">Datenschutz</a><a href="/#featured" target="_top">Vantura Studios ↗</a></div></div>
-    </footer>
+  </div></section>
+</main>
+<footer id="kontakt">
+  <div class="container footer-top">
+    <div><a class="wordmark" href="#start">ciao bella<span>TRATTORIA · PIZZERIA</span></a><p>Ein bisschen Italien.<br>Ein schöner Abend.</p></div>
+    <div><h2>Hier findest du uns</h2><address>Musterstraße 12<br>12345 Musterstadt<br><span>Telefon: 030 / XXXXXXX</span><a href="mailto:restaurant@example.com">restaurant@example.com</a></address><p class="fine-print">Beispieladresse und Kontaktdaten.</p></div>
+    <div><h2>Unsere Öffnungszeiten</h2><dl class="hours"><div><dt>Montag</dt><dd>Ruhetag</dd></div><div><dt>Dienstag–Freitag</dt><dd>12–14 &amp; 17–22 Uhr</dd></div><div><dt>Samstag</dt><dd>17–23 Uhr</dd></div><div><dt>Sonntag</dt><dd>12–21 Uhr</dd></div></dl></div>
+    <div><h2>Bleiben wir in Kontakt</h2><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><p class="fine-print">Beispiellinks zu den Plattformen.</p></div>
   </div>
+  <div class="container footer-bottom"><p>© 2026 Ciao Bella · Fiktives Restaurant · Eine Demo von Vantura Studios</p><div><a href="/impressum/" target="_blank" rel="noopener">Impressum</a><a href="/datenschutz/" target="_blank" rel="noopener">Datenschutz</a><a href="/#featured" target="_top">Vantura Studios ↗</a></div></div>
+</footer>
 </body>
 </html>
-
