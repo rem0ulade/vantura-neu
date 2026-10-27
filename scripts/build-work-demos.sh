@@ -87,7 +87,12 @@ build_vite_or_next() {
   pushd "$src" >/dev/null
   if [[ -f package.json ]]; then
     npm install --no-fund --no-audit
-    if [[ -f vite.config.ts || -f vite.config.js || -f vite.config.mjs ]]; then
+    if [[ "$repo" == "proud-together" ]]; then
+      # This repository also has a Vite server build; demos need its static Next export.
+      NEXT_PUBLIC_BASE_PATH="/demos/$slug" npm run build:pages
+      mkdir -p "$dest"
+      rsync -a out/ "$dest/"
+    elif [[ -f vite.config.ts || -f vite.config.js || -f vite.config.mjs ]]; then
       export VITE_BASE="$base"
       if grep -q "base:" vite.config.* 2>/dev/null; then
         npm run build -- --base "$base" 2>/dev/null || npx vite build --base "$base"

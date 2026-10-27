@@ -56,41 +56,22 @@ export const WORK_ITEMS: WorkItem[] = [
     publicPath: '/demos/restaurant/',
   },
   {
-    slug: 'arslan-gartenloewe',
-    preview: { src: '/demos/arslan-gartenloewe/og.png', alt: { en: 'Brand and garden imagery from the Arslan Gartenlöwe project', de: 'Marken- und Gartenmotiv aus dem Projekt Arslan Gartenlöwe' } },
-    repo: 'arslan-gartenloewe',
-    title: { en: 'Arslan Gartenlöwe', de: 'Arslan Gartenlöwe' },
-    blurb: {
-      en: 'A local garden business online: services, credibility and an easy way to get in touch.',
-      de: 'Ein regionaler Gartenbetrieb präsentiert seine Leistungen und macht die Kontaktaufnahme einfach.',
-    },
-    challenge: {
-      en: 'Present gardening services and regional contact details in one accessible website.',
-      de: 'Gartenleistungen und regionale Kontaktmöglichkeiten in einer übersichtlichen Website bündeln.',
-    },
-    result: {
-      en: 'A website built around the services, with local credibility and a direct way to inquire.',
-      de: 'Eine Website rund um die Leistungen, mit regionaler Glaubwürdigkeit und direktem Anfrageweg.',
-    },
-    kind: { en: 'Local business website', de: 'Website für einen lokalen Betrieb' },
-    featured: true,
-    publicPath: '/demos/arslan-gartenloewe/',
-  },
-  {
     slug: 'proud-together',
     repo: 'proud-together',
+    preview: { src: '/demos/proud-together/preview.svg', alt: { en: 'Proud Together association website with a violet design and sculptural rings', de: 'Vereinswebsite Proud Together mit violetter Gestaltung und plastischen Ringformen' } },
+    featured: true,
     title: { en: 'Proud Together', de: 'Proud Together' },
     blurb: {
-      en: 'Association website with calm structure and a clear identity.',
-      de: 'Vereinswebsite mit ruhiger Struktur und klarer Identität.',
+      en: 'My association website with a clear mission, expressive design and ways to get involved.',
+      de: 'Eigene Vereinswebsite mit klarer Mission, lebendiger Gestaltung und Raum für gemeinsames Engagement.',
     },
     challenge: {
       en: 'A young nonprofit needed to look serious without looking corporate.',
-      de: 'Ein junger Verein sollte seriös wirken, ohne nach Konzern auszusehen.',
+      de: 'Einem Verein in Gründung einen einladenden Auftritt für Mission, Projekte und Mitwirkende geben.',
     },
     result: {
-      en: 'A warm identity and pages for mission, events and membership.',
-      de: 'Ein warmes Erscheinungsbild und Seiten für Ziele, Veranstaltungen und Mitgliedschaft.',
+      en: 'Bold colour, sculptural shapes and clear paths to projects, membership and collaboration.',
+      de: 'Kräftige Farben, plastische Formen und klare Wege zu Projekten, Mitgliedschaft und Zusammenarbeit.',
     },
     kind: { en: 'Nonprofit', de: 'Verein' },
     publicPath: '/demos/proud-together/',
@@ -136,11 +117,12 @@ export const WORK_ITEMS: WorkItem[] = [
 ]
 
 export function getWorkSlugs(): string[] {
-  return [...WORK_ITEMS.map((item) => item.slug), 'grace']
+  return [...WORK_ITEMS.map((item) => item.slug), 'grace', 'arslan-gartenloewe']
 }
 
 export function getWorkItem(slug: string): WorkItem | undefined {
-  return WORK_ITEMS.find((item) => item.slug === (slug === 'grace' ? 'restaurant' : slug))
+  const resolvedSlug = slug === 'grace' ? 'restaurant' : slug === 'arslan-gartenloewe' ? 'proud-together' : slug
+  return WORK_ITEMS.find((item) => item.slug === resolvedSlug)
 }
 
 export function getFeaturedWork(): WorkItem[] {

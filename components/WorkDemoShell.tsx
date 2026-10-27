@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { BookingLink } from './webdesign/BookingLink'
 import type { Locale } from '@/lib/webdesign-content'
-import { t, workHref } from '@/lib/webdesign-content'
+import { homeHref, t } from '@/lib/webdesign-content'
 
 export function WorkDemoShell({
   locale,
@@ -20,7 +20,7 @@ export function WorkDemoShell({
     <div className="relative h-[100dvh] w-full overflow-hidden bg-ink">
       <div className="absolute inset-x-0 top-0 z-50 flex h-16 items-center justify-between gap-3 border-b-2 border-ink bg-paper px-3 sm:px-4">
         <Link
-          href={workHref(locale)}
+          href={`${homeHref(locale)}#featured`}
           className="inline-flex min-h-11 items-center border-2 border-ink bg-signal px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-ink shadow-[3px_3px_0_#111] transition hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
         >
           {copy.workBack}
