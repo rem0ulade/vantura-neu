@@ -35,25 +35,25 @@ export const WORK_ITEMS: WorkItem[] = [
     publicPath: '/demos/bonsai-home/',
   },
   {
-    slug: 'grace',
-    preview: { src: '/portfolio-websites/grace.webp', alt: { en: 'Website preview of my Grace software project', de: 'Website-Vorschau meines Softwareprojekts Grace' } },
-    repo: 'grace_webpage_v1',
-    title: { en: 'Grace', de: 'Grace' },
+    slug: 'restaurant',
+    preview: { src: '/demos/restaurant/preview.svg', alt: { en: 'Restaurant Lindenhof demo with menu, seasonal specials and table reservation', de: 'Restaurant-Demo Lindenhof mit Speisekarte, saisonalen Angeboten und Tischreservierung' } },
+    repo: 'vantura-neu',
+    title: { en: 'Restaurant Lindenhof', de: 'Restaurant Lindenhof' },
     blurb: {
-      en: 'A website for my own software product, explaining its features and showing how it works.',
-      de: 'Website für mein eigenes Softwareprodukt: Funktionen verständlich erklären und das Produkt zeigen.',
+      en: 'A German-language restaurant concept with a menu, seasonal specials and a table reservation demo.',
+      de: 'Restaurant-Beispiel mit Speisekarte, saisonalen Angeboten und einer Demo zur Tischreservierung.',
     },
     challenge: {
-      en: 'A technical product needed a public face that non-engineers could trust.',
-      de: 'Ein technisches Produkt brauchte einen öffentlichen Auftritt, dem auch Nicht-Techniker vertrauen.',
+      en: 'Help guests discover the food, find opening hours and plan their visit on any device.',
+      de: 'Gästen Appetit machen, Speisen und Öffnungszeiten zeigen und den Weg zum Tisch einfach gestalten.',
     },
     result: {
-      en: 'A clear offer, structured pages and visual examples of the product.',
-      de: 'Eine klare Angebotsbeschreibung, strukturierte Seiten und anschauliche Einblicke in das Produkt.',
+      en: 'A responsive restaurant demo with clear menu categories, current offers and an interactive reservation preview.',
+      de: 'Eine responsive Restaurant-Demo mit übersichtlicher Speisekarte, aktuellen Aktionen und interaktiver Reservierungsvorschau.',
     },
-    kind: { en: 'Personal software project', de: 'Eigenes Softwareprojekt' },
+    kind: { en: 'Restaurant website concept', de: 'Restaurant-Website · Konzept' },
     featured: true,
-    publicPath: '/demos/grace/',
+    publicPath: '/demos/restaurant/',
   },
   {
     slug: 'arslan-gartenloewe',
@@ -136,13 +136,14 @@ export const WORK_ITEMS: WorkItem[] = [
 ]
 
 export function getWorkSlugs(): string[] {
-  return WORK_ITEMS.map((item) => item.slug)
+  return [...WORK_ITEMS.map((item) => item.slug), 'grace']
 }
 
 export function getWorkItem(slug: string): WorkItem | undefined {
-  return WORK_ITEMS.find((item) => item.slug === slug)
+  return WORK_ITEMS.find((item) => item.slug === (slug === 'grace' ? 'restaurant' : slug))
 }
 
 export function getFeaturedWork(): WorkItem[] {
   return WORK_ITEMS.filter((item) => item.featured)
 }
+

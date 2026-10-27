@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Restaurant Lindenhof – eine Restaurant-Demo mit saisonaler Küche, Speisekarte, aktuellen Angeboten und Tischreservierung.">
+  <title>Restaurant Lindenhof · Gemeinsam gut essen</title>
+  <link rel="stylesheet" href="restaurant.css">
+  <script src="restaurant.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <div class="wrap">
+    <nav class="top" aria-label="Hauptnavigation">
+      <a class="brand" href="#start"><span class="brand-mark" aria-hidden="true">L</span><span>Lindenhof<small>Restaurant &amp; Begegnung</small></span></a>
+      <button class="nav-toggle" type="button" aria-controls="navigation" aria-expanded="false" hidden>Menü öffnen</button>
+      <div class="nav-links" id="navigation">
+        <a href="#speisekarte">Speisekarte</a><a href="#aktionen">Aktionen</a><a href="#ueber-uns">Über uns</a><a href="#kontakt">Kontakt</a><a class="nav-cta" href="#reservieren">Tisch reservieren ↗</a>
+      </div>
+    </nav>
+    <main id="inhalt">
+      <header class="hero" id="start">
+        <div class="hero-copy">
+          <p class="eyebrow">Frisch gekocht. Herzlich serviert.</p>
+          <h1>Gutes Essen.<span>Gute Zeit.</span>Bei uns.</h1>
+          <p class="hero-sub">Willkommen im Lindenhof. Freuen Sie sich auf saisonale Lieblingsgerichte, frische Zutaten und einen Platz, an dem man gerne etwas länger bleibt.</p>
+          <div class="cta-row"><a class="btn primary" href="#reservieren">Tisch reservieren ↗</a><a class="btn secondary" href="#speisekarte">Speisekarte entdecken</a></div>
+          <ul class="hero-proof"><li>Saisonale Küche</li><li>Vegetarische Auswahl</li><li>Mit Liebe zubereitet</li></ul>
+        </div>
+        <figure class="hero-visual">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Einladend gedeckter Tisch mit Weingläsern im Restaurant" width="900" height="1100" fetchpriority="high">
+          <figcaption><span>Ein Platz für gute Momente.</span><a href="#ueber-uns" aria-label="Unser Restaurant kennenlernen">↗</a></figcaption>
+        </figure>
+      </header>
+      <div class="ribbon"><span>Saisonal ✦ Frisch ✦ Herzlich ✦ Gemeinsam genießen</span></div>
+      <section id="aktionen" aria-labelledby="aktionen-titel">
+        <div class="section-head"><p class="eyebrow">Aktuell im Lindenhof</p><h2 id="aktionen-titel">Heute etwas<br>Besonderes.</h2></div>
+        <div class="offers">
+          <article class="offer featured"><p class="eyebrow">Dienstag bis Freitag · 12–14 Uhr</p><h3>Die Mittagspause<br>schmeckt besser hier.</h3><p>Ein wechselndes Hauptgericht und eine kleine Vorspeise. Frisch gekocht für Ihre Pause.</p><p class="price">Mittagsmenü <span>XX,XX €</span></p><a href="#reservieren">Platz für die Mittagspause sichern ↗</a></article>
+          <article class="offer"><p class="eyebrow">Unsere saisonale Empfehlung</p><h3>Herbst auf<br>dem Teller.</h3><p>Cremiges Kürbisrisotto mit Ofengemüse, gerösteten Kernen und frischen Kräutern. Auf Wunsch vegan.</p><p class="price">Saisonales Gericht <span>XX,XX €</span></p><a href="#speisekarte">Die Speisekarte ansehen ↗</a></article>
+        </div>
+        <p class="note">Beispielangebote dieser Restaurant-Demo. Alle Preise sind Platzhalter.</p>
+      </section>
+      <section id="speisekarte" aria-labelledby="speisekarte-titel">
+        <div class="section-head"><p class="eyebrow">Mit Appetit entdecken</p><h2 id="speisekarte-titel">Unsere<br>Speisekarte.</h2></div>
+        <nav class="menu-categories" aria-label="Kategorien der Speisekarte"><a href="#vorspeisen">Vorspeisen</a><a href="#hauptgerichte">Hauptgerichte</a><a href="#desserts">Desserts</a><a href="#getraenke">Getränke</a></nav>
+        <div class="menu-grid">
+          <article class="menu-category" id="vorspeisen"><p class="eyebrow">01 · Der Anfang</p><h3>Vorspeisen</h3>
+            <dl><div><dt>Geröstete Tomatensuppe <small>Mit Basilikum und hausgemachtem Brot · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Salat der Saison <small>Blattsalate, knackiges Gemüse und Kräuterdressing · vegan</small></dt><dd>XX,XX €</dd></div><div><dt>Burrata mit Tomaten <small>Mit Rucola, Olivenöl und geröstetem Brot · vegetarisch</small></dt><dd>XX,XX €</dd></div></dl>
+          </article>
+          <article class="menu-category" id="hauptgerichte"><p class="eyebrow">02 · Das Herzstück</p><h3>Hauptgerichte</h3>
+            <dl><div><dt>Kürbisrisotto <small>Ofengemüse, geröstete Kerne und Kräuter · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Gebratenes Fischfilet <small>Mit Rosmarinkartoffeln und saisonalem Gemüse</small></dt><dd>XX,XX €</dd></div><div><dt>Rindersteak vom Grill <small>Mit Kartoffelspalten, Kräuterbutter und kleinem Salat</small></dt><dd>XX,XX €</dd></div></dl>
+          </article>
+          <article class="menu-category" id="desserts"><p class="eyebrow">03 · Zum Abschluss</p><h3>Desserts</h3>
+            <dl><div><dt>Warmer Schokoladenkuchen <small>Mit Vanilleeis und Beeren · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Apfelstreusel aus dem Ofen <small>Mit Zimt und Vanillesoße · vegetarisch</small></dt><dd>XX,XX €</dd></div><div><dt>Sorbet der Saison <small>Zwei Kugeln mit frischen Früchten · vegan</small></dt><dd>XX,XX €</dd></div></dl>
+          </article>
+          <article class="menu-category" id="getraenke"><p class="eyebrow">04 · Im Glas</p><h3>Getränke</h3>
+            <dl><div><dt>Hausgemachte Limonade <small>Zitrone, Minze und ein Hauch Ingwer · 0,4 l</small></dt><dd>XX,XX €</dd></div><div><dt>Mineralwasser <small>Still oder sprudelnd · 0,75 l</small></dt><dd>XX,XX €</dd></div><div><dt>Wein des Hauses <small>Weiß, Rot oder Rosé · 0,2 l</small></dt><dd>XX,XX €</dd></div><div><dt>Kaffee oder Espresso <small>Frisch gemahlen · eine Tasse</small></dt><dd>XX,XX €</dd></div></dl>
+          </article>
+        </div>
+        <p class="note">Alle Preise sind Platzhalter. Informationen zu Allergenen und Zusatzstoffen erhalten Sie bei unserem Team.</p>
+      </section>
+      <section class="about-panel" id="ueber-uns" aria-labelledby="ueber-uns-titel">
+        <div><p class="eyebrow">Über uns</p><h2 id="ueber-uns-titel">Am liebsten<br>gemeinsam.</h2></div>
+        <div class="about-copy"><p>Wir glauben, dass gutes Essen Menschen zusammenbringt. Deshalb kochen wir im Lindenhof mit frischen Zutaten, einer großen Portion Sorgfalt und Freude an dem, was gerade Saison hat.</p><p>Ob zum Mittagessen, für einen Abend zu zweit oder eine große Runde mit Freunden: Bei uns stehen Gastfreundschaft und ehrlicher Genuss im Mittelpunkt.</p><ul><li><strong>Saisonal gedacht</strong><span>Unsere Küche richtet sich nach den Zutaten der Jahreszeit.</span></li><li><strong>Für alle am Tisch</strong><span>Auch vegetarische Gerichte gehören selbstverständlich dazu.</span></li><li><strong>Herzlich empfangen</strong><span>Ein gutes Essen beginnt für uns mit einem guten Gefühl.</span></li></ul></div>
+      </section>
+      <section class="reservation" id="reservieren" aria-labelledby="reservieren-titel">
+        <p class="eyebrow">Wir freuen uns auf Sie</p><h2 id="reservieren-titel">Ihr Platz<br>ist schon im Kopf.</h2>
+        <div class="reservation-bottom"><p>Ein Abend zu zweit oder ein Tisch für die ganze Runde? Probieren Sie unsere Reservierungsanfrage aus.</p><a class="btn dark" href="#reservierungsformular">Tisch reservieren ↗</a></div>
+        <form id="reservierungsformular">
+          <p class="form-note" id="demo-hinweis">Demo: Es werden keine Daten versendet und keine echten Tische reserviert. Bitte verwenden Sie Beispieldaten.</p>
+          <div class="form-grid">
+            <label>Ihr Name<input name="name" autocomplete="off" placeholder="Zum Beispiel Erika Musterfrau" required maxlength="100"></label>
+            <label>E-Mail-Adresse<input name="email" type="email" autocomplete="off" placeholder="erika@beispiel.de" required></label>
+            <label>Datum<input name="date" type="date" required></label>
+            <label>Uhrzeit<select name="time" required><option value="">Bitte wählen</option><option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>17:00</option><option>17:30</option><option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option></select></label>
+            <label>Personen<select name="guests" required><option value="">Bitte wählen</option><option>1 Person</option><option>2 Personen</option><option>3 Personen</option><option>4 Personen</option><option>5 Personen</option><option>6 Personen</option><option>Mehr als 6 Personen</option></select></label>
+            <label>Ihre Wünsche <span>(optional)</span><input name="message" placeholder="Zum Beispiel ein ruhiger Tisch" maxlength="300"></label>
+          </div>
+          <button class="btn dark" type="submit" aria-describedby="demo-hinweis">Reservierung ausprobieren ↗</button>
+          <p id="reservation-status" role="status" tabindex="-1"></p>
+          <noscript><p>Die Vorschau der Reservierung benötigt JavaScript. Dies ist eine Demo ohne echte Buchungsmöglichkeit.</p></noscript>
+        </form>
+      </section>
+    </main>
+    <footer id="kontakt">
+      <div class="footer-intro"><a class="brand" href="#start">Lindenhof</a><p>Gutes Essen. Gute Zeit. Bei uns.</p><p class="note">Fiktives Restaurant · Website-Beispiel von Vantura Studios. Adresse, Kontaktdaten und Öffnungszeiten sind Beispieldaten.</p></div>
+      <div class="footer-grid">
+        <div><h2>Öffnungszeiten</h2><dl class="hours"><div><dt>Montag</dt><dd>Ruhetag</dd></div><div><dt>Dienstag–Freitag</dt><dd>12–14 &amp; 17–22 Uhr</dd></div><div><dt>Samstag</dt><dd>17–23 Uhr</dd></div><div><dt>Sonntag</dt><dd>12–21 Uhr</dd></div></dl></div>
+        <div><h2>Kontakt &amp; Adresse</h2><address>Musterstraße 12<br>12345 Musterstadt<br>Telefon: 030 / XXXXXXX<br>E-Mail: <a href="mailto:restaurant@example.com">restaurant@example.com</a></address><p class="note">Kontaktangaben als Platzhalter.</p></div>
+        <div><h2>Folgen Sie uns</h2><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><br><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook ↗</a><p class="note">Beispiellinks zu den Plattformen.</p></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Restaurant Lindenhof · Demo</span><div><a href="/impressum/" target="_blank" rel="noopener">Impressum des Demo-Anbieters</a><a href="/datenschutz/" target="_blank" rel="noopener">Datenschutz</a><a href="/#featured" target="_top">Vantura Studios ↗</a></div></div>
+    </footer>
+  </div>
+</body>
+</html>
+

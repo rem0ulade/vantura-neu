@@ -25,7 +25,7 @@ export const webdesignCopy = {
     ],
     featuredEyebrow: 'Website examples',
     featuredTitle: 'See what your website could look like.',
-    featuredLead: 'A local business, a product and my own software project: three examples of different website needs. Explore the design and the work behind it.',
+    featuredLead: 'A local business, a product and a restaurant concept: three examples of different website needs. Explore the design and the work behind it.',
     featuredChallenge: 'The brief',
     featuredResult: 'The implementation',
     featuredCta: 'Explore website',
@@ -189,7 +189,7 @@ export const webdesignCopy = {
     ],
     featuredEyebrow: 'Website-Beispiele',
     featuredTitle: 'So könnte auch dein Auftritt aussehen.',
-    featuredLead: 'Ein lokaler Betrieb, ein Produkt und mein eigenes Softwareprojekt: drei Beispiele für unterschiedliche Anforderungen. Schau dir Gestaltung und Umsetzung direkt an.',
+    featuredLead: 'Ein lokaler Betrieb, ein Produkt und ein Restaurant-Konzept: drei Beispiele für unterschiedliche Anforderungen. Schau dir Gestaltung und Umsetzung direkt an.',
     featuredChallenge: 'Die Aufgabe',
     featuredResult: 'Die Umsetzung',
     featuredCta: 'Website ansehen',
@@ -345,3 +345,4 @@ export function workHref(locale: Locale, slug?: string) {
 export function homeHref(locale: Locale) {
   return locale === 'de' ? '/' : '/en/'
 }
+

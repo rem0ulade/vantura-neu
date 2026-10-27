@@ -27,7 +27,14 @@ export function WorkDemoShell({
       <BookingLink placement="project-demo" className="fixed right-4 top-4 z-50 border-2 border-ink bg-signal px-3 py-2 font-mono text-[11px] font-bold uppercase shadow-[4px_4px_0_#111]">
         {copy.navCta}
       </BookingLink>
-      <iframe title={title} src={src} className="absolute inset-0 h-full w-full border-0 bg-paper" />
+      <iframe
+        title={title}
+        src={src}
+        className={src === '/demos/restaurant/'
+          ? 'absolute inset-x-0 bottom-0 top-16 h-[calc(100dvh-4rem)] w-full border-0 bg-paper'
+          : 'absolute inset-0 h-full w-full border-0 bg-paper'}
+      />
     </div>
   )
 }
+

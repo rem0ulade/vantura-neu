@@ -150,7 +150,8 @@ build_vite_or_next() {
 
 echo "==> Building work demos into public/demos"
 
-for pair in "bonsai-home:bonsai-home" "onebyone-mockup:onebyone" "grace_webpage_v1:grace"; do
+# The restaurant concept is maintained directly in public/demos/restaurant/.
+for pair in "bonsai-home:bonsai-home" "onebyone-mockup:onebyone"; do
   repo="${pair%%:*}"
   slug="${pair##*:}"
   echo "--> $repo → $slug (static)"
@@ -179,3 +180,4 @@ done
 
 echo "==> Done. Demos in $PUBLIC"
 ls -la "$PUBLIC"
+

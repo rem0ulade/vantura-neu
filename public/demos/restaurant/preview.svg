@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title">
+<title id="title">Restaurant Lindenhof – Vorschau der Restaurant-Website</title>
+<rect width="1440" height="900" fill="#070708"/>
+<g fill="#f2f2f4" font-family="Arial,sans-serif">
+<text x="80" y="82" font-size="28" font-weight="700">Lindenhof</text>
+<g font-size="17" fill="#b2b2bc"><text x="720" y="80">Speisekarte</text><text x="860" y="80">Aktionen</text><text x="980" y="80">Über uns</text><text x="1100" y="80">Kontakt</text></g>
+<text x="1200" y="80" fill="#bdfc57" font-size="16">Reservieren ↗</text>
+<path d="M80 120H1360" stroke="#ffffff" stroke-opacity=".14"/>
+<text x="80" y="218" fill="#bdfc57" font-size="17" letter-spacing="3">FRISCH GEKOCHT. HERZLICH SERVIERT.</text>
+<g font-size="100" font-weight="800" letter-spacing="-6"><text x="75" y="340">Gutes Essen.</text><text x="75" y="446" fill="#95959e">Gute Zeit.</text><text x="75" y="552">Bei uns.</text></g>
+<g font-size="23" fill="#b2b2bc"><text x="80" y="615">Saisonale Lieblingsgerichte, frische Zutaten</text><text x="80" y="650">und ein Platz zum Zusammenkommen.</text></g>
+<rect x="80" y="690" width="245" height="60" rx="30" fill="#bdfc57"/><text x="108" y="728" fill="#070708" font-size="21" font-weight="700">Tisch reservieren ↗</text>
+<rect x="340" y="690" width="250" height="60" rx="30" fill="none" stroke="#ffffff" stroke-opacity=".25"/><text x="368" y="728" font-size="20">Speisekarte entdecken</text>
+<rect x="760" y="185" width="595" height="565" rx="28" fill="#141417" stroke="#ffffff" stroke-opacity=".14"/>
+<path d="M780 640L1330 260M780 350L1330 680" stroke="#8b5cf6" stroke-opacity=".12" stroke-width="60"/>
+<circle cx="1055" cy="448" r="194" fill="#262629"/><circle cx="1055" cy="448" r="167" fill="#e1e0da"/><circle cx="1055" cy="448" r="137" fill="#c9c8bd"/>
+<g fill="#c87c36"><path d="M969 382Q1057 330 1140 405L1120 465Q1030 414 968 443Z"/><path d="M980 466Q1060 432 1130 483L1104 530Q1030 490 990 519Z"/></g>
+<g fill="#6c8d3b"><ellipse cx="955" cy="470" rx="16" ry="32" transform="rotate(-24 955 470)"/><ellipse cx="1112" cy="365" rx="17" ry="32" transform="rotate(45 1112 365)"/><ellipse cx="1085" cy="545" rx="15" ry="30" transform="rotate(70 1085 545)"/><ellipse cx="1159" cy="459" rx="13" ry="24"/></g>
+<g fill="#e5be73"><circle cx="1000" cy="382" r="7"/><circle cx="1077" cy="399" r="6"/><circle cx="1052" cy="493" r="7"/><circle cx="1110" cy="478" r="6"/></g>
+<text x="800" y="710" font-size="20">Ein Platz für gute Momente.</text><text x="1292" y="710" fill="#bdfc57" font-size="28">↗</text>
+<rect x="0" y="810" width="1440" height="90" fill="#bdfc57"/><text x="720" y="867" text-anchor="middle" fill="#070708" font-size="35" font-weight="800">SAISONAL ✦ FRISCH ✦ HERZLICH ✦ GEMEINSAM GENIESSEN</text>
+</g></svg>
+
