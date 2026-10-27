@@ -51,7 +51,7 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
                       width={1440}
                       height={900}
                       sizes="(min-width: 1024px) 520px, 100vw"
-                      className="aspect-[16/10] w-full object-cover object-top"
+                      className="block aspect-[16/10] w-full bg-ink object-contain"
                     />
                   </Link>
                 )}
@@ -69,7 +69,7 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
                   {copy.featuredCta} →
                 </Link>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              <div className="grid content-start gap-4 sm:grid-cols-2 lg:grid-cols-1">
                 <div className="border-2 border-ink bg-paper p-4 transition group-hover:border-signal">
                   <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-signal">
                     {copy.featuredChallenge}
@@ -93,3 +93,4 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
     </section>
   )
 }
+

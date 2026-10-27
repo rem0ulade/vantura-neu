@@ -22,7 +22,10 @@ export function Nav({ locale }: { locale: Locale }) {
           Vantura
           <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-signal transition-all duration-300 group-hover:w-full" />
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-5">
+        <nav aria-label={locale === 'de' ? 'Hauptnavigation' : 'Main navigation'} className="flex items-center gap-2 sm:gap-5">
+          <a href="#angebote" className="hidden font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-ink transition hover:text-signal md:inline">
+            {locale === 'de' ? 'Pakete & Preise' : 'Packages & prices'}
+          </a>
           <Link
             href="#featured"
             className="hidden font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-ink transition hover:text-signal sm:inline"
@@ -52,6 +55,12 @@ export function Nav({ locale }: { locale: Locale }) {
           </BookingLink>
         </nav>
       </div>
+      <nav aria-label={locale === 'de' ? 'Seitenbereiche' : 'Page sections'} className="flex gap-5 overflow-x-auto border-t border-ink/15 px-4 md:hidden">
+        {[{ href: '#featured', label: copy.navWork }, { href: '#angebote', label: locale === 'de' ? 'Pakete' : 'Packages' }, { href: '#leistungen', label: copy.navServices }, { href: '#studio', label: copy.navAbout }].map((item) => (
+          <a key={item.href} href={item.href} className="inline-flex min-h-11 shrink-0 items-center font-mono text-[10px] font-bold uppercase tracking-[0.08em] hover:text-signal">{item.label}</a>
+        ))}
+      </nav>
     </header>
   )
 }
+

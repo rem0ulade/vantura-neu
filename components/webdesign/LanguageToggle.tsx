@@ -21,7 +21,8 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
         type="button"
         onClick={() => changeLanguage('en')}
         className={`px-2.5 py-1.5 transition ${locale === 'en' ? 'bg-ink text-paper' : 'text-ink hover:bg-ink/10'}`}
-        aria-label="Switch to English"
+        aria-label={locale === 'de' ? 'Auf Englisch wechseln' : 'Switch to English'}
+        aria-pressed={locale === 'en'}
       >
         EN
       </button>
@@ -29,10 +30,12 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
         type="button"
         onClick={() => changeLanguage('de')}
         className={`px-2.5 py-1.5 transition ${locale === 'de' ? 'bg-ink text-paper' : 'text-ink hover:bg-ink/10'}`}
-        aria-label="Auf Deutsch wechseln"
+        aria-label={locale === 'de' ? 'Auf Deutsch wechseln' : 'Switch to German'}
+        aria-pressed={locale === 'de'}
       >
         DE
       </button>
     </div>
   )
 }
+

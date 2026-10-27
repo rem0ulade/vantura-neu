@@ -45,7 +45,7 @@ export const WORK_ITEMS: WorkItem[] = [
     },
     challenge: {
       en: 'Help guests discover the food, find opening hours and plan their visit on any device.',
-      de: 'Gästen Appetit machen, Speisen und Öffnungszeiten zeigen und den Weg zum Tisch einfach gestalten.',
+      de: 'Gästen die Küche vorstellen, Speisekarte und Öffnungszeiten zeigen und Reservierungen einfach machen.',
     },
     result: {
       en: 'A responsive restaurant demo with clear menu categories, current offers and an interactive reservation preview.',
@@ -62,7 +62,7 @@ export const WORK_ITEMS: WorkItem[] = [
     title: { en: 'Arslan Gartenlöwe', de: 'Arslan Gartenlöwe' },
     blurb: {
       en: 'A local garden business online: services, credibility and an easy way to get in touch.',
-      de: 'Gartenbetrieb online: Leistungen, Vertrauen und ein klarer Weg zur Anfrage.',
+      de: 'Ein regionaler Gartenbetrieb präsentiert seine Leistungen und macht die Kontaktaufnahme einfach.',
     },
     challenge: {
       en: 'Present gardening services and regional contact details in one accessible website.',

@@ -89,7 +89,7 @@ export const webdesignCopy = {
     workCta: 'Open demo',
     workIndexTitle: 'Selected work',
     workIndexLead: 'Website examples, personal projects and design concepts. Each entry describes the work, with a demo to explore.',
-    workBack: '← Back to work',
+    workBack: '← All examples',
     processEyebrow: 'Your project',
     processTitle: 'A clear path to your new website.',
     process: [
@@ -133,7 +133,7 @@ export const webdesignCopy = {
     faq: [
       {
         q: 'What will my website cost?',
-        a: 'The price depends on the number of pages, content and functionality. After our free discovery call, you receive a fixed-price proposal with a clear scope. Ongoing costs such as hosting are listed separately.'
+        a: 'Website setup starts at €690 excluding VAT, with ongoing care from €59 per month excluding VAT. Packages differ in scope, functionality and care. After the discovery call, you receive a binding fixed-price proposal for the agreed scope.'
       },
       {
         q: 'What happens on the free discovery call?',
@@ -149,7 +149,7 @@ export const webdesignCopy = {
       },
       {
         q: 'What happens after launch?',
-        a: 'You get a handover and an introduction to the agreed solution. We define how you’ll update content during planning. Hosting, ongoing care and further changes are available as optional services.'
+        a: 'You get an introduction to your website, followed by hosting and care in your chosen package. A monthly allowance for changes is included. Care has a minimum term of 12 months, then cancellation is possible monthly.'
       }
     ],
     ctaTitle: 'Let’s talk about your website.',
@@ -164,7 +164,7 @@ export const webdesignCopy = {
     emailHref: CONTACT_HREF,
     bookingMeta: '30 minutes · Free & no obligation · Video call via Google Meet',
     allWork: 'More project examples',
-    servicesExtras: 'Need an online shop or ongoing hosting and care? We can include those in your proposal.',
+    servicesExtras: 'Need an online shop or additional features? We discuss the scope on our discovery call. For company websites, explore the three packages below, including hosting and care.',
     emailAlternative: 'Prefer to email?',
   },
   de: {
@@ -175,7 +175,7 @@ export const webdesignCopy = {
     heroBrand: 'Webdesign für Unternehmen · Bei Hamburg · Deutschlandweit',
     heroTitle: 'Deine neue Website. Gemacht für mehr Anfragen.',
     heroText:
-      'Ich bin Jonathan. Ich gestalte und entwickle Websites für kleine Unternehmen und Selbstständige – von der Seitenstruktur bis zur Veröffentlichung. Damit Besucher dein Angebot verstehen und einfach Kontakt aufnehmen können.',
+      'Ich bin Jonathan. Ich gestalte und entwickle Websites für kleine Unternehmen und Selbstständige – von der ersten Idee bis zur Veröffentlichung. Dein Angebot wird verständlich, dein Unternehmen sichtbar und der Weg zur Anfrage einfach.',
     heroCta: 'Kostenloses Erstgespräch buchen',
     heroSecondary: 'Website-Beispiele ansehen',
     heroNote: 'Design & Umsetzung aus einer Hand · Festpreis vor dem Projektstart',
@@ -189,7 +189,7 @@ export const webdesignCopy = {
     ],
     featuredEyebrow: 'Website-Beispiele',
     featuredTitle: 'So könnte auch dein Auftritt aussehen.',
-    featuredLead: 'Ein lokaler Betrieb, ein Produkt und ein Restaurant-Konzept: drei Beispiele für unterschiedliche Anforderungen. Schau dir Gestaltung und Umsetzung direkt an.',
+    featuredLead: 'Vom lokalen Betrieb bis zum Restaurant: Entdecke unterschiedliche Website-Beispiele und probiere die Seiten direkt aus.',
     featuredChallenge: 'Die Aufgabe',
     featuredResult: 'Die Umsetzung',
     featuredCta: 'Website ansehen',
@@ -253,7 +253,7 @@ export const webdesignCopy = {
     workCta: 'Demo öffnen',
     workIndexTitle: 'Ausgewählte Arbeiten',
     workIndexLead: 'Website-Beispiele, eigene Projekte und Gestaltungskonzepte. Zu jedem Eintrag findest du die Umsetzung und eine Demo zum Ansehen.',
-    workBack: '← Zurück zu den Arbeiten',
+    workBack: '← Alle Beispiele',
     processEyebrow: 'Dein Projekt',
     processTitle: 'In klaren Schritten zur neuen Website.',
     process: [
@@ -261,13 +261,13 @@ export const webdesignCopy = {
         number: '01',
         title: 'Kostenlos kennenlernen',
         duration: '30 Minuten',
-        text: 'Wir klären Ziele, Zielgruppe, Inhalte und Rahmen. Du bekommst eine ehrliche Einschätzung, auch wenn ich nicht der Richtige bin.',
+        text: 'Wir besprechen dein Unternehmen, deine Ziele und was deine Website leisten soll. Du bekommst eine erste Empfehlung zu Umfang, Paket und nächsten Schritten.',
       },
       {
         number: '02',
         title: 'Angebot',
         duration: 'innerhalb weniger Tage',
-        text: 'Umfang, Zeitplan und Festpreis, bevor die eigentliche Arbeit beginnt. Laufende Kosten sind separat ausgewiesen.',
+        text: 'Du erhältst ein Angebot mit klaren Leistungen, Zeitplan und Festpreis. Erstellung und monatliche Betreuung sind getrennt ausgewiesen.',
       },
       {
         number: '03',
@@ -279,7 +279,7 @@ export const webdesignCopy = {
         number: '04',
         title: 'Veröffentlichung',
         duration: 'Übergabe inklusive',
-        text: 'Begleitung beim Livegang, grundlegende Suchmaschinenoptimierung und eine Einführung in die vereinbarte Lösung. Auf Wunsch Hosting und Betreuung danach.',
+        text: 'Deine Website geht auf deiner Domain online. Du erhältst eine Einführung; anschließend übernehme ich den Betrieb und die Betreuung im gewählten Paket.',
       },
     ],
     aboutEyebrow: 'Dein Ansprechpartner',
@@ -289,7 +289,7 @@ export const webdesignCopy = {
     aboutPoints: [
       'Inhabergeführt: keine Übergabe zwischen Verkauf und Umsetzung',
       'Design und Code aus einer Hand',
-      'Hosting und Betreuung, wenn du alles aus einer Hand willst',
+      'Ein fester Ansprechpartner auch nach dem Livegang',
     ],
     aboutCta: 'Kostenloses Erstgespräch buchen',
     faqEyebrow: 'FAQ',
@@ -297,7 +297,7 @@ export const webdesignCopy = {
     faq: [
       {
         q: 'Was kostet meine neue Website?',
-        a: 'Der Preis hängt vom Umfang ab: Seitenzahl, Inhalte und Funktionen machen den Unterschied. Nach unserem kostenlosen Erstgespräch erhältst du ein Angebot mit klar beschriebenen Leistungen und Festpreis. Laufende Kosten wie Hosting werden separat ausgewiesen.'
+        a: 'Die Erstellung startet bei 690 € netto einmalig, die laufende Betreuung bei 59 € netto pro Monat. Die Pakete unterscheiden sich in Seitenumfang, Funktionen und Betreuung. Nach dem Erstgespräch erhältst du ein verbindliches Angebot für den vereinbarten Umfang. Alle Preise verstehen sich zuzüglich gesetzlicher Umsatzsteuer.'
       },
       {
         q: 'Was passiert im kostenlosen Erstgespräch?',
@@ -313,7 +313,7 @@ export const webdesignCopy = {
       },
       {
         q: 'Was passiert nach der Veröffentlichung?',
-        a: 'Du erhältst eine Übergabe und eine Einführung in die vereinbarte Lösung. Wie du Inhalte ändern kannst, legen wir bei der Planung fest. Hosting, laufende Betreuung und weitere Änderungen kannst du auf Wunsch zusätzlich beauftragen.'
+        a: 'Du erhältst eine Einführung in deine Website. Danach übernehme ich Hosting und Betreuung im gewählten Paket. Ein monatliches Zeitbudget für Änderungen ist enthalten. Die Betreuung läuft zunächst 12 Monate und ist anschließend monatlich kündbar.'
       }
     ],
     ctaTitle: 'Lass uns über deine Website sprechen.',
@@ -328,7 +328,7 @@ export const webdesignCopy = {
     emailHref: CONTACT_HREF_DE,
     bookingMeta: '30 Minuten · Kostenlos & unverbindlich · Videogespräch per Google Meet',
     allWork: 'Weitere Projektbeispiele',
-    servicesExtras: 'Du brauchst einen Online-Shop oder möchtest Hosting und Betreuung abgeben? Das berücksichtigen wir auf Wunsch im Angebot.',
+    servicesExtras: 'Du brauchst einen Online-Shop oder zusätzliche Funktionen? Wir klären den Umfang im Erstgespräch. Für klassische Firmenwebsites findest du unten drei Pakete inklusive Hosting und Betreuung.',
     emailAlternative: 'Lieber per E-Mail?',
   },
 } as const

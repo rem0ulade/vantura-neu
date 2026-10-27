@@ -3,6 +3,7 @@ import { Hero } from './Hero'
 import { Strip } from './Strip'
 import { FeaturedWork } from './FeaturedWork'
 import { Services } from './Services'
+import { Offers } from './Offers'
 import { Process } from './Process'
 import { About } from './About'
 import { Faq } from './Faq'
@@ -19,6 +20,7 @@ export function WebdesignHome({ locale }: { locale: Locale }) {
         <Strip locale={locale} />
         <FeaturedWork locale={locale} />
         <Services locale={locale} />
+        <Offers locale={locale} />
         <Process locale={locale} />
         <About locale={locale} />
         <Faq locale={locale} />
@@ -28,3 +30,4 @@ export function WebdesignHome({ locale }: { locale: Locale }) {
     </div>
   )
 }
+

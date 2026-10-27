@@ -24,7 +24,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: 8rem;
 }
 
 body {
@@ -89,3 +89,4 @@ button {
   outline: 3px solid var(--color-ink);
   outline-offset: 4px;
 }
+
