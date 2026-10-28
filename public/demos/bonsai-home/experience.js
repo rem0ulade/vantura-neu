@@ -6,7 +6,15 @@
   const canvas = document.querySelector('.particle-field');
   const toggle = document.querySelector('.motion-toggle');
   const ctx = canvas?.getContext('2d');
-  if (!hero || !scene || !dashboard || !ctx || !toggle) return;
+  if (!hero || !scene || !dashboard || !toggle) return;
+
+  // Fixed, decorative layers let the entire viewport crossfade between scenes.
+  const ambience = document.createElement('div');
+  ambience.className = 'ambient-stage';
+  ambience.setAttribute('aria-hidden', 'true');
+  ambience.innerHTML = '<div class="ambient-day"></div><div class="ambient-film"><div class="ambient-beam"></div></div><div class="ambient-night"><div class="ambient-stars"></div><div class="ambient-moon"></div></div>';
+  document.body.prepend(ambience);
+  document.body.dataset.ambience = 'ankommen';
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
   const titles = { ankommen: 'Willkommen zu Hause.', filmabend: 'Zeit für deinen Lieblingsfilm.', nacht: 'Alles ruhig. Gute Nacht.' };
@@ -14,19 +22,22 @@
   document.querySelectorAll('[data-preset]').forEach(button => {
     button.addEventListener('click', () => {
       const preset = button.dataset.preset;
+      if (!Object.hasOwn(titles, preset) || scene.dataset.scene === preset) return;
+      document.body.dataset.ambience = preset;
       scene.dataset.scene = preset;
       document.dispatchEvent(new CustomEvent('bonsai:scene', { detail: preset }));
       document.querySelectorAll('[data-preset]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
       document.getElementById('scene-title').textContent = titles[preset];
       document.getElementById('scene-caption').textContent = `Gestaltungsvorschau · ${captions[preset]}`;
-      hero.style.setProperty('--scene-glow', {ankommen:'#fbe1d14d',filmabend:'#ece5df66',nacht:'#e5e5e54d'}[preset]);
+      hero.style.setProperty('--scene-glow', {ankommen:'#fbe1d14d',filmabend:'#c6a68b24',nacht:'#486c9c24'}[preset]);
     });
   });
   let width = 0, height = 0, particles = [], frame = 0, previous = 0;
   let visible = true, paused = false;
   const pointer = { x: -999, y: -999 };
-  const active = () => !reduced.matches && !paused && visible && !document.hidden;
+  const active = () => Boolean(ctx) && !reduced.matches && !paused && visible && !document.hidden;
   function resize() {
+    if (!ctx || !canvas) return;
     const rect = hero.getBoundingClientRect();
     width = rect.width; height = rect.height;
     const scale = Math.min(devicePixelRatio || 1, 1.5);
@@ -36,15 +47,17 @@
     draw(0);
   }
   function draw(delta) {
+    if (!ctx) return;
     ctx.clearRect(0, 0, width, height);
     for (const p of particles) {
       p.y -= p.v * delta; if(p.y < -5) p.y = height + 5;
       const x = p.x + Math.sin(p.phase + p.y * .004) * 18;
       const distance = Math.hypot(x-pointer.x, p.y-pointer.y);
-      ctx.fillStyle = `rgba(23,25,28,${distance < 150 ? .7 : .23})`;
+      const ink = document.body.dataset.ambience === 'ankommen' ? '23,25,28' : '220,229,247';
+      ctx.fillStyle = `rgba(${ink},${distance < 150 ? .7 : .23})`;
       ctx.beginPath(); ctx.arc(x,p.y,p.r,0,Math.PI*2); ctx.fill();
       if(distance < 130) {
-        ctx.strokeStyle=`rgba(23,25,28,${(1-distance/130)*.16})`;
+        ctx.strokeStyle=`rgba(${ink},${(1-distance/130)*.16})`;
         ctx.beginPath(); ctx.moveTo(x,p.y); ctx.lineTo(pointer.x,pointer.y); ctx.stroke();
       }
     }

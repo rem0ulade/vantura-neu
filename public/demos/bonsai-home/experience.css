@@ -153,3 +153,101 @@ section { padding-block:80px; }
 .nav-links .button { background:#17191c;color:#fff;border-color:#17191c; }
 
 h3,.home-ui .home-greeting h3 { font-family:Inter,system-ui,sans-serif; }
+
+/* Scene atmosphere spans the iframe viewport, while all controls stay usable. */
+body[data-ambience] {
+  isolation:isolate;
+  --scene-base:#ffffff; --scene-ink:#17191c; --scene-muted:#70747f;
+  --scene-surface:#ffffff; --scene-soft:#f2f2f3; --scene-line:#e4e4e6;
+  --scene-nav:#ffffffed; --scene-action:#17191c; --scene-action-ink:#ffffff;
+  --text:var(--scene-ink); --muted:var(--scene-muted); --bg:var(--scene-base);
+  --bg-soft:var(--scene-soft); --line:var(--scene-line);
+  background:var(--scene-base); color:var(--scene-ink);
+  transition:background-color 1.2s ease,color 1.2s ease;
+}
+body[data-ambience='filmabend'] {
+  --scene-base:#292832; --scene-ink:#f6f2ed; --scene-muted:#c5c0ca;
+  --scene-surface:#35333e; --scene-soft:#302e39; --scene-line:#504b59;
+  --scene-nav:#292832ed; --scene-action:#f6f2ed; --scene-action-ink:#292832;
+}
+body[data-ambience='nacht'] {
+  --scene-base:#111b2a; --scene-ink:#edf3fc; --scene-muted:#b6c4d8;
+  --scene-surface:#1a283b; --scene-soft:#172335; --scene-line:#34465e;
+  --scene-nav:#111b2aed; --scene-action:#edf3fc; --scene-action-ink:#111b2a;
+}
+.ambient-stage { position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict; }
+.ambient-stage>div { position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease; }
+.ambient-day { background:radial-gradient(ellipse at 85% 5%,#fbe1d14d,transparent 60%); }
+.ambient-film { background:radial-gradient(ellipse at 90% 15%,#bfa79d18,transparent 65%); }
+.ambient-night { background:radial-gradient(ellipse at 75% 0%,#314a6b55,transparent 65%); }
+body[data-ambience='ankommen'] .ambient-day,
+body[data-ambience='filmabend'] .ambient-film,
+body[data-ambience='nacht'] .ambient-night { opacity:1; }
+.ambient-beam { position:absolute;right:-20vw;top:-40vh;width:100vw;height:110vh;transform-origin:90% 10%;background:conic-gradient(from 150deg at 80% 10%,transparent 0deg,#d8c4b512 10deg,transparent 28deg);filter:blur(22px);animation:projector-drift 14s ease-in-out infinite alternate; }
+.ambient-moon { position:absolute;right:9vw;top:15vh;width:64px;height:64px;border-radius:50%;box-shadow:inset -14px -7px 0 0 #dce8f5;opacity:.35;transform:rotate(-18deg); }
+.ambient-stars { position:absolute;left:7vw;top:14vh;width:2px;height:2px;border-radius:50%;background:#dce8f5;box-shadow:14vw 12vh #dce8f5,32vw -3vh #dce8f5,48vw 17vh #dce8f5,76vw 7vh #dce8f5,83vw 30vh #dce8f5,5vw 47vh #dce8f5,25vw 65vh #dce8f5,57vw 57vh #dce8f5,74vw 73vh #dce8f5,42vw 38vh #dce8f5,8vw 77vh #dce8f5;opacity:.35;animation:starlight 7s ease-in-out infinite alternate; }
+.ambient-stars::after { content:'';position:absolute;left:9vw;top:7vh;width:1px;height:1px;background:#dce8f5;box-shadow:12vw 14vh #dce8f5,28vw 2vh #dce8f5,54vw 22vh #dce8f5,69vw 12vh #dce8f5,9vw 58vh #dce8f5,40vw 74vh #dce8f5; }
+@keyframes projector-drift { from { transform:rotate(-5deg);opacity:.4; } to { transform:rotate(5deg);opacity:.8; } }
+@keyframes starlight { to { opacity:.65; } }
+body[data-ambience] .nav { background:var(--scene-nav); }
+body[data-ambience] .nav-links,body[data-ambience] .hero .eyebrow,
+body[data-ambience] .lead,body[data-ambience] .proof,body[data-ambience] .motion-toggle,
+body[data-ambience] .scene-status,body[data-ambience] .scene-caption,
+body[data-ambience] .hero-baseline,body[data-ambience] .artifact-note { color:var(--scene-muted); }
+body[data-ambience] .hero-baseline a { color:var(--scene-ink); }
+body[data-ambience] .nav-links .button,body[data-ambience] .button.primary,
+body[data-ambience] .scene-picker button[aria-pressed=true] { background:var(--scene-action);color:var(--scene-action-ink);border-color:var(--scene-action); }
+body[data-ambience] .button.secondary { color:var(--scene-ink);border-color:var(--scene-ink); }
+body[data-ambience] .scene-picker { background:var(--scene-soft); }
+body[data-ambience] .scene-picker button { color:var(--scene-muted); }
+body[data-ambience] .hero-energy,body[data-ambience] .hero-dashboard .home-control,
+body[data-ambience] .hero-dashboard .home-music,body[data-ambience] .device .home-ui { background:var(--scene-surface);color:var(--scene-ink);border-color:var(--scene-line); }
+body[data-ambience] .home-ui { --ui-accent:var(--scene-action);color:var(--scene-ink); }
+body[data-ambience] .home-ui .home-greeting h3 { color:var(--scene-ink); }
+body[data-ambience] .home-control,body[data-ambience] .home-chart,
+body[data-ambience] .home-routines,body[data-ambience] .home-music,
+body[data-ambience] .feature,body[data-ambience] .capability,
+body[data-ambience] .cta-card,body[data-ambience] .statement { background:var(--scene-soft);border-color:var(--scene-line); }
+body[data-ambience] .home-card-label,body[data-ambience] .home-demo-label,
+body[data-ambience] .home-greeting>div>span,body[data-ambience] .home-weather,
+body[data-ambience] .home-control strong small,body[data-ambience] .light-state,
+body[data-ambience] .temp-actions>span,body[data-ambience] .home-music small,
+body[data-ambience] .home-music span,body[data-ambience] .home-foot,
+body[data-ambience] .chart-summary>span,body[data-ambience] .chart-axis,
+body[data-ambience] .home-routines small,body[data-ambience] .feature small,
+body[data-ambience] .capability .num,body[data-ambience] .step::before { color:var(--scene-muted); }
+body[data-ambience] .hero-dashboard .light-control>strong { background:conic-gradient(var(--scene-action) var(--light-progress,75%),var(--scene-line) 0); }
+body[data-ambience] .hero-dashboard .light-control>strong::before { background:var(--scene-surface); }
+body[data-ambience] .tiny-switch[aria-pressed=true],body[data-ambience] .album-art { background:var(--scene-action);color:var(--scene-action-ink); }
+body[data-ambience] .tiny-switch[aria-pressed=true] i { background:var(--scene-action-ink); }
+body[data-ambience] .temp-actions button,body[data-ambience] .home-music>button { background:var(--scene-surface);color:var(--scene-ink);border-color:var(--scene-line); }
+body[data-ambience] .hero-energy svg path { stroke:var(--scene-line); }
+body[data-ambience] .hero-energy svg path[stroke='#17191c'] { stroke:var(--scene-ink); }
+body[data-ambience] .hero-energy svg circle { fill:var(--scene-ink); }
+body[data-ambience] .hero-baseline,body[data-ambience] .statement article { border-color:var(--scene-line); }
+body[data-ambience] :focus-visible { outline-color:var(--scene-ink); }
+body[data-ambience] .voice-copy p[style] { color:#5d2a1a!important; }
+body[data-ambience]:not([data-ambience='ankommen']) .bonsai-logo { filter:grayscale(1) invert(1); }
+body[data-ambience] .nav,body[data-ambience] .button,
+body[data-ambience] .hero-content,body[data-ambience] .hero-baseline,
+body[data-ambience] .home-ui,body[data-ambience] .home-control,
+body[data-ambience] .home-chart,body[data-ambience] .home-routines,
+body[data-ambience] .home-music,body[data-ambience] .hero-energy,
+body[data-ambience] .feature,body[data-ambience] .capability,
+body[data-ambience] .statement,body[data-ambience] .cta-card,
+body[data-ambience] .scene-picker,body[data-ambience] .scene-picker button,
+body[data-ambience] .temp-actions button,body[data-ambience] .home-music>button,
+body[data-ambience] .bonsai-logo { transition:background-color 1.2s ease,color 1.2s ease,border-color 1.2s ease,filter 1.2s ease,transform .5s ease; }
+body.motion-paused *,body.motion-paused *::before,body.motion-paused *::after { transition:none!important; }
+@media(max-width:620px) { .ambient-moon { width:44px;height:44px;right:7vw;top:11vh;box-shadow:inset -10px -5px 0 0 #dce8f5; } }
+@media(prefers-reduced-motion:reduce) { body[data-ambience],body[data-ambience] *,body[data-ambience] *::before,body[data-ambience] *::after { transition:none!important;animation:none!important; } }
+body[data-ambience] .nav-links .button.secondary { background:var(--scene-action);color:var(--scene-action-ink);border-color:var(--scene-action); }
+body[data-ambience] .lead,body[data-ambience] .eyebrow,body[data-ambience] .proof,
+body[data-ambience] .scene-status,body[data-ambience] .scene-caption,body[data-ambience] .motion-toggle,
+body[data-ambience] .artifact-note,body[data-ambience] .nav-links,
+body[data-ambience] .home-card-label,body[data-ambience] .light-state,
+body[data-ambience] .home-music small,body[data-ambience] .home-music span,
+body[data-ambience] .home-control strong small,body[data-ambience] .temp-actions>span { transition:color 1.2s ease; }
+body.motion-paused { transition:none!important; }
+.ambient-beam,.ambient-stars { animation-play-state:paused; }
+body[data-ambience='filmabend'] .ambient-beam,body[data-ambience='nacht'] .ambient-stars { animation-play-state:running; }
