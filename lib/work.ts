@@ -15,7 +15,7 @@ export type WorkItem = {
 export const WORK_ITEMS: WorkItem[] = [
   {
     slug: 'bonsai-home',
-    preview: { src: '/demos/bonsai-home/preview.svg', alt: { en: 'Bonsai Home website with a interactive dashboards in a bright blue and apricot design', de: 'Bonsai-Home-Website mit interaktiven Dashboards in hellem Blau und Apricot' } },
+    preview: { src: '/demos/bonsai-home/preview.svg', alt: { en: 'Bonsai Home website with a floating interactive product cards, serif headlines and a restrained monochrome design', de: 'Bonsai-Home-Website mit schwebenden Produktkarten, Serifenschrift und zurückhaltender Schwarz-Weiß-Gestaltung' } },
     repo: 'bonsai-home',
     title: { en: 'Bonsai Home', de: 'Bonsai Home' },
     blurb: {

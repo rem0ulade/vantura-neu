@@ -19,7 +19,7 @@
       document.querySelectorAll('[data-preset]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
       document.getElementById('scene-title').textContent = titles[preset];
       document.getElementById('scene-caption').textContent = `Gestaltungsvorschau · ${captions[preset]}`;
-      hero.style.setProperty('--scene-glow', {ankommen:'#cbdcfa80',filmabend:'#d9dffb90',nacht:'#b9cde960'}[preset]);
+      hero.style.setProperty('--scene-glow', {ankommen:'#fbe1d14d',filmabend:'#ece5df66',nacht:'#e5e5e54d'}[preset]);
     });
   });
   let width = 0, height = 0, particles = [], frame = 0, previous = 0;
@@ -41,10 +41,10 @@
       p.y -= p.v * delta; if(p.y < -5) p.y = height + 5;
       const x = p.x + Math.sin(p.phase + p.y * .004) * 18;
       const distance = Math.hypot(x-pointer.x, p.y-pointer.y);
-      ctx.fillStyle = `rgba(64,104,188,${distance < 150 ? .7 : .23})`;
+      ctx.fillStyle = `rgba(23,25,28,${distance < 150 ? .7 : .23})`;
       ctx.beginPath(); ctx.arc(x,p.y,p.r,0,Math.PI*2); ctx.fill();
       if(distance < 130) {
-        ctx.strokeStyle=`rgba(64,104,188,${(1-distance/130)*.16})`;
+        ctx.strokeStyle=`rgba(23,25,28,${(1-distance/130)*.16})`;
         ctx.beginPath(); ctx.moveTo(x,p.y); ctx.lineTo(pointer.x,pointer.y); ctx.stroke();
       }
     }
@@ -61,7 +61,7 @@
     hero.classList.toggle('effects-paused', !visible);
     toggle.hidden = reduced.matches;
     if (active()) frame=requestAnimationFrame(animate);
-    else { pointer.x=-999; pointer.y=-999; dashboard.style.transform=''; draw(0); }
+    else { pointer.x=-999; pointer.y=-999; scene.style.setProperty('--drift-x','0px'); scene.style.setProperty('--drift-y','0px'); draw(0); }
   }
   toggle.addEventListener('click', () => {
     paused=!paused; toggle.setAttribute('aria-pressed',String(paused));
@@ -73,9 +73,10 @@
     const sceneRect=scene.getBoundingClientRect();
     const x=Math.max(-.5,Math.min(.5,(event.clientX-sceneRect.left)/sceneRect.width-.5));
     const y=Math.max(-.5,Math.min(.5,(event.clientY-sceneRect.top)/sceneRect.height-.5));
-    dashboard.style.transform=`perspective(1200px) rotateY(${-5+x*5}deg) rotateX(${2-y*3}deg)`;
+    scene.style.setProperty('--drift-x',`${x*9}px`);
+    scene.style.setProperty('--drift-y',`${y*7}px`);
   },{passive:true});
-  hero.addEventListener('pointerleave',()=>{pointer.x=-999;pointer.y=-999;dashboard.style.transform='';});
+  hero.addEventListener('pointerleave',()=>{pointer.x=-999;pointer.y=-999;scene.style.setProperty('--drift-x','0px'); scene.style.setProperty('--drift-y','0px');});
   new ResizeObserver(resize).observe(hero);
   new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;sync();}).observe(hero);
   document.addEventListener('visibilitychange',sync);

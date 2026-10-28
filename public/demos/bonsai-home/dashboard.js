@@ -17,7 +17,7 @@
       panel.querySelector('[data-light-range]').value = state.light;
       panel.querySelector('[data-light-toggle]').setAttribute('aria-pressed',String(state.light > 0));
       panel.querySelector('[data-light-label]').textContent = state.light === 0 ? 'Licht ausgeschaltet' : state.light < 35 ? 'Sanft gedimmt' : 'Warm & einladend';
-      panel.querySelector('.lamp-beam').style.opacity = state.light / 300;
+      panel.style.setProperty('--light-progress', `${state.light}%`);
       panel.querySelector('[data-temp-value]').textContent = state.temp;
       panel.querySelector('[data-temp-change="-1"]').disabled = state.temp <= 16;
       panel.querySelector('[data-temp-change="1"]').disabled = state.temp >= 26;
