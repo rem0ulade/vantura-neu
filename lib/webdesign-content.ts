@@ -1,3 +1,4 @@
+import { WEBSITE_PRICING, WEBSITE_START_PRICE } from '@/lib/webdesign-pricing'
 import { BOOKING_HREF, CONTACT_HREF, CONTACT_HREF_DE } from '@/lib/site'
 
 export type Locale = 'en' | 'de'
@@ -11,7 +12,7 @@ export const webdesignCopy = {
     heroBrand: 'Webdesign for businesses · Near Hamburg · Working remotely',
     heroTitle: 'Your new website. Built to turn interest into inquiries.',
     heroText:
-      'I’m Jonathan. I design and build websites for small businesses and service providers, from the first page structure to launch. So visitors understand your offer and can take the next step.',
+      'Individual websites for businesses. Designed and built by Jonathan — from the first idea to launch.',
     heroCta: 'Book a free discovery call',
     heroSecondary: 'See website examples',
     heroNote: 'Design & development from one person · Fixed price agreed before we start',
@@ -129,27 +130,27 @@ export const webdesignCopy = {
     ],
     aboutCta: 'Book a free discovery call',
     faqEyebrow: 'FAQ',
-    faqTitle: 'Before you decide.',
+    faqTitle: 'A few questions?',
     faq: [
       {
         q: 'What will my website cost?',
-        a: 'Website setup starts at €690 excluding VAT. Optional hosting and care start at €59 per month excluding VAT. Packages differ in scope, functionality and care. After the discovery call, you receive a binding fixed-price proposal for the agreed scope.'
+        a: `Websites start at €${WEBSITE_START_PRICE} excluding VAT. Optional care starts at €${WEBSITE_PRICING[0].monthly} per month. Your proposal confirms the scope and fixed price.`
       },
       {
         q: 'What happens on the free discovery call?',
-        a: 'We spend 30 minutes on Google Meet discussing your business, current website and goals. I give you an initial recommendation on the right approach. You don’t need a finished brief, and the call doesn’t commit you to a project.'
+        a: 'We discuss your business, ideas and goals in a free 30-minute video call. No finished brief or commitment required.'
       },
       {
         q: 'How long does a project take?',
-        a: 'We agree on the timeline in your proposal. Scope, special features and the availability of copy and images affect the schedule. Before we start, you know the steps and when your feedback is needed.'
+        a: 'The proposal sets your timeline. Scope, functionality and the availability of content determine the schedule.'
       },
       {
         q: 'Do I need to supply copy and images?',
-        a: 'We can use your existing copy, images and logo. If anything is missing, we work out what you need and which support to include in the proposal. You don’t need finished content for the first call.'
+        a: 'We can use your existing content. If you need copywriting or imagery, we agree the scope in your proposal.'
       },
       {
         q: 'What happens after launch?',
-        a: 'You choose: I hand over your website for hosting with your own provider, or take care of hosting and maintenance if you prefer. Individual arrangements are welcome. Monthly fees and the 12-month minimum term apply only when you book ongoing care, followed by monthly cancellation.'
+        a: 'Your website is handed over to you or your provider. Optional care is available; its minimum term is 12 months, then monthly cancellation.'
       }
     ],
     ctaTitle: 'Let’s talk about your website.',
@@ -175,7 +176,7 @@ export const webdesignCopy = {
     heroBrand: 'Webdesign für Unternehmen · Bei Hamburg · Deutschlandweit',
     heroTitle: 'Deine neue Website. Gemacht für mehr Anfragen.',
     heroText:
-      'Ich bin Jonathan. Ich gestalte und entwickle Websites für kleine Unternehmen und Selbstständige – von der ersten Idee bis zur Veröffentlichung. Dein Angebot wird verständlich, dein Unternehmen sichtbar und der Weg zur Anfrage einfach.',
+      'Individuelle Websites für Unternehmen. Von Jonathan gestaltet und entwickelt – von der ersten Idee bis zum Livegang.',
     heroCta: 'Kostenloses Erstgespräch buchen',
     heroSecondary: 'Website-Beispiele ansehen',
     heroNote: 'Design & Umsetzung aus einer Hand · Festpreis vor dem Projektstart',
@@ -293,27 +294,27 @@ export const webdesignCopy = {
     ],
     aboutCta: 'Kostenloses Erstgespräch buchen',
     faqEyebrow: 'FAQ',
-    faqTitle: 'Was du vor dem Start wissen möchtest.',
+    faqTitle: 'Noch Fragen?',
     faq: [
       {
         q: 'Was kostet meine neue Website?',
-        a: 'Die Erstellung startet bei 690 € netto einmalig. Hosting und laufende Betreuung sind optional und starten bei 59 € netto pro Monat. Die Pakete unterscheiden sich in Seitenumfang, Funktionen und Betreuung. Nach dem Erstgespräch erhältst du ein verbindliches Angebot für den vereinbarten Umfang. Alle Preise verstehen sich zuzüglich gesetzlicher Umsatzsteuer.'
+        a: `Websites starten bei ${WEBSITE_START_PRICE} € netto einmalig. Optionale Betreuung gibt es ab ${WEBSITE_PRICING[0].monthly} € netto pro Monat. Dein Angebot enthält Umfang und verbindlichen Festpreis.`
       },
       {
         q: 'Was passiert im kostenlosen Erstgespräch?',
-        a: 'Wir sprechen 30 Minuten per Google Meet über dein Unternehmen, deinen bisherigen Auftritt und deine Ziele. Ich gebe dir eine erste Einschätzung, welche Website dazu passt. Du brauchst kein fertiges Konzept und beauftragst mit dem Gespräch noch kein Projekt.'
+        a: 'Wir besprechen dein Unternehmen, deine Ideen und Ziele. 30 Minuten per Google Meet, kostenlos und unverbindlich. Ein fertiges Konzept brauchst du nicht.'
       },
       {
         q: 'Wie lange dauert die Umsetzung?',
-        a: 'Den Zeitplan vereinbaren wir im Angebot. Entscheidend sind der Umfang, besondere Funktionen und die Verfügbarkeit von Texten und Bildern. Du weißt vor dem Start, welche Schritte und Rückmeldungen wann anstehen.'
+        a: 'Deinen Zeitplan vereinbaren wir im Angebot. Umfang, Funktionen und die Verfügbarkeit deiner Inhalte bestimmen die Dauer.'
       },
       {
         q: 'Muss ich Texte und Bilder selbst liefern?',
-        a: 'Vorhandene Texte, Bilder und dein Logo können wir verwenden. Fehlt noch etwas, klären wir gemeinsam, was gebraucht wird und welche Unterstützung Teil des Angebots sein soll. Du musst nicht mit fertigen Inhalten ins Erstgespräch kommen.'
+        a: 'Vorhandene Inhalte nutzen wir gerne. Unterstützung bei Texten und Bildern vereinbaren wir im Angebot – du brauchst zum Erstgespräch noch nichts fertigzustellen.'
       },
       {
         q: 'Was passiert nach der Veröffentlichung?',
-        a: 'Du entscheidest: Ich übergebe dir die fertige Website für den Betrieb bei deinem eigenen Anbieter oder übernehme auf Wunsch Hosting und Betreuung. Auch individuelle Absprachen sind möglich. Nur bei gebuchter Betreuung gelten die Monatsbeträge und die Mindestlaufzeit von 12 Monaten; danach ist sie monatlich kündbar.'
+        a: 'Du erhältst deine Website zur eigenen Nutzung oder für deinen Anbieter. Betreuung ist optional: 12 Monate Mindestlaufzeit, danach monatlich kündbar. Individuelle Absprachen sind möglich.'
       }
     ],
     ctaTitle: 'Lass uns über deine Website sprechen.',

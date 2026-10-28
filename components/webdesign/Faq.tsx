@@ -8,10 +8,10 @@ import { t } from '@/lib/webdesign-content'
 export function Faq({ locale }: { locale: Locale }) {
   const copy = t(locale)
   const reduce = useReducedMotion()
-  const [open, setOpen] = useState<number | null>(0)
+  const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="border-b-2 border-ink bg-paper py-20 lg:py-28">
+    <section id="faq" className="agency-faq border-b-2 border-ink bg-paper py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-signal">
           {copy.faqEyebrow}
@@ -61,3 +61,4 @@ export function Faq({ locale }: { locale: Locale }) {
     </section>
   )
 }
+

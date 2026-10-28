@@ -1,6 +1,6 @@
+import './agency.css'
 import { Nav } from './Nav'
 import { Hero } from './Hero'
-import { Strip } from './Strip'
 import { FeaturedWork } from './FeaturedWork'
 import { Services } from './Services'
 import { Offers } from './Offers'
@@ -13,11 +13,10 @@ import type { Locale } from '@/lib/webdesign-content'
 
 export function WebdesignHome({ locale }: { locale: Locale }) {
   return (
-    <div lang={locale} className="min-h-screen bg-paper text-ink">
+    <div lang={locale} className="agency-home min-h-screen bg-paper text-ink">
       <Nav locale={locale} />
       <main>
         <Hero locale={locale} />
-        <Strip locale={locale} />
         <FeaturedWork locale={locale} />
         <Services locale={locale} />
         <Offers locale={locale} />

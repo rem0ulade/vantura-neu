@@ -1,88 +1,46 @@
 import type { Locale } from '@/lib/webdesign-content'
+import { WEBSITE_PRICING } from '@/lib/webdesign-pricing'
 import { BookingLink } from './BookingLink'
+import { Reveal } from './Reveal'
 
-const packages = [
-  {
-    name: 'Basic', setup: '690', monthly: '59',
-    de: {
-      lead: 'Ein professioneller Einstieg mit den wichtigsten Informationen und direktem Kontakt.',
-      website: ['Leistungsübersicht mit deinen Fotos', 'Kontaktformular und Klick-zum-Anrufen', 'Für Smartphone, Tablet und Desktop optimiert', 'Technische SEO-Basis', 'Impressum und Datenschutz mit deinen Rechtstexten'],
-      care: ['Hosting, SSL und Domain-Verwaltung', 'Updates und monatliche Backups', '30 Minuten Änderungen pro Monat', 'Reaktion innerhalb von 3 Werktagen'],
-    },
-    en: {
-      lead: 'A professional starting point with the essential information and an easy way to get in touch.',
-      website: ['Service overview with your photos', 'Contact form and click-to-call', 'Responsive phone, tablet and desktop layouts', 'Technical SEO foundations', 'Legal pages using the texts you provide'],
-      care: ['Hosting, SSL and domain management', 'Updates and monthly backups', '30 minutes of changes per month', 'Response within 3 working days'],
-    },
-  },
-  {
-    name: 'Standard', setup: '1.290', monthly: '89',
-    de: {
-      lead: 'Mehr Raum für dein Unternehmen, überzeugende Referenzen und passende Anfragen.',
-      website: ['Alles aus Basic, zusätzlich:', 'Erweitertes Anfrageformular mit Datei-Upload', 'Referenz- oder Bildergalerie', 'Eine Seite zu Ausstattung oder Arbeitsweise', 'Über-uns-Seite mit Team und Unternehmen', 'Google-Unternehmensprofil einrichten', 'Bis zu 3 E-Mail-Postfächer einrichten', 'Basis-SEO und Google Search Console'],
-      care: ['Alles aus Basic, mit:', 'Wöchentlichen Backups', '1 Stunde Änderungen pro Monat', 'Reaktion innerhalb von 2 Werktagen'],
-    },
-    en: {
-      lead: 'More room for your business, convincing references and relevant inquiries.',
-      website: ['Everything in Basic, plus:', 'Extended inquiry form with file upload', 'Project or photo gallery', 'A page about your equipment or process', 'About page introducing your business and team', 'Google Business Profile setup', 'Setup of up to 3 email mailboxes', 'Basic SEO and Google Search Console'],
-      care: ['Everything in Basic, with:', 'Weekly backups', '1 hour of changes per month', 'Response within 2 working days'],
-    },
-  },
-  {
-    name: 'Premium', setup: '2.290', monthly: '129',
-    de: {
-      lead: 'Ein umfangreicher Auftritt mit zusätzlichen Inhalten und optionaler laufender Pflege.',
-      website: ['Alles aus Standard, zusätzlich:', 'Karriereseite mit Stellenanzeigen', 'Zusätzliche Seiten für Zielgruppen oder Leistungen', 'Texterstellung und Bearbeitung deiner Fotos', 'Seite zu Qualität und Zertifikaten', 'Englische Sprachversion'],
-      care: ['Alles aus Standard, mit:', 'Pflege des Google-Unternehmensprofils', 'Vierteljährlichem Bericht zu Besuchern, Anfragen und Suchplatzierungen', 'Täglichen Backups', '2 Stunden Änderungen pro Monat', 'Reaktion am nächsten Werktag'],
-    },
-    en: {
-      lead: 'A fuller website with additional content and optional ongoing care.',
-      website: ['Everything in Standard, plus:', 'Careers page with job listings', 'Additional pages for audiences or services', 'Copywriting and editing of your supplied photos', 'Quality and certifications page', 'English language version'],
-      care: ['Everything in Standard, with:', 'Google Business Profile maintenance', 'Quarterly report on visitors, inquiries and search positions', 'Daily backups', '2 hours of changes per month', 'Response on the next working day'],
-    },
-  },
-] as const
+const content = {
+  de: [
+    { lead: 'Dein professioneller Einstieg.', website: ['Kompakte Website für dein Angebot', 'Kontaktformular & Klick-zum-Anrufen', 'Mobil optimiert & technische SEO-Basis', 'Rechtliche Seiten mit deinen Texten'], care: ['Hosting & SSL', 'Technische Pflege', 'Monatliche Backups'] },
+    { lead: 'Mehr Raum für dein Unternehmen.', website: ['Mehrseitige Unternehmenswebsite', 'Leistungen, Über uns & Referenzgalerie', 'Erweitertes Anfrageformular', 'Basis-SEO & Google Search Console'], care: ['Hosting & SSL', 'Technische Pflege', 'Wöchentliche Backups'] },
+    { lead: 'Ein Auftritt mit mehr Möglichkeiten.', website: ['Erweiterter Seitenumfang', 'Texterstellung & Bearbeitung deiner Fotos', 'Englische Sprachversion', 'Karriere- oder zusätzliche Leistungsseiten'], care: ['Hosting & SSL, technische Pflege', 'Tägliche Backups', '30 Minuten Inhaltsänderungen / Monat'] },
+  ],
+  en: [
+    { lead: 'Your professional starting point.', website: ['A compact website for your offer', 'Contact form & click-to-call', 'Mobile layouts & technical SEO basics', 'Legal pages using your supplied texts'], care: ['Hosting & SSL', 'Technical maintenance', 'Monthly backups'] },
+    { lead: 'More room for your business.', website: ['A multi-page company website', 'Services, about page & project gallery', 'Extended inquiry form', 'Basic SEO & Google Search Console'], care: ['Hosting & SSL', 'Technical maintenance', 'Weekly backups'] },
+    { lead: 'A website with more possibilities.', website: ['Extended page scope', 'Copywriting & editing your photos', 'Additional English language version', 'Careers or additional service pages'], care: ['Hosting & SSL, technical maintenance', 'Daily backups', '30 minutes of content changes / month'] },
+  ],
+}
 
 export function Offers({ locale }: { locale: Locale }) {
   const de = locale === 'de'
-
   return (
-    <section id="angebote" aria-labelledby="angebote-title" className="border-b-2 border-ink bg-paper py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-signal">{de ? 'Pakete & Betreuung' : 'Packages & care'}</p>
-        <h2 id="angebote-title" className="mt-4 max-w-3xl text-4xl font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-6xl">{de ? 'Deine Website. Passend zu deinem Bedarf.' : 'Your website. Built around your needs.'}</h2>
-        <p className="mt-5 max-w-2xl text-sm leading-7 text-muted sm:text-base">{de ? 'Drei Pakete zur Orientierung. Du kannst nur die Website beauftragen und sie anschließend selbst oder bei einem Anbieter deiner Wahl betreiben lassen. Hosting und laufende Betreuung über mich sind optional. Umfang und Übergabe stimmen wir individuell ab.' : 'Three packages to help you plan. You can commission just the website and run it yourself or with a provider of your choice. Hosting and ongoing care through me are optional. We agree the scope and handover individually.'}</p>
-        <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-3">
-          {packages.map((item) => {
-            const copy = item[locale]
+    <section id="angebote" className="agency-offers agency-section" aria-labelledby="offers-heading">
+      <div className="agency-container">
+        <Reveal className="agency-section-heading"><p className="agency-kicker">03 / {de ? 'Pakete & Preise' : 'Packages & pricing'}</p><h2 id="offers-heading">{de ? <>Großer Auftritt.<br /><span>Klare Preise.</span></> : <>A bold presence.<br /><span>A clear price.</span></>}</h2><p>{de ? 'Drei Startpunkte. Dein verbindliches Angebot stimmen wir persönlich ab.' : 'Three starting points. Your fixed-price proposal is agreed personally.'}</p></Reveal>
+        <div className="agency-package-grid">
+          {WEBSITE_PRICING.map((item, index) => {
+            const copy = content[locale][index]
             return (
-              <article key={item.name} className="flex min-w-0 flex-col border-2 border-ink bg-paper shadow-[4px_4px_0_#111]">
-                <div className={`border-b-2 border-ink px-6 py-3 font-mono text-[11px] font-bold uppercase tracking-[0.12em] ${item.name === 'Standard' ? 'bg-signal' : 'bg-ink text-paper'}`}>
-                  {item.name === 'Standard' ? (de ? 'Empfehlung · Standard' : 'Recommended · Standard') : item.name}
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-3xl font-bold uppercase tracking-[-0.04em]">{item.name}</h3>
-                  <p className="mt-3 text-sm leading-6 text-muted lg:min-h-24">{copy.lead}</p>
-                  <div className="mt-6 border-y-2 border-ink py-5">
-                    <p className="font-mono text-[10px] font-bold uppercase tracking-[0.1em]">{de ? 'Erstellung & Veröffentlichung · einmalig ab' : 'Website setup & launch · one-time from'}</p>
-                    <p className="mt-2 text-4xl font-bold tracking-[-0.05em]">{de ? item.setup : item.setup.replace('.', ',')} €</p>
-                    <p className="mt-2 text-xs leading-5 text-muted">{de ? 'Alle Preise netto zzgl. gesetzlicher Umsatzsteuer.' : 'All prices exclude statutory VAT.'}</p>
-                  </div>
-                  <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">Website</h4>
-                  <ul className="mt-3 space-y-2 text-sm leading-6">{copy.website.map((point) => <li key={point} className="flex gap-2"><span aria-hidden className="text-signal">✦</span><span>{point}</span></li>)}</ul>
-                  <h4 className="mt-6 font-mono text-[11px] font-bold uppercase tracking-[0.12em]">{de ? 'Betreuung · optional' : 'Care · optional'}</h4>
-                  <p className="mt-2 text-xl font-bold">{item.monthly} € <span className="text-sm font-normal text-muted">{de ? '/ Monat · optional' : '/ month · optional'}</span></p>
-                  <ul className="mb-8 mt-3 space-y-2 text-sm leading-6">{copy.care.map((point) => <li key={point} className="flex gap-2"><span aria-hidden className="text-signal">✦</span><span>{point}</span></li>)}</ul>
-                  <BookingLink placement={`package-${item.name.toLowerCase()}`} className="mt-auto inline-flex min-h-12 items-center justify-center border-2 border-ink bg-signal px-4 py-3 text-center font-mono text-[11px] font-bold uppercase tracking-[0.1em] shadow-[3px_3px_0_#111] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">{de ? 'Jetzt Erstgespräch buchen' : 'Book a discovery call'} →</BookingLink>
-                </div>
-              </article>
+              <Reveal key={item.id} delay={index * 0.08} className={`agency-package-wrap ${index === 1 ? 'agency-package-featured' : ''}`}>
+                <article className="agency-package">
+                  <div className="agency-package-top"><h3>{item.name}</h3><span>{index === 1 ? (de ? 'Empfehlung' : 'Recommended') : `0${index + 1}`}</span></div>
+                  <p className="agency-package-lead">{copy.lead}</p>
+                  <div className="agency-setup-price"><span>{de ? 'Einmalig ab' : 'One-time from'}</span><strong>{item.setup.toLocaleString(de ? 'de-DE' : 'en-GB')}<small> €</small></strong></div>
+                  <ul className="agency-feature-list">{copy.website.map(point => <li key={point}><span aria-hidden>↗</span>{point}</li>)}</ul>
+                  <div className="agency-care"><h4>{de ? 'Betreuung · optional' : 'Care · optional'}</h4><p><strong>{item.monthly} €</strong><span>{de ? ' / Monat' : ' / month'}</span></p><ul>{copy.care.map(point => <li key={point}>{point}</li>)}</ul></div>
+                  <BookingLink placement={`package-${item.id}`} className={`agency-button ${index === 1 ? 'agency-button-orange' : 'agency-button-outline'}`}>{de ? 'Erstgespräch buchen' : 'Book a discovery call'} <span aria-hidden>↗</span></BookingLink>
+                </article>
+              </Reveal>
             )
           })}
         </div>
-        <div className="mt-8 grid gap-6 border-2 border-ink p-6 md:grid-cols-2">
-          <div><h3 className="text-lg font-bold">{de ? 'Das gilt für alle Pakete' : 'Included in every agreement'}</h3><p className="mt-3 text-sm leading-7 text-muted">{de ? 'Die Website ist auch ohne Hosting- oder Betreuungsvertrag erhältlich. Du erhältst eine abgestimmte Übergabe an dich oder deinen Anbieter. Nur wenn du die laufende Betreuung buchst, gilt: Start mit der Veröffentlichung, Mindestlaufzeit 12 Monate, danach monatlich kündbar. Zusätzliche Änderungen außerhalb des enthaltenen Zeitbudgets: 85 € netto pro Stunde, nur nach Absprache. Die einmalige Erstellung zahlst du zu 50 % bei Beauftragung und zu 50 % beim Livegang. Domain und Inhalte gehören dir; bei Kündigung erhältst du alle Daten.' : 'The website is available without a hosting or care contract. We arrange a handover to you or your provider. Only if you choose ongoing care does the 12-month minimum term apply, starting at launch, followed by monthly cancellation. Additional changes beyond the included time: €85 per hour excluding VAT, agreed in advance. Website setup is paid 50% on order and 50% at launch. Your domain and content belong to you; all data is handed over if you cancel.'}</p></div>
-          <div><h3 className="text-lg font-bold">{de ? 'Auf Wunsch ergänzen' : 'Optional additions'}</h3><p className="mt-3 text-sm leading-7 text-muted">{de ? 'Logo und Corporate Design, Visitenkarten und Briefpapier, eine LinkedIn-Unternehmensseite oder die Einrichtung von Google Ads. Preise und Umfang vereinbaren wir separat. Kosten für Anzeigen, externe Lizenzen und E-Mail-Tarife werden bei Bedarf gesondert ausgewiesen.' : 'Logo and brand design, business cards and stationery, a LinkedIn company page or Google Ads setup. Scope and prices are agreed separately. Advertising spend, external licences and email plans are listed separately when needed.'}</p></div>
-        </div>
+        <div className="agency-offer-notes"><p>{de ? 'Deine Website. Dein Hosting. Betreuung ist frei wählbar – auch eine reine Übergabe ist möglich.' : 'Your website. Your hosting. Care is optional — a standalone handover is welcome.'}</p><p>{de ? 'Alle Preise netto zzgl. gesetzlicher Umsatzsteuer.' : 'All prices exclude statutory VAT.'}</p></div>
+        <details className="agency-terms"><summary>{de ? 'Leistungsumfang & Vertragsdetails' : 'Scope & agreement details'} <span aria-hidden>+</span></summary><p>{de ? 'Seitenumfang, Funktionen und Übergabe vereinbaren wir im Angebot. Website-Erstellung: 50 % bei Beauftragung, 50 % beim Livegang. Nur bei gebuchter Betreuung: Start mit der Veröffentlichung, Mindestlaufzeit 12 Monate, danach monatlich kündbar. Basic und Standard enthalten technische Pflege; Inhaltsänderungen vereinbaren wir separat. Premium enthält 30 Minuten Inhaltsänderungen pro Monat. Weitere Änderungen: 85 € netto pro Stunde, nur nach Absprache. Domain-, E-Mail- und externe Lizenzkosten sowie Reaktionszeiten klären wir vorab. Domain und Inhalte gehören dir; bei Vertragsende erhältst du deine Daten.' : 'Page scope, functionality and handover are agreed in your proposal. Website setup: 50% on order and 50% at launch. Optional care starts at launch with a 12-month minimum term, followed by monthly cancellation. Basic and Standard cover technical maintenance; content changes are agreed separately. Premium includes 30 minutes of content changes per month. Additional changes: €85 per hour excluding VAT, agreed in advance. Domain, email and external licence costs and response times are clarified before work begins. You own your domain and content; your data is handed over when the agreement ends.'}</p></details>
       </div>
     </section>
   )

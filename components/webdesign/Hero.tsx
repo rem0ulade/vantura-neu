@@ -1,61 +1,56 @@
 'use client'
 
+import { useRef } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { BookingLink } from './BookingLink'
-
-import { motion, useReducedMotion } from 'framer-motion'
 import { HeroBackdrop } from './HeroBackdrop'
-import type { Locale } from '@/lib/webdesign-content'
-import { t } from '@/lib/webdesign-content'
+import { getFeaturedWork } from '@/lib/work'
+import { WEBSITE_START_PRICE } from '@/lib/webdesign-pricing'
+import { t, workHref, type Locale } from '@/lib/webdesign-content'
 
 export function Hero({ locale }: { locale: Locale }) {
   const copy = t(locale)
+  const de = locale === 'de'
   const reduce = useReducedMotion()
-
-  const fadeUp = (delay: number) =>
-    reduce
-      ? {}
-      : {
-          initial: { opacity: 0, y: 28 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] as const },
-        }
+  const ref = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
+  const frontY = useTransform(scrollYProgress, [0, 1], [0, -60])
+  const backY = useTransform(scrollYProgress, [0, 1], [0, 70])
+  const projects = getFeaturedWork()
+  const lines = de ? ['Websites,', 'die Eindruck', 'machen.'] : ['Websites', 'with real', 'character.']
 
   return (
-    <section className="relative isolate overflow-hidden border-b-2 border-ink">
+    <section ref={ref} className="agency-hero" aria-labelledby="hero-heading">
       <HeroBackdrop locale={locale} />
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col px-5 pb-20 pt-12 lg:px-8 lg:pb-24 lg:pt-16">
-        <motion.p {...fadeUp(0)} className="font-mono text-xs font-bold uppercase tracking-[0.22em]">
-          {copy.heroBrand}
-        </motion.p>
-        <motion.h1
-          {...fadeUp(0.08)}
-          className="mt-5 max-w-[20ch] text-[clamp(2.6rem,8vw,5.75rem)] font-bold uppercase leading-[0.9] tracking-[-0.055em]"
-        >
-          {copy.heroTitle}
-        </motion.h1>
-        <motion.p {...fadeUp(0.16)} className="mt-6 max-w-xl text-base leading-7 text-muted sm:text-lg">
-          {copy.heroText}
-        </motion.p>
-        <motion.p {...fadeUp(0.2)} className="mt-8 max-w-lg font-mono text-[11px] font-bold uppercase tracking-[0.12em] text-muted">
-          {copy.heroNote}
-        </motion.p>
-        <motion.div {...fadeUp(0.24)} className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <BookingLink
-            placement="hero"
-            className="inline-flex items-center justify-center border-2 border-ink bg-signal px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-ink shadow-[4px_4px_0_#111] transition hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none"
-          >
-            {copy.heroCta}
-          </BookingLink>
-          <a
-            href="#featured"
-            className="inline-flex items-center justify-center border-2 border-ink bg-paper px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.14em] text-ink transition hover:bg-ink hover:text-paper"
-          >
-            {copy.heroSecondary}
-          </a>
-        </motion.div>
-        <p className="mt-5 text-sm leading-6 text-muted">{copy.bookingMeta}</p>
+      <div className="agency-container agency-hero-grid">
+        <div className="agency-hero-copy">
+          <p className="agency-kicker">{de ? 'Vantura Studios · Webdesign aus Rellingen bei Hamburg' : 'Vantura Studios · Webdesign near Hamburg'}</p>
+          <h1 id="hero-heading" className="agency-display">
+            {lines.map((line, index) => <span className="agency-title-mask" key={line}><span style={{ animationDelay: `${index * 100}ms` }}>{line}</span></span>)}
+          </h1>
+          <p className="agency-hero-lead">{copy.heroText}</p>
+          <div className="agency-actions">
+            <BookingLink placement="hero" className="agency-button agency-button-orange">{de ? 'Erstgespräch buchen' : 'Book a discovery call'} <span aria-hidden>↗</span></BookingLink>
+            <a className="agency-text-link" href="#featured">{de ? 'Arbeiten entdecken' : 'Explore the work'} <span aria-hidden>↓</span></a>
+          </div>
+          <p className="agency-micro">{de ? '30 Minuten. Kostenlos. Ganz unverbindlich.' : '30 minutes. Free. No obligation.'}</p>
+        </div>
+        <div className="agency-hero-art" aria-label={de ? 'Drei Website-Beispiele zum Entdecken' : 'Explore three website examples'}>
+          {projects.map((item, index) => item.preview ? (
+            <motion.div key={item.slug} className={`agency-floating-site agency-floating-site-${index}`} style={{ y: reduce ? 0 : index === 1 ? frontY : backY }}>
+              <Link href={workHref(locale, item.slug)} aria-label={`${item.title[locale]} – ${de ? 'Demo ansehen' : 'explore demo'}`}>
+                <div className="agency-browser-bar"><span aria-hidden>● ● ●</span><span>{item.title[locale]}</span><span aria-hidden>↗</span></div>
+                <Image src={item.preview.src} alt={item.preview.alt[locale]} width={1440} height={900} sizes="(max-width: 760px) 80vw, 520px" priority={index === 0} />
+              </Link>
+            </motion.div>
+          ) : null)}
+          <a href="#angebote" className="agency-price-stamp"><span>{de ? 'Deine Website ab' : 'Your website from'}</span><strong>{WEBSITE_START_PRICE} €</strong><span>{de ? 'einmalig · netto ↗' : 'one-time · excl. VAT ↗'}</span></a>
+          <span className="agency-art-caption">{de ? 'Echte Gestaltung. Direkt ausprobieren.' : 'Real design. Ready to explore.'}</span>
+        </div>
       </div>
+      <div className="agency-container agency-hero-bottom"><span>{de ? 'Design & Entwicklung aus einer Hand' : 'Design & development in one place'}</span><a href="#featured">{de ? 'Runterscrollen. Eindruck gewinnen.' : 'Scroll down. Get a feel for it.'} <span aria-hidden>↓</span></a></div>
     </section>
   )
 }
-

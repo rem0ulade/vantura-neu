@@ -1,45 +1,16 @@
-'use client'
-
-import { motion, useReducedMotion } from 'framer-motion'
 import type { Locale } from '@/lib/webdesign-content'
-import { t } from '@/lib/webdesign-content'
+import { Reveal } from './Reveal'
 
 export function Process({ locale }: { locale: Locale }) {
-  const copy = t(locale)
-  const reduce = useReducedMotion()
-
-  return (
-    <section className="border-b-2 border-ink bg-paper py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-signal">
-          {copy.processEyebrow}
-        </p>
-        <h2 className="mt-4 max-w-3xl text-4xl font-bold uppercase leading-[0.95] tracking-[-0.05em] sm:text-6xl">
-          {copy.processTitle}
-        </h2>
-        <ol className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {copy.process.map((step, index) => (
-            <motion.li
-              key={step.number}
-              initial={reduce ? false : { opacity: 0, y: 20 }}
-              whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.07 }}
-              whileHover={reduce ? undefined : { y: -4, borderColor: '#ff4d1a' }}
-              className="border-2 border-ink p-6 transition"
-            >
-              <div className="flex items-center justify-between gap-3">
-                <p className="font-mono text-xs font-bold text-signal">{step.number}</p>
-                <p className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-muted">
-                  {step.duration}
-                </p>
-              </div>
-              <h3 className="mt-4 text-xl font-bold uppercase tracking-[-0.03em]">{step.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-muted">{step.text}</p>
-            </motion.li>
-          ))}
-        </ol>
-      </div>
-    </section>
-  )
+  const de = locale === 'de'
+  const steps = de ? [
+    { title: 'Kennenlernen.', text: '30 Minuten für deine Ideen. Danach erhältst du ein klares Angebot.' },
+    { title: 'Gestalten & bauen.', text: 'Du siehst den Entwurf. Ich setze dein Feedback und die Website um.' },
+    { title: 'Online gehen.', text: 'Alles geprüft, veröffentlicht und an dich übergeben. Betreuung auf Wunsch.' },
+  ] : [
+    { title: 'Meet.', text: '30 minutes for your ideas. A clear proposal follows.' },
+    { title: 'Design & build.', text: 'You review the design. I develop your website and incorporate your feedback.' },
+    { title: 'Go live.', text: 'Checked, published and handed over. Optional care afterwards.' },
+  ]
+  return <section className="agency-process agency-section" aria-labelledby="process-heading"><div className="agency-container"><Reveal className="agency-section-heading"><p className="agency-kicker">04 / {de ? 'So einfach geht’s' : 'How it works'}</p><h2 id="process-heading">{de ? 'Von der Idee. Ins Web.' : 'From idea. To online.'}</h2></Reveal><ol className="agency-process-grid">{steps.map((step, index) => <li key={step.title}><Reveal delay={index * 0.08}><span className="agency-step-number">0{index + 1}</span><h3>{step.title}</h3><p>{step.text}</p></Reveal></li>)}</ol></div></section>
 }

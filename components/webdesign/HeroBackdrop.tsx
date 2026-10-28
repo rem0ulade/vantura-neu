@@ -126,7 +126,7 @@ export function HeroBackdrop({ locale }: { locale: Locale }) {
       </div>
       {!reduce && (
         <button type="button" onClick={() => setPaused((value) => !value)} aria-pressed={paused} className="absolute bottom-4 right-5 z-20 border border-ink/20 bg-paper/90 px-3 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-ink transition hover:border-ink lg:right-8">
-          {locale === 'de' ? (paused ? 'Bewegung fortsetzen' : 'Bewegung pausieren') : (paused ? 'Resume motion' : 'Pause motion')}
+          {locale === 'de' ? (paused ? 'Hintergrund fortsetzen' : 'Hintergrund pausieren') : (paused ? 'Resume background' : 'Pause background')}
         </button>
       )}
     </>
