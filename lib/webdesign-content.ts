@@ -7,7 +7,7 @@ export const webdesignCopy = {
   en: {
     navWork: 'Projects',
     navServices: 'Services',
-    navAbout: 'The studio',
+    navAbout: 'About us',
     navCta: 'Book a call',
     heroBrand: 'Webdesign for businesses · Hamburg · Working remotely',
     heroTitle: 'Your new website. Built to turn interest into inquiries.',
@@ -171,7 +171,7 @@ export const webdesignCopy = {
   de: {
     navWork: 'Projekte',
     navServices: 'Leistungen',
-    navAbout: 'Das Studio',
+    navAbout: 'Über uns',
     navCta: 'Termin buchen',
     heroBrand: 'Webdesign für Unternehmen · Hamburg · Deutschlandweit',
     heroTitle: 'Deine neue Website. Gemacht für mehr Anfragen.',

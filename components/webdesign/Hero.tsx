@@ -14,7 +14,7 @@ export function Hero({ locale }: { locale: Locale }) {
       <HeroBackdrop locale={locale} />
       <div className="agency-container agency-hero-grid">
         <div className="agency-hero-copy">
-          <p className="agency-kicker">{de ? 'Vantura Studios · Webdesign aus Hamburg' : 'Vantura Studios · Webdesign · Hamburg'}</p>
+          <p className="agency-kicker">{de ? 'Vantura Studios · Deutschlandweit' : 'Vantura Studios · Throughout Germany'}</p>
           <h1 id="hero-heading" className="agency-display">
             {lines.map((line, index) => <span className="agency-title-mask" key={line}><span style={{ animationDelay: `${index * 100}ms` }}>{line}</span></span>)}
           </h1>
