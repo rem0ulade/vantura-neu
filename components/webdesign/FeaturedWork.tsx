@@ -22,7 +22,7 @@ function Project({ item, index, locale }: { item: WorkItem; index: number; local
       <Reveal className="agency-project-visual">
         <Link href={workHref(locale, item.slug)} className="agency-project-image" aria-label={`${item.title[locale]} – ${locale === 'de' ? 'Demo öffnen' : 'open demo'}`}>
           <motion.div style={{ y: reduce ? 0 : y }}>
-            {item.preview && <Image src={item.preview.src} alt={item.preview.alt[locale]} width={1440} height={900} sizes="(min-width: 1000px) 70vw, 100vw" />}
+            {item.preview && <Image src={item.preview.src} alt={item.preview.alt[locale]} width={1440} height={900} sizes="(min-width: 1000px) 30vw, (min-width: 600px) 45vw, 90vw" />}
           </motion.div>
           <span className="agency-project-open" aria-hidden>↗</span>
         </Link>
@@ -40,8 +40,22 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
   return (
     <section id="featured" className="agency-work agency-section" aria-labelledby="work-heading">
       <div className="agency-container">
-        <Reveal className="agency-section-heading"><p className="agency-kicker">01 / {locale === 'de' ? 'Ausgewählte Arbeiten' : 'Selected work'}</p><h2 id="work-heading">{locale === 'de' ? <>Weniger reden.<br /><span>Mehr zeigen.</span></> : <>Less talking.<br /><span>More showing.</span></>}</h2><p>{locale === 'de' ? 'Drei unterschiedliche Welten. Eine Handschrift: individuell.' : 'Three different worlds. One approach: individual design.'}</p></Reveal>
+        <Reveal className="agency-section-heading"><p className="agency-kicker">01 / {locale === 'de' ? 'Ausgewählte Arbeiten' : 'Selected work'}</p><h2 id="work-heading">{locale === 'de' ? <>Weniger reden.<br /><span>Mehr zeigen.</span></> : <>Less talking.<br /><span>More showing.</span></>}</h2><p>{locale === 'de' ? 'Digitale Auftritte mit eigener Persönlichkeit.' : 'Digital experiences with a distinct personality.'}</p></Reveal>
         <div className="agency-projects">{getFeaturedWork().map((item, index) => <Project key={item.slug} item={item} index={index} locale={locale} />)}</div>
+        <div className="agency-live-projects">
+          {[
+            { name: 'Grace', url: 'https://meet-grace.com/', label: 'meet-grace.com' },
+            { name: 'Nestpure', url: 'https://nestpure-landing.vercel.app/', label: 'nestpure-landing.vercel.app' },
+            { name: 'Jonathan Kokalj', url: 'https://www.jonathankokalj.com/de/', label: 'jonathankokalj.com' },
+          ].map((project, index) => (
+            <a key={project.url} href={project.url} target="_blank" rel="noopener noreferrer" className="agency-live-project">
+              <span className="agency-kicker">{locale === 'de' ? 'Weitere Arbeit' : 'More work'} / 0{index + 4}</span>
+              <strong>{project.name}<span aria-hidden>↗</span></strong>
+              <span>{project.label}</span>
+              <span className="agency-text-link">{locale === 'de' ? 'Website ansehen' : 'Visit website'}</span>
+            </a>
+          ))}
+        </div>
         <Link href={workHref(locale)} className="agency-button agency-button-outline">{copy.allWork} <span aria-hidden>↗</span></Link>
       </div>
     </section>

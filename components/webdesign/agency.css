@@ -143,3 +143,25 @@
 }
 @media(max-width:760px) { .agency-hero-art>.agency-floating-site { transform:none!important; } }
 @media(max-width:480px) { .agency-home>header>nav { gap:20px; } }
+
+/* Focused hero and compact portfolio */
+.agency-hero-grid { display:flex;justify-content:center;text-align:center;min-height:700px;padding-block:100px; }
+.agency-hero-copy { width:100%;max-width:1000px;margin-inline:auto; }
+.agency-hero-copy>.agency-kicker,.agency-hero-lead { margin-inline:auto; }
+.agency-hero-copy>.agency-kicker { max-width:none; }
+.agency-hero-copy .agency-actions { justify-content:center; }
+.agency-display { text-transform:none;font-size:clamp(56px,7.5vw,108px);letter-spacing:-.065em;line-height:1.02; }
+.agency-projects { grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:28px; }
+.agency-project,.agency-project:nth-child(even) { width:100%;margin:0;min-width:0; }
+.agency-project-visual { padding:18px; }
+.agency-project-meta { flex-direction:column;align-items:flex-start;gap:10px; }
+.agency-project-meta h3 { font-size:28px; }
+.agency-project-open { width:36px;height:36px;font-size:22px;right:10px;bottom:10px; }
+.agency-live-projects { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-bottom:48px; }
+.agency-live-project { display:flex;flex-direction:column;gap:18px;padding:28px;background:#e8e4dc;border:1px solid #11111115;border-radius:5px;transition:background .25s,transform .25s;min-width:0; }
+.agency-live-project:hover { background:#e0dbd1;transform:translateY(-4px); }
+.agency-live-project>strong { display:flex;justify-content:space-between;gap:12px;font-size:28px;letter-spacing:-.04em; }
+.agency-live-project>span:not(.agency-kicker) { font-size:12px;overflow-wrap:anywhere; }
+.agency-live-project .agency-text-link { margin-top:auto; }
+@media(max-width:999px) { .agency-projects,.agency-live-projects { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:599px) { .agency-hero-grid { min-height:620px;padding-block:70px; }.agency-display { font-size:clamp(46px,10.5vw,64px); }.agency-projects,.agency-live-projects { grid-template-columns:1fr;gap:28px; }.agency-hero-bottom { gap:16px;flex-wrap:wrap;justify-content:center;text-align:center; } }
