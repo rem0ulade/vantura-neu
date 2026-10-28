@@ -12,10 +12,10 @@ export const webdesignCopy = {
     heroBrand: 'Webdesign for businesses · Near Hamburg · Working remotely',
     heroTitle: 'Your new website. Built to turn interest into inquiries.',
     heroText:
-      'Individual websites for businesses. Designed and built by Jonathan — from the first idea to launch.',
+      'Individual websites for businesses. Designed and built by Vantura Studios — from the first idea to launch.',
     heroCta: 'Book a free discovery call',
     heroSecondary: 'See website examples',
-    heroNote: 'Design & development from one person · Fixed price agreed before we start',
+    heroNote: 'Design & development from one studio · Fixed price agreed before we start',
     strip: [
       'Company websites',
       'Landing pages',
@@ -110,7 +110,7 @@ export const webdesignCopy = {
         number: '03',
         title: 'Design & build',
         duration: 'agreed in the proposal',
-        text: 'You review your website design and share feedback. I then build the agreed pages.',
+        text: 'You review your website design and share feedback. We then build the agreed pages.',
       },
       {
         number: '04',
@@ -120,9 +120,9 @@ export const webdesignCopy = {
       },
     ],
     aboutEyebrow: 'Your contact',
-    aboutTitle: 'You talk to me. I build your website.',
+    aboutTitle: 'Your project. Our shared focus.',
     aboutText:
-      'I’m Jonathan Kokalj, the person behind Vantura Studios in Rellingen near Hamburg. I handle your website’s design and development. From our first call to launch, you have one contact who knows your project.',
+      'We are Vantura Studios. Our team brings strategy, design and development together, with a dedicated contact from the first conversation to launch.',
     aboutPoints: [
       'Owner-led: no handoff between sales and production',
       'Design and code in one workflow',
@@ -176,7 +176,7 @@ export const webdesignCopy = {
     heroBrand: 'Webdesign für Unternehmen · Bei Hamburg · Deutschlandweit',
     heroTitle: 'Deine neue Website. Gemacht für mehr Anfragen.',
     heroText:
-      'Individuelle Websites für Unternehmen. Von Jonathan gestaltet und entwickelt – von der ersten Idee bis zum Livegang.',
+      'Individuelle Websites für Unternehmen. Von Vantura Studios gestaltet und entwickelt – von der ersten Idee bis zum Livegang.',
     heroCta: 'Kostenloses Erstgespräch buchen',
     heroSecondary: 'Website-Beispiele ansehen',
     heroNote: 'Design & Umsetzung aus einer Hand · Festpreis vor dem Projektstart',
@@ -197,7 +197,7 @@ export const webdesignCopy = {
     servicesEyebrow: 'Leistungen',
     servicesTitle: 'Von deinem Angebot zur fertigen Website.',
     servicesLead:
-      'Für kleine Unternehmen, Dienstleister und lokale Betriebe. Wir klären, was deine Website leisten soll. Ich kümmere mich um Gestaltung und technische Umsetzung.',
+      'Für kleine Unternehmen, Dienstleister und lokale Betriebe. Wir klären, was deine Website leisten soll. Wir kümmern uns um Gestaltung und technische Umsetzung.',
     services: [
       {
         number: '01',
@@ -212,7 +212,7 @@ export const webdesignCopy = {
       {
         number: '02',
         title: 'Website erneuern',
-        text: 'Dein Angebot hat sich weiterentwickelt, deine Website nicht? Ich überarbeite Struktur, Gestaltung und Technik passend zu deinem heutigen Unternehmen.',
+        text: 'Dein Angebot hat sich weiterentwickelt, deine Website nicht? Wir überarbeiten Struktur, Gestaltung und Technik passend zu deinem heutigen Unternehmen.',
         points: [
           'Bestehende Inhalte prüfen',
           'Angebot klarer präsentieren',
@@ -274,19 +274,19 @@ export const webdesignCopy = {
         number: '03',
         title: 'Design & Umsetzung',
         duration: 'nach vereinbartem Zeitplan',
-        text: 'Du siehst den Entwurf deiner Website und gibst Feedback. Anschließend setze ich die abgestimmten Seiten technisch um.',
+        text: 'Du siehst den Entwurf deiner Website und gibst Feedback. Anschließend setzen wir die abgestimmten Seiten technisch um.',
       },
       {
         number: '04',
         title: 'Veröffentlichung',
         duration: 'Übergabe inklusive',
-        text: 'Deine Website geht auf deiner Domain online. Du erhältst eine Einführung und die vereinbarte Übergabe. Hosting und Betreuung übernehme ich auf Wunsch – du kannst auch deinen eigenen Anbieter nutzen.',
+        text: 'Deine Website geht auf deiner Domain online. Du erhältst eine Einführung und die vereinbarte Übergabe. Hosting und Betreuung übernehmen wir auf Wunsch – du kannst auch deinen eigenen Anbieter nutzen.',
       },
     ],
     aboutEyebrow: 'Dein Ansprechpartner',
-    aboutTitle: 'Du sprichst mit mir. Ich baue deine Website.',
+    aboutTitle: 'Dein Projekt. Unser gemeinsamer Fokus.',
     aboutText:
-      'Ich bin Jonathan Kokalj und stehe hinter Vantura Studios in Rellingen bei Hamburg. Ich übernehme Gestaltung und Entwicklung deiner Website. Vom ersten Gespräch bis zur Veröffentlichung hast du einen festen Ansprechpartner, der dein Projekt kennt.',
+      'Wir sind Vantura Studios. Unser Team verbindet Strategie, Gestaltung und Entwicklung. Vom ersten Gespräch bis zur Veröffentlichung hast du einen festen Kontakt für dein Projekt.',
     aboutPoints: [
       'Inhabergeführt: keine Übergabe zwischen Verkauf und Umsetzung',
       'Design und Code aus einer Hand',

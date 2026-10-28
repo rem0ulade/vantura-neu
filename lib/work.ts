@@ -98,7 +98,7 @@ export const WORK_ITEMS: WorkItem[] = [
   {
     slug: 'jonathan',
     repo: 'website-jonathan',
-    title: { en: 'Jonathan Kokalj', de: 'Jonathan Kokalj' },
+    title: { en: 'Business Intelligence', de: 'Business Intelligence' },
     blurb: {
       en: 'Personal brand site with a clear offer and direct contact.',
       de: 'Persönliche Markenseite mit klarem Angebot und direktem Kontakt.',

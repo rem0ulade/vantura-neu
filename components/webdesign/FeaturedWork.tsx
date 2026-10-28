@@ -46,7 +46,7 @@ export function FeaturedWork({ locale }: { locale: Locale }) {
           {[
             { name: 'Grace', url: 'https://meet-grace.com/', label: 'grace' },
             { name: 'Nestpure', url: 'https://nestpure-landing.vercel.app/', label: 'nestpure' },
-            { name: 'Jonathan Kokalj', url: 'https://www.jonathankokalj.com/de/', label: 'jonathan' },
+            { name: 'Business Intelligence', url: 'https://www.jonathankokalj.com/de/', label: 'jonathan' },
           ].map((project, index) => (
             <a key={project.url} href={project.url} target="_blank" rel="noopener noreferrer" className="agency-live-project">
               <div className="agency-project-visual"><div className="agency-project-image"><Image src={`/work-previews/${project.label}.png`} alt={`Screenshot – ${project.name}`} width={1440} height={900} sizes="(min-width:1000px) 30vw, 90vw" /></div></div>

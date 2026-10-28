@@ -37,7 +37,7 @@ export function WorkIndex({ locale }: { locale: Locale }) {
         <p className="mt-5 max-w-2xl text-sm leading-6 text-muted sm:text-base">{copy.workIndexLead}</p>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-muted">
           {locale === 'de'
-            ? 'Gefällt dir eine Richtung? Deine Website gestalte ich passend zu deinem Unternehmen. Im kostenlosen Erstgespräch klären wir Inhalte, Funktionen und den passenden Umfang. Hosting und Betreuung sind optional.'
+            ? 'Gefällt dir eine Richtung? Deine Website gestalten wir passend zu deinem Unternehmen. Im kostenlosen Erstgespräch klären wir Inhalte, Funktionen und den passenden Umfang. Hosting und Betreuung sind optional.'
             : 'Like a direction? I design your website around your business. On a free discovery call, we discuss content, functionality and scope. Hosting and care are optional.'}
         </p>
         <BookingLink placement="portfolio-intro" className="mt-7 inline-flex min-h-12 items-center justify-center border-2 border-ink bg-signal px-5 py-3 text-center font-mono text-xs font-bold uppercase tracking-[0.1em] shadow-[3px_3px_0_#111] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none">

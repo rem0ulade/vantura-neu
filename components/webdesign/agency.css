@@ -184,3 +184,11 @@
 .agency-review-grid figcaption { display:grid;gap:6px;margin-top:24px;font-size:12px; }
 .agency-review-grid figcaption span { color:#555; }
 @media(max-width:600px) { .agency-review-grid { grid-template-columns:1fr; } }
+
+.agency-studio-mark { position:relative;overflow:hidden;aspect-ratio:1;background:#111;color:#f2efe8;padding:32px;display:flex;flex-direction:column;justify-content:space-between;border-radius:8px; }
+.agency-studio-mark>strong { font-size:clamp(32px,4vw,56px);line-height:.95;letter-spacing:-.055em;z-index:1; }.agency-studio-mark>strong>span { display:block; }.agency-studio-disc { position:absolute;color:#ff4d1a;font-size:240px;right:-35px;bottom:20px;opacity:.35;line-height:1; }
+.agency-about h2 { font-size:clamp(32px,4vw,56px);overflow-wrap:anywhere; }
+.agency-scope-note { margin-top:24px;font-size:13px;line-height:1.8;max-width:960px; }
+.agency-cases { border-top:1px solid #1112; }.agency-cases article { padding:30px;border-left:2px solid #ff4d1a; }.agency-cases h3 { font-size:26px;letter-spacing:-.04em; }.agency-cases dl>div { margin-top:24px; }.agency-cases dt { font-family:var(--font-mono);font-size:10px;text-transform:uppercase; }.agency-cases dd { margin-top:8px;font-size:14px;line-height:1.8;color:#555; }
+.agency-inquiry { max-width:900px;margin-top:40px;border-top:1px solid #1115;padding-top:24px; }.agency-inquiry summary { cursor:pointer;font-size:18px; }.agency-inquiry form { margin-top:24px; }.agency-inquiry form>p,.agency-inquiry-draft p { font-size:13px;line-height:1.7;margin-bottom:20px; }.agency-inquiry-fields { display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px; }.agency-inquiry label { display:grid;gap:8px;font-size:13px; }.agency-inquiry input,.agency-inquiry select,.agency-inquiry textarea { width:100%;min-width:0;background:#f2efe8;color:#111;padding:12px;border:1px solid #1115;border-radius:3px; }.agency-inquiry-wide { grid-column:1/-1; }.agency-inquiry-draft { margin-top:24px; }.agency-inquiry pre { white-space:pre-wrap;overflow-wrap:anywhere;background:#f2efe8;padding:20px;margin-bottom:20px;font-size:13px; }.agency-inquiry :focus-visible { outline:2px solid #111;outline-offset:4px; }
+@media(max-width:600px) { .agency-inquiry-fields { grid-template-columns:1fr; }.agency-studio-mark { max-width:420px; }.agency-studio-mark>strong { font-size:46px; } }
