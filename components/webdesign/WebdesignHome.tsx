@@ -1,4 +1,5 @@
 import './agency.css'
+import { Testimonials } from './Testimonials'
 import { Nav } from './Nav'
 import { Hero } from './Hero'
 import { FeaturedWork } from './FeaturedWork'
@@ -19,6 +20,7 @@ export function WebdesignHome({ locale }: { locale: Locale }) {
         <Hero locale={locale} />
         <FeaturedWork locale={locale} />
         <Services locale={locale} />
+        <Testimonials locale={locale} />
         <Offers locale={locale} />
         <Process locale={locale} />
         <About locale={locale} />

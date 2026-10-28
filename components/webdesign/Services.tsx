@@ -4,7 +4,7 @@ import { Reveal } from './Reveal'
 export function Services({ locale }: { locale: Locale }) {
   const de = locale === 'de'
   const items = de ? [
-    { title: 'Dein Auftritt.', text: 'Individuelles Design, das zu deinem Unternehmen passt.', symbol: '↗' },
+    { title: 'Dein Auftritt.', text: 'Für Selbstständige, lokale Betriebe und kleine Teams: Dein Angebot wird verständlich und die Kontaktaufnahme einfach.', symbol: '↗' },
     { title: 'Dein Freiraum.', text: 'Ein Ansprechpartner für Gestaltung, Entwicklung und Veröffentlichung.', symbol: '✳' },
     { title: 'Dein Festpreis.', text: 'Du kennst den Umfang und die Kosten, bevor es losgeht.', symbol: '◎' },
   ] : [

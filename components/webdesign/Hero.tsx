@@ -18,7 +18,7 @@ export function Hero({ locale }: { locale: Locale }) {
           <h1 id="hero-heading" className="agency-display">
             {lines.map((line, index) => <span className="agency-title-mask" key={line}><span style={{ animationDelay: `${index * 100}ms` }}>{line}</span></span>)}
           </h1>
-          <p className="agency-hero-lead">{copy.heroText}</p>
+          <p className="agency-hero-lead">{de ? 'Webdesign für Selbstständige und kleine Unternehmen. Damit dein Angebot überzeugt – und der Weg zur Anfrage kurz bleibt.' : 'Web design for independent professionals and small businesses. A clear offer and a short path to getting in touch.'}</p>
           <div className="agency-actions">
             <BookingLink placement="hero" className="agency-button agency-button-orange">{de ? 'Erstgespräch buchen' : 'Book a discovery call'} <span aria-hidden>↗</span></BookingLink>
             <a className="agency-text-link" href="#featured">{de ? 'Arbeiten entdecken' : 'Explore the work'} <span aria-hidden>↓</span></a>
