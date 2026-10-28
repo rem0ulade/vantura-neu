@@ -7,9 +7,9 @@ export const webdesignCopy = {
   en: {
     navWork: 'Projects',
     navServices: 'Services',
-    navAbout: 'About me',
+    navAbout: 'The studio',
     navCta: 'Book a call',
-    heroBrand: 'Webdesign for businesses · Near Hamburg · Working remotely',
+    heroBrand: 'Webdesign for businesses · Hamburg · Working remotely',
     heroTitle: 'Your new website. Built to turn interest into inquiries.',
     heroText:
       'Individual websites for businesses. Designed and built by Vantura Studios — from the first idea to launch.',
@@ -158,7 +158,7 @@ export const webdesignCopy = {
       'In 30 minutes, we’ll discuss your business, your current website and what you want to achieve. You’ll get an initial recommendation on the right scope and next steps. No preparation or commitment required.',
     ctaButton: 'Book a free discovery call',
     ctaMeta: '30 minutes · Free & no obligation · Google Meet',
-    footerTag: 'Company websites · Relaunches · Landing pages · Near Hamburg',
+    footerTag: 'Company websites · Relaunches · Landing pages · Hamburg',
     legal: 'Legal notice',
     privacy: 'Privacy',
     contactHref: BOOKING_HREF,
@@ -171,9 +171,9 @@ export const webdesignCopy = {
   de: {
     navWork: 'Projekte',
     navServices: 'Leistungen',
-    navAbout: 'Über mich',
+    navAbout: 'Das Studio',
     navCta: 'Termin buchen',
-    heroBrand: 'Webdesign für Unternehmen · Bei Hamburg · Deutschlandweit',
+    heroBrand: 'Webdesign für Unternehmen · Hamburg · Deutschlandweit',
     heroTitle: 'Deine neue Website. Gemacht für mehr Anfragen.',
     heroText:
       'Individuelle Websites für Unternehmen. Von Vantura Studios gestaltet und entwickelt – von der ersten Idee bis zum Livegang.',
@@ -322,7 +322,7 @@ export const webdesignCopy = {
       'In 30 Minuten besprechen wir dein Unternehmen, deinen aktuellen Auftritt und deine Ziele. Du bekommst eine erste Einschätzung zum passenden Umfang und den nächsten Schritten. Du brauchst nichts vorzubereiten und gehst keine Verpflichtung ein.',
     ctaButton: 'Kostenloses Erstgespräch buchen',
     ctaMeta: '30 Minuten · Kostenlos & unverbindlich · Google Meet',
-    footerTag: 'Firmenwebsites · Relaunches · Landingpages · Bei Hamburg',
+    footerTag: 'Firmenwebsites · Relaunches · Landingpages · Hamburg',
     legal: 'Impressum',
     privacy: 'Datenschutz',
     contactHref: BOOKING_HREF,
