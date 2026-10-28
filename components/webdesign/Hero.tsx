@@ -21,7 +21,7 @@ export function Hero({ locale }: { locale: Locale }) {
           <p className="agency-hero-lead">{de ? 'Webdesign für Selbstständige und kleine Unternehmen. Damit dein Angebot überzeugt – und der Weg zur Anfrage kurz bleibt.' : 'Web design for independent professionals and small businesses. A clear offer and a short path to getting in touch.'}</p>
           <div className="agency-actions">
             <BookingLink placement="hero" className="agency-button agency-button-orange">{de ? 'Erstgespräch buchen' : 'Book a discovery call'} <span aria-hidden>↗</span></BookingLink>
-            <a className="agency-text-link" href="#featured">{de ? 'Arbeiten entdecken' : 'Explore the work'} <span aria-hidden>↓</span></a>
+            <a className="agency-button agency-button-outline" href="#projektanfrage">{de ? 'Projekt anfragen' : 'Send an inquiry'} <span aria-hidden>↗</span></a>
           </div>
           <p className="agency-micro">{de ? '30 Minuten. Kostenlos. Ganz unverbindlich.' : '30 minutes. Free. No obligation.'}</p>
         </div>

@@ -44,6 +44,7 @@ export function Nav({ locale }: { locale: Locale }) {
           >
             {copy.navAbout}
           </a>
+          <a href="#projektanfrage" className="hidden font-mono text-[11px] font-bold uppercase tracking-[0.14em] text-ink md:inline">{locale === 'de' ? 'Projekt anfragen' : 'Project inquiry'}</a>
           <LanguageToggle locale={locale} />
           <BookingLink
             placement="navigation"
@@ -56,7 +57,7 @@ export function Nav({ locale }: { locale: Locale }) {
         </nav>
       </div>
       <nav aria-label={locale === 'de' ? 'Seitenbereiche' : 'Page sections'} className="flex gap-5 overflow-x-auto border-t border-ink/15 px-4 md:hidden">
-        {[{ href: '#featured', label: copy.navWork }, { href: '#angebote', label: locale === 'de' ? 'Pakete' : 'Packages' }, { href: '#leistungen', label: copy.navServices }, { href: '#studio', label: copy.navAbout }].map((item) => (
+        {[{ href: '#projektanfrage', label: locale === 'de' ? 'Anfragen' : 'Inquire' }, { href: '#featured', label: copy.navWork }, { href: '#angebote', label: locale === 'de' ? 'Pakete' : 'Packages' }, { href: '#leistungen', label: copy.navServices }, { href: '#studio', label: copy.navAbout }].map((item) => (
           <a key={item.href} href={item.href} className="inline-flex min-h-11 shrink-0 items-center font-mono text-[10px] font-bold uppercase tracking-[0.08em] hover:text-signal">{item.label}</a>
         ))}
       </nav>
