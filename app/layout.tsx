@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { JetBrains_Mono, Space_Grotesk } from 'next/font/google'
 import { SITE } from '@/lib/site'
+import { SiteStatus } from '@/components/SiteStatus'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -15,39 +16,23 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
 })
 
-const title = `${SITE.name} Studios — ${SITE.claim}`
+const title = 'Vantura Studios · Website geschlossen'
+const description = 'Diese Website ist geschlossen. Vantura Studios bietet kein Webdesign mehr an.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: {
-    default: title,
-    template: `%s — ${SITE.name}`,
-  },
-  description: SITE.description,
-  keywords: [
-    'Webdesign',
-    'Website',
-    'Online Shop',
-    'Shopify',
-    'Relaunch',
-    'Landing Page',
-    'UI Design',
-    'Vantura',
-  ],
+  title: { default: title, template: '%s — Vantura Studios' },
+  description,
   openGraph: {
     type: 'website',
     locale: SITE.locale,
     url: SITE.url,
-    siteName: `${SITE.name} Studios`,
+    siteName: 'Vantura Studios',
     title,
-    description: SITE.description,
+    description,
   },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description: SITE.description,
-  },
-  robots: { index: true, follow: true },
+  twitter: { card: 'summary', title, description },
+  robots: { index: false, follow: false },
 }
 
 export default function RootLayout({
@@ -57,7 +42,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased"><SiteStatus>{children}</SiteStatus></body>
     </html>
   )
 }

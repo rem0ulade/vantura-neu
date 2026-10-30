@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { Footer } from '@/components/sections/Footer'
 import { Container } from '@/components/ui/Container'
 
 export function LegalPage({
@@ -27,7 +26,10 @@ export function LegalPage({
           </div>
         </Container>
       </main>
-      <Footer />
+      <footer className="flex flex-wrap justify-center gap-6 px-6 pb-8 text-sm text-muted">
+        <Link href="/impressum/" className="underline underline-offset-4">Impressum</Link>
+        <Link href="/datenschutz/" className="underline underline-offset-4">Datenschutz</Link>
+      </footer>
     </>
   )
 }
